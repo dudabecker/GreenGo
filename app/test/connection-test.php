@@ -13,15 +13,15 @@
 
         $pdo = $conn->getConnection();
     
-        $tabela = $pdo->query("SELECT * FROM myusers");
+        $tabela = $pdo->query("SELECT * FROM zonas");
     
-        $usuarios = $tabela->fetchAll(PDO::FETCH_BOTH);
+        $zonas = $tabela->fetchAll(PDO::FETCH_ASSOC);
     
         print "<pre>";
-        print_r($usuarios);
+        print_r($zonas);
         print "</pre>";
     }
 
-   findAllDataTest();
+    findAllDataTest();
 
 
