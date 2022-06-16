@@ -16,7 +16,7 @@
 
             <li>
                 <?= $user->getId ?> |
-                <?= $user->getusername ?> |
+                <?= $user->getname ?> |
                 <?= $user->getemail ?> |
                 <?= $user->getpassword ?> |
                 <a href="<?= $user->getId() ?>"> mostrar </a>
