@@ -12,13 +12,15 @@
     <h1>Zonas</h1>
 
     <ul>
-        <?php foreach($data['zonas'] as $zonas): ?>
+        <?php foreach($data['usuarios'] as $user): ?>
 
             <li>
-                <?= $zona['idZona'] ?>
-                <?= $zona['qntPlantas'] ?>
-            </li>
-
+                <?= $user->getId ?> |
+                <?= $user->getusername ?> |
+                <?= $user->getemail ?> |
+                <?= $user->getpassword ?> |
+                <a href="<?= $user->getId() ?>"> mostrar </a>
+           </li>
         <?php endforeach; ?>
     </ul>
     
