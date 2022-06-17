@@ -1,6 +1,7 @@
 :root{
     --principal: #338a5f;
     --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
     --destaque:#f58c95;
 
     font-family: Helvetica;
@@ -50,38 +51,32 @@ body.header-index{
     margin-left: 5px;
     margin-right: 5px;
    
-    background-image: linear-gradient(90deg, white,white);
+    background-image: linear-gradient(90deg, var(--branco), var(--branco));
     background-repeat: no-repeat;
     background-size: 0% 1px;
-    background-position: center bottom;
+    background-position: center bottom 0.5px;
     transition: background-size 500ms ease;
 }
 
-
-
-
 .cabecalho-index-menu-item:hover{
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(22, 82, 32, 0.5));
-    filter: drop-shadow(5px 5px 5px rgba(13, 41, 23, 0.5));
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
     background-size: 70% 1px;
-    
 }
 
 .cabecalho-index-menu-itemB{
-    color: var(--principal);
+    color: var(--branco);
     font-weight: 600;
     text-decoration: none;
 
     text-align: center;
     align-items: center;
-    background-color: var(--branco);
+    background-color: var(--branquinho);
 
     margin-right: 1.5em;
     width: auto;
     height: min-content;
-    border-radius: 5px; 
+    border-radius: 7px; 
     padding: 5px;
     border: none;
     cursor: pointer;
@@ -89,9 +84,10 @@ body.header-index{
 }
 
 .cabecalho-index-menu-itemB:hover{
-    background: #338a5f;
-    color: #ebf0f1;
-    box-shadow: inset 0 0 0 3px #ebf0f1;
+    background: var(--branquinho);
+    color: var(--branco);
+    border-radius: 0;
+    border: none;
     transition: all 0.5s ease;
 
 }
