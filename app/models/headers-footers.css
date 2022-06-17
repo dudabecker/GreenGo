@@ -32,7 +32,7 @@ body.header-index{
 .cabecalho-index-menu{
     display: flex;
     gap: 1em;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 1.2em;
 }
 
@@ -78,9 +78,9 @@ body.footer{
 }
 
 .rodape-texto{
-    font-family: cursive;
+    font-family: monospace;
     color: var(--principal);
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 550;
 }

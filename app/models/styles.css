@@ -1,7 +1,7 @@
 :root {
-    --principal: #338a5f;
+    --principal: hsl(150, 46%, 37%);
     --branco: #ebf0f1;
-    --destaque: #f58c95;
+    --destaque: hsl(355, 84%, 75%);
 
     font-family: Helvetica;
     color: var(--branco);
@@ -17,11 +17,16 @@ body {
     text-decoration: none;
 }
 
-footer {
+.imagem-celular{
+    background-color: var(--branco);
+}
+
+footer, iframe.footer {
+    width: 100%;
+    height: 100px;
     position: absolute;
     bottom: 0;
     left: 0;
-    border: none;
-    width: 100%;
-    height: 60px;
+    height: 45px;
+    border-collapse:collapse;
 }
