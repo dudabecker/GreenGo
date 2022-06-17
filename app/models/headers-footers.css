@@ -44,7 +44,7 @@ body.header-index{
     cursor: pointer;
     height: min-content;
 
-    transition: all 0.5s;
+    transition: all 0.01s;
     cursor: pointer;
 
     margin-left: 5px;
@@ -80,6 +80,12 @@ body.header-index{
     cursor: pointer;
 }
 
+.cabecalho-index-menu-itemB:hover{
+    background: #338a5f;
+    color: #ebf0f1;
+    box-shadow: inset 0 0 0 3px #ebf0f1;
+    transition: all 0.5s ease;
+}
 /**FOOTER.HTML**/
 
 body.footer{
