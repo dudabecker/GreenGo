@@ -7,7 +7,7 @@
 }
 
 .logo-greengo{
-    padding-top: 2px;
+    padding-top: 5px;
 }
 
 /**HEADER-INDEX.HTML**/
@@ -33,7 +33,7 @@ body.header-index{
     display: flex;
     gap: 1em;
     font-size: 20px;
-    margin-top: 1.2em;
+    margin-top: 2.5em;
 }
 
 .cabecalho-index-menu-item{
@@ -43,6 +43,23 @@ body.header-index{
     padding-top: 5px;
     cursor: pointer;
     height: min-content;
+
+    transition: all 0.5s;
+    cursor: pointer;
+
+    margin-left: 5px;
+    margin-right: 5px;
+   
+}
+
+
+
+
+.cabecalho-index-menu-item:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(22, 82, 32, 0.5));
+    filter: drop-shadow(5px 5px 5px rgba(13, 41, 23, 0.5));
 }
 
 .cabecalho-index-menu-itemB{
