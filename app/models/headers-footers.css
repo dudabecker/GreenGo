@@ -50,6 +50,11 @@ body.header-index{
     margin-left: 5px;
     margin-right: 5px;
    
+    background-image: linear-gradient(90deg, white,white);
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    background-position: center bottom;
+    transition: background-size 500ms ease;
 }
 
 
@@ -60,6 +65,7 @@ body.header-index{
     transform: scale(1.1);
     -webkit-filter: drop-shadow(5px 5px 5px rgba(22, 82, 32, 0.5));
     filter: drop-shadow(5px 5px 5px rgba(13, 41, 23, 0.5));
+    background-size: 100% 3px;
 }
 
 .cabecalho-index-menu-itemB{
@@ -78,6 +84,7 @@ body.header-index{
     padding: 5px;
     border: none;
     cursor: pointer;
+   
 }
 
 .cabecalho-index-menu-itemB:hover{
@@ -85,6 +92,7 @@ body.header-index{
     color: #ebf0f1;
     box-shadow: inset 0 0 0 3px #ebf0f1;
     transition: all 0.5s ease;
+
 }
 /**FOOTER.HTML**/
 
