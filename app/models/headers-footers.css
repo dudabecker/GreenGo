@@ -8,7 +8,7 @@
 }
 
 .logo-greengo{
-    padding-top: 5px;
+    padding-top: 0.3em;
 }
 
 /**HEADER-INDEX.HTML**/
@@ -33,64 +33,68 @@ body.header-index{
 .cabecalho-index-menu{
     display: flex;
     gap: 1em;
-    font-size: 20px;
-    margin-top: 2.5em;
+    font-size: 1.2em;
+    margin-top: 2em;
 }
 
 .cabecalho-index-menu-item{
     color: var(--branco);
     text-align: right;
     text-decoration: none;
-    padding-top: 5px;
+    padding-top: 0.3em;
     cursor: pointer;
     height: min-content;
 
     transition: all 0.01s;
     cursor: pointer;
 
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
    
     background-image: linear-gradient(90deg, var(--branco), var(--branco));
     background-repeat: no-repeat;
-    background-size: 0% 1px;
-    background-position: center bottom 0.5px;
+    background-size: 0% 0.07em;
+    background-position: center bottom;
     transition: background-size 500ms ease;
 }
 
 .cabecalho-index-menu-item:hover{
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    background-size: 70% 1px;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    background-size: 70% 0.07em;
+    
+    transition: all 0.5s ease;
 }
 
 .cabecalho-index-menu-itemB{
-    color: var(--branco);
+    color: var(--principal);
     font-weight: 600;
     text-decoration: none;
 
     text-align: center;
     align-items: center;
-    background-color: var(--branquinho);
+    background-color: var(--branco);
 
     margin-right: 1.5em;
     width: auto;
     height: min-content;
-    border-radius: 7px; 
-    padding: 5px;
+    border-radius: 0.3em; 
+    padding: 0.3em;
     border: none;
     cursor: pointer;
-   
 }
 
 .cabecalho-index-menu-itemB:hover{
-    background: var(--branquinho);
-    color: var(--branco);
+    background: var(--branco);
+    color: var(--principal);
+
+    padding-left: 0.4em;
+    padding-right: 0.4em;
     border-radius: 0;
     border: none;
     transition: all 0.5s ease;
-
 }
+
 /**FOOTER.HTML**/
 
 body.footer{
@@ -109,7 +113,7 @@ body.footer{
 .rodape-texto{
     font-family: monospace;
     color: var(--principal);
-    font-size: 15px;
+    font-size: 1em;
     text-align: center;
     font-weight: 550;
 }
