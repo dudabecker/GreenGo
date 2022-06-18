@@ -1,0 +1,74 @@
+:root{
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque:#f58c95;
+    --rosinha: #f0b6bc;
+
+    color: var(--branco);
+    font-family: Helvetica;
+}
+
+/**FUNDO BRANCO**/
+
+body.fundo-branco {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: var(--branco);
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    display: -webkit-inline-flex;
+}
+
+h2.titulo-form{
+    color: var(--principal);
+}
+
+label{
+    color: var(--principal);
+}
+
+input{
+    background-color: var(--rosinha);
+    box-shadow: none;
+    border: none;
+}
+
+span{
+    color: var(--verdao);
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.link-cadastro{
+    color: var(--verdao);
+    text-decoration: none;
+    font-weight: 550;
+}
+
+.entrar-btn{
+    background-color: var(--principal);
+    color: var(--branco);
+    font-size: 1.5em;
+    font-weight: 550;
+
+    border: none;
+    border-radius: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+}

@@ -1,9 +1,11 @@
 :root{
     --principal: #338a5f;
+    --verdao: #04574d;
     --branco: #ebf0f1;
     --branquinho: #ebf0f14b;
     --destaque:#f58c95;
 
+    color: var(--branco);
     font-family: Helvetica;
 }
 
@@ -12,15 +14,6 @@
 }
 
 /**HEADER-INDEX.HTML**/
-
-body.header-index{
-    width: 100%;
-    height: 100%;
-    border: 0;
-    margin: 0;
-    background-color: var(--principal);
-    text-decoration: none;
-}
 
 .cabecalho-index{
     display:flex;
