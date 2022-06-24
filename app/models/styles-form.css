@@ -6,7 +6,6 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    color: var(--branco);
     font-family: Helvetica;
 
 }
@@ -22,71 +21,103 @@ body.fundo-branco {
     background-color: var(--branco);
     text-decoration: none;
 
+}
 
+.img-top{
+    width: 20%;
+    position: fixed;
+    left: 79%;
+    top: -5%;
+}
+
+.img-bottom{
+    width: 27%;
+    position: fixed;
+    left: -2%;
+    bottom: -10%;
 }
 
 .container {
     width: 100%;
-    left: 50%;
-    display: -webkit-inline-flex;
+    position: absolute;
+    top:25%;
+    vertical-align: middle;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: justify;
 
+}
+
+.login-form {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 h2.titulo-form {
     color: var(--principal);
     font-size: 35pt;
+    font-weight: bold;
     text-align: left;
-
+    margin-top: 0;
+    margin-bottom: 20px;
 
 }
 
 label {
     color: var(--principal);
+    font-size: 18pt;
+    margin-top: 5px;
 }
 
 input.input-form {
-    font-size: 18pt;
+    font-size: 14pt;
+    color: #021a17;
     height: 40px;
     width: 500px;
-    margin-top: 3px;
-    margin-bottom: 7px;
     background-color: var(--rosinha);
+    padding-left: 1em;
+    margin-top: 5px;
+    margin-bottom: 10px;
     box-shadow: none;
     border: none;
-
 }
 
+a.restaurar-senha-form{
+    color: var(--verdao);
+    font-size: 14pt;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.entrar-btn {
+    background-color: var(--principal);
+    color: var(--branco);
+    font-size: 25pt;
+    letter-spacing: 0.08em;
+    font-weight:bold;
+
+    border: none;
+    border-radius: 0.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 3px;
+    margin-top: 25px;
+}
 
 span {
+    width: 100%;
     color: var(--verdao);
+    font-size: 14pt;
     text-decoration: none;
-    margin-left: 1em;
-}
-
-.login-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    text-align:end!important; /*ALINHAR COM O FINAL DA DIV DO FORM*/
+    padding-left: 5em;
 }
 
 .link-cadastro {
     color: var(--verdao);
     text-decoration: none;
     font-weight: 550;
-}
-
-.entrar-btn {
-    background-color: var(--principal);
-    color: var(--branco);
-    font-size: 1.5em;
-    font-weight: 550;
-
-    border: none;
-    border-radius: 0.2em;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-top: 35px;
+ 
 }
