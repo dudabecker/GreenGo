@@ -1,14 +1,14 @@
-:root{
+:root {
     --principal: #338a5f;
     --verdao: #04574d;
     --branco: #ebf0f1;
     --branquinho: #ebf0f14b;
-    --destaque:#f58c95;
+    --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
     color: var(--branco);
     font-family: Helvetica;
-    
+
 }
 
 /**FUNDO BRANCO**/
@@ -21,62 +21,64 @@ body.fundo-branco {
     padding: 0;
     background-color: var(--branco);
     text-decoration: none;
-    
-    
+
+
 }
 
-.container{
+.container {
     width: 100%;
-    top: 50%;
     left: 50%;
     display: -webkit-inline-flex;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1000;
-    margin-top: 15%;
-    font-size: 25px;
-   
+
 }
 
-h2.titulo-form{
+h2.titulo-form {
     color: var(--principal);
+    font-size: 35pt;
     text-align: left;
- 
+
 
 }
 
-label{
+label {
     color: var(--principal);
 }
 
-input{
+input.input-form {
+    font-size: 18pt;
+    height: 40px;
+    width: 500px;
+    margin-top: 3px;
+    margin-bottom: 7px;
     background-color: var(--rosinha);
     box-shadow: none;
     border: none;
-    
+
 }
 
 
-span{
+span {
     color: var(--verdao);
     text-decoration: none;
     margin-left: 1em;
 }
 
-.login-form{
+.login-form {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.link-cadastro{
+.link-cadastro {
     color: var(--verdao);
     text-decoration: none;
     font-weight: 550;
 }
 
-.entrar-btn{
+.entrar-btn {
     background-color: var(--principal);
     color: var(--branco);
     font-size: 1.5em;
