@@ -29,7 +29,7 @@
 
     <tr>
       <th scope="row"><?= $zona->getIdZona() ?></th>
-      <td><?= $zona->getQntPlantas() ?></td>
+      <td><?= $zona->getQntPlantas() ?> </td>
       <td><a href="<?= $zona->findZonaByIdZona($idParam) ?>"> mostrar zona </a></td>
     </tr>
 
