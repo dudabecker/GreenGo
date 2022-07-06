@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); //só copiei do login
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
