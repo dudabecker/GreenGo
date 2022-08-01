@@ -49,13 +49,24 @@ header, .navbar{
     color: #fff;
 }
 #navbar-links a{
-   
+    display: flex;
+ 
+    font-size: 0.9em;
+    margin-left: 10px ;
     color: var(--branco);
     text-decoration: none;
     padding-top: 0.3em;
     cursor: pointer;
     height: min-content;
+    
 }
+#navbar-links a:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    height: min-content;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 1rem .8rem;
 }
