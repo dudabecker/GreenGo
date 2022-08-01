@@ -1,0 +1,62 @@
+
+
+:root {
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque: #f58c95;
+    --rosinha: #f0b6bc;
+
+    font-family: Helvetica;
+
+}
+
+/*Geral*/ 
+body{
+    font-family:  Helvetica;
+    font-size: 1.2em;
+    
+}
+.row{
+    margin: 0;
+}
+.container{
+    padding: 70px 0;
+}
+
+p,li{
+    color: #444;
+    font-size: 14px;
+}
+
+/*Barra de navegação*/
+header, .navbar{
+    background-color: #338a5f;
+}
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#logo{
+    width: 75px;
+}
+.navbar-brand{
+    padding: 0;
+    color: #fff;
+}
+.navbar-brand:hover{
+    color: #fff;
+}
+#navbar-links a{
+   
+    color: var(--branco);
+    text-decoration: none;
+    padding-top: 0.3em;
+    cursor: pointer;
+    height: min-content;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    padding: 1rem .8rem;
+}
+
