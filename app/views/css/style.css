@@ -1,3 +1,5 @@
+
+
 :root {
     --principal: #338a5f;
     --verdao: #04574d;
@@ -12,6 +14,10 @@
 @font-face {
     font-family: 'Cooper';
     src: url('cooperhewitt-heavy.otf');
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('poppins/Poppins-ExtraBold.otf');
 }
 /*Geral*/ 
 body{
@@ -155,3 +161,14 @@ header, .navbar{
     width: 100%;
  }
  
+ #about-areafim h1{
+     font-family: Poppins;
+    font-size: 70px;
+    color: #EBF0F1;
+    
+    }
+    #about-areafim h2{
+        font-family: Poppins;
+       font-size: 40px;
+       color: #EBF0F1;
+       }
