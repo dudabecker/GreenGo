@@ -84,5 +84,26 @@ header, .navbar{
  #about-area p{
     color: white;
     font-family: roboto;
-    position: absolute;
+    
+ }
+ #botao-mapa h3{
+    background: #EBF0F1;
+    width: 90px;
+    height: 30px;
+    cursor: pointer;
+    font-family: sans-serif;
+    color: #f58c95;
+    border-radius: 20%;
+    padding: 0%;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 25px;
+    
+    
+ }
+ button{
+    border-radius: 10px;
+    border-color: #EBF0F1
+    
  }
