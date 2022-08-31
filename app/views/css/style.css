@@ -38,6 +38,9 @@ header, .navbar{
 #nav-container{
     padding-top: 0;
     padding-bottom: 0;
+    position: fixed;
+    background: fixed;
+    background-color: #338a5f;
 }
 #logo{
     width: 75px;
@@ -45,6 +48,7 @@ header, .navbar{
 .navbar-brand{
     padding: 0;
     color: #fff;
+    
 }
 .navbar-brand:hover{
     color: #fff;
@@ -66,11 +70,13 @@ header, .navbar{
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     height: min-content;
+    
 }
 
 .navbar-expand-lg .navbar-nav .nav-link{
     padding: 1rem .8rem;
-  
+    background: fixed;
+    
     
 }
 
@@ -84,7 +90,11 @@ header, .navbar{
  #about-area p{
     color: white;
     font-family: roboto;
+    font-size: 22px;
     
+ }
+ #about-area h1{
+    font-size: 55px;
  }
  #botao-mapa h3{
     background: #EBF0F1;
@@ -106,4 +116,30 @@ header, .navbar{
     border-radius: 10px;
     border-color: #EBF0F1
     
+ }
+ #home-dois h1{
+    color: #EBF0F1;
+    
+    margin-top: 150px;
+    font-size: 80px;
+ }
+
+ #botoes h3{
+    background: #f58c95;
+    color:#EBF0F1;
+    cursor: pointer;
+ }
+
+ #botoes button{
+    border-radius: 10px;
+    border-color: #f58c95;
+    background-color: #f58c95;
+   
+ }
+
+ #itensmenu{
+    position: fixed;
+    background-color: #338a5f;
+    top: 0px;
+    width: 100%;
  }
