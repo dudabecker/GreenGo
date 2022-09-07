@@ -1,6 +1,13 @@
-<?php session_start(); //só copiei do login
-?>
+<?php session_start(); //só copiei do login?>
 
+<!--
+    Adicionar:
+        inputs como obrigatorios
+        colocar mini texto embaixo da senha descrevendo as caracteristicas q ela tem q ter (oito caracteres com letras e numeros)
+        arte da logo
+        colocar o botao de cadastro com outro nome no css (esta como de entrar)
+    Att, Alana
+-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="../public/styles.css">
     <link rel="stylesheet" type="text/css" href="../public/styles-form.css">
 
-    <title>cadastro</title>
+    <title>Cadastro</title>
 </head>
 
 <body class="fundo-branco">
@@ -23,7 +30,7 @@
         <form class="form-cadastro" id="cadastroform" name="cadastroform" method="post" action="../controllers/userController.php?action=create">
 
             <h2 class="titulo-form">
-                criar uma conta
+                Criar uma conta
             </h2> <br>
 
             <?php if(isset($_SESSION['msg_erro'])): ?>
@@ -33,40 +40,50 @@
             <br/> 
             
             <label>
-               nome <br>
-                <input class="input-form" type="text" name="field_email" placeholder="greengo@email.com" autocomplete="off">
+                nome <br>
+                <input class="input-form" type="text" name="field_email" placeholder="maria" autocomplete="off">
             </label> <br>
 
             <label>
-                genero <br>
-                <select name="genero">
-                <option value="feminino"> feminino </option>
-                <option value="masculino"> masculino </option>
-                </select>
-            </label> <br>
-
-            <label>
-                escolaridade <br>
-                <select name="escolaridade">
-                <option value="ensino fundamental 1"> ensino fundamental 1 </option>
-                <option value="ensino fundamental 2"> ensino fundamental 2 </option>
-                <option value="ensino medio"> ensino medio </option>
-                <option value="ensino superior"> ensino superior </option>
-                </select>
-            </label> <br>
-            <label>
-                E-mail <br>
+                e-mail <br>
                 <input class="input-form" type="text" name="field_email" placeholder="greengo@email.com" autocomplete="off" >
             </label> <br>
 
             <label>
-                Senha <br>
+                senha <br>
                 <input class="input-form" type="password" name="field_password" placeholder="greengo123" autocomplete="off" >
             </label> <br>
-            
-            <a class="restaurar-senha-form" href="#link-restauracao-de-senha">Esqueceu sua senha?</a>
-            <br>
 
+            <label>
+                confirmar senha <br>
+                <input class="input-form" type="password" name="field_password" placeholder="greengo123" autocomplete="off" >
+            </label> <br>
+
+            <label>
+                gênero <br>
+                <select name="genero">
+                    <option value="feminino"> feminino </option>
+                    <option value="masculino"> masculino </option>
+                    <option value="masculino"> outro </option>
+                </select>
+            </label> <br>
+
+            <label>
+                nível de escolaridade <br>
+                <select name="escolaridade">
+                    <option value="ensino fundamental 1"> ensino fundamental 1 </option>
+                    <option value="ensino fundamental 2"> ensino fundamental 2 </option>
+                    <option value="ensino medio"> ensino médio </option>
+                    <option value="ensino superior"> ensino superior </option>
+                </select>
+            </label> <br>
+
+            <label>
+                <input class="input-form" type="checkbox" name="field_termos" required >
+                Li e concordo com os <a href="/"><u>Termos de Uso</u></a>
+            </label> <br>
+            
+        
             <div>
                 <button class="entrar-btn me-auto">
                     Cadastrar
