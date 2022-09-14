@@ -12,29 +12,16 @@
             $this->conn = Connection::getConnection();
         }
 
-        public function create() {
+        public function create(UserModel $user):int {
+         try {
 
-            /* VALIDAÇÃO DE EMAIL (DEVERIA ESTAR AQUI) */
-            $query = "SELECT * FROM myusers WHERE email = :email";
-            $prepare = $this->conn->prepare($query);
-            $prepare->bindValue(":email", $myuser->getEmail());
-            $prepare->execute();
-
-            $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
-
-            if(count($result) > 0) {
-                throw new Exception("Email já cadastrado");
-            }
-
-            try {
-
-                $query = "INSERT INTO myusers (name, genero, escolaridade, email, password) VALUES (:name, :genero, :escolaridade, :email, :password)";
+                $query = "INSERT INTO myusers ( name, genero, escolaridade, email, password) VALUES (:name, :genero, :escolaridade, :email, :password)";
                 $prepare = $this->conn->prepare($query);
-                $prepare->bindValue(":name", $myuser->getUsername());
-                $prepare->bindValue(":genero", $myuser->getGenero());
-                $prepare->bindValue(":escolaridade", $myuser->getEscolaridade());
-                $prepare->bindValue(":email", $myuser->getEmail());
-                $prepare->bindValue(":password", $myuser->getPassword());
+                $prepare->bindValue(":name", $user->getUsername());
+                $prepare->bindValue(":genero", $user->getGenero());
+                $prepare->bindValue(":escolaridade", $user->getEscolaridade());
+                $prepare->bindValue(":email", $user->getEmail());
+                $prepare->bindValue(":password", $user->getPassword());
                 $prepare->execute();
 
                 return $this->conn->lastInsertId();
@@ -87,7 +74,7 @@
             return $usuario;
         }
 
-        public function update(UserModel $myuser) {
+        public function update(UserModel $myuser) : bool{
 
             $query = "UPDATE myusers SET name = :name, email = :email, password = :password WHERE id = :id";
             $prepare = $this->conn->prepare($query);
@@ -95,15 +82,20 @@
             $prepare->bindValue(":email", $user->getEmail());
             $prepare->bindValue(":password", $user->getPassword());
             $prepare->bindValue(":id", $user->getId());
-            $prepare->execute();
+            $result = $prepare->execute();
+            
+            return $result;
         }
 
-        public function deleteById( int $id) { 
+        public function deleteById( int $id) :int{ 
             $query = "DELETE FROM myusers WHERE id = :id";
 
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":id", $id);
             $prepare->execute();
+            $result = $prepare->rowCount();
+            //var_dump($result);
+            return $result;
             
         }
     }
