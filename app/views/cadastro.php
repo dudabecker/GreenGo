@@ -6,6 +6,7 @@
         colocar mini texto embaixo da senha descrevendo as caracteristicas q ela tem q ter (oito caracteres com letras e numeros)
         arte da logo
         colocar o botao de cadastro com outro nome no css (esta como de entrar)
+        confirmar senha foi adiado, lembrar as meninas de fazer
     Att, Alana
 -->
 
@@ -24,8 +25,6 @@
 
 <body class="fundo-branco">
     
-    <img class="img-top" src="../../public/imagem-top.png">
-
     <div class="container">
         <form class="form-cadastro" id="cadastroform" name="cadastroform" method="post" action="../controllers/userController.php?action=create">
 
@@ -41,36 +40,36 @@
             
             <label>
                 nome <br>
-                <input class="input-form" type="text" name="field_email" placeholder="maria" autocomplete="off">
+                <input class="input-form" type="text" name="field_nome" autocomplete="off">
             </label> <br>
 
             <label>
                 e-mail <br>
-                <input class="input-form" type="text" name="field_email" placeholder="greengo@email.com" autocomplete="off" >
+                <input class="input-form" type="text" name="field_email" autocomplete="off" >
             </label> <br>
 
             <label>
                 senha <br>
-                <input class="input-form" type="password" name="field_password" placeholder="greengo123" autocomplete="off" >
+                <input class="input-form" type="password" name="field_password" autocomplete="off" >
             </label> <br>
-
+<!--
             <label>
                 confirmar senha <br>
-                <input class="input-form" type="password" name="field_password" placeholder="greengo123" autocomplete="off" >
+                <input class="input-form" type="password" name="field_password" autocomplete="off" >
             </label> <br>
-
+-->
             <label>
                 gênero <br>
-                <select name="genero">
+                <select name="field_genero">
                     <option value="feminino"> feminino </option>
                     <option value="masculino"> masculino </option>
-                    <option value="masculino"> outro </option>
+                    <option value="outro"> outro </option>
                 </select>
             </label> <br>
 
             <label>
                 nível de escolaridade <br>
-                <select name="escolaridade">
+                <select name="field_escolaridade">
                     <option value="ensino fundamental 1"> ensino fundamental 1 </option>
                     <option value="ensino fundamental 2"> ensino fundamental 2 </option>
                     <option value="ensino medio"> ensino médio </option>
@@ -97,8 +96,6 @@
         </form>
     </div>
     <br>
-
-    <img class="img-bottom" src="../../public/imagem-bottom.png">
     
 </body>
 

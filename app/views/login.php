@@ -32,12 +32,12 @@
 
             <label>
                 E-mail <br>
-                <input class="input-form" type="email" name="field_email" placeholder="greengo@email.com" autocomplete="off" value="mariaehsb@gmail.com">
+                <input class="input-form" type="email" name="field_email" autocomplete="off" value="mariaehsb@gmail.com">
             </label> <br>
 
             <label>
                 Senha <br>
-                <input class="input-form" type="password" name="field_password" placeholder="greengo123" autocomplete="off" value="4444">
+                <input class="input-form" type="password" name="field_password" autocomplete="off" value="4444">
             </label> <br>
             
             <a class="restaurar-senha-form" href="#link-restauracao-de-senha">Esqueceu sua senha?</a>
