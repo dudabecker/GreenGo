@@ -23,8 +23,8 @@
       <th scope="col">genero</th>
       <th scope="col">escolaridade</th>
       <th scope="col">email</th>
-      <th scope="col">password</th>
       <th scope="col">opcoes</th>
+      <th scope="col"></th>
 
     </tr>
   </thead>
@@ -38,8 +38,9 @@
       <td><?= $user->getGenero() ?></td>
       <td><?= $user->getEscolaridade() ?> </td>
       <td><?= $user->getEmail() ?> </td>
-      <td><?= $user->getPassword() ?> </td>
-      <td><a href= '../controllers/userController.php?action=findUserById&id=<?= $user->getId()?> '> mostrar usuario</a> </td>
+      <td> <a href= '../controllers/userController.php?action=findUserById&id=<?= $user->getId()?>'> Mostrar usuario</a> </td>
+      <td><a href='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>'> Editar </a> </td>
+      
     </tr>
 
     <?php endforeach; ?>
