@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/app/views/index.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <!-- Progress bar -->
+    <script src="js/progressbar.min.js"></script>
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+
+</head>
+
+
+<body>
+    
+    <form>
+
+        <div class="form-group">
+            <h1>Criar conta</h1>
+            <label for="exampleInputnome">nome</label>
+            <br>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="nome-cadastro" >
+            <br>
+          <label for="exampleInputEmail">email </label>
+          <br>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email-cadastro" >
+          
+    <br>
+          <label for="exampleInputPassword">Senha</label>
+          <br>
+          <input type="password" class="form-control" id="senha-cadastro">
+          <br>
+          <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e numeros</small>
+          <br>
+           <label for="exampleInputPassword1">Confirmar senha</label>
+           <br>
+          <input type="password" class="form-control" id="senha-cadastro">
+          <br>
+        
+        <form>
+            <div class="form-row align-items-center">
+              <div class="col-auto my-1">
+                <label for="validationDefault01">Gênero</label>
+              <br>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected> </option>
+                  <option value="1">Feminino</option>
+                  <option value="2">Masculino</option>
+                  <option value="3">Outro</option>
+                </select>
+                <br>
+                <label for="validationDefault01">Nível de escolaridade</label>
+              <br>
+                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected> </option>
+                  <option value="1">ensino fundamental 1 </option>
+                  <option value="2">ensino fundamental 2</option>
+                  <option value="3">ensino medio</option>
+                  <option value="4">ensino superior</option>
+                  
+</select>
+<div class="custom-control custom-checkbox mb-3">
+    <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+    <label class="custom-control-label" for="customControlValidation1">li e concordo com os termos de uso</label>
+    
+  </div>
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <span class="trocar-form me-auto">
+      Já tem uma conta? <a href="cadastro.php" class="link-cadastro">Entrar</a>
+  </span>
+              </div>
+              
+       
+        </div>
+       
+        </div>
+    </div>
+      </form>
+      </form>
+    
+</body>
+</html>
