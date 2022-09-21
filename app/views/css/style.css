@@ -17,15 +17,18 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url('poppins/Poppins-ExtraBold.otf');
+    src: url('Poppins-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('Poppins-Regular.ttf');
 }
 
-/*Geral*/
-body {
 
-    background-color: #338a5f;
 
-}
+
+
+
 
 .row {
     margin: 0;
@@ -191,4 +194,36 @@ button {
     font-family: Poppins;
     font-size: 40px;
     color: #EBF0F1;
+}
+
+/*Cadastro*/
+
+
+.form-group h1{
+    font-family: Poppins;
+    font-size: 60px;
+}
+
+.form-group {
+    margin-left: 6rem;
+    margin-right: 6rem;
+    position: absolute;
+    
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+
+/* identical to box height */
+
+    align-items: flex-end;
+    color: #338A5F;
+   
+}
+.label{
+    font-family: Poppins regular;
+}
+.custom-control {
+    margin-top: 30px;
+    
 }
