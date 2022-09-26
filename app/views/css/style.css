@@ -234,3 +234,11 @@ button {
 #imagens{
     background-color: #04574d;
 }
+#exampleInputEmail1{
+    background-color: #f0b6bc;
+    width: 506px;
+    height: 44px;
+    border-radius: 0%;
+    border-color: #f0b6bc;
+    text-decoration: none;
+}
