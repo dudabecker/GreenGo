@@ -208,11 +208,12 @@ button {
     margin-left: 6rem;
     margin-right: 6rem;
     position: absolute;
-    
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
+   background-color: #EBF0F1;
+    
 
 /* identical to box height */
 
@@ -226,4 +227,10 @@ button {
 .custom-control {
     margin-top: 30px;
     
+}
+#venha{
+    background-color: #04574d;
+}
+#imagens{
+    background-color: #04574d;
 }
