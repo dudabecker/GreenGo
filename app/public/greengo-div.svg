@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="201.55873"
-   height="465.83545"
-   viewBox="0 0 201.55874 465.83545"
+   width="133.53819"
+   height="465.81778"
+   viewBox="0 0 133.5382 465.81778"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -25,16 +25,21 @@
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#505050"
    inkscape:document-units="px"
-   showgrid="false"
-   inkscape:zoom="0.68359376"
-   inkscape:cx="38.034285"
-   inkscape:cy="376.68571"
-   inkscape:window-width="764"
-   inkscape:window-height="728"
-   inkscape:window-x="0"
-   inkscape:window-y="0"
-   inkscape:window-maximized="0"
-   inkscape:current-layer="layer1" />
+   showgrid="true"
+   inkscape:zoom="1.9334951"
+   inkscape:cx="-41.893046"
+   inkscape:cy="287.56214"
+   inkscape:window-width="1366"
+   inkscape:window-height="705"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="layer1"
+   showguides="true"><inkscape:grid
+     type="xygrid"
+     id="grid1674"
+     originx="-68.020864"
+     originy="-0.017659" /></sodipodi:namedview>
     
   <defs
    id="defs2">
@@ -56,14 +61,14 @@
    inkscape:label="Camada 1"
    inkscape:groupmode="layer"
    id="layer1"
-   transform="translate(-247.04123,-32.469886)">
+   transform="translate(-315.06209,-32.487545)">
     <g
    inkscape:groupmode="layer"
    id="layer2"
    inkscape:label="outline" /><path
-   style="fill:#ebf1f1;stroke-width:1.17825;fill-opacity:1"
-   d="m 355.69445,498.30532 -108.65322,3e-5 0.46157,-465.819005 c 0,0 60.77145,-0.03782 67.55896,0.0012 47.67901,0.274256 87.95068,46.721538 98.15861,91.343265 11.66111,50.97402 -17.67879,105.67061 -45.24872,154.26387 25.02572,-17.62042 79.92558,-19.91245 80.61521,12.95421 0.89153,42.48944 -43.8128,107.65615 -109.11841,143.57422 6.07499,24.7995 16.226,63.68219 16.226,63.68219 z"
+   style="fill:#ebf1f1;fill-opacity:1;stroke-width:1.17825"
+   d="m 355.69445,498.30532 -40.63036,1e-5 -0.002,-465.817785 c 47.67901,0.274256 87.95068,46.721538 98.15861,91.343265 11.66111,50.97402 -17.67879,105.67061 -45.24872,154.26387 25.02572,-17.62042 79.92558,-19.91245 80.61521,12.95421 0.89153,42.48944 -43.8128,107.65615 -109.11841,143.57422 6.07499,24.7995 16.226,63.68219 16.226,63.68219 z"
    id="path465"
-   sodipodi:nodetypes="ccccccsccc" />
+   sodipodi:nodetypes="cccccsccc" />
   </g>
 </svg>
