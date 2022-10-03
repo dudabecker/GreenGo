@@ -274,3 +274,14 @@ button {
 #oi{
     text-align: left;
 }
+ #imagemcentrocad{
+    position: relative;
+    height: 46em;
+    width: 25em;
+    
+ }
+body{
+    width: 100%;
+    height: 10rem;
+    background-image: linear-gradient(to left,  #338a5f 50%,  #ebf0f1 50%);
+}
