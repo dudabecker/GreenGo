@@ -1,4 +1,4 @@
-<?php session_start(); //só copiei do login?>
+<?php session_start();?>
 
 <!--
     Adicionar:
@@ -9,6 +9,8 @@
         confirmar senha foi adiado, lembrar as meninas de fazer
     Att, Alana
 -->
+
+
 <!--
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +106,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -133,79 +136,82 @@
 
 <body background="Desktop - 2.svg">
     
-    <form>
-                
+    <form>        
         <div class="form-group">
           <div class="row">
             <div class="col-sm">
                 <h1>Criar conta</h1>
-                    <label for="exampleInputnome">nome</label>
-            <br>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="nome-cadastro" >
-            <br>
-                            <label for="exampleInputEmail">email </label>
-            <br>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email-cadastro" >
-          
-            <br>
-                            <label for="exampleInputPassword">senha</label>
-          <br>
-                        <input type="password" class="form-control" id="exampleInputEmail1">
-          <br>
-                    <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e numeros</small>
-          <br>
+                
+                <label for="exampleInputnome">nome</label>
+                <br>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nome-cadastro" >
+                <br>
+                
+                <label for="exampleInputEmail">email </label>
+                <br>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email-cadastro" >
+                <br>
+                
+                <label for="exampleInputPassword">senha</label>
+                <br>
+                <input type="password" class="form-control" id="exampleInputEmail1">
+                <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e numeros</small>
+                <br>
+                
+            <!--
                 <label for="exampleInputPassword1">confirmar senha</label>
-           <br>
-            <input type="password" class="form-control" id="exampleInputEmail1">
-          <br>
+                <br>
+                <input type="password" class="form-control" id="exampleInputEmail1">
+                <br>
+            -->
 
         <form>
           
           <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <label for="exampleInputPassword">gênero</label>
-              <br>
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">genero</label>
-                        <select class="custom-select mr-sm-2" id="exampleInputEmail2">
-                            <option selected></option>
-                            <option value="1">Feminino</option>
-                            <option value="2">Masculino</option>
-                            <option value="3">Outro</option>
-                        </select>
-                    </div>
+                <div class="col-auto my-1">
+                    <label for="exampleInputPassword">gênero</label>
+                    <br>
+                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
+                    <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                        <option selected></option>
+                        <option value="feminino">feminino</option>
+                        <option value="masculino">masculino</option>
+                        <option value="outro">outro</option>
+                    </select>   
                 </div>
+            </div>
          
             <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <label for="exampleInputPassword">nível de escolaridade</label>
-              <br>
-                    <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">anoescolar</label>
-                        <select class="custom-select mr-sm-2" id="exampleInputEmail2">
-                            <option selected></option>
-                            <option value="1">ensino fundamental 1</option>
-                            <option value="2">ensino fundamental 2</option>
-                            <option value="3">ensino medio</option>
-                            <option value="4">ensino superior</option>
-                        </select> 
-                    </div>
+                <div class="col-auto my-1">
+                    <label for="exampleInputPassword">nível de escolaridade</label>
+                    <br>
+                <!--<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">anoescolar</label> -->
+                    <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                        <option selected></option>
+                        <option value="ensino fundamental 1"> ensino fundamental 1 </option>
+                        <option value="ensino fundamental 2"> ensino fundamental 2 </option>
+                        <option value="ensino medio"> ensino médio </option>
+                        <option value="ensino superior"> ensino superior </option>
+                    </select> 
                 </div>
+            </div>
               
-              <div class="col-auto my-1">
+            <div class="col-auto my-1">
                 <div class="custom-control custom-checkbox mr-sm-2">
-                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
                     <label class="custom-control-label" for="customControlAutosizing">Li e concordo com os termos de uso</label>
                 </div>
-              </div>
-            <div class="col-auto my-1">
-                <button type="submit" class="btn btn-primary" id="botaocadastro">cadastrar</button>
-              </div>
-              <div class="col-auto md-2">
-                <label type="text"  id="jatemumaconta">já tem uma conta?</button>
-              </div>
             </div>
-          </form>
-          
-          </body>
             
-          
+            <div class="col-auto my-1">
+                <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
+            </div>
+            
+            <div class="col-auto md-2">
+                <label type="text"  id="jatemumaconta">Já tem uma conta?</button>
+            </div>
+        </div>
+    </form>
+    
+</body>          
 </html>
