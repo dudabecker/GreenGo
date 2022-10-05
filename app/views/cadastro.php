@@ -1,4 +1,4 @@
-<?php session_start(); //só copiei do login?>
+<?php session_start();?>
 
 <!--
     Adicionar:
@@ -9,6 +9,8 @@
         confirmar senha foi adiado, lembrar as meninas de fazer
     Att, Alana
 -->
+
+
 <!--
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +106,7 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -152,7 +155,7 @@
                 <label for="exampleInputPassword">senha</label>
                 <br>
                 <input type="password" class="form-control" id="exampleInputEmail1">
-                <br>
+    
                 <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e numeros</small>
                 <br>
                 
