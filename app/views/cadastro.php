@@ -155,7 +155,6 @@
                 <label for="exampleInputPassword">senha</label>
                 <br>
                 <input type="password" class="form-control" id="exampleInputEmail1">
-    
                 <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e numeros</small>
                 <br>
                 
@@ -169,50 +168,50 @@
         <form>
           
           <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <label for="exampleInputPassword">gênero</label>
-              <br>
+                <div class="col-auto my-1">
+                    <label for="exampleInputPassword">gênero</label>
+                    <br>
                     <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                        <select class="custom-select mr-sm-2" id="exampleInputEmail2">
-                            <option selected></option>
-                            <option value="feminino">feminino</option>
-                            <option value="masculino">masculino</option>
-                            <option value="outro">outro</option>
-                        </select>
-                    </div>
+                    <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                        <option selected></option>
+                        <option value="feminino">feminino</option>
+                        <option value="masculino">masculino</option>
+                        <option value="outro">outro</option>
+                    </select>   
                 </div>
+            </div>
          
             <div class="form-row align-items-center">
-              <div class="col-auto my-1">
-                <label for="exampleInputPassword">nível de escolaridade</label>
-              <br>
-                    <!-- <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">anoescolar</label> -->
-                        <select class="custom-select mr-sm-2" id="exampleInputEmail2">
-                            <option selected></option>
-                            <option value="ensino fundamental 1"> ensino fundamental 1 </option>
-                            <option value="ensino fundamental 2"> ensino fundamental 2 </option>
-                            <option value="ensino medio"> ensino médio </option>
-                            <option value="ensino superior"> ensino superior </option>
-                        </select> 
-                    </div>
+                <div class="col-auto my-1">
+                    <label for="exampleInputPassword">nível de escolaridade</label>
+                    <br>
+                <!--<label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">anoescolar</label> -->
+                    <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                        <option selected></option>
+                        <option value="ensino fundamental 1"> ensino fundamental 1 </option>
+                        <option value="ensino fundamental 2"> ensino fundamental 2 </option>
+                        <option value="ensino medio"> ensino médio </option>
+                        <option value="ensino superior"> ensino superior </option>
+                    </select> 
                 </div>
+            </div>
               
-              <div class="col-auto my-1">
+            <div class="col-auto my-1">
                 <div class="custom-control custom-checkbox mr-sm-2">
-                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                    <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
                     <label class="custom-control-label" for="customControlAutosizing">Li e concordo com os termos de uso</label>
                 </div>
-              </div>
+            </div>
+            
             <div class="col-auto my-1">
                 <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
-              </div>
-              <div class="col-auto md-2">
-                <label type="text"  id="jatemumaconta">Já tem uma conta?</button>
-              </div>
             </div>
-          </form>
-          
-          </body>
             
-          
+            <div class="col-auto md-2">
+                <label type="text"  id="jatemumaconta">Já tem uma conta?</button>
+            </div>
+        </div>
+    </form>
+    
+</body>          
 </html>
