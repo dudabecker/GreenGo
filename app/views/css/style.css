@@ -280,8 +280,12 @@ button {
     width: 25em;
     
  }
-body{
+#fundocadastro{
     width: 100%;
     height: 10rem;
     background-image: linear-gradient(to left,  #338a5f 50%,  #ebf0f1 50%);
+}
+
+#fundoindex{
+    background-color: #338a5f;
 }
