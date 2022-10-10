@@ -156,6 +156,8 @@ button {
 }
 #parte{
     background-image: url(Vector\ 1.png);
+    position: relative;
+    
     
 }
 
@@ -196,7 +198,10 @@ button {
     font-size: 40px;
     color: #EBF0F1;
 }
-
+#card{
+    height: 30px;
+    width: 15px;
+}
 
 /*Cadastro*/
 
@@ -317,4 +322,39 @@ button {
 
 #fundoindex{
     background-color: #338a5f;
+}
+.card-group{
+    display:flex;
+    
+}
+#card{
+    margin: 15px;
+    border-radius: 5px;
+}
+#parte h5{
+    color: #EBF0F1;
+    size: 55px;
+    font-family: Poppins;
+    margin-left: 15px;
+    
+}
+#finalhome{
+    background-color: #338A5F;
+   
+    
+}
+
+#segundacolunaindex{
+    background-image: url("Vector\ 2.png");
+}
+#segundacolunaindex h5{
+    color: #EBF0F1;
+    size: 55px;
+    font-family: Poppins;
+    margin-left: 15px;
+    
+}
+
+#rodapezinho{
+    background-color: #EBF0F1;
 }
