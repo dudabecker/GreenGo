@@ -276,12 +276,13 @@ button {
     width: 25em;
     
  }
-body{
+#fundocadastro{
     width: 100%;
     height: 10rem;
     background-image: linear-gradient(to left,  #338a5f 50%,  #ebf0f1 50%);
 }
 
+<<<<<<< HEAD
 #venhacon{
     font-family: Poppins;
     text-align: right;
@@ -311,3 +312,8 @@ body{
     align-items: flex-end;
     color: #338A5F;
 }
+=======
+#fundoindex{
+    background-color: #338a5f;
+}
+>>>>>>> 7e002de00683bc4cd045a218d5bebd821d8478dd
