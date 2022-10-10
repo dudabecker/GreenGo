@@ -79,6 +79,12 @@ header,
     color: #fff;
 }
 
+#header.active{
+position: absolute;
+background: #04574d;
+z-index: 9999;
+box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+}
 #navbar-links a {
     display: flex;
     font-size: 1.3em;
@@ -148,12 +154,9 @@ button {
     border-radius: 10px;
     border-color: #EBF0F1
 }
-
-#home-dois h1 {
-    color: #EBF0F1;
-    font-family: Cooper;
-    margin-top: 150px;
-    font-size: 80px;
+#parte{
+    background-image: url(Vector\ 1.png);
+    
 }
 
 #botoes h3 {
@@ -176,9 +179,7 @@ button {
 }
 
 #itensmenu {
-    background: fixed;
     position: fixed;
-    background-color: #338a5f;
     top: 0px;
     width: 100%;
 }
@@ -195,6 +196,7 @@ button {
     font-size: 40px;
     color: #EBF0F1;
 }
+
 
 /*Cadastro*/
 
@@ -282,7 +284,7 @@ button {
     background-image: linear-gradient(to left,  #338a5f 50%,  #ebf0f1 50%);
 }
 
-<<<<<<< HEAD
+
 #venhacon{
     font-family: Poppins;
     text-align: right;
@@ -312,8 +314,7 @@ button {
     align-items: flex-end;
     color: #338A5F;
 }
-=======
+
 #fundoindex{
     background-color: #338a5f;
 }
->>>>>>> 7e002de00683bc4cd045a218d5bebd821d8478dd
