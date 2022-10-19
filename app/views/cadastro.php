@@ -1,7 +1,7 @@
 <?php session_start();?>
-            <?php// if(isset($_SESSION['msg_erro'])): ?>
+            <?php if(isset($_SESSION['msg_erro'])): ?>
                 <span> 
-                    <?= //$_SESSION['msg_erro'] ?> </span>
+                    <?= $_SESSION['msg_erro'] ?> </span>
             <?php endif ?>
 
 
@@ -81,6 +81,8 @@
                     </select>   
                 </div>
             </div>
+
+            <br>
          
             <div class="form-row align-items-center">
                 <div class="col-auto my-1">
@@ -96,6 +98,8 @@
                 </div>
             </div>
             
+            <br>
+
             <div class="col-auto my-1">
                 <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
             </div>
@@ -103,6 +107,7 @@
             <div class="col-auto md-2">
                 <label id="jatemumaconta">Já tem uma conta?</button>
             </div>
+            
         </div>
     </form>
     
