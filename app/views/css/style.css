@@ -23,6 +23,12 @@
     font-family: 'Poppins-regular';
     src: url('Poppins-Regular.ttf');
 }
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('Poppins-SemiBold.ttf');
+}
+
+
 
 
 
@@ -55,7 +61,7 @@ header,
     padding-top: 0;
     padding-bottom: 0;
     position: fixed;
-    background: fixed;
+   
     background-color: #338a5f;
 }
 
@@ -79,12 +85,7 @@ header,
     color: #fff;
 }
 
-#header.active{
-position: absolute;
-background: #04574d;
-z-index: 9999;
-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
-}
+
 #navbar-links a {
     display: flex;
     font-size: 1.3em;
@@ -94,7 +95,7 @@ box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
     padding-top: 0.3em;
     cursor: pointer;
     height: min-content;
-
+    
 }
 
 #navbar-links a:hover {
@@ -107,7 +108,7 @@ box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
-    background: fixed;
+  text-align: right;
 
 
 }
@@ -154,12 +155,7 @@ button {
     border-radius: 10px;
     border-color: #EBF0F1
 }
-#parte{
-    background-image: url(Vector\ 1.png);
-    position: relative;
-    
-    
-}
+
 
 #botoes h3 {
     background: #f58c95;
@@ -180,7 +176,7 @@ button {
 
 }
 
-#itensmenu {
+#itensmenu{
     position: fixed;
     top: 0px;
     width: 100%;
@@ -241,7 +237,7 @@ button {
     border-color: #f0b6bc;
     text-decoration: none;
     
-}*/
+}
 
 .col-auto my-1{
     background-color: #f0b6bc;
@@ -265,16 +261,12 @@ button {
     width: 223px;
     height: 60px;
     border-radius: 13px;
-    border-color: none;
     font-family: Arial, Helvetica, sans-serif;
     font-style: bold;
     font-size: 27px;
     margin-top: 30px;
 }
-.custom-control-input{
-    border-radius: 0%;
-    background-color: #f0b6bc;
-}
+
 #oi{
     text-align: left;
 }
@@ -309,17 +301,8 @@ button {
     text-decoration: none;
     
 }
-#teste{
-    margin-left: 6rem;
-    margin-right: 6rem;
-    position: absolute;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 29%;
-    align-items: flex-end;
-    color: #338A5F;
-}
+
+
 
 #fundoindex{
     background-color: #338a5f;
@@ -344,18 +327,55 @@ button {
    
     
 }
-
+/*
 #segundacolunaindex{
     background-image: url("Vector\ 2.png");
-}
+}*/
 #segundacolunaindex h5{
     color: #EBF0F1;
     size: 55px;
     font-family: Poppins;
-    margin-left: 15px;
+    
     
 }
 
 #rodapezinho{
     background-color: #EBF0F1;
+}
+#primeirotextoindex{
+    text-align: left;
+    
+    margin-bottom: 120px;
+}
+#dropdownMenuButton{
+   margin-top: 200px;
+   background-color: #103D37;
+    text-decoration: none;
+    color: (--verdao);
+    width: 230px;
+    height: 93px;
+    border-radius: 10px;
+    font-family: Poppins-semibold;
+    font-style: bold;
+    font-size: 35px;
+    margin-left: 150px;
+     
+}
+
+#mapa-home{
+    background-image: url(Vector\ 8.svg);
+    position: relative;
+    
+}
+#mapa-da-home{
+    margin-top: 90px;
+}
+
+#parte h5{
+    margin-top: 100px;
+}
+#mapa-home h1{
+    font-family: Poppins;
+    color: #EBF0F1;
+    text-align: center;
 }
