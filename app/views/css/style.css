@@ -330,6 +330,7 @@ button {
 #card{
     margin: 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 #parte h5{
     color: #EBF0F1;
