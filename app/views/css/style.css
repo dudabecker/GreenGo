@@ -12,20 +12,20 @@
 
 @font-face {
     font-family: 'Cooper';
-    src: url('cooperhewitt-heavy.otf');
+    src: url('../fontes/cooperhewitt-heavy.otf');
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('Poppins-ExtraBold.ttf');
+    src: url('../fontes/Poppins-ExtraBold.ttf');
 }
 @font-face {
     font-family: 'Poppins-regular';
-    src: url('Poppins-Regular.ttf');
+    src: url('../fontes/Poppins-Regular.ttf');
 }
 @font-face {
     font-family: 'Poppins-semibold';
-    src: url('Poppins-SemiBold.ttf');
+    src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
 
@@ -265,7 +265,7 @@ button {
 }
 
 #mapa-home{
-    background-image: url(../Vector\ 8.svg);
+    background-image: url(../../public/Vector\ 8.svg);
     position: relative;
     
     
@@ -296,7 +296,7 @@ button {
     margin-top: 110px;
 }
 #desenvolvedoras-home{
-    background-image: url(../Vector\ 9.svg);
+    background-image: url(../../public/Vector\ 9.svg);
 }
 #fotonossa{
     margin-left: auto;

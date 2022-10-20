@@ -9,24 +9,24 @@
     font-family: Helvetica;
 
 }
-
 @font-face {
     font-family: 'Cooper';
-    src: url('cooperhewitt-heavy.otf');
+    src: url('../fontes/cooperhewitt-heavy.otf');
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('Poppins-ExtraBold.ttf');
+    src: url('../fontes/Poppins-ExtraBold.ttf');
 }
 @font-face {
     font-family: 'Poppins-regular';
-    src: url('Poppins-Regular.ttf');
+    src: url('../fontes/Poppins-Regular.ttf');
 }
 @font-face {
     font-family: 'Poppins-semibold';
-    src: url('Poppins-SemiBold.ttf');
+    src: url('../fontes/Poppins-SemiBold.ttf');
 }
+
 
 
 
