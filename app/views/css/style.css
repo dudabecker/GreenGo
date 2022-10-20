@@ -325,13 +325,12 @@ button {
 }
 #finalhome{
     background-color: #338A5F;
-   
-    
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+    ;
 }
-/*
-#segundacolunaindex{
-    background-image: url("Vector\ 2.png");
-}*/
+
 #segundacolunaindex h5{
     color: #EBF0F1;
     size: 55px;
@@ -393,4 +392,107 @@ button {
 }
 #mapa-home h1{
     margin-top: 110px;
+}
+#desenvolvedoras-home{
+    background-image: url(../Vector\ 9.svg);
+}
+#fotonossa{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    display: block;
+    max-width: 60%;  height: auto;
+    margin-bottom: 60px;
+    margin-top: 130px;
+}
+#desenvolvedoras-home h3{
+    font-family: Poppins;
+    color: #EBF0F1;
+    text-align: center;
+    margin-bottom: 185px;
+
+}
+#parte{
+    
+    box-sizing: border-box;
+}
+#parte h3{
+    font-family: Poppins-semibold;
+    color: #EBF0F1;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 60px;
+    
+}
+#slider{
+    position: relative;
+  padding: 15px;
+  max-width: 1300px;
+  margin-bottom: 150px;
+
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 15px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, transparent 0%);
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  color: #103D37;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: left;
+  background: linear-gradient(to right, transparent 0%,transparent 0%);
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.item {
+    width: 245px;
+    height: 381px;
+  flex-shrink: 0;
+    
+}
+
+.current-item {
+  opacity: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
 }
