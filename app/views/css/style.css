@@ -60,7 +60,7 @@ header,
 #nav-container {
     padding-top: 0;
     padding-bottom: 0;
-    position: fixed;
+  
    
     background-color: #338a5f;
 }
@@ -78,6 +78,7 @@ header,
 .navbar-brand {
     padding: 0;
     color: #fff;
+    
 
 }
 
@@ -96,6 +97,7 @@ header,
     cursor: pointer;
     height: min-content;
     
+    
 }
 
 #navbar-links a:hover {
@@ -107,7 +109,7 @@ header,
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-    padding: 1rem .8rem;
+    
   text-align: right;
 
 
@@ -177,7 +179,7 @@ button {
 }
 
 #itensmenu{
-    position: fixed;
+    
     top: 0px;
     width: 100%;
 }
@@ -495,4 +497,7 @@ button {
 .gallery-wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none; 
+}
+#indexinteiro{
+    background-color: #338A5F;
 }
