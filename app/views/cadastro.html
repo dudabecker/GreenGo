@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
   <link rel="stylesheet" href="/app/views/index.html">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cadastro.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
+  
   <!--scripts-->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -34,85 +34,123 @@
     <div class="form-group">
       <div class="row">
         <div class="col-sm">
-          <h1>Criar conta</h1>
-
-          <label for="exampleInputnome">nome</label>
-          <br>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="nome-cadastro">
-          <br>
-
-          <label for="exampleInputEmail">email </label>
-          <br>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="email-cadastro">
-          <br>
-
-          <label for="exampleInputPassword">senha</label>
-          <br>
-          <input type="password" class="form-control" id="exampleInputEmail1">
-          <small id="senha-cadastro" class="form-text text-muted">8 caracteres contendo letras e números</small>
-          <br>
-
-          <!--
-            <label for="exampleInputPassword1">confirmar senha</label>
-            <br>
-            <input type="password" class="form-control" id="exampleInputEmail1">
-            <br>
-        -->
+         
 
           <form>
+            
+            <div class="container" >
+              <div class="col-auto " id="venhacon">
+                <span class="img-fluid">
+                  <img class="img-responsive" src="greengo-div.svg" alt="logocentro" id="imagemcentrocad">
+                </div>
+              <h1 id="h1" >Criar conta</h1>
+              
+              <div class="row">
+                <div class="col-sm">
+                  <div class="form-row align-items-left">
+                  
+                    <label for="formtexto" id="texto">nome</label>
+                    <div class="w-100"></div>
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
+                  </div>
+                </div>
+              </div>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-row align-items-left">
+                    
+                      <label for="formtexto" id="texto">email</label>
+                      <div class="w-100"></div>
+                      <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro">
+                      
+                    </div>
+                  </div>
+                  
+                </div>
+                  
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-row align-items-left">
+                    
+                      <label for="formtexto" id="texto">senha</label>
+                      <div class="w-100"></div>
+                      <input type="text" class="form-control" id="formtexto" aria-describedby="senha-cadastro">
+                      <div class="w-100"></div>
+                      <h6 id="senha-cadastro"  style="color: #04574D ">8 caracteres contendo letras e números</h6>
+                    </div>
+                  </div>
+                </div>
+                
+          
+         
+          
+                
+                
+
 
             <div class="form-row align-items-center">
               <div class="col-auto my-1">
-                <label for="exampleInputPassword">gênero</label>
+                <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
                 <br>
-                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect" >gênero</label>
+                <select class="custom-select mr-sm-2" id="caixinha-cad">
                   <option selected></option>
                   <option value="feminino">feminino</option>
                   <option value="masculino">masculino</option>
                   <option value="outro">outro</option>
                 </select>
               </div>
-            </div>
-
-            <br>
-
-            <div class="form-row align-items-center">
+              <div class="w-100"></div>
+              
               <div class="col-auto my-1">
-                <label for="exampleInputPassword">nível de escolaridade</label>
+                <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
                 <br>
-                <select class="custom-select mr-sm-2" id="exampleInputEmail2">
+                <select class="custom-select mr-sm-2" id="caixinha-cad">
                   <option selected></option>
                   <option value="ensino fundamental 1"> ensino fundamental 1 </option>
                   <option value="ensino fundamental 2"> ensino fundamental 2 </option>
                   <option value="ensino medio"> ensino médio </option>
                   <option value="ensino superior"> ensino superior </option>
                 </select>
+                
+    
+                
               </div>
+              
             </div>
 
             <br>
-
-            <div class="col-auto my-1">
+            
+            <div class="form-row align-items-left">
+              <div class="col-auto my-1">
               <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
+              <label id="jatemumaconta">Já tem uma conta? <a id="entrar">Entrar.</a></button>
             </div>
-
-            <div class="col-auto md-2">
-              <label id="jatemumaconta">Já tem uma conta?</button>
+            <div class="col-sm">
+             
             </div>
-        </div>
-  </form>
-
-  <div class="form">
-    <div class="row-md">
-      <img src="greengo-div.svg" alt="logocentro" id="imagemcentrocad">
+          <div id="pp" >
+      <a >Comece sua <br> aventura...</a> 
     </div>
-
-    <div class="col-auto " id="venhacon">
-      <a>Comece sua <br> aventura...</a>
-
+   
+    <div class="img-fluid" id="icon">
+      <img src="layer1.svg" alt="">
     </div>
+    
+            </div>
   </div>
+</div>
+</div></div>
+       
+</form>
+            <br>
+ 
+    
+    </div>
+    
+    
+   
 
 </body>
 
