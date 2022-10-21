@@ -232,6 +232,10 @@ button {
     display: block
     ;
 }
+#imggrengo{
+    width: 450px;
+    margin-bottom: 10px;
+}
 
 #segundacolunaindex h5{
     color: #EBF0F1;
@@ -400,4 +404,8 @@ button {
 }
 #indexinteiro{
     background-color: #338A5F;
+}
+
+#imggrengo{
+    size: 20px;
 }
