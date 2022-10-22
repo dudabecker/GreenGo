@@ -6,7 +6,7 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    font-family: Helvetica;
+    font-family: Poppins-regular, Roboto;
 
 }
 
@@ -19,22 +19,16 @@
     font-family: 'Poppins';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../fontes/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
-
-
-
-
-
-
-
-
 
 .row {
     margin: 0;
@@ -60,8 +54,8 @@ header,
 #nav-container {
     padding-top: 0;
     padding-bottom: 0;
-  
-   
+
+
     background-color: #338a5f;
 }
 
@@ -78,7 +72,7 @@ header,
 .navbar-brand {
     padding: 0;
     color: #fff;
-    
+
 
 }
 
@@ -96,8 +90,8 @@ header,
     padding-top: 0.3em;
     cursor: pointer;
     height: min-content;
-    
-    
+
+
 }
 
 #navbar-links a:hover {
@@ -110,7 +104,7 @@ header,
 
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 1rem .8rem;
-  text-align: right;
+    text-align: right;
 
 
 }
@@ -178,8 +172,8 @@ button {
 
 }
 
-#itensmenu{
-    
+#itensmenu {
+
     top: 0px;
     width: 100%;
 }
@@ -196,7 +190,8 @@ button {
     font-size: 40px;
     color: #EBF0F1;
 }
-#card{
+
+#card {
     height: 30px;
     width: 15px;
 }
@@ -206,56 +201,62 @@ button {
 
 
 
-#fundoindex{
+#fundoindex {
     background-color: #338a5f;
 }
-.card-group{
-    display:flex;
-    
+
+.card-group {
+    display: flex;
+
 }
-#card{
+
+#card {
     margin: 15px;
     border-radius: 5px;
     cursor: pointer;
 }
-#parte h5{
+
+#parte h5 {
     color: #EBF0F1;
     size: 55px;
     font-family: Poppins;
     margin-left: 15px;
-    
+
 }
-#finalhome{
+
+#finalhome {
     background-color: #338A5F;
     margin-left: auto;
     margin-right: auto;
-    display: block
-    ;
+    display: block;
 }
-#imggrengo{
+
+#imggrengo {
     width: 450px;
     margin-bottom: 10px;
 }
 
-#segundacolunaindex h5{
+#segundacolunaindex h5 {
     color: #EBF0F1;
     size: 55px;
     font-family: Poppins;
-    
-    
+
+
 }
 
-#rodapezinho{
+#rodapezinho {
     background-color: #EBF0F1;
 }
-#primeirotextoindex{
+
+#primeirotextoindex {
     text-align: left;
-    
+
     margin-bottom: 120px;
 }
-#dropdownMenuButton{
-   margin-top: 200px;
-   background-color: #103D37;
+
+#dropdownMenuButton {
+    margin-top: 200px;
+    background-color: #103D37;
     text-decoration: none;
     color: (--verdao);
     width: 230px;
@@ -265,147 +266,161 @@ button {
     font-style: bold;
     font-size: 35px;
     margin-left: 150px;
-     
+
 }
 
-#mapa-home{
+#mapa-home {
     background-image: url(../../public/Vector\ 8.svg);
     position: relative;
-    
-    
-    
+
+
+
 }
-#mapa-da-home{
+
+#mapa-da-home {
     margin-top: 60px;
-    max-width: 100%;  height: auto;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 235px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
-#parte h5{
+#parte h5 {
     margin-top: 100px;
 }
-#mapa-home h1{
+
+#mapa-home h1 {
     font-family: Poppins;
     color: #EBF0F1;
     text-align: center;
 }
-#imagem-celular{
-    max-width: 100%;  height: auto;
+
+#imagem-celular {
+    max-width: 100%;
+    height: auto;
 }
-#mapa-home h1{
+
+#mapa-home h1 {
     margin-top: 110px;
 }
-#desenvolvedoras-home{
+
+#desenvolvedoras-home {
     background-image: url(../../public/Vector\ 9.svg);
 }
-#fotonossa{
+
+#fotonossa {
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
     display: block;
-    max-width: 60%;  height: auto;
+    max-width: 60%;
+    height: auto;
     margin-bottom: 60px;
     margin-top: 130px;
 }
-#desenvolvedoras-home h3{
+
+#desenvolvedoras-home h3 {
     font-family: Poppins;
     color: #EBF0F1;
     text-align: center;
     margin-bottom: 185px;
 
 }
-#parte{
-    
+
+#parte {
+
     box-sizing: border-box;
 }
-#parte h3{
+
+#parte h3 {
     font-family: Poppins-semibold;
     color: #EBF0F1;
     text-align: center;
     margin-top: 150px;
     margin-bottom: 60px;
-    
+
 }
-#slider{
+
+#slider {
     position: relative;
-  padding: 15px;
-  max-width: 1300px;
-  margin-bottom: 150px;
+    padding: 15px;
+    max-width: 1300px;
+    margin-bottom: 150px;
 
 }
 
 .gallery-wrapper {
-  overflow-x: auto;
+    overflow-x: auto;
 }
 
 .arrow-left,
 .arrow-right {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: auto;
-  bottom: 0;
-  font-size: 15px;
-  line-height: 250px;
-  width: 40px;
-  color: #fff;
-  transition: all 600ms ease-in-out;
-  background: linear-gradient(to left, transparent 0%, transparent 0%);
-  opacity: 1;
-  cursor: pointer;
-  border: none;
-  color: #103D37;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 15px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, transparent 0%);
+    opacity: 1;
+    cursor: pointer;
+    border: none;
+    color: #103D37;
 }
 
 .arrow-left:hover,
 .arrow-right:hover {
-  opacity: 1;
-  text-decoration: none;
+    opacity: 1;
+    text-decoration: none;
 }
 
 .arrow-right {
-  right: 0;
-  left: auto;
-  text-align: left;
-  background: linear-gradient(to right, transparent 0%,transparent 0%);
+    right: 0;
+    left: auto;
+    text-align: left;
+    background: linear-gradient(to right, transparent 0%, transparent 0%);
 }
 
 .gallery {
-  display: flex;
-  flex-flow: row nowrap;
-  gap: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
 }
 
 .item {
     width: 245px;
     height: 381px;
-  flex-shrink: 0;
-    
+    flex-shrink: 0;
+
 }
 
 .current-item {
-  opacity: 1;
-  margin-left: 15px;
-  margin-right: 15px;
+    opacity: 1;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 
 .gallery-wrapper::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .gallery-wrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-#indexinteiro{
+
+#indexinteiro {
     background-color: #338A5F;
 }
 
-#imggrengo{
+#imggrengo {
     size: 20px;
 }

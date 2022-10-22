@@ -42,19 +42,6 @@ body.fundo-branco {
 
 }
 
-.img-top{
-    width: 20%;
-    position: fixed;
-    left: 79%;
-    top: -5%;
-}
-
-.img-bottom{
-    width: 27%;
-    position: fixed;
-    left: -2%;
-    bottom: -10%;
-}
 
 .container {
     width: 100%;
@@ -67,17 +54,10 @@ body.fundo-branco {
 
 }
 
-.login-form {
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-h2.titulo-form {
+h2.titulo {
     font-family: 'Poppins-ExtraBold';
     color: var(--principal);
-    font-size: 35pt;
+    font-size: 60px;
     font-weight: bold;
     text-align: left;
     margin-top: 0;

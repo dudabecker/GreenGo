@@ -6,7 +6,7 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    font-family: Helvetica;
+    font-family: Poppins-regular, Roboto;
 
 }
 @font-face {
@@ -100,10 +100,11 @@
     position: relative;
 }
 #entrar{
-    color: #f58c95;
+    color: #04574d;
     cursor: pointer;
     font-family: Poppins-semibold;
 }
+
 #imagemcentrocad{
     text-align: right;
     display: inline-box;

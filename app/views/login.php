@@ -15,7 +15,7 @@
 
 <body class="fundo-branco">
     
-    <img class="img-top" src="../public/imagem-top.png">
+    <img class="img-top" src="../public/imagem-top.svg">
 
     <div class="container">
         <form class="form-login" id="loginform" name="loginform" method="post" action="../controllers/loginController.php?action=logar">
@@ -28,16 +28,14 @@
             <span> <?= $_SESSION['msg_erro'] ?> </span>
             <?php endif ?>
 
-            <br/> 
-
             <label>
                 E-mail <br>
-                <input class="input-form" type="email" name="field_email" autocomplete="off" value="mariaehsb@gmail.com">
+                <input class="input-form" type="email" name="field_email" autocomplete="off" required>
             </label> <br>
 
             <label>
                 Senha <br>
-                <input class="input-form" type="password" name="field_password" autocomplete="off" value="4444">
+                <input class="input-form" type="password" name="field_password" autocomplete="off" required>
             </label> <br>
             
             <a class="restaurar-senha-form" href="#link-restauracao-de-senha">Esqueceu sua senha?</a>
@@ -57,7 +55,7 @@
     </div>
     <br>
 
-    <img class="img-bottom" src="../public/imagem-bottom.png">
+    <img class="img-bottom" src="../public/imagem-bottom.svg">
     
 </body>
 
