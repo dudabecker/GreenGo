@@ -104,7 +104,8 @@ body{
     font-family: Poppins;
     margin-top: 50px;
     font-size: 60px;
-    margin-left: 40px;
+    margin-left: 10px;
+    margin-bottom: 40px;
 }
 #picture__input {
     display: none;
@@ -148,7 +149,8 @@ body{
   
 
   #pontos{
-    margin-top: 0px;
+    margin-top: 15px;
+   
   }
 
   *{
@@ -246,6 +248,8 @@ a{
 
 #texto{
     margin-left: 0% ;
+    font-family: Poppins-semibold;
+    color: #338A5F;
 }
 
 #caixa-adicione-individuos h4{
@@ -261,4 +265,30 @@ a{
 }
 #form-registro{
     margin-left: 90px;
+}
+.form-control{
+   background-color: #F0B6BC;
+   border-radius: 0%;
+   border: none;
+   margin-bottom: 25px;
+   height: 45px;
+}
+
+#texto-checkbox{
+    font-family: Poppins-regular;
+    color: #04574d;
+
+}
+#container-checkbox a{
+    font-family: Poppins-semibold;
+    color: #338a5f;
+   
+
+}
+
+#form-texto{
+    margin-bottom: 40px;
+}
+.form-check-input{
+    border-radius: 0%;
 }

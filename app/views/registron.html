@@ -46,6 +46,13 @@
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
 		<script type="text/javascript" src="js/script.js"></script>
+
+        <style>
+            .ck-editor__editable_inline{
+                min-height: 400px;
+            }
+
+        </style>
 </head>
 
     
@@ -112,7 +119,7 @@
                                     <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
 
                                     <label for="formtexto" id="texto">Nome popular</label>
-                                    <div class="w-100"></div>
+                                    
                                     <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
                                   </div>
                                   <label id="pontos">
@@ -150,25 +157,35 @@
                 <div class="row">
                     <div class="col-md">
                         <div class="form-group form-check">
+                            <div>
                             <a>Atributos especificos</a>
                             <div class="w-100"></div>
                             <br>
-                            <input type="checkbox" class="form-check-input" id="botaocheck">
-                            <label class="form-check-label" for="botaocheck">Clique em mim</label>
+                            <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="botaocheck" >
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Comestível</label>
                           </div>
                           <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="botaocheck">
-                            <label class="form-check-label" for="botaocheck">Clique em mim</label>
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Exótica</label>
                           </div>
                           <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="botaocheck">
-                            <label class="form-check-label" for="botaocheck">Clique em mim</label>
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Frutífera</label>
                           </div>
                           <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="botaocheck">
-                            <label class="form-check-label" for="botaocheck">Clique em mim</label>
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Medicinal</label>
                           </div>
-
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="botaocheck">
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Rara</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="botaocheck">
+                            <label class="form-check-label" for="botaocheck" id="texto-checkbox">Tóxica</label>
+                          </div>
+                        </div>
                     </div>
                 </div>
 
@@ -180,55 +197,32 @@
         <nav id="primeirotextoindex">
                             <br>
                             <div class="container"  >
-                                
-                            <div id="dvCenterEditor">
-                                <div id="bar">
-                                    <button id="btn_new" class="btn"></button>
-                                    <button id="btn_delete" class="btn"></button>
-                                    
-                                    <button id="btn_copy" class="btn margin"></button>
-                                    <button id="btn_cut" class="btn"></button>
-                                    <button id="btn_paste" class="btn"></button>
-                                    
-                                    <button id="btn_undo" class="btn margin"></button>
-                                    <button id="btn_redo" class="btn"></button>
-                                    
-                                    <select id="slFonte" class="margin">
-                                        <option value="courier">courier</option>
-                                        <option value="Verdana">Verdana</option>
-                                        <option value="Arial">Arial</option>
-                                        <option value="Segoe">Segoe</option>
-                                        <option value="Calibri">Calibri</option>
-                                    </select>
-                                    
-                                   
-                                 <button id="btn_bold" class="btn margin"></button>
-                                    <button id="btn_italic" class="btn"></button>
-                                    <button id="btn_underline" class="btn"></button>
-                                    
-                                    <button id="btn_color" class="btn  margin"></button>
-                                    <button id="btn_paragraph" class="btn"></button>
-                                    <button id="btn_left" class="btn"></button>
-                                    <button id="btn_center" class="btn"></button>
-                                    <button id="btn_right" class="btn"></button>
-                                    <button id="btn_justify" class="btn"></button>
-                                    
-                                    <button id="btn_line" class="btn  margin"></button>
-                                    <button id="btn_unordered" class="btn"></button>
-                                    <button id="btn_ordered" class="btn"></button>
-                                    
-                                    <button id="btn_link" class="btn margin"></button>
-                                    <button id="btn_link_break" class="btn"></button>
-                                    
-                                    <button id="btn_image" class="btn margin"></button>
-                                    <button id="btn_audio" class="btn"></button>
-                                    
-                                    <button id="btn_select" class="btn margin"></button>
-                                </div>
-                                
-                                <iframe id="Editor" name="Editor" ></iframe>
-                                <textarea id="txtEditor" style="display:none;"></textarea>
-                            </div>
+                                <textarea  id="txtconteudo" ></textarea>
+
+                                <script src="ckeditor/build/ckeditor.js"></script>
+    <script>ClassicEditor
+            .create( document.querySelector( '#txtconteudo' ), {
+                
+                licenseKey: '',
+                
+                
+                
+            } )
+            .then( editor => {
+                window.editor = editor;
+        
+                
+                
+                
+            } )
+            .catch( error => {
+                console.error( 'Oops, something went wrong!' );
+                console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+                console.warn( 'Build id: mnx0o2etqvuk-d6hv5tpaevt5' );
+                console.error( error );
+            } );
+    </script>
+                            
                                 </div>
                             </div>
                         </nav>
@@ -259,7 +253,7 @@
                                     </div>
                                 </div>
                             </nav>
-                           
+                        
                         
                
     </main>
