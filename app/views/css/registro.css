@@ -289,6 +289,24 @@ a{
 #form-texto{
     margin-bottom: 40px;
 }
-.form-check-input{
-    border-radius: 0%;
+
+
+
+.chk input {
+    display: none;
+    background-color: #04574d;
 }
+
+.chk span {
+    width: 12px;
+    height: 12px;
+    display: block;
+    
+    border: 1px solid #DDD;
+    background-color: #04574d;
+}
+
+.chk input:checked + span {
+    background-color: #c03;
+}
+
