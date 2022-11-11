@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5deb2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Tempo de geração: 14-Out-2022 às 17:38
--- Versão do servidor: 8.0.30-0ubuntu0.20.04.2
--- versão do PHP: 7.4.3
+-- Host: 127.0.0.1
+-- Tempo de geração: 09-Nov-2022 às 13:02
+-- Versão do servidor: 10.4.24-MariaDB
+-- versão do PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `GREENGO`
+-- Banco de dados: `greengo`
 --
 
 -- --------------------------------------------------------
@@ -29,11 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `equipe` (
-  `idEquipe` int NOT NULL,
+  `idEquipe` int(11) NOT NULL,
   `nomeEquipe` varchar(100) NOT NULL,
-  `codigoEnt` int NOT NULL,
-  `id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `codEntrada` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `idZona` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -42,17 +42,25 @@ CREATE TABLE `equipe` (
 --
 
 CREATE TABLE `especie` (
-  `idEspecie` int NOT NULL,
+  `idEspecie` int(11) NOT NULL,
   `nomePop` varchar(100) NOT NULL,
   `nomeCie` varchar(100) NOT NULL,
   `descricao` text NOT NULL,
-  `imagem` blob NOT NULL,
   `frutifera` tinyint(1) NOT NULL,
   `raridade` tinyint(1) NOT NULL,
   `medicinal` tinyint(1) NOT NULL,
   `toxidade` tinyint(1) NOT NULL,
-  `exotica` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `exotica` tinyint(1) NOT NULL,
+  `pontoEspecie` int(11) NOT NULL,
+  `idPlanta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `especie`
+--
+
+INSERT INTO `especie` (`idEspecie`, `nomePop`, `nomeCie`, `descricao`, `frutifera`, `raridade`, `medicinal`, `toxidade`, `exotica`, `pontoEspecie`, `idPlanta`) VALUES
+(1, 'Flor da fortuna', 'Kalanchoe blossfeldiana', 'A flor-da-fortuna pertence à família das crassuláceas, originária da África. Possui folhas suculentas sendo resistente ao calor e a pouca água. Os tons desta linda flor, variam entre vermelho, alaranjado, amarelo, rosa, lilás e branco.', 0, 0, 1, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -61,26 +69,27 @@ CREATE TABLE `especie` (
 --
 
 CREATE TABLE `myuser` (
-  `id` int NOT NULL,
-  `name` varchar(90) DEFAULT NULL,
-  `genero` varchar(100) NOT NULL,
-  `escolaridade` varchar(500) NOT NULL,
+  `id` int(11) NOT NULL,
+  `nomeUsuario` varchar(100) DEFAULT NULL,
+  `genero` tinyint(1) NOT NULL,
+  `escolaridade` tinyint(1) NOT NULL,
   `email` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `senha` varchar(100) DEFAULT NULL,
+  `tipoUsuario` tinyint(1) NOT NULL,
+  `somaPonto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
--- Extraindo dados da tabela `myuser`
+-- Estrutura da tabela `pergunta`
 --
 
-INSERT INTO `myuser` (`id`, `name`, `genero`, `escolaridade`, `email`, `password`) VALUES
-(1, 'duda heck', 'feminino', 'ensino fundamental 1', 'mariaehsb@gmail.com', '4444'),
-(2, 'jefferson', 'masculino', 'ensino superior', 'jefferson@email.com', '1234'),
-(3, 'teste2', 'feminino', 'ensino médio', 'jefferson.chaves@ifpr.edu.br', '123456'),
-(4, 'mariaehsb', 'feminino', 'ensino fundamental 1', 'maria@gmail.com', 'mariae'),
-(5, 'mariaehsb4', 'masculino', 'ensino superior', 'maria@gmail.com', 'mariae'),
-(6, 'mariaehsb7', 'feminino', 'ensino fundamental 1', 'maria@gmail.com', 'mariae'),
-(7, 'julia', 'outro', 'ensino medio', 'juju@gmail.com', 'juju');
+CREATE TABLE `pergunta` (
+  `idPergunta` int(11) NOT NULL,
+  `descricaoP` varchar(600) NOT NULL,
+  `idQuiz` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -89,11 +98,11 @@ INSERT INTO `myuser` (`id`, `name`, `genero`, `escolaridade`, `email`, `password
 --
 
 CREATE TABLE `planta` (
-  `id` int NOT NULL,
-  `idEspecie` int NOT NULL,
-  `codNumerico` int NOT NULL,
+  `idPlanta` int(11) NOT NULL,
+  `idZona` int(11) NOT NULL,
+  `codNumerico` int(11) NOT NULL,
   `codQR` varchar(5000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -102,18 +111,23 @@ CREATE TABLE `planta` (
 --
 
 CREATE TABLE `quizz` (
-  `idQuizz` int NOT NULL,
-  `pergunta` varchar(500) NOT NULL,
-  `resposta` tinyint(1) NOT NULL,
-  `idZona` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+  `idQuiz` int(11) NOT NULL,
+  `pontoQuiz` int(11) NOT NULL,
+  `idZona` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
--- Extraindo dados da tabela `quizz`
+-- Estrutura da tabela `resposta`
 --
 
-INSERT INTO `quizz` (`idQuizz`, `pergunta`, `resposta`, `idZona`) VALUES
-(1, 'qual a cor da folha ?', 1, 1);
+CREATE TABLE `resposta` (
+  `idResposta` int(11) NOT NULL,
+  `isCorreta` tinyint(1) NOT NULL,
+  `descricaoR` varchar(600) NOT NULL,
+  `idPergunta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -122,16 +136,10 @@ INSERT INTO `quizz` (`idQuizz`, `pergunta`, `resposta`, `idZona`) VALUES
 --
 
 CREATE TABLE `zona` (
-  `idZona` int NOT NULL,
-  `qntPlantas` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Extraindo dados da tabela `zona`
---
-
-INSERT INTO `zona` (`idZona`, `qntPlantas`) VALUES
-(1, 100);
+  `idZona` int(11) NOT NULL,
+  `qntPlantas` int(11) NOT NULL,
+  `pontoZona` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Índices para tabelas despejadas
@@ -141,7 +149,9 @@ INSERT INTO `zona` (`idZona`, `qntPlantas`) VALUES
 -- Índices para tabela `equipe`
 --
 ALTER TABLE `equipe`
-  ADD PRIMARY KEY (`idEquipe`);
+  ADD PRIMARY KEY (`idEquipe`),
+  ADD KEY `id` (`id`),
+  ADD KEY `idZona` (`idZona`);
 
 --
 -- Índices para tabela `especie`
@@ -156,16 +166,32 @@ ALTER TABLE `myuser`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `pergunta`
+--
+ALTER TABLE `pergunta`
+  ADD PRIMARY KEY (`idPergunta`),
+  ADD KEY `idQuiz` (`idQuiz`);
+
+--
 -- Índices para tabela `planta`
 --
 ALTER TABLE `planta`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`idPlanta`),
+  ADD KEY `idZona` (`idZona`);
 
 --
 -- Índices para tabela `quizz`
 --
 ALTER TABLE `quizz`
-  ADD PRIMARY KEY (`idQuizz`);
+  ADD PRIMARY KEY (`idQuiz`),
+  ADD KEY `idZona` (`idZona`);
+
+--
+-- Índices para tabela `resposta`
+--
+ALTER TABLE `resposta`
+  ADD PRIMARY KEY (`idResposta`),
+  ADD KEY `idPergunta` (`idPergunta`);
 
 --
 -- Índices para tabela `zona`
@@ -181,37 +207,84 @@ ALTER TABLE `zona`
 -- AUTO_INCREMENT de tabela `equipe`
 --
 ALTER TABLE `equipe`
-  MODIFY `idEquipe` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idEquipe` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `especie`
 --
 ALTER TABLE `especie`
-  MODIFY `idEspecie` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idEspecie` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `myuser`
 --
 ALTER TABLE `myuser`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de tabela `pergunta`
+--
+ALTER TABLE `pergunta`
+  MODIFY `idPergunta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `planta`
 --
 ALTER TABLE `planta`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `idPlanta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `quizz`
 --
 ALTER TABLE `quizz`
-  MODIFY `idQuizz` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `idQuiz` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de tabela `resposta`
+--
+ALTER TABLE `resposta`
+  MODIFY `idResposta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `zona`
 --
 ALTER TABLE `zona`
-  MODIFY `idZona` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idZona` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `equipe`
+--
+ALTER TABLE `equipe`
+  ADD CONSTRAINT `equipe_ibfk_1` FOREIGN KEY (`id`) REFERENCES `myuser` (`id`),
+  ADD CONSTRAINT `equipe_ibfk_2` FOREIGN KEY (`idZona`) REFERENCES `zona` (`idZona`);
+
+--
+-- Limitadores para a tabela `pergunta`
+--
+ALTER TABLE `pergunta`
+  ADD CONSTRAINT `pergunta_ibfk_1` FOREIGN KEY (`idQuiz`) REFERENCES `quizz` (`idQuiz`);
+
+--
+-- Limitadores para a tabela `planta`
+--
+ALTER TABLE `planta`
+  ADD CONSTRAINT `planta_ibfk_1` FOREIGN KEY (`idZona`) REFERENCES `zona` (`idZona`);
+
+--
+-- Limitadores para a tabela `quizz`
+--
+ALTER TABLE `quizz`
+  ADD CONSTRAINT `quizz_ibfk_1` FOREIGN KEY (`idZona`) REFERENCES `zona` (`idZona`);
+
+--
+-- Limitadores para a tabela `resposta`
+--
+ALTER TABLE `resposta`
+  ADD CONSTRAINT `resposta_ibfk_1` FOREIGN KEY (`idPergunta`) REFERENCES `pergunta` (`idPergunta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
