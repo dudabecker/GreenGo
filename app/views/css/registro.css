@@ -80,7 +80,7 @@ header,
     font-weight: 5;
 }
 #menu{
-    margin :0 auto;
+    margin: 0 auto;
 }
 #navbar-links a{
    color: #338A5F;
@@ -310,3 +310,6 @@ a{
     background-color: #c03;
 }
 
+#indexinteiro{
+    margin-right: 0%;
+}

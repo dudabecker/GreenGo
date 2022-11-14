@@ -1,20 +1,11 @@
+<?php session_start();?>
+            <?php if(isset($_SESSION['msg_erro'])): ?>
+                <span> 
+                    <?= $_SESSION['msg_erro'] ?> </span>
+            <?php endif ?>
 
-<!--
-    Adicionar:
-        adaptar as cores da header (mudar o nome da class nos dois pra diferenciar)
-        tirar style="color: #338a5f;" do header itens
-        separar o form em tres colunas (todos os text ocupam duas colunas, tipo de planta e pontos ocupam uma coluna. duas colunas e a coluna do carregar imagem devem ter o mesmo comprimento)
-        estilizar o carregar imagem
-        estilizar o limpar-btn
-        adicionar acao nos btn limpar e entrar?
-        deixar o titulo do individuos menor
-        substituir o text area por ckeditor ou semelhante
-        vou adicionar uma imagem para o botao dos individuos
-        ajustar o tamanho dos svg (copiar e mais)
-        verificar se o carregar imagem esta aceitando so imagem - png jpg e jpeg
-    Att, Alana
--->
-<!DOCTYPE html>
+
+            <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -61,7 +52,7 @@
           <div class="col-xs-12" id="nav-container">
               
               <div id="itensmenu">
-                
+              
               <nav class="navbar navbar-expand-lg " id="menu" >
                   <a href="index.html" class="nav-brand">
                       <div class="row justify-content-md-left" >
@@ -76,7 +67,6 @@
                       aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                   </button>
-                  <nav>
                   <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                       <div class="navbar-nav" id="navbar-links">
   
@@ -89,7 +79,7 @@
                             <a class="nav-item nav-link" id="botaoentrar" href="login.php">  Adm </a>
                       </div>
                   </div>
-                </nav>
+               
               </nav>
             </div>
               </div>
