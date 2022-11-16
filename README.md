@@ -1,4 +1,4 @@
-!(/app/public/isologo-greengo verde.svg)
+![ISOLOGO DO PROJETO](/app/public/isologo-greengo verde.svg)
 
 ## Projeto de Extensão Green Go: Gamificação Etnobotânica da Identificação de Plantas no IFPR 
 
