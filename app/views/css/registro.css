@@ -313,3 +313,18 @@ a{
 #indexinteiro{
     margin-right: 0%;
 }
+#primeirotextoreg1{
+    color: #338A5F;
+    font-family: Poppins;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 0 auto;
+    margin-bottom: 40px;
+    text-align: left;
+
+}
+#cardreg{
+    border-radius: 20px;
+    background-color: #ebf0f1;
+    border: none;
+}
