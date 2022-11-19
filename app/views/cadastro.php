@@ -1,8 +1,9 @@
-<?php session_start();?>
-            <?php if(isset($_SESSION['msg_erro'])): ?>
-                <span> 
-                    <?= $_SESSION['msg_erro'] ?> </span>
-            <?php endif ?>
+<?php session_start(); ?>
+<?php if (isset($_SESSION['msg_erro'])): ?>
+<span>
+  <?= $_SESSION['msg_erro'] ?>
+</span>
+<?php endif ?>
 
 
 <!DOCTYPE html>
@@ -13,6 +14,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
+
+  <link rel="icon" href="../public/favicon.svg">
   <link rel="stylesheet" href="/app/views/index.html">
   <link rel="stylesheet" href="css/cadastro.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -31,7 +34,7 @@
   <script src="js/progressbar.min.js"></script>
   <!-- Parallax -->
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-  
+
 </head>
 
 
@@ -111,9 +114,6 @@
                     <option value="ensino medio"> ensino médio </option>
                     <option value="ensino superior"> ensino superior </option>
                   </select>
-
-
-
                 </div>
 
               </div>
@@ -123,6 +123,7 @@
               <div class="form-row align-items-left">
                 <div class="col-auto my-1">
                   <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
+
                   <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
                 </div>
                 <div class="col-sm">
@@ -133,7 +134,7 @@
                 </div>
 
                 <div class="img-fluid" id="icon">
-                  <img src="../public/layer1.svg" alt="">
+                  <a href="index.html"><img src="../public/logo-rosa.svg" alt=""></a>
                 </div>
 
               </div>

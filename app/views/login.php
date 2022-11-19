@@ -11,21 +11,27 @@
     <link rel="stylesheet" type="text/css" href="css/styles-form.css">
 
     <title>Entrar</title>
+
+    <!--FAVICON-->
+    <link rel="icon" href="../public/favicon.svg">
 </head>
 
 <body class="fundo-branco">
-    
+
     <img class="img-top" src="../public/imagem-top.svg">
 
     <div class="container">
-        <form class="form-login" id="loginform" name="loginform" method="post" action="../controllers/loginController.php?action=logar">
+        <form class="form-login" id="loginform" name="loginform" method="post"
+            action="../controllers/loginController.php?action=logar">
 
             <h2 class="titulo-form">
                 Entrar na conta
             </h2> <br>
 
-            <?php if(isset($_SESSION['msg_erro'])): ?>
-            <span> <?= $_SESSION['msg_erro'] ?> </span>
+            <?php if (isset($_SESSION['msg_erro'])): ?>
+            <span>
+                <?= $_SESSION['msg_erro'] ?>
+            </span>
             <?php endif ?>
 
             <label>
@@ -37,7 +43,7 @@
                 Senha <br>
                 <input class="input-form" type="password" name="field_password" autocomplete="off" required>
             </label> <br>
-            
+
             <a class="restaurar-senha-form" href="#link-restauracao-de-senha">Esqueceu sua senha?</a>
             <br>
 
@@ -56,7 +62,7 @@
     <br>
 
     <img class="img-bottom" src="../public/imagem-bottom.svg">
-    
+
 </body>
 
 </html>

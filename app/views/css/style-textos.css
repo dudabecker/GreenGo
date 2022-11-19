@@ -7,10 +7,12 @@
     font-family: 'Poppins-ExtraBold';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../fontes/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
@@ -25,8 +27,7 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    font-family: Poppins-regular, Roboto;
-
+    font: Poppins-regular, Roboto var(--verdao);
 }
 
 /**FUNDO BRANCO**/
@@ -46,7 +47,7 @@ body.fundo-branco {
 .container {
     width: 100%;
     position: absolute;
-    top:25%;
+    top: 25%;
     vertical-align: middle;
     display: flex;
     justify-content: center;
@@ -84,7 +85,7 @@ input.input-form {
     border: none;
 }
 
-a.restaurar-senha-form{
+a.restaurar-senha-form {
     color: var(--verdao);
     font-size: 14pt;
     text-decoration: none;
@@ -111,7 +112,8 @@ span {
     color: var(--verdao);
     font-size: 14pt;
     text-decoration: none;
-    text-align:end!important; /*ALINHAR COM O FINAL DA DIV DO FORM*/
+    text-align: end !important;
+    /*ALINHAR COM O FINAL DA DIV DO FORM*/
     padding-left: 5em;
 }
 
@@ -119,22 +121,25 @@ span {
     color: var(--verdao);
     text-decoration: none;
     font-weight: bold;
- 
+
 }
 
-#icon{
+#icon {
     margin-top: 20px;
     text-align: center;
 }
+
 #senha-cadastro {
     color: 04574D;
     size: 10px;
 
 }
-#jatemumaconta{
+
+#jatemumaconta {
     margin-top: 120px;
     text-align: right;
 }
-#entrarcad{
+
+#entrarcad {
     font-family: Poppins-semibold;
 }
