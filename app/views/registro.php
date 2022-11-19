@@ -103,22 +103,23 @@
                             </div>
                         </div>
 
-
+                        <form action="controllers/EspecieController.php?action=create" method="POST">
                         <div class="container" id="reg1">
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-row align-items-left">
 
-                                        <label for="formtexto" id="texto">Nome científico</label>
-                                        <div class="w-100"></div>
-                                        <input type="text" class="form-control" id="formtexto"
-                                            aria-describedby="nome-cadastro">
-
                                         <label for="formtexto" id="texto">Nome popular</label>
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomePop" class="form-control" id="formtexto"
+                                                aria-describedby="nome-cadastro">
+                                                
+                                        <label for="formtexto" id="texto">Nome científico</label>
 
-                                        <input type="text" class="form-control" id="formtexto"
+                                        <input type="text" name="nomeCie" class="form-control" id="formtexto"
                                             aria-describedby="nome-cadastro">
                                     </div>
+
                                     <label id="pontos">
                                         Pontos <br>
                                         <input class="input-form" type="number" min="0" name="field_pontos"
@@ -135,7 +136,7 @@
                                     <label class="picture" for="picture__input" tabIndex="0">
                                         <span class="picture__image"></span>
                                     </label>
-                                    <input type="file" name="picture__input" id="picture__input">
+                                    <input type="file" name="imagem" id="picture__input">
                                     <script
                                         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
 
@@ -157,32 +158,32 @@
                                 <div class="w-100"></div>
                                 <br>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="comestivel" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck"
                                         id="texto-checkbox">Comestível</label>
 
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="exotica" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck" id="texto-checkbox">Exótica</label>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="frutifera" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck"
                                         id="texto-checkbox">Frutífera</label>
                                     <span></span>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="medicinal" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck"
                                         id="texto-checkbox">Medicinal</label>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="raridade" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck" id="texto-checkbox">Rara</label>
                                 </div>
                                 <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="botaocheck">
+                                    <input type="checkbox" name="toxidade" class="form-check-input" id="botaocheck">
                                     <label class="form-check-label" for="botaocheck" id="texto-checkbox">Tóxica</label>
                                 </div>
                             </div>
@@ -196,7 +197,7 @@
         <nav id="primeirotextoindex">
             <br>
             <div class="container">
-                <textarea id="txtconteudo"></textarea>
+                <textarea id="txtconteudo" name="descricao"></textarea>
 
                 <script src="ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
@@ -245,7 +246,7 @@
                 </div>
             </div>
         </nav>
-
+</form> <!-- onde seria o fim do form, não sei onde é -->
         <label class="chk">
             <input type="checkbox" name="exemplo" />
             <span></span>
