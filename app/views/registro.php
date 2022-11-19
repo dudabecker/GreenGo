@@ -122,7 +122,7 @@
 
                                     <label id="pontos">
                                         Pontos <br>
-                                        <input class="input-form" type="number" min="0" name="field_pontos"
+                                        <input class="input-form" type="number" min="0" name="pontoEsp"
                                             autocomplete="off">
                                     </label> <br>
 
