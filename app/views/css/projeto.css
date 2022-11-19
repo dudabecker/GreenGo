@@ -192,4 +192,8 @@ img.alunas{
 #ifpr{
     width: 330px;
     margin-right: 30px;
+} 
+
+#nit{
+    height: 100px;
 }
