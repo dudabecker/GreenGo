@@ -15,17 +15,19 @@
 
         public function create(EspecieModel $especie){
             try {
-                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, /*imagem,*/ frutifera, toxidade, exotica, raridade, medicinal) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :frutifera, :toxidade, :descricao, :raridade, :medicinal)";
+                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, imagem, pontoEsp/*, frutifera, toxidade, exotica, raridade, medicinal, comestivel*/) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :pontoEsp/*, :frutifera, :toxidade, :raridade, :medicinal, :comestivel*/)";
                 $prepare = $this->conn->prepare($query);
                 $prepare->bindValue(":nomePop", $especie->getNomePop());
                 $prepare->bindValue(":nomeCie", $especie->getNomeCie());
                 $prepare->bindValue(":descricao", $especie->getDescricao());
-                //$prepare->bindValue(":imagem", $especie->getImagem());
-                $prepare->bindValue(":frutifera", $especie->getFrutifera());
+                $prepare->bindValue(":imagem", $especie->getImagem());
+                $prepare->bindValue(":pontoEsp", $especie->getPontoEsp());
+                /*$prepare->bindValue(":frutifera", $especie->getFrutifera());
                 $prepare->bindValue(":toxidade", $especie->getToxidade());
                 $prepare->bindValue(":exotica", $especie->getExotica());
                 $prepare->bindValue(":raridade", $especie->getRaridade());
                 $prepare->bindValue(":medicinal",$especie->getMedicinal());
+                $prepare->bindValue(":comestivel",$especie->getComestivel());*/
                 print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
@@ -57,7 +59,7 @@
         }
 
         public function update(EspecieModel $especie) : bool {
-            $query = "UPDATE especie SET nomePop = ?, nomeCie = ?, descricao = ?, frutifera = ?, toxidade = ?, exotica = ?, raridade = ?, medicinal = ? WHERE idEspecie = ?";
+            $query = "UPDATE especie SET nomePop = ?, nomeCie = ?, descricao = ?, frutifera = ?, toxidade = ?, exotica = ?, raridade = ?, medicinal = ?, comestivel = ?, pontoEsp = ?, imagem = ? WHERE idEspecie = ?";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(1, $especie->getNomePop());
             $prepare->bindValue(2, $especie->getNomeCie());
@@ -67,7 +69,10 @@
             $prepare->bindValue(6, $especie->getExotica());
             $prepare->bindValue(7, $especie->getRaridade());
             $prepare->bindValue(8, $especie->getMedicinal());
-            $prepare->bindValue(9, $especie->getIdEspecie());
+            $prepare->bindValue(9, $especie->getComestivel());
+            $prepare->bindValue(10, $especie->getPontoEsp());
+            $prepare->bindValue(11, $especie->getImagem());
+            $prepare->bindValue(12, $especie->getIdEspecie());
             $result = $prepare->execute();
             //$result = $prepare->rowCount();
             //var_dump($result);
