@@ -7,8 +7,8 @@
     --rosinha: #f0b6bc;
 
     font-family: Poppins-regular, Roboto;
-
 }
+
 @font-face {
     font-family: 'Cooper';
     src: url('../fontes/cooperhewitt-heavy.otf');
@@ -18,23 +18,19 @@
     font-family: 'Poppins';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../fontes/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
 
-
-
-
-
-
-
-#formtexto{
+#formtexto {
     width: 500px;
     background-color: #F0B6BC;
     height: 47px;
@@ -46,14 +42,16 @@
     margin-top: -5px;
     border-color: #f0b6bc;
     position: relative;
-    
+
 }
-#texto{
+
+#texto {
     color: #338A5F;
     font-family: Poppins-semibold;
-    
+
 }
-#caixinha-cad{
+
+#caixinha-cad {
     width: 250px;
     height: 45px;
     border-radius: 0%;
@@ -65,7 +63,7 @@
     margin: 0 auto;
 }
 
-#h1{
+#h1 {
     color: #338A5F;
     font-family: Poppins;
     margin-top: 110px;
@@ -74,17 +72,19 @@
     position: relative;
 }
 
-#texto-caixinhas{
+#texto-caixinhas {
     color: #338A5F;
     font-family: Poppins-semibold;
 }
-#senha-cadastro{
+
+#senha-cadastro {
     margin-top: -20px;
     font-size: 13px;
     margin-left: 15px;
     margin-bottom: 20px;
 }
-#botaocadastro{
+
+#botaocadastro {
     color: #ebf0f1;
     background-color: #338A5F;
     border-radius: 5px;
@@ -92,50 +92,57 @@
     width: 160px;
     font-family: Poppins-semibold;
     font-size: 20px;
-   
+
 }
-#jatemumaconta{
+
+#jatemumaconta {
     margin-left: 90px;
     color: #04574d;
     position: relative;
 }
-#entrar{
+
+#entrar {
     color: #04574d;
     cursor: pointer;
     font-family: Poppins-semibold;
 }
 
-#imagemcentrocad{
+#imagemcentrocad {
     text-align: right;
     display: inline-box;
     margin-left: 50%;
     position: absolute;
     background-color: #338a5f;
     height: 785px;
-    
 
 }
-#comece{
+
+#comece {
     text-align: right;
     background-color: #338a5f;
-   position: relative;
-  
-   
+    position: relative;
+
 }
-body{
+
+body {
     background-image: linear-gradient(to right, #ebf0f1 0, #ebf0f1 56%, #338a5f 44%);
+}
 
+a:hover{
+    text-decoration: none;
 
 }
-#pp{
+
+#pp {
     font-family: Poppins;
     color: #ebf0f1;
     font-size: 36px;
     margin-top: -50px;
 }
-#icon{
+
+#icon {
     margin-top: -60px;
     margin-left: 10px;
-   
+
     position: relative;
 }
