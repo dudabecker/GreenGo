@@ -21,24 +21,27 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-	include_once __DIR__ . "/../helpers/mensagem.php";
+	//include_once __DIR__ . "/../helpers/mensagem.php";
 	//$caminho = __DIR__ . "/../helpers/mensagem.php";
 	//print_r($caminho); 
 ?>
     
-    <h1>Plantas</h1>
+    <h1>Espécies</h1>
     <ul>
         <?php foreach($data['especies'] as $especie): ?>
 
             <li>
-                <?= $especie['idEspecie'] ?> - 
-                <?= $especie['nomePop'] ?> - 
-                <?= $especie['nomeCie'] ?> - 
-                <?= $especie['frutifera'] ?> - 
-                <?= $especie['toxidade'] ?> - 
-                <?= $especie['comestivel'] ?> - 
-                <?= $especie['raridade'] ?> - 
-                <?= $especie['medicinal'] ?> - 
+                Imagem: <?= $especie['imagem'] ?><br>
+                Identificação Espécie: <?= $especie['idEspecie'] ?><br>
+                Nome Popular: <?= $especie['nomePop'] ?><br>
+                Nome Cientifico: <?= $especie['nomeCie'] ?><br>
+                Pontos: <?= $especie['pontoEsp'] ?><br>
+                Frutifera: <?= $especie['frutifera'] ?><br>
+                Tóxica: <?= $especie['toxidade'] ?><br>
+                Comestível: <?= $especie['comestivel'] ?><br>
+                Exótica: <?= $especie['exotica'] ?><br>
+                Rara: <?= $especie['raridade'] ?><br>
+                Medicinal: <?= $especie['medicinal'] ?><br><br>
                 [ <a href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a> ] 
                 [ <a href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a> ]
             </li>             
