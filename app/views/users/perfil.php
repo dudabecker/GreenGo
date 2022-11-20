@@ -80,10 +80,26 @@
             O e-mail cadastrado é <b><?= $user->getEmail() ?></b> e minha senha é um <b>segredo</b>.
         </p>
 
-        <button action='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>' method="get" class="editar">Editar</button>
+        <div class="row justify-content-md-left">
+            <div class="row">
+                <!--EDITAR-->
+                <div class="col">
+                    <button action='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>' method="get" class="editar">Editar</button>
+                </div>
+
+                <!--ENCERRAR-->
+                <div class="col">
+                    <button action='../controllers/userController.php?action=exit&id=<?= $user->getId() ?>' method="get" class="sair">Sair da conta</button>
+                </div>
+
+                <!--EXCLUIR-->
+                <div class="col">
+                    <button action='../controllers/userController.php?action=delete&id=<?= $user->getId() ?>' method="get" class="excluir">Excluir a conta</button>
+                </div>
+            </div>
+        </div>
 
     </div>
-
 </body>
 
 </html>

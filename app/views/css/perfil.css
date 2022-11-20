@@ -34,7 +34,7 @@
 
 header,
 .navbar {
-    background-color: #ebf0f1;
+    background-color: var(--branco);
 
 }
 
@@ -43,7 +43,7 @@ header,
     padding-bottom: 0;
     margin-top: 0%;
 
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
 
 #logo {
@@ -53,7 +53,7 @@ header,
 
 #botaoentrar {
     font-weight: 700;
-    color: #ebf0f1;
+    color: var(--branco);
     cursor: pointer;
 
 }
@@ -87,7 +87,7 @@ header,
 }
 
 #navbar-links a {
-    color: #338A5F;
+    color: var(--principal);
     cursor: pointer;
     height: min-content;
     font-family: Poppins-regular;
@@ -103,7 +103,7 @@ header,
 }
 
 body {
-    background-color: #ebf0f1;
+    background-color: var(--branco);
     color: var(--verdao);
 }
 
@@ -128,11 +128,34 @@ p{
 }
 
 button.editar{
-    color: #ebf0f1;
-    background-color: #338A5F;
+    color: var(--branco);
+    background-color: var(--principal);
+    border: none;
     border-radius: 5px;
     height: 50px;
     width: 160px;
     font-family: Poppins-semibold;
     font-size: 20px;
+}
+
+button.sair{
+    color: var(--principal);
+    background-color: transparent;
+    border: solid 2px var(--principal) ;
+    border-radius: 5px;
+    height: 50px;
+    width: 160px;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+button.excluir{
+    color: var(--principal);
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 10px;
+
 }
