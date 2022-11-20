@@ -58,9 +58,12 @@ class ControllerEspecie{
     private function create(){
         $especie = new EspecieModel();
 
+        $especie->setImagem($_POST["imagem"]);
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
+        $especie->setImagem($_POST["imagem"]);
+        $especie->setPontoEsp($_POST["pontoEsp"]);
         
         if(isset($_POST["frutifera"])){
             $especie->setFrutifera($_POST["frutifera"]);
@@ -90,6 +93,12 @@ class ControllerEspecie{
             $especie->setMedicinal($_POST["medicinal"]);
         } else{ 
             $especie->setMedicinal(0);
+        }
+
+        if(isset($_POST["comestivel"])){
+            $especie->setComestivel($_POST["comestivel"]);
+        } else{ 
+            $especie->setComestivel(0);
         }
 
         $id = $this->especieRepository->create($especie);
@@ -162,6 +171,8 @@ class ControllerEspecie{
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
+        $especie->setImagem($_POST["imagem"]);
+        $especie->setPontoEsp($_POST["pontoEsp"]);
 		
         if(isset($_POST["frutifera"])){
             $especie->setFrutifera($_POST["frutifera"]);
@@ -191,6 +202,12 @@ class ControllerEspecie{
             $especie->setMedicinal($_POST["medicinal"]);
         } else{ 
             $especie->setMedicinal(0);
+        }
+
+        if(isset($_POST["comestivel"])){
+            $especie->setComestivel($_POST["comestivel"]);
+        } else{ 
+            $especie->setComestivel(0);
         }
 
         //print_r($especie);
