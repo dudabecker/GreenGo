@@ -15,11 +15,12 @@
 
         public function create(PlantaModel $planta){
             try {
-                $query = "INSERT INTO planta (idZona, codNumerico, codQR) VALUES (:idZona, :codNumerico, :codQR)";
+                $query = "INSERT INTO planta (idEspecie, idZona, codNumerico, codQR) VALUES (:idEspecie, :idZona, :codNumerico, :codQR)";
                 $prepare = $this->conn->prepare($query);
+                $prepare->bindValue(":idEspecie", $planta->getIdEspecie());
                 $prepare->bindValue(":idZona", $planta->getIdZona());
                 $prepare->bindValue(":codNumerico", $planta->getCodNumerico());
-                $prepare->bindValue(":codQR", $especie->getCodQR());
+                $prepare->bindValue(":codQR", $planta->getCodQR());
                 print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
@@ -51,21 +52,26 @@
         }
 
         public function update(PlantaModel $planta) : bool {
-            $query = "UPDATE planta SET idZona = ?, codNumerico = ?, codQR = ? WHERE idPlanta = ?";
+            $query = "UPDATE planta SET idEspecie = ?, idZona = ?, codNumerico = ?, codQR = ? WHERE idPlanta = ?";
             $prepare = $this->conn->prepare($query);
-            $prepare->bindValue(1, $planta->getIdZona());
-            $prepare->bindValue(2, $planta->getCodNumerico());
-            $prepare->bindValue(3, $planta->getCodQR());
+            $prepare->bindValue(1, $planta->getIdEspecie());
+            $prepare->bindValue(2, $planta->getIdZona());
+            $prepare->bindValue(3, $planta->getCodNumerico());
+            $prepare->bindValue(4, $planta->getCodQR());
+            $prepare->bindValue(5, $planta->getIdPlanta());
             $result = $prepare->execute();
+            //$result = $prepare->rowCount();
+            //var_dump($result);
             return $result;
         }
 
-        public function deletePlantaById( int $idPlanta) : int {
+        public function deletePlantaById(int $idPlanta) : int {
             $query = "DELETE FROM planta WHERE idPlanta = :idPlanta";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":idPlanta", $idPlanta);
             $prepare->execute();
             $result = $prepare->rowCount();
+            //var_dump($result);
             return $result;
         }
 
