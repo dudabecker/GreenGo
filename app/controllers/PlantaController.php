@@ -13,7 +13,7 @@ class ControllerPlanta{
 
     public $plantaRepository;
 	function __construct(){
-        $this->especieRepository = new PlantaRepository();
+        $this->plantaRepository = new PlantaRepository();
 		if(isset($_POST["action"])){
 			$action = $_POST["action"];
 		}else if(isset($_GET["action"])){
@@ -25,6 +25,7 @@ class ControllerPlanta{
 		}else{
 			$msg = "Nenhuma acao a ser processada...";
             print_r($msg);
+			//include_once "index.php";
 		}
 	}
 
@@ -53,6 +54,7 @@ class ControllerPlanta{
     private function create(){
         $planta = new PlantaModel();
 
+        $planta->setIdEspecie($_POST["idEspecie"]);
 		$planta->setIdZona($_POST["idZona"]);
 		$planta->setCodNumerico($_POST["codNumerico"]);
         $planta->setCodQR($_POST["codQR"]);
@@ -69,19 +71,18 @@ class ControllerPlanta{
     }
 
     private function loadFormNew(){
-        $this->loadView("plantas/formCadastroPlantas.php", null,"teste");
+        $this->loadView("plantas/formCadastroPlanta.php", null,"teste");
     }    
 
     private function findAll(string $msg = null){
 
         $plantas = $this->plantaRepository->findAll();
 
-        $data['titulo'] = "listar plantas";
+        $data['titulo'] = "Listar Plantas";
         $data['plantas'] = $plantas;
 
         $this->loadView("plantas/listPlantas.php", $data, $msg);
     }
-
 
     private function findPlantaById(){
         $idParam = $_GET["idPlanta"];
@@ -102,7 +103,7 @@ class ControllerPlanta{
     }
 
     private function deletePlantaById(){
-        $idParam = $_GET["idPlanta"];
+        $idParam = $_GET['idPlanta'];
         $qt = $this->plantaRepository->deletePlantaById($idParam);
         if($qt){
 			$msg = "Registro excluído com sucesso.";
@@ -117,17 +118,18 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->findPlantaById($idParam);
         $data['plantas'][0] = $planta;
 
-        $this->loadView("plantas/formEditarPlanta.php", $data);
+        $this->loadView("plantas/formEditPlantas.php", $data);
     }
 
     private function update(){
         $planta = new PlantaModel();
 
 		$planta->setIdPlanta($_GET["idPlanta"]);
+		$planta->setIdEspecie($_POST["idEspecie"]);
 		$planta->setIdZona($_POST["idZona"]);
-		$planta->setCodNumerico($_POST["codNumerico"]);
+        $planta->setCodNumerico($_POST["codNumerico"]);
         $planta->setCodQR($_POST["codQR"]);
-		
+        
         $atualizou = $this->plantaRepository->update($planta);
         
         if($atualizou){
