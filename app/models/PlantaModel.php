@@ -2,9 +2,11 @@
 class PlantaModel{
 	private $idPlanta;
 	private $idZona;
+	private $idEspecie;
 	private $codNumerico;
 	private $codQR;
 	
+
 	public function getIdZona()
 	{
 		return $this->idZona;
@@ -17,6 +19,17 @@ class PlantaModel{
 		return $this;
 	}
 
+	public function getIdEspecie()
+	{
+		return $this->idEspecie;
+	}
+
+	public function setIdEspecie($idEspecie)
+	{
+		$this->idEspecie = $idEspecie;
+
+		return $this;
+	}
 	public function getCodQR()
 	{
 		return $this->codQR;
