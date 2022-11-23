@@ -1,0 +1,155 @@
+:root {
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque: #f58c95;
+    --rosinha: #f0b6bc;
+
+    font: Poppins-regular, Roboto;
+
+
+}
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fontes/cooperhewitt-heavy.otf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../fontes/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('../fontes/Poppins-SemiBold.ttf');
+}
+
+
+header,
+.navbar {
+    background-color: var(--branco);
+
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0%;
+
+    background-color: var(--principal);
+}
+
+#logo {
+    width: 75px;
+
+}
+
+#botaoentrar {
+    font-weight: 700;
+    color: var(--branco);
+    cursor: pointer;
+
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+    font-size: 5px;
+
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    height: min-content;
+
+}
+
+
+#navbar-links {
+    font-weight: 5;
+}
+
+#menu {
+    margin: 0 auto;
+}
+
+#navbar-links a {
+    color: var(--principal);
+    cursor: pointer;
+    height: min-content;
+    font-family: Poppins-regular;
+    margin-left: 35px;
+    font-size: 20px;
+    padding: 1rem .8rem;
+    text-align: right;
+
+}
+
+.img-responsive {
+    width: 130px;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--verdao);
+}
+
+.titulo{
+    color: var(--principal);
+    font-family: Poppins;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+p{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+button.editar{
+    color: var(--branco);
+    background-color: var(--principal);
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 160px;
+    font-family: Poppins-semibold;
+    font-size: 20px;
+}
+
+button.sair{
+    color: var(--principal);
+    background-color: transparent;
+    border: solid 2px var(--principal) ;
+    border-radius: 5px;
+    height: 50px;
+    width: 160px;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+button.excluir{
+    color: var(--principal);
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 10px;
+
+}
