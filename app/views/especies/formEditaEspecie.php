@@ -26,7 +26,7 @@
 		Imagem: <input type="text" name="imagem" value="<?= $especie->getImagem(); ?>">
 		<br><br>
 
-		Atributos Especiais: <br>
+		Atributos Especiais: <br>  <!--<? if($especie->getFrutifera() == 1){echo 'checked';} ?>-->
 		Frutifera: <input type="checkbox" name="frutifera" value="<?= $especie->getFrutifera(); ?>">
 		<br>
 		Tóxica: <input type="checkbox" name="toxidade" value="<?= $especie->getToxidade(); ?>">

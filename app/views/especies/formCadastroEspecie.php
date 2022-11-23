@@ -9,12 +9,13 @@
 <body>
 <h2>Cadastro de especies</h2>
 <form action="./EspecieController.php?action=create" method="POST">
+	Imagem: <input type="text" name="imagem">
+	<br>
 	Nome Popular: <input type="text" name="nomePop">
 	<br>
 	Nome Cientifico: <input type="text" name="nomeCie">
 	<br>
 	Descrição: <input type="text" name="descricao">
-	Imagem: <input type="text" name="imagem">
 	<br>
 	Ponto Especie: <input type="number" name="pontoEsp"> 
 	<br>
