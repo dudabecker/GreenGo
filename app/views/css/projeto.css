@@ -34,7 +34,7 @@
 
 header,
 .navbar {
-    background-color: #ebf0f1;
+    background-color: var(--branco);
 
 }
 
@@ -43,7 +43,7 @@ header,
     padding-bottom: 0;
     margin-top: 0%;
 
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
 
 #logo {
@@ -53,7 +53,7 @@ header,
 
 #botaoentrar {
     font-weight: 700;
-    color: #ebf0f1;
+    color: var(--branco);
     cursor: pointer;
 
 }
@@ -87,7 +87,7 @@ header,
 }
 
 #navbar-links a {
-    color: #338A5F;
+    color: var(--principal);
     cursor: pointer;
     height: min-content;
     font-family: Poppins-regular;
@@ -103,12 +103,12 @@ header,
 }
 
 body {
-    background-color: #ebf0f1;
+    background-color: var(--branco);
     color: var(--verdao);
 }
 
 .titulo{
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
     font-size: 60px;
@@ -128,7 +128,7 @@ p{
 }
 
 .subtitulo{
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
     font-size: 40px;

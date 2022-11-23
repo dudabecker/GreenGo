@@ -48,7 +48,7 @@ li {
 /*Barra de navegação*/
 header,
 .navbar {
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
 
 #nav-container {
@@ -56,7 +56,7 @@ header,
     padding-bottom: 0;
 
 
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
 
 #logo {
@@ -114,7 +114,7 @@ header,
     text-align: center;
     margin-top: 150px;
     font-family: Cooper;
-    color: #ebf0f1;
+    color: var(--principal);
 }
 
 #about-area p {
@@ -131,12 +131,12 @@ header,
 }
 
 #botao-mapa h3 {
-    background: #EBF0F1;
+    background: var(--branco);
     width: 90px;
     height: 30px;
     cursor: pointer;
     font-family: sans-serif;
-    color: #f58c95;
+    color: var(--destaque);
     border-radius: 20%;
     padding: 0%;
     text-decoration: none;
@@ -149,13 +149,13 @@ header,
 
 button {
     border-radius: 10px;
-    border-color: #EBF0F1
+    border-color: var(--branco)
 }
 
 
 #botoes h3 {
-    background: #f58c95;
-    color: #EBF0F1;
+    background: var(--destaque);
+    color: var(--branco);
     cursor: pointer;
     font-family: Roboto;
     font-size: 17px;
@@ -166,8 +166,8 @@ button {
 
 #botoes button {
     border-radius: 10px;
-    border-color: #f58c95;
-    background-color: #f58c95;
+    border-color: var(--destaque);
+    background-color: var(--destaque);
 
 
 }
@@ -181,14 +181,14 @@ button {
 #about-areafim h1 {
     font-family: Poppins;
     font-size: 70px;
-    color: #EBF0F1;
+    color: var(--branco);
 
 }
 
 #about-areafim h2 {
     font-family: Poppins;
     font-size: 40px;
-    color: #EBF0F1;
+    color: var(--branco);
 }
 
 #card {
@@ -202,7 +202,7 @@ button {
 
 
 #fundoindex {
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
 
 .card-group {
@@ -217,7 +217,7 @@ button {
 }
 
 #parte h5 {
-    color: #EBF0F1;
+    color: var(--principal);
     size: 55px;
     font-family: Poppins;
     margin-left: 15px;
@@ -225,7 +225,7 @@ button {
 }
 
 #finalhome {
-    background-color: #338A5F;
+    background-color: var(--principal);
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -237,7 +237,7 @@ button {
 }
 
 #segundacolunaindex h5 {
-    color: #EBF0F1;
+    color: var(--branco);
     size: 55px;
     font-family: Poppins;
 
@@ -245,7 +245,7 @@ button {
 }
 
 #rodapezinho {
-    background-color: #EBF0F1;
+    background-color: var(--branco);
 }
 
 #primeirotextoindex {
@@ -256,9 +256,9 @@ button {
 
 #dropdownMenuButton {
     margin-top: 200px;
-    background-color: #103D37;
+    background-color: var(--verdao);
     text-decoration: none;
-    color: (--verdao);
+    color: var(--verdao);
     width: 230px;
     height: 93px;
     border-radius: 10px;
@@ -294,7 +294,7 @@ button {
 
 #mapa-home h1 {
     font-family: Poppins;
-    color: #EBF0F1;
+    color: var(--branco);
     text-align: center;
 }
 
@@ -324,7 +324,7 @@ button {
 
 #desenvolvedoras-home h3 {
     font-family: Poppins;
-    color: #EBF0F1;
+    color: var(--branco);
     text-align: center;
     margin-bottom: 185px;
 
@@ -337,7 +337,7 @@ button {
 
 #parte h3 {
     font-family: Poppins-semibold;
-    color: #EBF0F1;
+    color: var(--branco);
     text-align: center;
     margin-top: 150px;
     margin-bottom: 60px;
@@ -372,7 +372,7 @@ button {
     opacity: 1;
     cursor: pointer;
     border: none;
-    color: #103D37;
+    color: var(--verdao);
 }
 
 .arrow-left:hover,
@@ -418,7 +418,7 @@ button {
 }
 
 #indexinteiro {
-    background-color: #338A5F;
+    background-color: var(--principal);
 }
 
 #imggrengo {
