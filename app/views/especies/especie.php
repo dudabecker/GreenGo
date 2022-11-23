@@ -1,10 +1,14 @@
+<?php foreach ($data['especies'] as $especie): ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Especies</title>
+    <title><?= $user->getUsername() ?></title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -13,7 +17,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../views/css/especie.css">
+    <link rel="stylesheet" href="../views/css/perfil.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -40,7 +44,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/icone 3.svg" alt="">
+                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -66,40 +70,34 @@
 <body>
     <div class="container">
         <h2 class="titulo">
-            Espécies
+            <?= $especie['nomePop'] ?>
         </h2>
 
-        <?php foreach($data['especies'] as $especie): ?>
 
         <p>
-            Imagem: <?= $especie['imagem'] ?><br>
-            Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-            Nome Popular: <?= $especie['nomePop'] ?><br>
-            Nome Cientifico: <?= $especie['nomeCie'] ?><br>
-            Pontos: <?= $especie['pontoEsp'] ?><br>
-            Frutifera: <?= $especie['frutifera'] ?><br>
-            Tóxica: <?= $especie['toxidade'] ?><br>
-            Comestível: <?= $especie['comestivel'] ?><br>
-            Exótica: <?= $especie['exotica'] ?><br>
-            Rara: <?= $especie['raridade'] ?><br>
-            Medicinal: <?= $especie['medicinal'] ?><br><br>
-            [ <a href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a> ]
-            [ <a href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a> ]
-            [ <a href="./EspecieController.php?action=loadFormNew">Cadastrar novo</a> ]
+            Meu nome aqui é <b><?= $user->getUsername() ?></b>
+            , meu gênero é <b> <?= genero($user); ?> </b> 
+            e estou no <b><?= $user->getEscolaridade() ?></b>.
+            <br><br>
+            O e-mail cadastrado é <b><?= $user->getEmail() ?></b> e minha senha é um <b>segredo</b>.
         </p>
 
         <div class="row justify-content-md-left">
             <div class="row">
                 <!--EDITAR-->
                 <div class="col">
-                    <button action='./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>' method="get" class="editar">Editar</button>
+                    <button action='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>' method="get" class="editar">Editar</button>
+                </div>
+
+                <!--ENCERRAR-->
+                <div class="col">
+                    <button action='../controllers/userController.php?action=exit&id=<?= $user->getId() ?>' method="get" class="sair">Sair da conta</button>
                 </div>
 
                 <!--EXCLUIR-->
                 <div class="col">
-                    <button action='./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>' method="get" class="excluir">Deletar</button>
+                    <button action='../controllers/userController.php?action=delete&id=<?= $user->getId() ?>' method="get" class="excluir">Excluir a conta</button>
                 </div>
-
             </div>
         </div>
 
@@ -107,5 +105,3 @@
 </body>
 
 </html>
-
-<?php endforeach; ?>
