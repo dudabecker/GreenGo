@@ -15,19 +15,19 @@
 
         public function create(EspecieModel $especie){
             try {
-                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, imagem, pontoEsp/*, frutifera, toxidade, exotica, raridade, medicinal, comestivel*/) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :pontoEsp/*, :frutifera, :toxidade, :raridade, :medicinal, :comestivel*/)";
+                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, imagem, pontoEsp, frutifera, toxidade, exotica, raridade, medicinal, comestivel) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :pontoEsp, :frutifera, :toxidade, :raridade, :medicinal, :comestivel)";
                 $prepare = $this->conn->prepare($query);
                 $prepare->bindValue(":nomePop", $especie->getNomePop());
                 $prepare->bindValue(":nomeCie", $especie->getNomeCie());
                 $prepare->bindValue(":descricao", $especie->getDescricao());
                 $prepare->bindValue(":imagem", $especie->getImagem());
                 $prepare->bindValue(":pontoEsp", $especie->getPontoEsp());
-                /*$prepare->bindValue(":frutifera", $especie->getFrutifera());
+                $prepare->bindValue(":frutifera", $especie->getFrutifera());
                 $prepare->bindValue(":toxidade", $especie->getToxidade());
                 $prepare->bindValue(":exotica", $especie->getExotica());
                 $prepare->bindValue(":raridade", $especie->getRaridade());
                 $prepare->bindValue(":medicinal",$especie->getMedicinal());
-                $prepare->bindValue(":comestivel",$especie->getComestivel());*/
+                $prepare->bindValue(":comestivel",$especie->getComestivel());
                 print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
