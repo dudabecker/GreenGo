@@ -40,7 +40,7 @@
 
 <body id="fundocadastro">
 
-  <form>
+  <form method="post" action="../controllers/UserController.php?action=create">
     <div class="form-group">
       <div class="row">
         <div class="col-sm">
@@ -60,7 +60,7 @@
 
                     <label for="formtexto" id="texto">nome</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro" name="field_nome">
                   </div>
                 </div>
               </div>
@@ -71,7 +71,7 @@
 
                     <label for="formtexto" id="texto">email</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro">
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro" name= "field_email">
                   </div>
                 </div>
 
@@ -83,7 +83,7 @@
 
                     <label for="formtexto" id="texto">senha</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="senha-cadastro">
+                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro" name= "field_password">
                     <div class="w-100"></div>
                     <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
                   </div>
@@ -95,7 +95,7 @@
                   <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
                   <br>
                   <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                  <select class="custom-select mr-sm-2" id="caixinha-cad">
+                  <select name= "field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
                     <option selected></option>
                     <option value="feminino">feminino</option>
                     <option value="masculino">masculino</option>
@@ -107,12 +107,14 @@
                 <div class="col-auto my-1">
                   <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
                   <br>
-                  <select class="custom-select mr-sm-2" id="caixinha-cad">
-                    <option selected></option>
-                    <option value="ensino fundamental 1"> ensino fundamental 1 </option>
-                    <option value="ensino fundamental 2"> ensino fundamental 2 </option>
-                    <option value="ensino medio"> ensino médio </option>
-                    <option value="ensino superior"> ensino superior </option>
+                  <select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+                            <option selected></option>
+                            <option value="6° Ano (EF II)"> 6° Ano (EF II) </option>
+                            <option value=" 7° Ano (EF II)"> 7° Ano (EF II)</option>
+                            <option value=" 8° Ano (EF II)" > 8° Ano (EF II) </option>
+                            <option value=" 9° Ano (EF II)"> 9° Ano (EF II) </option>
+                            <option value="ensino medio">ensino medio</option>
+                            <option value="ensino superior">ensino superior</option>
                   </select>
                 </div>
 
