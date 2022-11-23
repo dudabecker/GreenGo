@@ -62,41 +62,42 @@ class ControllerEspecie{
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
-        $especie->setImagem($_POST["imagem"]);
+        //$especie->setImagem($_POST["imagem"]);
         $especie->setPontoEsp($_POST["pontoEsp"]);
         
+        print_r($_POST["frutifera"]);
         if(isset($_POST["frutifera"])){
-            $especie->setFrutifera($_POST["frutifera"]);
+            $especie->setFrutifera(1);
         } else{ 
             $especie->setFrutifera(0);
         }
-		
+        
         if(isset($_POST["toxidade"])){
-            $especie->setToxidade($_POST["toxidade"]);
+            $especie->setToxidade(1);
         } else{ 
             $especie->setToxidade(0);
         }
 
         if(isset($_POST["exotica"])){
-            $especie->setExotica($_POST["exotica"]);
+            $especie->setExotica(1);
         } else{ 
             $especie->setExotica(0);
         }
     
         if(isset($_POST["raridade"])){
-            $especie->setRaridade($_POST["raridade"]);
+            $especie->setRaridade(1);
         } else{ 
             $especie->setRaridade(0);
         }
     
         if(isset($_POST["medicinal"])){
-            $especie->setMedicinal($_POST["medicinal"]);
+            $especie->setMedicinal(1);
         } else{ 
             $especie->setMedicinal(0);
         }
 
         if(isset($_POST["comestivel"])){
-            $especie->setComestivel($_POST["comestivel"]);
+            $especie->setComestivel(1);
         } else{ 
             $especie->setComestivel(0);
         }
@@ -175,37 +176,37 @@ class ControllerEspecie{
         $especie->setPontoEsp($_POST["pontoEsp"]);
 		
         if(isset($_POST["frutifera"])){
-            $especie->setFrutifera($_POST["frutifera"]);
+            $especie->setFrutifera(1);
         } else{ 
             $especie->setFrutifera(0);
         }
 		
         if(isset($_POST["toxidade"])){
-            $especie->setToxidade($_POST["toxidade"]);
+            $especie->setToxidade(1);
         } else{ 
             $especie->setToxidade(0);
         }
 
         if(isset($_POST["exotica"])){
-            $especie->setExotica($_POST["exotica"]);
+            $especie->setExotica(1);
         } else{ 
             $especie->setExotica(0);
         }
     
         if(isset($_POST["raridade"])){
-            $especie->setRaridade($_POST["raridade"]);
+            $especie->setRaridade(1);
         } else{ 
             $especie->setRaridade(0);
         }
     
         if(isset($_POST["medicinal"])){
-            $especie->setMedicinal($_POST["medicinal"]);
+            $especie->setMedicinal(1);
         } else{ 
             $especie->setMedicinal(0);
         }
 
         if(isset($_POST["comestivel"])){
-            $especie->setComestivel($_POST["comestivel"]);
+            $especie->setComestivel(1);
         } else{ 
             $especie->setComestivel(0);
         }
