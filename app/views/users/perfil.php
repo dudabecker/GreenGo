@@ -41,7 +41,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/icone 3.svg" alt="">
+                        <img class="img-responsive" src="../../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
