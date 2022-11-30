@@ -103,7 +103,7 @@ body{
     background-color: var(--branco);
 }
 
-#textoreg{
+#titulo{
     color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
