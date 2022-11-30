@@ -11,7 +11,9 @@ $ccliente = new ControllerEspecie();
 
 class ControllerEspecie{
 
+    public $especieRepository;
 	function __construct(){
+        $this->especieRepository = new EspecieRepository();
 		if(isset($_POST["action"])){
 			$action = $_POST["action"];
 		}else if(isset($_GET["action"])){
@@ -56,41 +58,51 @@ class ControllerEspecie{
     private function create(){
         $especie = new EspecieModel();
 
+        $especie->setImagem($_POST["imagem"]);
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
+        $especie->setDescricao($_POST["descricao"]);
+        //$especie->setImagem($_POST["imagem"]);
+        $especie->setPontoEsp($_POST["pontoEsp"]);
         
+        print_r($_POST["frutifera"]);
         if(isset($_POST["frutifera"])){
-            $especie->setFrutifera($_POST["frutifera"]);
+            $especie->setFrutifera(1);
         } else{ 
             $especie->setFrutifera(0);
         }
-		
+        
         if(isset($_POST["toxidade"])){
-            $especie->setToxidade($_POST["toxidade"]);
+            $especie->setToxidade(1);
         } else{ 
             $especie->setToxidade(0);
         }
 
-        if(isset($_POST["comestivel"])){
-            $especie->setComestivel($_POST["comestivel"]);
+        if(isset($_POST["exotica"])){
+            $especie->setExotica(1);
         } else{ 
-            $especie->setComestivel(0);
+            $especie->setExotica(0);
         }
     
         if(isset($_POST["raridade"])){
-            $especie->setRaridade($_POST["raridade"]);
+            $especie->setRaridade(1);
         } else{ 
             $especie->setRaridade(0);
         }
     
         if(isset($_POST["medicinal"])){
-            $especie->setMedicinal($_POST["medicinal"]);
+            $especie->setMedicinal(1);
         } else{ 
             $especie->setMedicinal(0);
         }
 
-        $especieRepository = new EspecieRepository();
-        $id = $especieRepository->create($especie);
+        if(isset($_POST["comestivel"])){
+            $especie->setComestivel(1);
+        } else{ 
+            $especie->setComestivel(0);
+        }
+
+        $id = $this->especieRepository->create($especie);
 
         if($id){
 			$msg = "Registro inserido com sucesso.";
@@ -106,9 +118,8 @@ class ControllerEspecie{
     }    
 
     private function findAll(string $msg = null){
-        $especieRepository = new EspecieRepository();
 
-        $especies = $especieRepository->findAll();
+        $especies = $this->especieRepository->findAll();
 
         $data['titulo'] = "listar especies";
         $data['especies'] = $especies;
@@ -116,22 +127,28 @@ class ControllerEspecie{
         $this->loadView("especies/list.php", $data, $msg);
     }
 
-    private function findEspecieById(){
-        $idParam = $_GET['idEspecie'];
 
-        $especieRepository = new EspecieRepository();
-        $especie = $especieRepository->findEspecieById($idParam);
+    private function findEspecieById(){
+        $idParam = $_GET["idEspecie"];
+
+        $especie = $this->especieRepository->findEspecieById($idParam);
 
         print "<pre>";
         print_r($especie);
         print "</pre>";
     }
 
+    private function verEspecie(){
+        $idParam = $_GET["idEspecie"];
+        $especie = $this->especieRepository->findEspecieById($idParam);
+        $data['especies'][0] = $especie;
+
+        $this->loadView("especies/verEspecie.php", $data);
+    }
+
     private function deleteEspecieById(){
         $idParam = $_GET["idEspecie"];
-        $especieRepository = new EspecieRepository();    
-
-        $qt = $especieRepository->deleteEspecieById($idParam);
+        $qt = $this->especieRepository->deleteEspecieById($idParam);
         if($qt){
 			$msg = "Registro excluído com sucesso.";
 		}else{
@@ -142,8 +159,7 @@ class ControllerEspecie{
 
     private function edit(){
         $idParam = $_GET['idEspecie'];
-        $especieRepository = new EspecieRepository(); 
-        $especie = $especieRepository->findEspecieById($idParam);
+        $especie = $this->especieRepository->findEspecieById($idParam);
         $data['especies'][0] = $especie;
 
         $this->loadView("especies/formEditaEspecie.php", $data);
@@ -155,40 +171,48 @@ class ControllerEspecie{
 		$especie->setIdEspecie($_GET["idEspecie"]);
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
+        $especie->setDescricao($_POST["descricao"]);
+        $especie->setImagem($_POST["imagem"]);
+        $especie->setPontoEsp($_POST["pontoEsp"]);
 		
         if(isset($_POST["frutifera"])){
-            $especie->setFrutifera($_POST["frutifera"]);
+            $especie->setFrutifera(1);
         } else{ 
             $especie->setFrutifera(0);
         }
 		
         if(isset($_POST["toxidade"])){
-            $especie->setToxidade($_POST["toxidade"]);
+            $especie->setToxidade(1);
         } else{ 
             $especie->setToxidade(0);
         }
 
-        if(isset($_POST["comestivel"])){
-            $especie->setComestivel($_POST["comestivel"]);
+        if(isset($_POST["exotica"])){
+            $especie->setExotica(1);
         } else{ 
-            $especie->setComestivel(0);
+            $especie->setExotica(0);
         }
     
         if(isset($_POST["raridade"])){
-            $especie->setRaridade($_POST["raridade"]);
+            $especie->setRaridade(1);
         } else{ 
             $especie->setRaridade(0);
         }
     
         if(isset($_POST["medicinal"])){
-            $especie->setMedicinal($_POST["medicinal"]);
+            $especie->setMedicinal(1);
         } else{ 
             $especie->setMedicinal(0);
         }
 
-        $especieRepository = new EspecieRepository();
+        if(isset($_POST["comestivel"])){
+            $especie->setComestivel(1);
+        } else{ 
+            $especie->setComestivel(0);
+        }
+
         //print_r($especie);
-        $atualizou = $especieRepository->update($especie);
+        $atualizou = $this->especieRepository->update($especie);
         
         if($atualizou){
 			$msg = "Registro atualizado com sucesso.";

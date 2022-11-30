@@ -1,13 +1,17 @@
 <?php
 class EspecieModel{
 	private $idEspecie;
+	private $imagem;
+	private $descricao;
+	private $pontoEsp;
 	private $nomePop;
 	private $nomeCie;
 	private $frutifera;
 	private $toxidade;
-	private $comestivel;
+	private $exotica;
 	private $raridade;
 	private $medicinal;
+	private $comestivel;
 	
 	public function getIdEspecie(): int{
 		return $this->idEspecie;
@@ -17,6 +21,30 @@ class EspecieModel{
 		$this->idEspecie = $idEspecie;
 	}	
 	
+	public function getImagem(): string{
+		return $this->imagem;
+	}
+	
+	public function setImagem(string $img){
+		$this->imagem = $img;
+	}
+
+	public function getDescricao(): string{
+		return $this->descricao;
+	}
+	
+	public function setDescricao(string $des){
+		$this->descricao = $des;
+	}
+
+	public function getPontoEsp(): int{
+		return $this->pontoEsp;
+	}
+	
+	public function setPontoEsp(int $pe){
+		$this->pontoEsp = $pe;
+	}
+
 	public function getNomePop(): string{
 		return $this->nomePop;
 	}
@@ -49,12 +77,12 @@ class EspecieModel{
 		$this->toxidade = $tox;
 	}
 
-	public function getComestivel(): int{
-		return $this->comestivel;
+	public function getExotica(): int{
+		return $this->exotica;
 	}
 	
-	public function setComestivel(int $com){
-		$this->comestivel = $com;
+	public function setExotica(int $exo){
+		$this->exotica = $exo;
 	}
 
 	public function getRaridade(): int{
@@ -71,5 +99,13 @@ class EspecieModel{
 	
 	public function setMedicinal(int $med){
 		$this->medicinal = $med;
+	}
+
+	public function getComestivel(): int{
+		return $this->comestivel;
+	}
+	
+	public function setComestivel(int $com){
+		$this->comestivel = $com;
 	}
 }

@@ -27,11 +27,9 @@
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
-
 header,
 .navbar {
-    background-color: #ebf0f1;
-    
+    background-color: var(--branco);
 }
 
 #nav-container {
@@ -39,51 +37,46 @@ header,
     padding-bottom: 0;
   margin-top: 0%;
    
-    background-color: #338a5f;
+    background-color: var(--principal);
 }
+
 #logo {
     width: 75px;
-
 }
 
 #botaoentrar {
     font-weight: 700;
-    color: #ebf0f1;
+    color: var(--branco);
     cursor: pointer;
-
 }
 
 .navbar-brand {
     padding: 0;
     color: #fff;
     font-size: 5px;
-
 }
 
 .navbar-brand:hover {
     color: #fff;
 }
 
-
-
-
 #navbar-links a:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1);
     height: min-content;
-
 }
-
 
 #navbar-links{
     font-weight: 5;
 }
+
 #menu{
     margin: 0 auto;
 }
+
 #navbar-links a{
-   color: #338A5F;
+   color: var(--principal);
    cursor: pointer;
    height: min-content;
    font-family: Poppins-regular;
@@ -96,20 +89,23 @@ header,
 .img-responsive{
     width: 130px;
 }
+
 body{
-    background-color: #ebf0f1;
+    background-color: var(--branco);
 }
+
 #primeirotextoreg{
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
     font-size: 60px;
     margin-left: 10px;
     margin-bottom: 40px;
 }
+
 #picture__input {
     display: none;
-  }
+}
   
   .picture {
     width: 400px;
@@ -249,12 +245,13 @@ a{
 #texto{
     margin-left: 0% ;
     font-family: Poppins-semibold;
-    color: #338A5F;
+    color: var(--principal);
 }
 
 #caixa-adicione-individuos h4{
    margin-left: 5%;
 }
+
 #caixa-adicione-individuos{
     margin-top: 90px;
 }
@@ -263,38 +260,33 @@ a{
     width: 64px;
     margin-left: 70px;
 }
+
 #form-registro{
     margin-left: 90px;
 }
+
 .form-control{
-   background-color: #F0B6BC;
-   border-radius: 0%;
-   border: none;
-   margin-bottom: 25px;
+   background-color: var(--rosinha);
    height: 45px;
 }
 
 #texto-checkbox{
     font-family: Poppins-regular;
-    color: #04574d;
-
+    color: var(--verdao);
 }
+
 #container-checkbox a{
     font-family: Poppins-semibold;
-    color: #338a5f;
-   
-
+    color: var(--principal);
 }
 
 #form-texto{
     margin-bottom: 40px;
 }
 
-
-
 .chk input {
     display: none;
-    background-color: #04574d;
+    background-color: var(--verdao);
 }
 
 .chk span {
@@ -303,7 +295,7 @@ a{
     display: block;
     
     border: 1px solid #DDD;
-    background-color: #04574d;
+    background-color: var(--verdao);
 }
 
 .chk input:checked + span {
@@ -312,4 +304,21 @@ a{
 
 #indexinteiro{
     margin-right: 0%;
+}
+
+#primeirotextoreg1{
+    color: var(--principal);
+    font-family: Poppins;
+    margin-top: 50px;
+    font-size: 60px;
+    margin-left: 0 auto;
+    margin-bottom: 40px;
+    text-align: left;
+
+}
+
+#cardreg{
+    border-radius: 20px;
+    background-color: var(--branco);
+    border: none;
 }

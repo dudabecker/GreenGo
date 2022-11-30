@@ -1,3 +1,6 @@
+<?php foreach ($data['especies'] as $especie): ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,16 +8,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu perfil</title>
+    <title><?= $user->getUsername() ?></title>
 
     <!--FAVICON-->
-    <link rel="icon" href="../../public/favicon.svg">
+    <link rel="icon" href="../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../views/css/perfil.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -41,7 +44,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                        <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                        <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -67,14 +70,13 @@
 <body>
     <div class="container">
         <h2 class="titulo">
-            Meu perfil
+            <?= $especie['nomePop'] ?>
         </h2>
 
-        <?php foreach ($data['usuarios'] as $user): ?>
 
         <p>
             Meu nome aqui é <b><?= $user->getUsername() ?></b>
-            , meu gênero é <b><?php= genero($user); ?></b> 
+            , meu gênero é <b> <?= genero($user); ?> </b> 
             e estou no <b><?= $user->getEscolaridade() ?></b>.
             <br><br>
             O e-mail cadastrado é <b><?= $user->getEmail() ?></b> e minha senha é um <b>segredo</b>.
@@ -103,15 +105,3 @@
 </body>
 
 </html>
-
-<?php
-function genero($user)
-{
-    if ($user->getUsername() == "outro") {
-        return "indefinido";
-    } else {
-        return $user->getUsername();
-    }
-}
-
-    endforeach; ?>

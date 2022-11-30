@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="../css/registro.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
 
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
-    <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/editorwys.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/script.js"></script>
 
     <style>
@@ -60,7 +60,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                        <img class="img-responsive" src="../../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -73,7 +73,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
                         <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
                         <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        <form action="controllers/EspecieController.php?action=create" method="POST">
+                        <form action="/controllers/EspecieController.php?action=create" method="POST">
                         <div class="container" id="reg1">
                             <div class="row">
                                 <div class="col-sm">
@@ -225,7 +225,7 @@
                     <h4>Adicione individuos</h4>
                     <div class="w-100"></div>
                     <div class="row">
-                        <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
+                        <img class="img-responsive" src="../../public/mais.svg" id="mais-registro">
                     </div>
                     <form id="form-registro">
                         <div class="col-auto my-1">
@@ -246,7 +246,8 @@
                 </div>
             </div>
         </nav>
-</form> <!-- onde seria o fim do form, não sei onde é -->
+                    </form> <!-- onde seria o fim do form, não sei onde é -->
+
         <label class="chk">
             <input type="checkbox" name="exemplo" />
             <span></span>

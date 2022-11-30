@@ -15,7 +15,7 @@
         public function create(UserModel $user):int {
          try {
 
-                $query = "INSERT INTO myusers ( name, genero, escolaridade, email, password) VALUES (:name, :genero, :escolaridade, :email, :password)";
+                $query = "INSERT INTO myuser ( name, genero, escolaridade, email, password) VALUES (:name, :genero, :escolaridade, :email, :password)";
                 $prepare = $this->conn->prepare($query);
                 $prepare->bindValue(":name", $user->getUsername());
                 $prepare->bindValue(":genero", $user->getGenero());
@@ -33,7 +33,7 @@
 
         public function findAll(): array {
 
-            $table = $this->conn->query("SELECT * FROM myusers");
+            $table = $this->conn->query("SELECT * FROM myuser");
             //$usuarios  = $table->fetchAll(PDO::FETCH_ASSOC);
             $usuarios  = $table->fetchAll(PDO::FETCH_CLASS, "UserModel");
 
@@ -42,7 +42,7 @@
 
         public function findUserById(int $id) {
 
-            $query = "SELECT * FROM myusers WHERE myusers.id = ?";
+            $query = "SELECT * FROM myuser WHERE myuser.id = ?";
             
             $prepare = $this->conn->prepare($query);
             $prepare->bindParam(1, $id, PDO::PARAM_INT);
@@ -60,7 +60,7 @@
 
         public function findUserByEmail(string $email) {
 
-            $query = "SELECT * FROM myusers WHERE myusers.email = ?";
+            $query = "SELECT * FROM myuser WHERE myuser.email = ?";
             
             $prepare = $this->conn->prepare($query);
             $prepare->bindParam(1, $email, PDO::PARAM_STR);
@@ -74,21 +74,25 @@
             return $usuario;
         }
 
-        public function update(UserModel $myuser) : bool{
+        public function update(UserModel $user){
 
-            $query = "UPDATE myusers SET name = :name, email = :email, password = :password WHERE id = :id";
+            $query = "UPDATE myuser SET name = ?, email = ?, password = ?, genero = ?, escolaridade = ? WHERE id = ?";
             $prepare = $this->conn->prepare($query);
-            $prepare->bindValue(":name", $user->getUsername());
-            $prepare->bindValue(":email", $user->getEmail());
-            $prepare->bindValue(":password", $user->getPassword());
-            $prepare->bindValue(":id", $user->getId());
+            $prepare->bindValue(1, $user->getUsername());
+            $prepare->bindValue(2, $user->getEmail());
+            $prepare->bindValue(3, $user->getPassword());
+            $prepare->bindValue(4, $user->getGenero());
+            $prepare->bindValue(5, $user->getEscolaridade());
+            $prepare->bindValue(6, $user->getId());
             $result = $prepare->execute();
-            
-            return $result;
+            //$resultU= $prepare->rowCount();
+            //var_dump($resultU);
+            //return $result;
+
         }
 
         public function deleteById( int $id) :int{ 
-            $query = "DELETE FROM myusers WHERE id = :id";
+            $query = "DELETE FROM myuser WHERE id = :id";
 
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":id", $id);

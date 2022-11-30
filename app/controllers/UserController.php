@@ -1,5 +1,7 @@
 <?php
 
+use ControllerUser as GlobalControllerUser;
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -56,16 +58,17 @@ class ControllerUser{
     $user = new UserModel();
 
 	$user->setUsername($_POST["field_nome"]);
+    $user->setEmail($_POST["field_email"]);
+    $user->setPassword($_POST["field_password"]);
 	$user->setGenero($_POST["field_genero"]);
     $user->setEscolaridade($_POST["field_escolaridade"]);
-	$user->setEmail($_POST["field_email"]);
-    $user->setPassword($_POST["field_password"]);   
+   
 
     $userRepository = new UserRepository();
 
     $id = $userRepository->create($user);
-    //print_r($userRepository);
-    //findAll();
+    print_r($userRepository);
+    $this->findAll();
 }
 
 function findAll()
@@ -83,14 +86,15 @@ function findAll()
 function findUserById()
 {
     $idParam = $_GET['id'];
-    print_r($idParam);
+    //print_r($idParam);
     $userRepository = new UserRepository();
     $usuario = $userRepository->findUserById($idParam);
-    print "<pre>";
-    print_r($usuario);
-    print "</pre>";
-    //$data= $usuario;
-    $this->loadView("users/perfil.php");
+    //print "<pre>";
+    //print_r($usuario);
+    //print "</pre>";
+    $data['usuario'][0] = $usuario;
+    //$this->loadView("users/perfil.php");
+    $this->loadView("../views/users/perfil.php", $data, $idParam);
 
 
 }
@@ -104,15 +108,40 @@ function deleteUserById()
 
     //Controller::loadView("users/list.php", $data);
 }
-private function edit(){
+
+function edit(){
     $idParam = $_GET['id'];
     $userRepository = new UserRepository(); 
     $usuario = $userRepository->findUserById($idParam);
     $data['usuarios'][0] = $usuario;
 
-    $this->loadView("../users/editUser.php", $data);
+    GlobalControllerUser::loadView("../views/users/editUser.php", $data);
 }
+ 
+function update()
+{
+    $usuario = new UserModel();
 
+    $usuario->setId($_GET["id"]);
+    $usuario->setUsername($_POST["field_nome"]);
+    $usuario->setEmail($_POST["field_email"]);
+    $usuario->setPassword($_POST["field_password"]);
+    $usuario->setGenero($_POST["field_genero"]);
+    $usuario->setEscolaridade($_POST["field_escolaridade"]);
+
+    $userRepository = new userRepository();
+    //print_r($usuario);
+    $atualizouUser = $userRepository->update($usuario);
+    
+    if($atualizouUser){
+        $msg = "Registro atualizado com sucesso.";
+    }else{
+        $msg = "Erro ao atualizar o registro no banco de dados.";
+    }
+    // include_once "cadastrar.php";
+
+    GlobalControllerUser::findAll();        
+}
 function preventDefault() {
     print "call preventDefault()";
     //Controller::loadView("users/list.php", $data);
