@@ -101,7 +101,7 @@
 
                         <div class="row">
                             <div class="col">
-                                <h1 id="textoreg"> Registre uma espécie!</h1>
+                                <h1 id="titulo"> Registre uma espécie!</h1>
                             </div>
                         </div>
 
