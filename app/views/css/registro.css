@@ -12,6 +12,11 @@
     font-family: Poppins-regular, Roboto;
 }
 
+*{
+    margin:0 auto; 
+    padding:0;
+}
+
 @font-face {
     font-family: 'Cooper';
     src: url('../fontes/cooperhewitt-heavy.otf');
@@ -89,6 +94,7 @@ header,
    text-align: right;
 
 }
+
 .img-responsive{
     width: 130px;
 }
@@ -97,7 +103,7 @@ body{
     background-color: var(--branco);
 }
 
-#primeirotextoreg{
+#textoreg{
     color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
@@ -110,51 +116,37 @@ body{
     display: none;
 }
   
-  .picture {
+.picture {
     width: 400px;
-    aspect-ratio: 16/9;
-    background: #ddd;
+    height: 400px;
+    background: var(--rosinha);
+    color: var(--verdao);
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #aaa;
-    border: 2px dashed currentcolor;
+    border: none;
     cursor: pointer;
-    font-family: sans-serif;
     transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
     overflow: hidden;
-  }
-  
-  .picture:hover {
-    color: #777;
+}
+
+.picture:hover {
+    background: var(--destaque);
+}
+
+.picture:focus {
     background: #ccc;
-  }
-  
-  .picture:active {
-    border-color: turquoise;
-    color: turquoise;
-    background: #eee;
-  }
-  
-  .picture:focus {
-    color: #777;
-    background: #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .picture__img {
+}
+
+.picture__img {
     max-width: 100%;
-  }
-  
+}
 
-  #pontos{
+
+#pontos{
     margin-top: 15px;
-   
-  }
 
-  *{
-	margin:0 auto; 
-	padding:0;
 }
 
 a{
@@ -177,7 +169,7 @@ a{
 	height:22px;
 }
 
-/* Begin format elements here*/
+/* ELEMENTOS CKEDITOR */
 
 .btn{
 	background-size:cover;
@@ -219,8 +211,7 @@ a{
 #btn_select{background-image: url("../img/select_all.png");}
 #btn_paragraph{background-image: url("../img/paragraph.png");}
 
-
-/* end format elements here*/
+/*END*/
 
 #dvCenterEditor{
 	max-width:1028px;
@@ -271,6 +262,48 @@ a{
 .form-control{
    background-color: var(--rosinha);
    height: 45px;
+   border: none;
+   border-radius: 0;
+   box-shadow: none;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: var(--branco);
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:var(--destaque);
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid var(--destaque);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
 }
 
 #texto-checkbox{
@@ -311,7 +344,7 @@ a{
    
 }
 
-#primeirotextoreg1{
+#textoreg1{
     color: var(--principal);
     font-family: Poppins;
     margin-top: 50px;
@@ -340,4 +373,7 @@ a{
     background-color: #338A5F;
    
     height: 100px;
+}
+.ck-editor__editable_inline {
+    min-height: 400px;
 }
