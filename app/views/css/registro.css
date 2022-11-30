@@ -304,6 +304,8 @@ a{
 
 #indexinteiro{
     margin-right: 0%;
+    
+   
 }
 
 #primeirotextoreg1{
@@ -321,4 +323,18 @@ a{
     border-radius: 20px;
     background-color: var(--branco);
     border: none;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#icone-rodape{
+    width: 70px;
+    margin-left: 20px;
+    margin-top: 30px;
+    
+}
+#rodapezinho{
+    background-color: #338A5F;
+   
+    height: 100px;
 }

@@ -1,85 +1,433 @@
-body, * {
-    box-sizing: border-box;
-  }
-  body {
-    background-color: #f2f2f2;
-  }
-  .image {
-  
-    width: 90px;
-    height: 90px;
-    position: relative;
-  }
-  .image:hover .editar-content {
-  
-    opacity: 1;
-  }
-  .image img {
-  
-    width: 90px;
-    border-radius: 100%;
-  
-  }
-  .close-preview {
-    font-size: 9px;
-    position: absolute;
-    right: -15px;
-    top: -2px;
-    background-color: #000;
-    line-height: 15px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    width: 15px;
-    height: 15px;
-    cursor: pointer;
-  }
-  
-  #new {
-  
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 100%;
-    z-index: 2;
-    display: none;
-    background-position: center center;
-  }
-  
-  .editar-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    z-index: 9;
-    text-align: center;
-    height: 100%;
-    vertical-align: middle;
-    display: table;
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  .editar-content span {
-    width: 100%;
-    text-align: center;
-    display: table-cell;
-    height: 100%;
-    vertical-align: middle;
-  }
-  
-  .editar-content i {
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
-    padding: 2px 5px;
-    text-transform: uppercase;
-    font-size: 10px;
-    border: 1px solid #fff;
-    font-style: normal;
-  }
+:root {
+  --principal: #338a5f;
+  --verdao: #04574d;
+  --branco: #ebf0f1;
+  --branquinho: #ebf0f14b;
+  --destaque: #f58c95;
+  --rosinha: #f0b6bc;
+
+  font-family: Poppins-regular, Roboto;
+
+}
+
+@font-face {
+  font-family: 'Cooper';
+  src: url('../fontes/cooperhewitt-heavy.otf');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fontes/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-regular';
+  src: url('../fontes/Poppins-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-semibold';
+  src: url('../fontes/Poppins-SemiBold.ttf');
+}
+
+.row {
+  margin: 0;
+}
+
+.container {
+  padding: 70px 0;
+
+}
+
+p,
+li {
+  color: #444;
+  font-size: 14px;
+}
+
+/*Barra de navegação*/
+header,
+.navbar {
+  background-color: var(--principal);
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+
+
+  background-color: var(--principal);
+}
+
+#logo {
+  width: 75px;
+
+}
+
+#botaoentrar {
+  font-weight: 700;
+
+}
+
+.navbar-brand {
+  padding: 0;
+  color: #fff;
+
+
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+
+#navbar-links a {
+  display: flex;
+  font-size: 1.3em;
+  margin-left: 50px;
+  color: var(--branco);
+  text-decoration: none;
+  padding-top: 0.3em;
+  cursor: pointer;
+  height: min-content;
+
+
+}
+
+#navbar-links a:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  height: min-content;
+
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+  text-align: right;
+
+
+}
+
+#about-area {
+
+  text-align: center;
+  margin-top: 150px;
+  font-family: Cooper;
+  color: var(--principal);
+}
+
+#about-area p {
+  color: white;
+  font-family: roboto;
+  font-size: 22px;
+}
+
+#about-area h1 {
+  font-size: 55px;
+  font-family: Cooper;
+  font-size: 70px;
+
+}
+
+#botao-mapa h3 {
+  background: var(--branco);
+  width: 90px;
+  height: 30px;
+  cursor: pointer;
+  font-family: sans-serif;
+  color: var(--destaque);
+  border-radius: 20%;
+  padding: 0%;
+  text-decoration: none;
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 25px;
+
+
+}
+
+button {
+  border-radius: 10px;
+  border-color: var(--branco)
+}
+
+
+#botoes h3 {
+  background: var(--destaque);
+  color: var(--branco);
+  cursor: pointer;
+  font-family: Roboto;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 10px;
+
+}
+
+#botoes button {
+  border-radius: 10px;
+  border-color: var(--destaque);
+  background-color: var(--destaque);
+
+
+}
+
+#itensmenu {
+
+  top: 0px;
+  width: 100%;
+}
+
+#about-areafim h1 {
+  font-family: Poppins;
+  font-size: 70px;
+  color: var(--branco);
+
+}
+
+#about-areafim h2 {
+  font-family: Poppins;
+  font-size: 40px;
+  color: var(--branco);
+}
+
+#card {
+  height: 30px;
+  width: 15px;
+}
+
+/*Cadastro*/
+
+
+
+
+#fundoindex {
+  background-color: var(--principal);
+}
+
+.card-group {
+  display: flex;
+
+}
+
+#card {
+  margin: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#parte h5 {
+  color: var(--principal);
+  size: 55px;
+  font-family: Poppins;
+  margin-left: 15px;
+
+}
+
+#finalhome {
+  background-color: var(--principal);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#imggrengo {
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+#segundacolunaindex h5 {
+  color: var(--branco);
+  size: 55px;
+  font-family: Poppins;
+
+
+}
+
+#rodapezinho {
+  background-color: var(--branco);
+}
+
+#primeirotextoindex {
+  text-align: left;
+
+  margin-bottom: 120px;
+}
+
+#dropdownMenuButton {
+  margin-top: 200px;
+  background-color: var(--verdao);
+  text-decoration: none;
+  color: var(--verdao);
+  width: 230px;
+  height: 93px;
+  border-radius: 10px;
+  font-family: Poppins-semibold;
+  font-style: bold;
+  font-size: 35px;
+  margin-left: 150px;
+
+}
+
+#mapa-home {
+  background-image: url(../../public/Vector\ 8.svg);
+  position: relative;
+
+
+
+}
+
+#mapa-da-home {
+  margin-top: 60px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 235px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#parte h5 {
+  margin-top: 100px;
+}
+
+#mapa-home h1 {
+  font-family: Poppins;
+  color: var(--branco);
+  text-align: center;
+}
+
+#imagem-celular {
+  max-width: 100%;
+  height: auto;
+}
+
+#mapa-home h1 {
+  margin-top: 110px;
+}
+
+#desenvolvedoras-home {
+  background-image: url(../../public/Vector\ 9.svg);
+}
+
+#fotonossa {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  display: block;
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 60px;
+  margin-top: 130px;
+}
+
+#desenvolvedoras-home h3 {
+  font-family: Poppins;
+  color: var(--branco);
+  text-align: center;
+  margin-bottom: 185px;
+
+}
+
+#parte {
+
+  box-sizing: border-box;
+}
+
+#parte h3 {
+  font-family: Poppins-semibold;
+  color: var(--branco);
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 60px;
+
+}
+
+#slider {
+  position: relative;
+  padding: 15px;
+  max-width: 1300px;
+  margin-bottom: 150px;
+
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 15px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, transparent 0%);
+  opacity: 1;
+  cursor: pointer;
+  border: none;
+  color: var(--verdao);
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: left;
+  background: linear-gradient(to right, transparent 0%, transparent 0%);
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.item {
+  width: 245px;
+  height: 381px;
+  flex-shrink: 0;
+
+}
+
+.current-item {
+  opacity: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#indexinteiro {
+  background-color: var(--principal);
+}
+
+#imggrengo {
+  size: 20px;
+}
+#zonarosa{
+  width: 389px;
+  position: absolute;
+  margin-left: 48%;
+  margin-right: auto;
+  margin-top: 290px;
+}
