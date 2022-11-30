@@ -270,6 +270,7 @@ a{
 input[type=checkbox] {
     position: relative;
     cursor: pointer;
+    margin-right: 10px;
 }
 input[type=checkbox]:before {
     content: "";
@@ -279,7 +280,7 @@ input[type=checkbox]:before {
     height: 20px;
     top: 0;
     left: 0;
-    background-color: var(--branco);
+    background-color: var(--rosinha);
 }
 input[type=checkbox]:checked:before {
     content: "";
