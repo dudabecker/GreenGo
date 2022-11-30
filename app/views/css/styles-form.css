@@ -56,19 +56,10 @@ body.fundo-branco {
     bottom: -10%;
 }
 
-.container {
-    width: 100%;
-    position: absolute;
-    top:25%;
-    vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: justify;
 
-}
 
 .login-form {
-    
+    text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
