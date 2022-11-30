@@ -12,7 +12,6 @@
     font-family: Poppins-regular, Roboto;
 }
 
-
 @font-face {
     font-family: 'Cooper';
     src: url('../fontes/cooperhewitt-heavy.otf');
@@ -53,53 +52,6 @@ header,
 
 }
 
-#botaoentrar {
-    font-weight: 700;
-    color: var(--branco);
-    cursor: pointer;
-
-}
-
-.navbar-brand {
-    padding: 0;
-    color: #fff;
-    font-size: 5px;
-
-}
-
-.navbar-brand:hover {
-    color: #fff;
-}
-
-#navbar-links a:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    height: min-content;
-
-}
-
-
-#navbar-links {
-    font-weight: 5;
-}
-
-#menu {
-    margin: 0 auto;
-}
-
-#navbar-links a {
-    color: var(--principal);
-    cursor: pointer;
-    height: min-content;
-    font-family: Poppins-regular;
-    margin-left: 35px;
-    font-size: 20px;
-    padding: 1rem .8rem;
-    text-align: right;
-
-}
-
 .img-responsive {
     width: 130px;
 }
@@ -107,6 +59,7 @@ header,
 body {
     background-color: var(--branco);
     color: var(--verdao);
+    text-align: justify;
 }
 
 .titulo{
@@ -121,9 +74,68 @@ body {
 p{
     font-size: 20px;
     margin-left: 10px;
+    text-align: justify;
 }
 
-button.editar{
+.assinatura{
+    background-color: #f0b6bc94;
+    padding: 10px;
+}
+
+div.col.chk{
+    max-width: 5%;
+    align-items: center;
+    display: flex;  
+    justify-content: center;
+    padding-right: 0px;
+}
+
+input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: var(--branco);
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color:var(--destaque);
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid var(--destaque);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+}
+div.col.envio{
+    flex-grow: 0;
+    align-self: center;
+    display: flex;  
+
+}
+
+.cad-btn{
     color: var(--branco);
     background-color: var(--principal);
     border: none;
@@ -134,24 +146,9 @@ button.editar{
     font-size: 20px;
 }
 
-button.sair{
-    color: var(--principal);
-    background-color: transparent;
-    border: solid 2px var(--principal) ;
-    border-radius: 5px;
-    height: 50px;
-    width: 160px;
-    font-size: 20px;
-    margin-top: 2px;
-    margin-left: 10px;
-}
-
-button.excluir{
+.voltar{
     color: var(--principal);
     background-color: transparent;
     border: none;
     font-size: 18px;
-    margin-top: 20px;
-    margin-left: 10px;
-
 }

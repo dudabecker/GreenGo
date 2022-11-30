@@ -1,3 +1,17 @@
+:root {
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque: #f58c95;
+    --rosinha: #f0b6bc;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: Poppins-regular, Roboto;
+}
+
 @font-face {
     font-family: 'Cooper';
     src: url('../fontes/cooperhewitt-heavy.otf');
@@ -16,20 +30,6 @@
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
-
-:root {
-    --principal: #338a5f;
-    --verdao: #04574d;
-    --branco: #ebf0f1;
-    --branquinho: #ebf0f14b;
-    --destaque: #f58c95;
-    --rosinha: #f0b6bc;
-
-    width: 100%;
-    height: 100%;
-
-    font-family: Poppins-regular, Roboto;
-}
 
 body.fundo-branco {
     width: 100%;

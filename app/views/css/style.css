@@ -6,8 +6,10 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    font-family: Poppins-regular, Roboto;
+    width: 100%;
+    height: 100%;
 
+    font-family: Poppins-regular, Roboto;
 }
 
 @font-face {
@@ -250,7 +252,7 @@ button {
 
 #primeirotextoindex {
     text-align: left;
-
+    color: var(--branco);
     margin-bottom: 120px;
 }
 

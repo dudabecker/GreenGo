@@ -6,9 +6,10 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
 
-    font: Poppins-regular, Roboto;
+    width: 100%;
+    height: 100%;
 
-
+    font-family: Poppins-regular, Roboto;
 }
 
 @font-face {
