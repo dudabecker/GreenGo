@@ -118,18 +118,58 @@
 
                                         <input type="text" name="nomeCie" class="form-control" id="formtexto"
                                             aria-describedby="nome-cadastro">
-                                    </div>
-
-                                    <label id="pontos">
-                                        Pontos <br>
-                                        <input class="input-form" type="number" min="0" name="pontoEsp"
-                                            autocomplete="off">
-                                    </label> <br>
-
+                    </div>
+             
+                                    
+                                    <nav>
+            <div class="container" id="container-checkbox">
+                <div class="row">
+                    <div class="col-md">
+                        <div class="form-group form-check">
+                            <div id="atributos">
+                                <a>Atributos especificos</a>
+                                <div class="w-100"></div>
+                                <br>
+    </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="comestivel" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck"
+                                        id="texto-checkbox">Comestível</label>
 
                                 </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="exotica" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Exótica</label>
+                                </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="frutifera" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck"
+                                        id="texto-checkbox">Frutífera</label>
+                                    <span></span>
+                                </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="medicinal" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck"
+                                        id="texto-checkbox">Medicinal</label>
+                                </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="raridade" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Rara</label>
+                                </div>
+                                <div class="form-group form-check" id="form">
+                                    <input type="checkbox" name="toxidade" class="form-check-input" id="botaocheck">
+                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Tóxica</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </nav>
 
-                                <div class="col-sm">
+                                </div>
+                                
+<nav>
+                                <div class="col-sm" id="imagemreg">
 
                                     Carregue uma imagem <br>
 
@@ -148,50 +188,7 @@
             </div>
         </nav>
 
-        <nav>
-            <div class="container" id="container-checkbox">
-                <div class="row">
-                    <div class="col-md">
-                        <div class="form-group form-check">
-                            <div>
-                                <a>Atributos especificos</a>
-                                <div class="w-100"></div>
-                                <br>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="comestivel" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck"
-                                        id="texto-checkbox">Comestível</label>
-
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="exotica" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Exótica</label>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="frutifera" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck"
-                                        id="texto-checkbox">Frutífera</label>
-                                    <span></span>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="medicinal" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck"
-                                        id="texto-checkbox">Medicinal</label>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="raridade" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Rara</label>
-                                </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" name="toxidade" class="form-check-input" id="botaocheck">
-                                    <label class="form-check-label" for="botaocheck" id="texto-checkbox">Tóxica</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </nav>
-
+        
 
 
         <nav id="primeirotextoindex">

@@ -240,6 +240,7 @@ a{
     margin-left: 0% ;
     font-family: Poppins-semibold;
     color: var(--principal);
+    margin-top: 10px;
 }
 
 #caixa-adicione-individuos h4{
@@ -265,6 +266,9 @@ a{
    border: none;
    border-radius: 0;
    box-shadow: none;
+   margin-top: -10px;
+   margin-right: 70px;
+
 }
 
 input[type=checkbox] {
@@ -315,11 +319,11 @@ input[type=checkbox]:checked:after {
 #container-checkbox a{
     font-family: Poppins-semibold;
     color: var(--principal);
+    
+    
+   
 }
 
-#form-texto{
-    margin-bottom: 40px;
-}
 
 .chk input {
     display: none;
@@ -377,4 +381,29 @@ input[type=checkbox]:checked:after {
 }
 .ck-editor__editable_inline {
     min-height: 400px;
+}
+
+#primeirotextoreg{
+    color: #338A5F;
+    margin-bottom: 50px;
+   font-family: Poppins;
+    
+   
+}
+#container-checkbox{
+    margin-top: 20px;
+    margin-left: -35px;
+}
+#form{
+    margin-top: -5px;
+}
+#atributos{
+    margin-bottom: -20px;
+}
+#imagemreg{
+    margin-left: 10px;
+}
+
+#form-texto{
+
 }
