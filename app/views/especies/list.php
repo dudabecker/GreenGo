@@ -41,7 +41,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                        <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -70,12 +70,14 @@
             Espécies
         </h2>
 
+
         <?php foreach($data['especies'] as $especie): ?>
 
             <div class="row justify-content-md-left">
             <div class="row">
         <p>
-            Imagem: <?= $especie['imagem'] ?><br>
+           
+            <img <?= $especie['imagem'] ?>><br>
             Identificação Espécie: <?= $especie['idEspecie'] ?><br>
             Nome Popular: <?= $especie['nomePop'] ?><br>
             Nome Cientifico: <?= $especie['nomeCie'] ?><br>
@@ -86,6 +88,7 @@
             Exótica: <?= $especie['exotica'] ?><br>
             Rara: <?= $especie['raridade'] ?><br>
             Medicinal: <?= $especie['medicinal'] ?><br><br>
+            [ <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">Detalhes</a> ]
             [ <a href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a> ]
             [ <a href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a> ]
             [ <a href="./EspecieController.php?action=loadFormNew">Cadastrar novo</a> ]

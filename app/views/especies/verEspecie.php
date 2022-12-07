@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar</title>
+    <title>Espécie</title>
 
-	<!--FAVICON-->
+    <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -63,43 +63,31 @@
 </nav>
 
 <body>
-<?php
-	//include_once __DIR__ . "/../helpers/mensagem.php";
-	//$caminho = __DIR__ . "/../helpers/mensagem.php";
-	//print_r($caminho); 
-?>
-<h2>Editar espécie</h2>
 <?php foreach($data['especies'] as $especie): ?>
-	<form action="./EspecieController.php?action=update&idEspecie=<?= $especie->getIdEspecie()?>" method="POST">
-		Nome Popular: <input type="text" name="nomePop" value="<?= $especie->getNomePop(); ?>">
+
+    <h2><?= $especie->getNomePop() ?></h2>
+    <img <?= $especie->getImagem() ?>><br><br>
+
+		Nome Cientifico: <?= $especie->getNomeCie(); ?>
 		<br>
-		Nome Cientifico: <input type="text" name="nomeCie" value="<?= $especie->getNomeCie(); ?>">
+		Descrição: <?= $especie->getDescricao(); ?>
 		<br>
-		Descrição: <input type="text" name="descricao" value="<?= $especie->getDescricao(); ?>">
-		<br>
-		Ponto: <input type="text" name="pontoEsp" value="<?= $especie->getPontoEsp(); ?>">
-		<br>
-		Imagem: <input type="text" name="imagem" value="<?= $especie->getImagem(); ?>">
+		Pontos: <?= $especie->getPontoEsp(); ?>
 		<br><br>
-
-		Atributos Especiais: <br>  <!--<? if($especie->getFrutifera() == 1){echo 'checked';} ?>-->
-		Frutifera: <input type="checkbox" name="frutifera" value="<?= $especie->getFrutifera(); ?>">
+	
+		Atributos Especiais:
+		Frutifera: <?= $especie->getFrutifera(); ?>
 		<br>
-		Tóxica: <input type="checkbox" name="toxidade" value="<?= $especie->getToxidade(); ?>">
+		Tóxica: <?= $especie->getToxidade(); ?>
 		<br>
-		Exótica: <input type="checkbox" name="exotica" value="<?= $especie->getExotica(); ?>">
+		Exótica: <?= $especie->getExotica(); ?>
 		<br>
-		Rara: <input type="checkbox" name="raridade" value="<?= $especie->getRaridade(); ?>">
+		Rara: <?= $especie->getRaridade(); ?>
 		<br>
-		Medicinal: <input type="checkbox" name="medicinal" value="<?= $especie->getMedicinal(); ?>">
+		Medicinal: <?= $especie->getMedicinal(); ?>
 		<br>
-		Comestível: <input type="checkbox" name="comestivel" value="<?= $especie->getComestivel(); ?>">
+		Comestível: <?= $especie->getComestivel(); ?>
 		<br>
-		
-		<input type="submit" value="Atualizar">
-		<input type="reset" value="Limpar">
-	</form>		
 <?php endforeach; ?>
-
 </body>
 </html>
