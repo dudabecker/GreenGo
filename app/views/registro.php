@@ -65,12 +65,16 @@
                     </div>
                 </a>
 
-
+          
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                
+               
+                
+                <nav>
+        <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
                         <a class="nav-item nav-link" id="portfolio-menu" href="projeto.html"> Projeto </a>
@@ -82,9 +86,11 @@
                         <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
                     </div>
                 </div>
-
+                </nav>
             </nav>
+            
         </div>
+      
     </div>
 
 </nav>
@@ -127,7 +133,7 @@
                     <div class="col-md">
                         <div class="form-group form-check">
                             <div id="atributos">
-                                <a>Atributos especificos</a>
+                                <a>Atributos específicos</a>
                                 <div class="w-100"></div>
                                 <br>
     </div>
@@ -171,7 +177,7 @@
 <nav>
                                 <div class="col-sm" id="imagemreg">
 
-                                    Carregue uma imagem <br>
+                                   <a id="carregueimagemtexto"> Carregue uma imagem</a>  <br>
 
                                     <label class="picture" for="picture__input" tabIndex="0">
                                         <span class="picture__image"></span>
@@ -179,7 +185,7 @@
                                     <input type="file" name="imagem" id="picture__input">
                                     <script
                                         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-
+                                        <a id="carregueimagemtexto2"> .png .jpg ou .jpeg    tamanho mínimo: 2MB  tamanho máximo: 5MB </a>
                                 </div>
                             </div>
                         </div>
@@ -193,7 +199,8 @@
 
         <nav id="primeirotextoindex">
             <br>
-            <div class="container">
+            <div class="container" id="caixadetexto">
+                <a id="textodescritivo">Texto descritivo</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
                 <script src="ckeditor/build/ckeditor.js"></script>

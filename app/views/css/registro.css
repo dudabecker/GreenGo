@@ -77,6 +77,7 @@ header,
 
 #navbar-links{
     font-weight: 5;
+    text-align: right;
 }
 
 #menu{
@@ -387,6 +388,9 @@ input[type=checkbox]:checked:after {
     color: #338A5F;
     margin-bottom: 50px;
    font-family: Poppins;
+   margin-top: 40px;
+   font-size: 50px;
+   
     
    
 }
@@ -404,6 +408,26 @@ input[type=checkbox]:checked:after {
     margin-left: 10px;
 }
 
-#form-texto{
-
+#carregueimagemtexto{
+    color: #338A5F;
+    font-family: Poppins-semibold;
 }
+#carregueimagemtexto2{
+    color: #04574d;
+    font-family: Poppins-semibold;
+    font-size: 12px;
+}
+#textodescritivo{
+    color: #338A5F;
+    font-family: Poppins-semibold;
+    font-size: 20px;
+   
+}
+#caixadetexto{
+    margin-top: 20px;
+    
+}
+#txtconteudo{
+   color: #f58c95;
+}
+
