@@ -65,7 +65,7 @@ class ControllerEspecie{
         //$especie->setImagem($_POST["imagem"]);
         $especie->setPontoEsp($_POST["pontoEsp"]);
         
-        print_r($_POST["frutifera"]);
+        
         if(isset($_POST["frutifera"])){
             $especie->setFrutifera(1);
         } else{ 
