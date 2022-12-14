@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/perfil.css">
+    <link rel="stylesheet" href="../css/perfil.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
+                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -71,37 +71,52 @@
         </h2>
 
         <?php
-            //function genero($user){
-
-                //include "UserModel.php";if ($user->$getGenero() == "outro") {return "indefinido";} else {return $user->getGenero();}}
-
-        foreach($data['usuario'] as $user): ?>
+        //function genero($user){
+        
+        //include "UserModel.php";if ($user->$getGenero() == "outro") {return "indefinido";} else {return $user->getGenero();}}
+        
+        foreach ($data['usuario'] as $user): ?>
 
         <p>
-            Meu nome aqui é <b><?= $user->getNomeUsuario() ?></b>
-            , meu gênero é <b><?= $user->getGenero() ?></b> 
-            e estou no <b><?= $user->getEscolaridade() ?></b>.
+            Meu nome aqui é <b>
+                <?= $user->getNomeUsuario() ?>
+            </b>
+            , meu gênero é <b>
+                <?= $user->getGenero() ?>
+            </b>
+            e estou no <b>
+                <?= $user->getEscolaridade() ?>
+            </b>.
             <br><br>
-            O e-mail cadastrado é <b><?= $user->getEmail() ?></b> e minha senha é um <b>segredo</b>.
+            O e-mail cadastrado é <b>
+                <?= $user->getEmail() ?>
+            </b> e minha senha é um <b>segredo</b>.
         </p>
 
         <div class="row justify-content-md-left">
             <div class="row">
                 <!--EDITAR-->
                 <div class="col">
-                <button>   <a  href='./UserController.php?action=edit&id=<?= $user->getId(); ?>'>  <h3>  Editar  </h3> </a> </button>
+                    <button class="editar">
+                        <a href='./UserController.php?action=edit&id=<?= $user->getId(); ?>'> Editar </a>
+                    </button>
                 </div>
 
-                <!--ENCERRAR-->
+                <!--SAIR-->
                 <div class="col">
-                <button>   <a  href='controllers/LoginController.php?action=sair<?= $user->getId(); ?>'>  <h3>  Sair da conta </h3> </a> </button>
+                    <button class="sair">
+                        <a href='controllers/LoginController.php?action=sair<?= $user->getId(); ?>'> Sair da conta </a>
+                    </button>
                 </div>
 
                 <!--EXCLUIR-->
                 <div class="col">
-                 <a  href='./UserController.php?action=deleteUserById&id<?= $user->getId(); ?>'>  <h3>  Excluir a conta </h3> </a> 
+                    <button class="excluir">
+                        <a href='./UserController.php?action=deleteUserById&id<?= $user->getId(); ?>'> Excluir a conta
+                        </a>
+                    </button>
                 </div>
-                
+
             </div>
         </div>
 
@@ -109,10 +124,5 @@
 </body>
 
 </html>
-
-
-
-    
-<html> 
 
 <?php endforeach; ?>
