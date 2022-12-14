@@ -8,13 +8,13 @@
     <title>Meu perfil</title>
 
     <!--FAVICON-->
-    <link rel="icon" href="../../public/favicon.svg">
+    <link rel="icon" href="../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../views/css/perfil.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                        <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
                         <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
@@ -70,11 +70,16 @@
             Meu perfil
         </h2>
 
-        <?php foreach ($data['usuarios'] as $user): ?>
+        <?php
+            //function genero($user){
+
+                //include "UserModel.php";if ($user->$getGenero() == "outro") {return "indefinido";} else {return $user->getGenero();}}
+
+        foreach($data['usuario'] as $user): ?>
 
         <p>
-            Meu nome aqui é <b><?= $user->getUsername() ?></b>
-            , meu gênero é <b><?php= genero($user); ?></b> 
+            Meu nome aqui é <b><?= $user->getNomeUsuario() ?></b>
+            , meu gênero é <b><?= $user->getGenero() ?></b> 
             e estou no <b><?= $user->getEscolaridade() ?></b>.
             <br><br>
             O e-mail cadastrado é <b><?= $user->getEmail() ?></b> e minha senha é um <b>segredo</b>.
@@ -84,18 +89,19 @@
             <div class="row">
                 <!--EDITAR-->
                 <div class="col">
-                    <button action='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>' method="get" class="editar">Editar</button>
+                <button>   <a  href='./UserController.php?action=edit&id=<?= $user->getId(); ?>'>  <h3>  Editar  </h3> </a> </button>
                 </div>
 
                 <!--ENCERRAR-->
                 <div class="col">
-                    <button action='../controllers/userController.php?action=exit&id=<?= $user->getId() ?>' method="get" class="sair">Sair da conta</button>
+                <button>   <a  href='controllers/LoginController.php?action=sair<?= $user->getId(); ?>'>  <h3>  Sair da conta </h3> </a> </button>
                 </div>
 
                 <!--EXCLUIR-->
                 <div class="col">
-                    <button action='../controllers/userController.php?action=delete&id=<?= $user->getId() ?>' method="get" class="excluir">Excluir a conta</button>
+                 <a  href='./UserController.php?action=deleteUserById&id<?= $user->getId(); ?>'>  <h3>  Excluir a conta </h3> </a> 
                 </div>
+                
             </div>
         </div>
 
@@ -104,14 +110,9 @@
 
 </html>
 
-<?php
-function genero($user)
-{
-    if ($user->getUsername() == "outro") {
-        return "indefinido";
-    } else {
-        return $user->getUsername();
-    }
-}
 
-    endforeach; ?>
+
+    
+<html> 
+
+<?php endforeach; ?>
