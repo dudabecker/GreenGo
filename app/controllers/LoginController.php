@@ -6,7 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . "/../repository/UserRepository.php";
-require_once __DIR__ . "/Controller.php";
+//require_once __DIR__ . "/Controller.php";
 
 function logar()
 {
@@ -17,19 +17,21 @@ function logar()
 
     $user = $userRepository->findUserByEmail($email);
 
-
+    var_dump($user);
     if( $user == false){
         $_SESSION['msg_erro'] =  "usuário não cadastrado";
         header("location: ../views/login.php?msg=outramensagem");
         
-    } else if($user->getPassword() != $password){
+    } else if(!password_verify($password, $user->getPassword())){
             $_SESSION['msg_erro'] =  "senha incorreta";
             header("location: ../views/login.php");
+
             
     } else {
         
-        $_SESSION['usuario_logado'] =  true;
-        header("location: ./userController.php?action=findAll"); //.. sai da pasta e ./ é a partir daqui
+       
+        print_r($_SESSION['user']->getEmail());
+        header("location: ./UserController.php?action=findAll"); 
     }
 
 
