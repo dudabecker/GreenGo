@@ -121,37 +121,48 @@ body {
 p{
     font-size: 20px;
     margin-left: 10px;
+    margin-bottom: 45px;
 }
 
-button.editar{
+a:hover{
+    color: inherit !important;
+    text-decoration: none;
+}
+
+.editar{
     color: var(--branco);
     background-color: var(--principal);
     border: none;
     border-radius: 5px;
-    height: 50px;
-    width: 160px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: Poppins-semibold;
     font-size: 20px;
+
+    margin-left: 20px;
 }
 
-button.sair{
+.sair{
     color: var(--principal);
     background-color: transparent;
-    border: solid 2px var(--principal) ;
     border-radius: 5px;
-    height: 50px;
-    width: 160px;
-    font-size: 20px;
-    margin-top: 2px;
-    margin-left: 10px;
+    box-shadow:0px 0px 0px 2px var(--principal);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+
+    margin-left: 20px;
 }
 
-button.excluir{
-    color: var(--principal);
+.excluir{
+    color: var(--destaque);
     background-color: transparent;
     border: none;
     font-size: 18px;
     margin-top: 20px;
-    margin-left: 10px;
-
+    margin-left: 20px;
 }

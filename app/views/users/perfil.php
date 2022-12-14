@@ -72,7 +72,6 @@
 
         <?php
         //function genero($user){
-        
         //include "UserModel.php";if ($user->$getGenero() == "outro") {return "indefinido";} else {return $user->getGenero();}}
         
         foreach ($data['usuario'] as $user): ?>
@@ -94,32 +93,23 @@
         </p>
 
         <div class="row justify-content-md-left">
-            <div class="row">
-                <!--EDITAR-->
-                <div class="col">
-                    <button class="editar">
-                        <a href='./UserController.php?action=edit&id=<?= $user->getId(); ?>'> Editar </a>
-                    </button>
-                </div>
 
-                <!--SAIR-->
-                <div class="col">
-                    <button class="sair">
-                        <a href='controllers/LoginController.php?action=sair<?= $user->getId(); ?>'> Sair da conta </a>
-                    </button>
-                </div>
-
-                <!--EXCLUIR-->
-                <div class="col">
-                    <button class="excluir">
-                        <a href='./UserController.php?action=deleteUserById&id<?= $user->getId(); ?>'> Excluir a conta
-                        </a>
-                    </button>
-                </div>
-
+            <!--EDITAR-->
+            <div class="row-3">
+                <a class="editar" href='./UserController.php?action=edit&id=01'> Editar </a>
             </div>
-        </div>
 
+            <!--SAIR-->
+            <div class="row-3">
+                <a class="sair" href='controllers/LoginController.php?action=sair01'> Sair da conta </a>
+            </div>
+
+            <!--EXCLUIR-->
+            <div class="row-3">
+                <a class="excluir" href='./UserController.php?action=deleteUserById&id01'> Excluir a conta </a>
+            </div>
+
+        </div>
     </div>
 </body>
 
