@@ -57,17 +57,19 @@ class ControllerUser{
     function create(){
     $user = new UserModel();
 
-	$user->setUsername($_POST["field_nome"]);
+	$user->setNomeUsuario($_POST["field_nome"]);
     $user->setEmail($_POST["field_email"]);
     $user->setPassword($_POST["field_password"]);
 	$user->setGenero($_POST["field_genero"]);
     $user->setEscolaridade($_POST["field_escolaridade"]);
+    
+    //$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
    
 
     $userRepository = new UserRepository();
 
     $id = $userRepository->create($user);
-    print_r($userRepository);
+    //print_r($senhaCriptografada);
     $this->findAll();
 }
 
@@ -99,6 +101,23 @@ function findUserById()
 
 }
 
+function findUserByEmail()
+{
+    $idParam = $_GET['id'];
+    //print_r($idParam);
+    $userRepository = new UserRepository();
+    $usuario = $userRepository->findUserByEmail($idParam);
+    //print "<pre>";
+    //print_r($usuario);
+    //print "</pre>";
+    $data['usuario'][0] = $usuario;
+    //$this->loadView("users/perfil.php");
+    ///$this->loadView("../views/users/perfil.php", $data, $idParam);
+
+
+}
+
+
 function deleteUserById()
 {
     $idParam = $_GET['id'];
@@ -113,23 +132,23 @@ function edit(){
     $idParam = $_GET['id'];
     $userRepository = new UserRepository(); 
     $usuario = $userRepository->findUserById($idParam);
-    $data['usuarios'][0] = $usuario;
+    $data['usuario'][0] = $usuario;
 
-    GlobalControllerUser::loadView("../views/users/editUser.php", $data);
+    GlobalControllerUser::loadView("../views/eteste.php", $data, $idParam);
 }
  
 function update()
 {
     $usuario = new UserModel();
-
-    $usuario->setId($_GET["id"]);
-    $usuario->setUsername($_POST["field_nome"]);
+    //$idParam = $_GET['id'];
+    $usuario->setId($_GET['id']);
+    $usuario->setNomeUsuario($_POST["field_nome"]);
     $usuario->setEmail($_POST["field_email"]);
     $usuario->setPassword($_POST["field_password"]);
     $usuario->setGenero($_POST["field_genero"]);
     $usuario->setEscolaridade($_POST["field_escolaridade"]);
 
-    $userRepository = new userRepository();
+    $userRepository = new UserRepository();
     //print_r($usuario);
     $atualizouUser = $userRepository->update($usuario);
     
@@ -140,10 +159,35 @@ function update()
     }
     // include_once "cadastrar.php";
 
-    GlobalControllerUser::findAll();        
+    $this->findAll();        
 }
 function preventDefault() {
     print "call preventDefault()";
     //Controller::loadView("users/list.php", $data);
 }
+
+function genero(){
+
+    $idParam = $_GET['id'];
+    $userRepository = new UserRepository();    
+    
+    $userRepository->genero($idParam);
+
+}
+
+function adm(){
+
+  // A sessão precisa ser iniciada em cada página diferente
+
+  $nivel_necessario = 1;
+
+  // Verifica se não há a variável da sessão que identifica o usuário
+  if ($_SESSION['tipoUsuario'] == $nivel_necessario) {
+      // Destrói a sessão por segurança
+      session_destroy();
+      // Redireciona o visitante de volta pro login
+      header("Location: index.php"); exit;
+  }
+}
+
 }
