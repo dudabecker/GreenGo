@@ -1,0 +1,75 @@
+:root {
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque: #f58c95;
+    --rosinha: #f0b6bc;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: Poppins-regular, Roboto;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../fontes/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('../fontes/Poppins-SemiBold.ttf');
+}
+
+#logo {
+    content: url('../../public/logo-green.svg');
+    width: 75px;
+
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0%;
+}
+
+#botaoentrar {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar-brand {
+    padding: 0;
+    color: #fff;
+    font-size: 5px;
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#navbar-links a {
+    color: var(--principal);
+    cursor: pointer;
+    height: min-content;
+    font-family: Poppins-regular;
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 1rem .8rem;
+    text-align: right;
+}
+
+#navbar-links a:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    height: min-content;
+}
+
+
