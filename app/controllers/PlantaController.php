@@ -103,7 +103,16 @@ class ControllerPlanta{
     }
 
     private function deletePlantaById(){
-        $idParam = $_GET['idPlanta'];
+            $idParam = $_GET["id"];
+            $qt = $this->plantaRepository->deletePlantaById($idParam);
+            if($qt){
+                $msg = "Registro excluído com sucesso.";
+            }else{
+                $msg = "Erro ao excluir o registro no banco de dados.";
+            }
+            $this->findAll($msg);
+        }
+        /*$idParam = $_GET["idPlanta"];
         $qt = $this->plantaRepository->deletePlantaById($idParam);
         if($qt){
 			$msg = "Registro excluído com sucesso.";
@@ -111,14 +120,14 @@ class ControllerPlanta{
 			$msg = "Erro ao excluir o registro no banco de dados.";
 		}
         $this->findAll($msg);
-    }
+    }*/
 
     private function edit(){
         $idParam = $_GET['idPlanta'];
         $planta = $this->plantaRepository->findPlantaById($idParam);
         $data['plantas'][0] = $planta;
 
-        $this->loadView("plantas/formEditPlantas.php", $data);
+        $this->loadView("plantas/formEditPlanta.php", $data);
     }
 
     private function update(){
