@@ -65,7 +65,7 @@
             return $result;
         }
 
-        public function deletePlantaById(int $idPlanta) : int {
+        public function deletePlantaById( int $idPlanta) : int{
             $query = "DELETE FROM planta WHERE idPlanta = :idPlanta";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":idPlanta", $idPlanta);
