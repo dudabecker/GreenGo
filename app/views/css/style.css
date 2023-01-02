@@ -48,17 +48,10 @@ li {
 }
 
 /*Barra de navegação*/
-header,
-.navbar {
-    background-color: var(--principal);
-}
 
 #nav-container {
     padding-top: 0;
     padding-bottom: 0;
-
-
-    background-color: var(--principal);
 }
 
 #logo {

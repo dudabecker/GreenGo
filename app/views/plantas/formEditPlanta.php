@@ -65,18 +65,21 @@
 <body>
 <h2>Editar planta</h2>
 
-<form action="./PlantaController.php?action=update&idPlanta<?= $planta['idPlanta']?>" method="POST">
-	Espécie: <input type="text" name="idEspecie" placeholder="<?= $planta['idEspecie']?>" >
-	<br>
-	Zona: <input type="text" name="idZona" placeholder="<?= $planta['idZona']?>">
-	<br>
-	Código Númerico <input type="text" name="codNumerico" placeholder="<?= $planta['codNumerico']?>" >
-	<br>
-    Código QR: <input type="text" name="codQR" placeholder="<?= $planta['codQR']?> ">
-	<br><br>
-
-	<input type="submit" value="Atualizar">
-	<input type="reset" value="Limpar">
+<?php foreach($data['plantas'] as $planta): ?>
+	<form action="./PlantaController.php?action=update&idPlanta=<?= $planta->getIdPlanta()?>" method="POST">
+		Número de identificação da espécie: <input type="text" name="idEspecie" value="<?= $planta->getIdEspecie(); ?>">
+		<br>
+		Número de identificação da zona: <input type="text" name="idZona" value="<?= $planta->getIdZona(); ?>">
+		<br>
+		Código numérico: <input type="text" name="codNumerico" value="<?= $planta->getCodNumerico(); ?>">
+		<br>
+		Código QR: <input type="text" name="codQR" value="<?= $planta->getCodQR(); ?>">
+		<br><br>
+		
+		<input type="submit" value="Atualizar">
+		<input type="reset" value="Limpar">
+	</form>		
+<?php endforeach; ?>
 </form>		
 </body>
 </html>

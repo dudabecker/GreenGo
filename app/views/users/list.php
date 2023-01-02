@@ -25,8 +25,8 @@
           <th scope="col">genero</th>
           <th scope="col">escolaridade</th>
           <th scope="col">email</th>
-          <th scope="col">opcoes</th>
-          <th scope="col"></th>
+          <th scope="col">ver perfil</th>
+          <th scope="col"> editar </th>
 
         </tr>
       </thead>
@@ -39,7 +39,7 @@
             <?= $user->getId() ?>
           </th>
           <td>
-            <?= $user->getUsername() ?>
+            <?= $user->getNomeUsuario() ?>
           </td>
           <td>
             <?= $user->getGenero() ?>
@@ -50,9 +50,9 @@
           <td>
             <?= $user->getEmail() ?>
           </td>
-          <td> <a href='../controllers/userController.php?action=findUserById&id=<?= $user->getId() ?>'> Mostrar
+          <td> <a href='../controllers/UserController.php?action=findUserById&id=<?= $user->getId() ?>'> Mostrar
               usuario</a> </td>
-          <td><a href='../controllers/userController.php?action=edit&id=<?= $user->getId() ?>'> Editar </a> </td>
+          <td><a href='../controllers/UserController.php?action=edit&id=<?= $user->getId() ?>'> Editar </a> </td>
 
         </tr>
 

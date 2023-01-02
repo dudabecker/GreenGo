@@ -15,9 +15,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 
-  <link rel="icon" href="../public/favicon.svg">
+  <link rel="icon" href="../../public/favicon.svg">
   <link rel="stylesheet" href="/app/views/index.html">
-  <link rel="stylesheet" href="css/cadastro.css">
+  <link rel="stylesheet" href="../css/cadastro.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -40,7 +40,7 @@
 
 <body id="fundocadastro">
 
-  <form method="post" action="../controllers/UserController.php?action=create">
+  <form method="post" action="../../controllers/UserController.php?action=create">
     <div class="form-group">
       <div class="row">
         <div class="col-sm">
@@ -49,7 +49,7 @@
             <div class="container">
               <div class="col-auto " id="venhacon">
                 <span class="img-fluid">
-                  <img class="img-responsive" src="../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
+                  <img class="img-responsive" src="../../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
               </div>
 
               <h1 id="h1">Criar conta</h1>
@@ -124,7 +124,7 @@
 
               <div class="form-row align-items-left">
                 <div class="col-auto my-1">
-                  <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
+                  <button  class="btn btn-primary" id="botaocadastro"href="termos.php">Cadastrar</button>
 
                   <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
                 </div>
@@ -136,7 +136,7 @@
                 </div>
 
                 <div class="img-fluid" id="icon">
-                  <a href="index.html"><img src="../public/logo-rosa.svg" alt=""></a>
+                  <a href="index.html"><img src="../../public/logo-rosa.svg" alt=""></a>
                 </div>
 
               </div>

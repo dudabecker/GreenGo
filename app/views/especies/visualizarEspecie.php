@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu perfil</title>
+    <title>Nome da Espécie</title>
 
     <!--FAVICON-->
-    <link rel="icon" href="../public/favicon.svg">
+    <link rel="icon" href="../../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="stylesheet" href="../../views/css/visualizarE.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                        <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -53,7 +53,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
                         <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
@@ -66,53 +66,32 @@
 
 <body>
     <div class="container">
-        <h2 class="titulo">
-            Meu perfil
-        </h2>
+        <div class="row">
+            <div class="col">
+                <div class="form-row align-items-left">
+                    <h1 class="popular">
+                        Extremosa
+                    </h1>
 
-        <?php
-        //function genero($user){
-        //include "UserModel.php";if ($user->$getGenero() == "outro") {return "indefinido";} else {return $user->getGenero();}}
-        
-        foreach ($data['usuario'] as $user): ?>
+                    <spam class="pontos align-items-center">
+                        25 pontos
+                    </spam>
+                </div>
 
-        <p>
-            Meu nome aqui é <b>
-                <?= $user->getNomeUsuario() ?>
-            </b>
-            , meu gênero é <b>
-                <?= $user->getGenero() ?>
-            </b>
-            e estou no <b>
-                <?= $user->getEscolaridade() ?>
-            </b>.
-            <br><br>
-            O e-mail cadastrado é <b>
-                <?= $user->getEmail() ?>
-            </b> e minha senha é um <b>segredo</b>.
-        </p>
-
-        <div class="row justify-content-md-left">
-
-            <!--EDITAR-->
-            <div class="row-3">
-                <a class="editar" href='./UserController.php?action=edit&id=01'> Editar </a>
+                <div class="form-row align-items-left">
+                    <h2 class="cientifico">
+                        Lager Extremiosa
+                    </h2>
+                </div>
             </div>
-
-            <!--SAIR-->
-            <div class="row-3">
-                <a class="sair" href='controllers/LoginController.php?action=sair01'> Sair da conta </a>
-            </div>
-
-            <!--EXCLUIR-->
-            <div class="row-3">
-                <a class="excluir" href='./UserController.php?action=deleteUserById&id01'> Excluir a conta </a>
-            </div>
-
         </div>
+    </div>
+
+
+
+       
+
     </div>
 </body>
 
 </html>
-
-<?php endforeach; ?>

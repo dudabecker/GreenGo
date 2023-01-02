@@ -7,59 +7,59 @@ class PlantaModel{
 	private $codQR;
 	
 
-	public function getIdZona()
+	public function getIdZona(): int
 	{
 		return $this->idZona;
 	}
 
-	public function setIdZona($idZona)
+	public function setIdZona(int $idZona)
 	{
 		$this->idZona = $idZona;
 
 		return $this;
 	}
 
-	public function getIdEspecie()
+	public function getIdEspecie(): int
 	{
 		return $this->idEspecie;
 	}
 
-	public function setIdEspecie($idEspecie)
+	public function setIdEspecie(int $idEspecie)
 	{
 		$this->idEspecie = $idEspecie;
 
 		return $this;
 	}
-	public function getCodQR()
+	public function getCodQR(): string
 	{
 		return $this->codQR;
 	}
 
-	public function setCodQR($codQR)
+	public function setCodQR(string $codQR)
 	{
 		$this->codQR = $codQR;
 
 		return $this;
 	}
  
-	public function getCodNumerico()
+	public function getCodNumerico(): int
 	{
 		return $this->codNumerico;
 	}
 
-	public function setCodNumerico($codNumerico)
+	public function setCodNumerico(int $codNumerico)
 	{
 		$this->codNumerico = $codNumerico;
 
 		return $this;
 	}
 
-	public function getIdPlanta()
+	public function getIdPlanta(): int 
 	{
 		return $this->idPlanta;
 	}
 
-	public function setIdPlanta($idPlanta)
+	public function setIdPlanta(int $idPlanta)
 	{
 		$this->idPlanta = $idPlanta;
 
