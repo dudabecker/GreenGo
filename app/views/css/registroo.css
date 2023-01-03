@@ -460,20 +460,10 @@ input[type=checkbox]:checked:after {
     
 }
 
-#limpar{
-    color:  #338A5F;
+
+
+#botoeslimpar a{
+    color: #338A5F;
     font-family: Poppins-regular;
-    
-   
-}
-#limpar:hover{
-    color: #ebf0f1;
-    
 }
 
-#botoeslimpar:hover{
-    background-color: #338A5F;
-    border-color: #338A5F;
-    color: #ebf0f1;
-
-}
