@@ -467,3 +467,18 @@ input[type=checkbox]:checked:after {
     font-family: Poppins-regular;
 }
 
+#caixa-adicione-individuos a{
+    font-family: Poppins-semibold;
+    color: #338A5F;
+    text-align: start;
+    
+}
+#textoind{
+    font-size: 27px;
+    color: #04574d;
+}
+#mais-registro{
+    text-align: left;
+   float: right;
+   cursor: pointer;
+}

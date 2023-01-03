@@ -235,23 +235,17 @@
 
         
             <div class="container" id="caixa-adicione-individuos">
-                <div class="row justify-content-md-left">
-                    <h4>Adicione individuos</h4>
-                    <div class="w-100"></div>
-                    <div class="row">
+                
+                    <a id="textoind">Individuos dessa espécie:</a>
+                    
+                    
                         <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
-                    </div>
-                    
-                    
 
                 </div>
             </div>
         </nav>
 </form> <!-- onde seria o fim do form, não sei onde é -->
-        <label class="chk">
-            <input type="checkbox" name="exemplo" />
-            <span></span>
-        </label>
+        
 
     </main>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
