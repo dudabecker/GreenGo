@@ -137,10 +137,10 @@ function edit(){
     GlobalControllerUser::loadView("../views/eteste.php", $data, $idParam);
 }
  
-function update()
+unction update()
 {
     $usuario = new UserModel();
-    //$idParam = $_GET['id'];
+    $idParam = $_GET['id'];
     $usuario->setId($_GET['id']);
     $usuario->setNomeUsuario($_POST["field_nome"]);
     $usuario->setEmail($_POST["field_email"]);
@@ -154,13 +154,16 @@ function update()
     
     if($atualizouUser){
         $msg = "Registro atualizado com sucesso.";
+        print_r($msg) ;
     }else{
         $msg = "Erro ao atualizar o registro no banco de dados.";
+        print_r($msg) ;
     }
-    // include_once "cadastrar.php";
-
-    $this->findAll();        
+    $data['usuario'][0] = $usuario;
+    //GlobalControllerUser::findUserById($idParam);  
+    $this->loadView("../views/users/perfil.php", $data, $idParam);  
 }
+	
 function preventDefault() {
     print "call preventDefault()";
     //Controller::loadView("users/list.php", $data);
