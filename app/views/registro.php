@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/registro.css">
+    
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-
+    <link rel="stylesheet" href="css/registro.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -219,11 +219,21 @@
                             console.error(error);
                         });
                 </script>
-
+                    
             </div>
+            
             </div>
+                
         </nav>
+        
+            <div class="container" >
+                <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar">Registrar</button>
+                <button type="button" class="btn btn-secondary btn-lg" id="botoesregistrar">Limpar</button>
+            </div>
+        
         <nav>
+
+        
             <div class="container" id="caixa-adicione-individuos">
                 <div class="row justify-content-md-left">
                     <h4>Adicione individuos</h4>
@@ -231,21 +241,8 @@
                     <div class="row">
                         <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
                     </div>
-                    <form id="form-registro">
-                        <div class="col-auto my-1">
-                            <label for="caixinha-cad">Zona</label>
-                            <br>
-                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"></label>
-                            <select class="custom-select mr-sm-2" id="caixinha-cad">
-                                <option selected></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                        </div>
-                    </form>
+                    
+                    
 
                 </div>
             </div>
