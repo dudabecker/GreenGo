@@ -482,3 +482,19 @@ input[type=checkbox]:checked:after {
    float: right;
    cursor: pointer;
 }
+.quadrado {
+    
+    width: 267px;
+    height: 304px;
+    margin-left: 0px;
+    background: #EEC8CC;
+    margin-top: 70px;
+  }
+
+  .quadrado p{
+   color: #5866604D;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Poppins-semibold;
+  }
+ 

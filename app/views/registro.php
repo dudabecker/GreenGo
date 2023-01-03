@@ -236,13 +236,31 @@
         
             <div class="container" id="caixa-adicione-individuos">
                 
-                    <a id="textoind">Individuos dessa espécie:</a>
+                    <a id="textoind">Indivíduos dessa espécie:</a>
                     
                     
                         <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
-
-                </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="quadrado">
+                                    <p>IMAGEM</p> 
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="col">
+                            <div class="row">
+                                <div class="quadrado">
+                                    <p>IMAGEM</p> 
+                                </div>
+                            </div>
+                    
+                        </div>
+                         
             </div>
+                        
+                           
+                
+           
         </nav>
 </form> <!-- onde seria o fim do form, não sei onde é -->
         
