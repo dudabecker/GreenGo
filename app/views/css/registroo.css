@@ -431,3 +431,49 @@ input[type=checkbox]:checked:after {
    color: #f58c95;
 }
 
+#botoesregistrar{
+    background-color: #338A5F;
+    margin-top: 60px ;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 130px;
+    border-color: #338A5F;
+    margin-right: 20px;
+    font-family: Poppins-regular;
+    height: 52px;
+    text-align: center;
+    
+}
+#botoeslimpar{
+    background-color: (var(--branquinho));
+    border-color: #338A5F;
+    border-radius: 10px;
+    border-width: 2px;
+    width: 110px;
+    margin-top: 60px ;
+}
+
+#botoesregistrar:hover{
+    background-color: (var(--branquinho));
+    border-color: #338A5F;
+    color: #338A5F;
+    
+}
+
+#limpar{
+    color:  #338A5F;
+    font-family: Poppins-regular;
+    
+   
+}
+#limpar:hover{
+    color: #ebf0f1;
+    
+}
+
+#botoeslimpar:hover{
+    background-color: #338A5F;
+    border-color: #338A5F;
+    color: #ebf0f1;
+
+}

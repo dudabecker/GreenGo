@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/registroo.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -227,8 +227,8 @@
         </nav>
         
             <div class="container" >
-                <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar">Registrar</button>
-                <button type="button" class="btn btn-secondary btn-lg" id="botoesregistrar">Limpar</button>
+                <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
+                <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a> </button>
             </div>
         
         <nav>
