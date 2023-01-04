@@ -60,7 +60,8 @@
 
                     <label for="formtexto" id="texto">nome</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro" name="field_nome">
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro"
+                      name="field_nome">
                   </div>
                 </div>
               </div>
@@ -71,7 +72,8 @@
 
                     <label for="formtexto" id="texto">email</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro" name= "field_email">
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro"
+                      name="field_email">
                   </div>
                 </div>
 
@@ -83,7 +85,8 @@
 
                     <label for="formtexto" id="texto">senha</label>
                     <div class="w-100"></div>
-                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro" name= "field_password">
+                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro"
+                      name="field_password">
                     <div class="w-100"></div>
                     <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
                   </div>
@@ -95,7 +98,7 @@
                   <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
                   <br>
                   <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                  <select name= "field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
+                  <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
                     <option selected></option>
                     <option value="feminino">feminino</option>
                     <option value="masculino">masculino</option>
@@ -107,47 +110,47 @@
                 <div class="col-auto my-1">
                   <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
                   <br>
-                  <select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
-                            <option selected></option>
-                            <option value="6° Ano (EF II)"> 6° Ano (EF II) </option>
-                            <option value=" 7° Ano (EF II)"> 7° Ano (EF II)</option>
-                            <option value=" 8° Ano (EF II)" > 8° Ano (EF II) </option>
-                            <option value=" 9° Ano (EF II)"> 9° Ano (EF II) </option>
-                            <option value="ensino medio">ensino medio</option>
-                            <option value="ensino superior">ensino superior</option>
+                  <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+                    <option selected></option>
+                    <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
+                    <option value=" 7° Ano (EF II)"> 7° ano (EF II)</option>
+                    <option value=" 8° Ano (EF II)"> 8° ano (EF II) </option>
+                    <option value=" 9° Ano (EF II)"> 9° ano (EF II) </option>
+                    <option value="ensino medio">ensino médio</option>
+                    <option value="ensino superior">ensino superior</option>
                   </select>
                 </div>
 
               </div>
 
               <br>
-</form>
-              <div class="form-row align-items-left">
-                <div class="col-auto my-1">
-                  <button  class="btn btn-primary" id="botaocadastro"href="termos.php">Cadastrar</button>
+          </form>
+          <div class="form-row align-items-left">
+            <div class="col-auto my-1">
+              <button class="btn btn-primary" id="botaocadastro" href="termos.php">Cadastrar</button>
 
-                  <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
-                </div>
-                  <div class="col-sm">
-
-                  </div>
-                      <div id="pp">
-                        <a>Comece sua <br> aventura...</a>
-                      </div>
-
-                        <div class="img-fluid" id="icon">
-                          <a href="index.html"><img src="../../public/logo-rosa.svg" alt=""></a>
-                         </div>
-
-              </div>
+              <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
+            </div>
+            <div class="col-sm">
 
             </div>
+            <div id="pp">
+              <a>Comece sua <br> aventura...</a>
+            </div>
+
+            <div class="img-fluid" id="icon">
+              <a href="index.html"><img src="../../public/logo-rosa.svg" alt=""></a>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </div>
+    </div>
 
   </form>
-  
+
 
 </body>
 

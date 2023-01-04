@@ -128,67 +128,72 @@ a:hover{
     text-decoration: none;
 }
 
-.editar{
+a.editar{
     color: var(--branco);
     background-color: var(--principal);
     border: none;
     border-radius: 5px;
+
+    width: max-content !important;
+    height: max-content !important;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-family: Poppins-semibold;
     font-size: 20px;
-
+    transition: 0.3s ease;
     margin-left: 20px;
+
+    display: inline-block;
 }
 
 a.editar:hover{
-    color: var(--principal);
-    background-color: var(--branco);
-    box-shadow:0px 0px 0px 2px var(--principal);
-    border: none;
-    border-radius: 5px;
+    color: var(--branco);
+    transform: scale(1.05);
 }
 
 .sair{
     color: var(--principal);
     background-color: transparent;
     border-radius: 5px;
-    box-shadow:0px 0px 0px 2px var(--principal);
+    border:2px solid var(--principal);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 18px;
-
+    transition: 0.3s ease;
     margin-left: 20px;
+
+    display: inline-block;
 }
 
 a.sair:hover{
     color: var(--branco);
     background-color: var(--principal);
-    border: none;
     border-radius: 5px;
 }
 
 .excluir{
-    color: var(--destaque);
-    background-color: transparent;
+   
+    color: var(--branco);
+    background-color: var(--rosinha);
+    border:2px solid var(--rosinha);
     border-radius: 5px;
-    box-shadow:0px 0px 0px 2px var(--destaque);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 16px;
-
+    transition: 0.3s ease;
     margin-left: 20px;
+
+    display: inline-block;
 }
 
 a.excluir:hover{
-    color: var(--branco);
-    background-color: var(--destaque);
-    border: none;
+    color: var(--rosinha);
+    background-color: transparent;
     border-radius: 5px;
 }

@@ -93,22 +93,21 @@
         </p>
 
         <div class="row justify-content-md-left">
-
             <!--EDITAR-->
             <div class="row-3">
-                 <a class="editar" href='./UserController.php?action=edit&id=<?= $user->getId() ?>'> <button>  Editar </button>  </a>   
+                <a class="editar" href='./UserController.php?action=edit&id=<?= $user->getId() ?>'> Editar </a>
             </div>
 
             <!--SAIR-->
             <div class="row-3">
-                <a class="sair" href='controllers/LoginController.php?action=sair'> <button> Sair da conta </button> </a>
+                <a class="sair" href='controllers/LoginController.php?action=sair'> Sair da conta </a>
             </div>
 
             <!--EXCLUIR-->
             <div class="row-3">
-                <a class="excluir" href='./UserController.php?action=deleteUserById&id<?= $user->getId() ?>'> <button> Excluir a conta </button> </a>
+                <a class="excluir" href='./UserController.php?action=deleteUserById&id<?= $user->getId() ?>'> Excluir a conta
+                </a>
             </div>
-
         </div>
     </div>
 </body>

@@ -15,12 +15,12 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="projeto-menu" href="#"> Projeto </a>
                         <a class="nav-item nav-link" id="mapa-menu" href="#"> Mapa</a>
                         <a class="nav-item nav-link" id="jogar-menu" href="#"> Jogar </a>
-                        <a class="nav-item nav-link" id="registro-menu" href="#"> Registro </a>
-                        <a class="nav-item nav-link" id="quiz-menu" href="#"> Quiz </a>
-                        <a class="nav-item nav-link" id="equipes-menu" href="#"> Equipes </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="#"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="#"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="#"> Usuários </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="#"> Adm </a>
                     </div>
                 </div>
