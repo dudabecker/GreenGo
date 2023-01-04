@@ -137,7 +137,7 @@ function edit(){
     GlobalControllerUser::loadView("../views/eteste.php", $data, $idParam);
 }
  
-unction update()
+function update()
 {
     $usuario = new UserModel();
     $idParam = $_GET['id'];
