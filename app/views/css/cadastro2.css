@@ -95,6 +95,7 @@
     width: 160px;
     font-family: Poppins-semibold;
     font-size: 20px;
+    border: none;
 
 }
 
@@ -116,7 +117,7 @@
     margin-left: 50%;
     position: absolute;
     background-color: var(--principal);
-    height: 785px;
+    height: 790px;
 
 }
 
@@ -128,7 +129,8 @@
 }
 
 body {
-    background-image: linear-gradient(to right, #ebf0f1 0, #338a5f 56%, #338a5f 44%);
+    background-image: linear-gradient(to right, #ebf0f1 0, #ebf0f1 56%, #338a5f 44%);
+    
 }
 
 a:hover{
@@ -144,8 +146,8 @@ a:hover{
 }
 
 #icon {
-    margin-top: -60px;
-    margin-left: 10px;
-
-    position: relative;
+    margin-top: -85px;
+    margin-left: 14px;
+    
+    
 }
