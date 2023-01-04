@@ -124,6 +124,47 @@
                         
                         
             </div>
+           <div class="container" id="caixa-adicione-individuos">
+                
+                    
+                        <div class="col">
+                            <div class="row">
+                                <div class="quadrado">
+                                     
+                                </div>
+                                <div class="quadrado">
+                                     
+                                </div>
+                                <div class="quadrado">
+                                    
+                                </div>
+                                <div class="quadrado">
+                                    
+                                </div>
+                               
+                            </div>
+</div>
+                        
+                            <div class="col">
+                                <div class="row">
+                                     <div class="quadrado">
+                                        
+                                    </div>
+                                    <div class="quadrado">
+                                    
+                                </div>
+                                <div class="quadrado">
+                                    
+                                </div>
+                                <div class="quadrado">
+                                    
+                                </div>
+                                </div>
+                           
+                    
+                        </div>
+                         
+            </div>
            
         </nav>
     </main>
