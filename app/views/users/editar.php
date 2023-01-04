@@ -17,7 +17,7 @@
 
   <link rel="icon" href="../../public/favicon.svg">
   <link rel="stylesheet" href="../index.html">
-  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/cadastro2.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -135,8 +135,8 @@
                   <a>Comece sua <br> aventura...</a>
                 </div>
 
-                <div class="img-fluid" id="icon">
-                  <a href="index.html"><img src="../../public/logo-rosa.svg" alt=""></a>
+                <div class="img-fluid" id="icon"  >
+                  <a href="../index2.html"><img src="../../public/logo-rosa.svg" alt=""></a>
                 </div>
 
               </div>

@@ -31,9 +31,6 @@
 }
 
 
-
-
-
 #itemmenu  {
     display: flex;
     font-size: 1.3em;
@@ -72,87 +69,12 @@ body{
 
 #mapa-da-home{
    
-    width: 100% \9;
+    
     margin-top: 100px;
    cursor: pointer;
    
    
 
-}
-
-#about-area h1{
-    color: #338a5f;
-    font-family: Poppins-semibold;
-    font-size: 60px;
-}
-#about-area button{
-    background-color: #338a5f;
-    border: none;
-    height: 70px;
-    width: 200px;
-    left: 150px;
-    top: 573px;
-    border-radius: 9px;
-    font-family: Poppins-semibold;
-    font-size: 28px;
-    margin-top: 20px;
-   
-}
-#textoindex{
-    margin-right: 62px;
-}
-
-.dropdown-menu{
-    font-family: Poppins-semibold;
-    background-color: #338a5f;
-   
-   
-}
-.dropdown-menu a{
-    color: #ebf0f1;
-}
-.quadrado {
-    
-    width: 300px;
-    height: 360px;
-    margin-right: 30px;
-    margin-left: 30px;
-    background: #F0B6BC;
-    margin-top: 100px;
-    cursor: pointer;
-    border-radius: 10px;
-    border: none;
-  }
-
-  .quadrado p{
-   color: #ebf0f1;
-    text-align: center;
-    margin-top: 70px;
-    font-family: Poppins-semibold;
-    font-size: 20px;
-  }
-  .quadrado img{
-    width: 100px;
-    text-align: center;
-    margin-top: 55px;
-    margin-left: 100px;
-  }
-#imagenscaixas{
-    text-align: center;
-
-}
-#finalhome {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-#imggrengo
-{
-    width: 400px;
-}
-#imagem-celular{
-    margin-top: 150px;
 }
 #botaoentrar{
     display: flex;
@@ -166,4 +88,52 @@ body{
     font-family: Poppins-regular;
     font-size: 19px;
     font-weight: bold;
+}
+#botoesmapa{
+    margin-top: 100px;
+    text-align: center;
+}
+
+#botaozona{
+    width: 120px;
+    height: 50px;
+    margin-right: 30px;
+    font-family: Poppins-regular;
+    color: #338a5f;
+    border-color: #338a5f;
+    border-radius: 9px;
+    text-decoration: none;
+    background-color: #ebf0f1;
+    border-width: 2px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+#todosbotao{
+    width: 120px;
+    height: 50px;
+    margin-right: 25px;
+    background-color: #EA8C94;
+    border: none;
+    font-size: 20px;
+    font-family: Poppins-regular;
+    border-radius: 9px;
+    margin-top: 20px;
+}
+
+#botoesfileira2{
+    width: 110px;
+    height: 40px;
+    margin-right: 5px;
+    font-family: Poppins-regular;
+    color: #338a5f;
+    border-color: #338a5f;
+    border-radius: 9px;
+    text-decoration: none;
+    background-color: #ebf0f1;
+    border-width: 2px;
+    font-size: 17px;
+    margin-top: 20px;
+}
+#linhasecundaria{
+    margin-left: 20px;
 }

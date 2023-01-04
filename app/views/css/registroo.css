@@ -35,6 +35,7 @@
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
+
 header,
 .navbar {
     background-color: var(--branco);
