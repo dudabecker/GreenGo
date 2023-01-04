@@ -38,10 +38,10 @@
         <div id="itensmenu">
 
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="views/index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -96,17 +96,17 @@
 
             <!--EDITAR-->
             <div class="row-3">
-                <a class="editar" href='./UserController.php?action=edit&id=01'> Editar </a>
+                 <a class="editar" href='./UserController.php?action=edit&id=<?= $user->getId() ?>'> <button>  Editar </button>  </a>   
             </div>
 
             <!--SAIR-->
             <div class="row-3">
-                <a class="sair" href='controllers/LoginController.php?action=sair01'> Sair da conta </a>
+                <a class="sair" href='controllers/LoginController.php?action=sair'> <button> Sair da conta </button> </a>
             </div>
 
             <!--EXCLUIR-->
             <div class="row-3">
-                <a class="excluir" href='./UserController.php?action=deleteUserById&id01'> Excluir a conta </a>
+                <a class="excluir" href='./UserController.php?action=deleteUserById&id<?= $user->getId() ?>'> <button> Excluir a conta </button> </a>
             </div>
 
         </div>
