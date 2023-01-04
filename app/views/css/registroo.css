@@ -498,3 +498,6 @@ input[type=checkbox]:checked:after {
     font-family: Poppins-semibold;
   }
  
+ #itensregistro{
+    display: inline-block;
+ }

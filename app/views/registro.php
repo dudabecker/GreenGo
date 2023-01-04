@@ -245,12 +245,16 @@
                                 <div class="quadrado">
                                     <p>IMAGEM</p> 
                                 </div>
+                               
                             </div>
-                            <div class="w-100"></div>
+                            
+                           
+
                             <div class="col">
-                            <div class="row">
-                                <div class="quadrado">
-                                    <p>IMAGEM</p> 
+                                <div class="row">
+                                     <div class="quadrado">
+                                        <p>IMAGEM</p> 
+                                    </div>
                                 </div>
                             </div>
                     
@@ -273,3 +277,8 @@
 </body>
 
 </html>
+<a class="nav-item nav-link" id="itensregistro"> Mapa</a>
+                        <a class="nav-item nav-link" id="itensregistro"> Jogar </a>
+                        <a class="nav-item nav-link" id="itensregistro"> Registro </a>
+                        <a class="nav-item nav-link" id="itensregistro"> Quiz </a>
+                        <a class="nav-item nav-link" id="itensregistro"> Equipes </a>
