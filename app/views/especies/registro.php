@@ -32,7 +32,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/registro.js"></script>
@@ -47,7 +47,7 @@
     <script type="text/javascript" src="js/script.js"></script>
 
     <style>
-        
+
     </style>
 </head>
 
@@ -62,7 +62,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                        <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -106,64 +106,80 @@
                         </div>
 
                         <form action="/controllers/EspecieController.php?action=create" method="POST">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="form-row align-items-left">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-row align-items-left">
 
-                                        <label for="formtexto" id="texto">Nome popular</label>
-                                        <input type="text" name="nomePop" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
-                                                
-                                        <label for="formtexto" id="texto">Nome científico</label>
-                                        <input type="text" name="nomeCie" class="form-control" id="formtexto" aria-describedby="nome-cadastro">
+                                            <label for="formtexto" id="texto">Nome popular</label>
+                                            <input type="text" name="nomePop" class="form-control" id="formtexto"
+                                                aria-describedby="nome-cadastro">
 
-                                        <label id="texto"> Pontos </label>
-                                        <input class="input-form " type="number" min="0" name="pontoEsp" id="formtexto">
-                                
-                                        <div class="form-group form-check">
-                                            <label for="formtexto" id="texto">Atributos específicos</label>
-                                            <br>
+                                            <label for="formtexto" id="texto">Nome científico</label>
+                                            <input type="text" name="nomeCie" class="form-control" id="formtexto"
+                                                aria-describedby="nome-cadastro">
+
+                                            <label id="texto"> Pontos </label>
+                                            <input class="input-form " type="number" min="0" name="pontoEsp"
+                                                id="formtexto">
+
                                             <div class="form-group form-check">
-                                                <input type="checkbox" name="comestivel" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck" id="texto-checkbox">Comestível</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" name="exotica" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck" id="texto-checkbox">Exótica</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" name="frutifera" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck" id="texto-checkbox">Frutífera</label>
-                                                <span></span>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" name="medicinal" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck"  id="texto-checkbox">Medicinal</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" name="raridade" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck" id="texto-checkbox">Rara</label>
-                                            </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" name="toxidade" class="form-check-input" id="botaocheck">
-                                                <label class="form-check-label" for="botaocheck" id="texto-checkbox">Tóxica</label>
+                                                <label for="formtexto" id="texto">Atributos específicos</label>
+                                                <br>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="comestivel" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Comestível</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="exotica" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Exótica</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="frutifera" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Frutífera</label>
+                                                    <span></span>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="medicinal" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Medicinal</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="raridade" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Rara</label>
+                                                </div>
+                                                <div class="form-group form-check">
+                                                    <input type="checkbox" name="toxidade" class="form-check-input"
+                                                        id="botaocheck">
+                                                    <label class="form-check-label" for="botaocheck"
+                                                        id="texto-checkbox">Tóxica</label>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="col">
-                                    <span id="texto">Carregue uma imagem <br><span>
+                                    <div class="col">
+                                        <span id="texto">Carregue uma imagem <br><span>
 
-                                    <label class="picture" for="picture__input" tabIndex="0">
-                                        <img src="../../public/camera.svg">
-                                    </label>
+                                                <label class="picture" for="picture__input" tabIndex="0">
+                                                    <img src="../../public/camera.svg">
+                                                </label>
 
-                                    <input type="file" name="imagem" id="picture__input">
-                                    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+                                                <input type="file" name="imagem" id="picture__input">
+                                                <script
+                                                    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -191,7 +207,7 @@
                 </script>
 
             </div>
-            </div>
+        </div>
         </div>
 
         <nav>
@@ -221,7 +237,7 @@
                 </div>
             </div>
         </nav>
-                    </form> 
+        </form>
 
     </main>
 </body>
