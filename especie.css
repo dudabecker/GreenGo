@@ -4,7 +4,7 @@
     --branco: #ebf0f1;
     --branquinho: #ebf0f14b;
     --destaque: #f58c95;
-    --rosinha: #f0b6bcb4;
+    --rosinha: #f0b6bc;
     --cinza: #586660;
 
     width: 100%;
@@ -120,11 +120,11 @@ body {
 
 img.mais{
     height: 60px !important; 
-    transition: 0.3s ease;
 }
 
 .mais:hover{
     transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 a{
@@ -138,14 +138,11 @@ a:hover{
 }
 
 .especie{
-    padding: 20px;
-    transition: 0.3s ease;
+    padding: 10px;
 }
 
 .especie:hover{
     background-color: var(--rosinha);
-    transition: 0.3s ease;
-
 }
 
 .nome-pop{
