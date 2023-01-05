@@ -154,11 +154,15 @@ a.editar:hover{
     transform: scale(1.05);
 }
 
+a.editar:disabled{
+    background-color: var(--cinza);
+}
+
 .sair{
     color: var(--principal);
     background-color: transparent;
     border-radius: 5px;
-    border:2px solid var(--principal);
+    border: 2px solid var(--principal);
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
@@ -176,11 +180,15 @@ a.sair:hover{
     border-radius: 5px;
 }
 
+.sair:disabled{
+    color: var(--cinza);
+    border: 2px solid var(--cinza);
+}
+
 .excluir{
-   
     color: var(--branco);
     background-color: var(--rosinha);
-    border:2px solid var(--rosinha);
+    border: 2px solid var(--rosinha);
     border-radius: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -197,4 +205,10 @@ a.excluir:hover{
     color: var(--rosinha);
     background-color: transparent;
     border-radius: 5px;
+}
+
+.excluir:disabled{
+    color: var(--branco);
+    background-color: var(--cinza);
+    border: 2px solid var(--cinza);
 }
