@@ -140,6 +140,7 @@ a:hover{
 .especie{
     padding: 20px;
     transition: 0.3s ease;
+    display: inline-block;
 }
 
 .especie:hover{
@@ -218,4 +219,9 @@ a.excluir:hover{
 .excluir:disabled{
     color: var(--cinza);
     border: 2px solid var(--cinza);
+}
+
+.img-especie{
+    margin: auto;    
+    display: block;
 }

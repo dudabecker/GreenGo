@@ -82,7 +82,7 @@
             <?php foreach ($data['especies'] as $especie): ?>
             <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
                 <div class="col especie">
-                    <div class="row">
+                    <div class="row justify-content-evenly">
                         <div class="col-6">
                             <h3 class="nome-pop">
                                 <?= $especie['nomePop'] ?>
@@ -94,10 +94,10 @@
 
                             <p>
                                 Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-                                    Pontos: <?=$especie['pontoEsp'] ?><br>
+                                    Pontos: < ?=$especie['pontoEsp'] ?><br>
                                         Frutifera: <?= $especie['frutifera'] ?><br>
                                             Tóxica: <?= $especie['toxidade'] ?><br>
-                                                Comestível: <?=$especie['comestivel'] ?><br>
+                                                Comestível: < ?=$especie['comestivel'] ?><br>
                                                     Exótica: <?= $especie['exotica'] ?><br>
                                                         Rara: <?= $especie['raridade'] ?><br>
                                                             Medicinal: <?= $especie['medicinal'] ?><br>
@@ -118,8 +118,8 @@
                             </div>
                         </div>
 
-                        <div class="col align-content-center ">
-                            <img <?= $especie['imagem'] ?>>
+                        <div class="col align-content-center">
+                            <img class="img-especie" src="../public/especie.svg"< ?= $especie['imagem'] ?>>
                         </div>
                     </div>
                 </div>
