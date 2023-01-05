@@ -31,7 +31,6 @@
 
 </head>
 
-
 <nav>
     <div class="col-xs-12" id="nav-container">
 
@@ -73,7 +72,7 @@
                         Extremosa
                     </h1>
 
-                    <spam class="pontos align-items-center">
+                    <spam class="pontos align-items-end">
                         25 pontos
                     </spam>
                 </div>

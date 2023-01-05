@@ -14,11 +14,6 @@
 }
 
 @font-face {
-    font-family: 'Cooper';
-    src: url('../fontes/cooperhewitt-heavy.otf');
-}
-
-@font-face {
     font-family: 'Poppins';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
@@ -116,6 +111,15 @@ body {
     font-size: 60px;
     margin-left: 10px;
     margin-bottom: 40px;
+}
+
+img.mais{
+    height: 60px !important; 
+}
+
+.mais:hover{
+    transform: scale(1.05);
+    transition: 0.3s ease;
 }
 
 p{

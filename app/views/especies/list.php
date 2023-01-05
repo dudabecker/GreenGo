@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/perfil.css">
+    <link rel="stylesheet" href="../views/css/especie.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -66,49 +66,57 @@
 
 <body>
     <div class="container">
-        <h2 class="titulo">
-            Espécies
-        </h2>
+
+        <div class="row justify-content-between">
+            <h2 class="titulo">
+                Espécies
+            </h2>
+
+            <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
+                <img class="mais " src="../public/mais.svg">
+            </a>
+        </div>
+
 
 
         <?php foreach($data['especies'] as $especie): ?>
 
-            <div class="row justify-content-md-left">
-            <div class="row">
-        <p>
-           
-            <img <?= $especie['imagem'] ?>><br>
-            Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-            Nome Popular: <?= $especie['nomePop'] ?><br>
-            Nome Cientifico: <?= $especie['nomeCie'] ?><br>
-            Pontos: <?= $especie['pontoEsp'] ?><br>
-            Frutifera: <?= $especie['frutifera'] ?><br>
-            Tóxica: <?= $especie['toxidade'] ?><br>
-            Comestível: <?= $especie['comestivel'] ?><br>
-            Exótica: <?= $especie['exotica'] ?><br>
-            Rara: <?= $especie['raridade'] ?><br>
-            Medicinal: <?= $especie['medicinal'] ?><br><br>
-            [ <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">Detalhes</a> ]
-            [ <a href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a> ]
-            [ <a href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a> ]
-            [ <a href="./EspecieController.php?action=loadFormNew">Cadastrar novo</a> ]
-        </p>
-
         <div class="row justify-content-md-left">
-            <div class="row">
-                <!--EDITAR-->
-                <div class="col">
-                 
-                </div>
+        <div class="row">
+            <div class="col">
+            
+                
+                Identificação Espécie: <?= $especie['idEspecie'] ?><br>
+                Nome Popular: <?= $especie['nomePop'] ?><br>
+                Nome Cientifico: <?= $especie['nomeCie'] ?><br>
+                Pontos: <?= $especie['pontoEsp'] ?><br>
+                Frutifera: <?= $especie['frutifera'] ?><br>
+                Tóxica: <?= $especie['toxidade'] ?><br>
+                Comestível: <?= $especie['comestivel'] ?><br>
+                Exótica: <?= $especie['exotica'] ?><br>
+                Rara: <?= $especie['raridade'] ?><br>
+                Medicinal: <?= $especie['medicinal'] ?><br><br>
+                [ <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">Detalhes</a> ]]
+            
+                <div class="row justify-content-md-left">
+                    <div class="row">
+                        <!--EDITAR-->
+                        <div class="col">
+                            <a href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
+                        </div>
 
-                <!--EXCLUIR-->
-                <div class="col">
-                    
-                </div>
+                        <!--EXCLUIR-->
+                        <div class="col">
+                            <a href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
+                        </div>
 
-            </div>
+                    </div>
+                </div>
         </div>
 
+        </div class="row">
+            <img  src="../public/especie.svg"><!-- < ?= $especie['imagem'] ?> -->
+        </div>
     </div>
 </body>
 

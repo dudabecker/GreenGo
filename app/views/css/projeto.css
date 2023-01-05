@@ -135,12 +135,12 @@ p{
     margin-top: 50px;
     font-size: 40px;
     margin-left: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 iframe.maps{
-    width: 1104px;
-    height: 542px;
+    width: 100% !important;
+    height: 200px;
     border-style: none;
     border-radius: 1em;
 }
@@ -159,29 +159,26 @@ img.coordenador{
 
 .txt-coord{
     font-size: 25px;
-    margin-top: 130px;
     margin-left: 30px;
+    margin-bottom: 20px;
+}
 
-} .txt-coord[small]{
-    font-size: 20px;
+small{
+    font-size: 20px; 
 }
 
 img.alunas{
-    width: 1104px;
     border-style:none;
     border-radius: 1em;
 }
 
 .membro{
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 20px;
-
-} .membro[small]{
-    font-size: 15px; 
+    margin-left: 10px;
 }
 
 .img-medalha{
-    width: 1104px;
     border-style:none;
     border-radius: 1em;
     margin-bottom: 10px;
@@ -194,6 +191,7 @@ img.alunas{
 #ifpr{
     width: 330px;
     margin-right: 30px;
+    margin-left: 10px;
 } 
 
 #nit{
