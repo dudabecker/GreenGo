@@ -94,10 +94,10 @@
 
                             <p>
                                 Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-                                    Pontos: < ?=$especie['pontoEsp'] ?><br>
+                                    Pontos: <?=$especie['pontoEsp'] ?><br>
                                         Frutifera: <?= $especie['frutifera'] ?><br>
                                             Tóxica: <?= $especie['toxidade'] ?><br>
-                                                Comestível: < ?=$especie['comestivel'] ?><br>
+                                                Comestível: <?=$especie['comestivel'] ?><br>
                                                     Exótica: <?= $especie['exotica'] ?><br>
                                                         Rara: <?= $especie['raridade'] ?><br>
                                                             Medicinal: <?= $especie['medicinal'] ?><br>
@@ -119,7 +119,7 @@
                         </div>
 
                         <div class="col align-content-center ">
-                            <img src="../public/especie.svg"><!-- < ?= $especie['imagem'] ?> -->
+                            <img <?= $especie['imagem'] ?>>
                         </div>
                     </div>
                 </div>
