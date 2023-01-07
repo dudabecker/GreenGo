@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/especie.css">
+    <link rel="stylesheet" href="../views/css/listEspecie.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -77,13 +77,12 @@
             </a>
         </div>
 
-        <div class="row-cols-4 align-content-start">
-
+        <div class="foreach row-cols-4 align-content-start">
             <?php foreach ($data['especies'] as $especie): ?>
             <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
                 <div class="col especie">
                     <div class="row justify-content-evenly">
-                        <div class="col-6">
+                        <div class="col">
                             <h3 class="nome-pop">
                                 <?= $especie['nomePop'] ?>
                             </h3>
@@ -94,16 +93,16 @@
 
                             <p>
                                 Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-                                    Pontos: <?= $especie['pontoEsp'] ?><br>
-                                        Frutifera: <?= $especie['frutifera'] ?><br>
-                                            Tóxica: <?= $especie['toxidade'] ?><br>
-                                                Comestível: <?= $especie['comestivel'] ?><br>
-                                                    Exótica: <?= $especie['exotica'] ?><br>
-                                                        Rara: <?= $especie['raridade'] ?><br>
-                                                            Medicinal: <?= $especie['medicinal'] ?><br>
+                                Pontos: <?= $especie['pontoEsp'] ?><br>
+                                Frutifera: <?= $especie['frutifera'] ?><br>
+                                Tóxica: <?= $especie['toxidade'] ?><br>
+                                Comestível: <?= $especie['comestivel'] ?><br>
+                                Exótica: <?= $especie['exotica'] ?><br>
+                                Rara: <?= $especie['raridade'] ?><br>
+                                Medicinal: <?= $especie['medicinal'] ?><br>
                             </p>
 
-                            <div class="row justify-content-md-left ">
+                            <div class="row justify-content-start">
                                 <!--EDITAR-->
                                 <div class="row-3">
                                     <a class="editar"
