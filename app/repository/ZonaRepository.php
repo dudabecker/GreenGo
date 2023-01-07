@@ -12,13 +12,14 @@
             $this->conn = Connection::getConnection();
         }
 
-        public function create(ZonaModel $zonas) {
+        public function create(ZonaModel $zona) {
 
             try {
 
-                $query = "INSERT INTO zonas (qntPlantas) VALUES (:qntPlantas)";
+                $query = "INSERT INTO zona (nomeZona, pontoZona) VALUES (:nomeZona, :pontoZona)";
                 $prepare = $this->conn->prepare($query);
-                $prepare->bindValue(":qntPlantas", $zonas->getqntPlantas());
+                $prepare->bindValue(":nomeZona", $zona->getNomeZona());
+                $prepare->bindValue(":pontoZona", $zona->getPontoZona());
                 $prepare->execute();
 
                 return $this->conn->lastInsertId();
@@ -30,7 +31,14 @@
 
         public function findZonas(): array {
 
-            $table = $this->conn->query("SELECT * FROM zonas");
+            $table = $this->conn->query("SELECT * FROM zona");
+            $zonas  = $table->fetchAll(PDO::FETCH_ASSOC);
+
+            return $zonas;
+        }
+
+        public function listar(){
+            $table = $this->conn->query("SELECT idZona FROM zona");
             $zonas  = $table->fetchAll(PDO::FETCH_ASSOC);
 
             return $zonas;
@@ -38,7 +46,7 @@
 
         public function findZonaByIdZona(int $idZona) {
 
-            $query = "SELECT * FROM zonas WHERE id.Zona = ?";
+            $query = "SELECT * FROM zona WHERE id.Zona = ?";
             
             $prepare = $this->conn->prepare($query);
             $prepare->bindParam(1, $idZona, PDO::PARAM_INT);
@@ -61,6 +69,8 @@
             $prepare->bindValue(":id", $zonas->getIdZona());
             $prepare->bindValue(":qntPlantas", $zonas->getQntPlantas());
             $prepare->execute();
+            
+            //ARRUMAR
         }
 
         public function deleteZonaByIdZona( int $idZona) {

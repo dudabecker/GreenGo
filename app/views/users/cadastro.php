@@ -129,7 +129,7 @@
             <div class="col-auto my-1">
               <button class="btn btn-primary" id="botaocadastro" href="termos.php">Cadastrar</button>
 
-              <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
+              <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="../login.php">Entrar</a></button>
             </div>
             <div class="col-sm">
 

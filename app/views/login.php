@@ -67,7 +67,7 @@
                 </button>
 
                 <span class="trocar-form me-auto">
-                    Novo por aqui? <a href="cadastro.php" class="link-cadastro">Cadastrar</a>
+                    Novo por aqui? <a href="../views/users/cadastro.php" class="link-cadastro">Cadastrar</a>
                 </span>
             </div>
 

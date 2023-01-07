@@ -94,13 +94,13 @@
 
                             <p>
                                 Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-                                Pontos: <?=$especie['pontoEsp'] ?><br>
-                                Frutifera: <?= $especie['frutifera'] ?><br>
-                                Tóxica: <?= $especie['toxidade'] ?><br>
-                                Comestível: <?=$especie['comestivel'] ?><br>
-                                Exótica: <?= $especie['exotica'] ?><br>
-                                Rara: <?= $especie['raridade'] ?><br>
-                                Medicinal: <?= $especie['medicinal'] ?><br>
+                                    Pontos: <?= $especie['pontoEsp'] ?><br>
+                                        Frutifera: <?= $especie['frutifera'] ?><br>
+                                            Tóxica: <?= $especie['toxidade'] ?><br>
+                                                Comestível: <?= $especie['comestivel'] ?><br>
+                                                    Exótica: <?= $especie['exotica'] ?><br>
+                                                        Rara: <?= $especie['raridade'] ?><br>
+                                                            Medicinal: <?= $especie['medicinal'] ?><br>
                             </p>
 
                             <div class="row justify-content-md-left ">
