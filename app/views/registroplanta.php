@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="css/registroplantas.css">
+    <link rel="stylesheet" href="css/registroplanta.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -113,6 +113,8 @@
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
+                                        
+                                       
                                         <div class="form-row align-items-left">
 
                                             <label for="formtexto" id="texto">Nome cientifico da espécie</label>
@@ -124,26 +126,27 @@
                                                 <div class="w-100"></div>
                                                     <input type="text" name="nomeCie" class="form-control" id="formtextoo"
                                                         aria-describedby="nome-cadastro">
-
+                                                        
+                                                
                                             <div class="col"> 
-                                                <label for="formtexto" id="texto">Zona</label>
+                                                    <a  id="zonatxt">Zona</a> 
                                                     <div class="w-100"></div>
                                             
-                                            <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
                                                 
-                                            </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         
-                                            <a class="dropdown-item" href="modosolo">zona 1</a>
-                                            <a class="dropdown-item" href="emequipe">zona 2</a>
-                                            <a class="dropdown-item" href="emequipe">zona 3</a>
-                                            <a class="dropdown-item" href="emequipe">zona 4</a>
-                                            <a class="dropdown-item" href="emequipe">zona 5</a>
-                                            <a class="dropdown-item" href="emequipe">zona 6</a>
-                                        </div>
+                                                        <a class="dropdown-item" href="modosolo">zona 1</a>
+                                                        <a class="dropdown-item" href="emequipe">zona 2</a>
+                                                        <a class="dropdown-item" href="emequipe">zona 3</a>
+                                                        <a class="dropdown-item" href="emequipe">zona 4</a>
+                                                        <a class="dropdown-item" href="emequipe">zona 5</a>
+                                                        <a class="dropdown-item" href="emequipe">zona 6</a>
+                                                </div>
                                        
-                                    </div>
+                                            </div>
                                         </div>
 
 

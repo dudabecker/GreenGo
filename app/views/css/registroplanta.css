@@ -504,7 +504,7 @@ input[type=checkbox]:checked:after {
     display: inline-block;
  }
  #formtextoo{
-    width: 300px;
+    width: 280px;
  }
 
  #dropdownMenuButton{
@@ -512,6 +512,9 @@ input[type=checkbox]:checked:after {
     border: none;
     border-radius: 0%;
     width: 150px;
+    margin-top: -10px;
+    margin-left: -47px;
+    height: 45px;
    
  }
 
@@ -527,3 +530,17 @@ input[type=checkbox]:checked:after {
     height: 52px;
     text-align: center;
  }
+
+ #zonatxt{
+    margin-top: -32px;
+    position: absolute;
+    color: #338A5F;
+    font-family: Poppins-semibold;
+    margin-left: -45px;
+ }
+ .dropdown-item{
+    color: #338A5F;
+    font-family: Poppins-semibold;
+    background-color: #ebf0f1;
+ }
+ 
