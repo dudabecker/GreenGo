@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="css/registroplanta.css">
+    <link rel="stylesheet" href="../css/registroplanta.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -199,7 +199,7 @@
                 <a id="textodescritivo">História</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="ckeditor/build/ckeditor.js"></script>
+                <script src="../ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
