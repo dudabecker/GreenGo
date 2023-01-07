@@ -469,6 +469,10 @@ input[type=checkbox]:checked:after {
     font-family: Poppins-regular;
 }
 
+#botoeslimpar:hover{
+    background-color: #bef0c8;
+}
+
 #caixa-adicione-individuos a{
     font-family: Poppins-semibold;
     color: #338A5F;
@@ -530,6 +534,9 @@ input[type=checkbox]:checked:after {
     height: 52px;
     text-align: center;
  }
+ #botoesexcluir:hover{
+    background-color: var(--destaque);
+ }
 
  #zonatxt{
     margin-top: -32px;
@@ -544,3 +551,13 @@ input[type=checkbox]:checked:after {
     background-color: #ebf0f1;
  }
  
+ #form2{
+    background-color: var(--rosinha);
+    height: 45px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: -10px;
+    margin-right: 70px;
+ 
+ }

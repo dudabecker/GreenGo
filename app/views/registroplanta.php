@@ -145,8 +145,22 @@
                                                         <a class="dropdown-item" href="emequipe">zona 5</a>
                                                         <a class="dropdown-item" href="emequipe">zona 6</a>
                                                 </div>
-                                       
+                                                
                                             </div>
+                                            <div class="w-100"></div>
+                                            <label for="formtexto" id="texto">Pontos</label>
+                                                <div class="w-100"></div>
+                                                    <input type="text" name="nomeCie" class="form-control" id="formtextoo"
+                                                        aria-describedby="nome-cadastro">
+
+                                            <div class="w-100"></div>
+
+                                            <label for="formtexto" id="texto">Nome social</label>
+
+                                                <div class="w-100"></div>
+                                                    <input type="text" name="nomeCie" class="form-control" id="form2"
+                                                        aria-describedby="nome-cadastro">
+
                                         </div>
 
 
