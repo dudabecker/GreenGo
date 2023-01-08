@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/registro.css">
+
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -32,22 +32,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/grayscale.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/registro.js"></script>
     <!-- Progress bar -->
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-
+    <link rel="stylesheet" href="css/registroo.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
-    <link rel="stylesheet" href="../css/editorwys.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/script.js"></script>
 
     <style>
-
+        .ck-editor__editable_inline {
+            min-height: 400px;
+        }
     </style>
 </head>
 
@@ -62,7 +60,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -72,28 +70,34 @@
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
+
+
+                <nav>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                        <div class="navbar-nav" id="navbar-links">
+
+                            <a class="nav-item nav-link" id="portfolio-menu" href="projeto.html"> Projeto </a>
+                            <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
+                            <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
+                            <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
+                            <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
+                            <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
+                            <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
+                        </div>
                     </div>
-                </div>
-
+                </nav>
             </nav>
+
         </div>
+
     </div>
 
 </nav>
 
 <body>
     <main>
-        <nav>
+        <nav id="primeirotextoindex">
             <div class="container">
                 <div class="row justify-content-md-left">
 
@@ -101,83 +105,98 @@
 
                         <div class="row">
                             <div class="col">
-                                <h1 id="titulo"> Registre uma espécie!</h1>
+                                <h1 id="primeirotextoreg"> Registre uma espécie!</h1>
                             </div>
                         </div>
 
-                        <form action="/controllers/EspecieController.php?action=create" method="POST">
-                            <div class="container">
+                        <form action="controllers/EspecieController.php?action=create" method="POST">
+                            <div class="container" id="reg1">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-sm">
                                         <div class="form-row align-items-left">
 
                                             <label for="formtexto" id="texto">Nome popular</label>
+                                            <div class="w-100"></div>
                                             <input type="text" name="nomePop" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
 
                                             <label for="formtexto" id="texto">Nome científico</label>
+
                                             <input type="text" name="nomeCie" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
+                                        </div>
 
-                                            <label id="texto"> Pontos </label>
-                                            <input class="input-form " type="number" min="0" name="pontoEsp"
-                                                id="formtexto">
 
-                                            <div class="form-group form-check">
-                                                <label for="formtexto" id="texto">Atributos específicos</label>
-                                                <br>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="comestivel" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Comestível</label>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="exotica" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Exótica</label>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="frutifera" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Frutífera</label>
-                                                    <span></span>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="medicinal" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Medicinal</label>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="raridade" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Rara</label>
-                                                </div>
-                                                <div class="form-group form-check">
-                                                    <input type="checkbox" name="toxidade" class="form-check-input"
-                                                        id="botaocheck">
-                                                    <label class="form-check-label" for="botaocheck"
-                                                        id="texto-checkbox">Tóxica</label>
+                                        <nav>
+                                            <div class="container" id="container-checkbox">
+                                                <div class="row">
+                                                    <div class="col-md">
+                                                        <div class="form-group form-check">
+                                                            <div id="atributos">
+                                                                <a>Atributos específicos</a>
+                                                                <div class="w-100"></div>
+                                                                <br>
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="comestivel"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Comestível</label>
+
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="exotica"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Exótica</label>
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="frutifera"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Frutífera</label>
+                                                                <span></span>
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="medicinal"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Medicinal</label>
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="raridade"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Rara</label>
+                                                            </div>
+                                                            <div class="form-group form-check" id="form">
+                                                                <input type="checkbox" name="toxidade"
+                                                                    class="form-check-input" id="botaocheck">
+                                                                <label class="form-check-label" for="botaocheck"
+                                                                    id="texto-checkbox">Tóxica</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </nav>
+
+                                    </div>
+
+                                    <nav>
+                                        <div class="col-sm" id="imagemreg">
+
+                                            <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
+
+                                            <label class="picture" for="picture__input" tabIndex="0">
+                                                <span class="picture__image"></span>
+                                            </label>
+                                            <input type="file" name="imagem" id="picture__input">
+                                            <script
+                                                src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+                                            <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
+                                                máximo: 5MB </a>
                                         </div>
-                                    </div>
-
-                                    <div class="col">
-                                        <span id="texto">Carregue uma imagem <br><span>
-
-                                                <label class="picture" for="picture__input" tabIndex="0">
-                                                    <img src="../../public/camera.svg">
-                                                </label>
-
-                                                <input type="file" name="imagem" id="picture__input">
-                                                <script
-                                                    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-                                    </div>
                                 </div>
                             </div>
                     </div>
@@ -186,9 +205,14 @@
         </nav>
 
 
-        <div>
+
+
+        <nav id="primeirotextoindex">
             <br>
-            <div class="container">
+            <div class="container" id="caixadetexto">
+                <a id="textodescritivo">Texto descritivo</a>
+                <textarea id="txtconteudo" name="descricao"></textarea>
+
                 <script src="ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
@@ -207,39 +231,60 @@
                 </script>
 
             </div>
-        </div>
+
+            </div>
+
+        </nav>
+
+        <div class="container">
+            <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
+            <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
+            </button>
         </div>
 
         <nav>
+
+
             <div class="container" id="caixa-adicione-individuos">
-                <div class="row justify-content-md-left">
-                    <h4>Adicione individuos</h4>
-                    <div class="w-100"></div>
+
+                <a id="textoind">Indivíduos dessa espécie:</a>
+
+
+                <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
+                <div class="col">
                     <div class="row">
-                        <img class="img-responsive" src="../../public/mais.svg" id="mais-registro">
-                    </div>
-                    <form id="form-registro">
-                        <div class="col-auto my-1">
-                            <label for="caixinha-cad">Zona</label>
-                            <br>
-                            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect"></label>
-                            <select class="custom-select mr-sm-2" id="caixinha-cad">
-                                <option selected></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
+                        <div class="quadrado">
+                            <p>IMAGEM</p>
                         </div>
-                    </form>
+
+                    </div>
+
+
+
+                    <div class="col">
+                        <div class="row">
+                            <div class="quadrado">
+                                <p>IMAGEM</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
+
             </div>
+
+
+
+
         </nav>
-        </form>
+        </form> <!-- onde seria o fim do form, não sei onde é -->
+
 
     </main>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/grayscale.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 
 </html>
