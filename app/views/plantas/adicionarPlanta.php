@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php if (isset($_SESSION['msg_erro'])): ?>
-<span>
-    <?= $_SESSION['msg_erro'] ?>
-</span>
+    <span>
+        <?= $_SESSION['msg_erro'] ?>
+    </span>
 <?php endif ?>
 
 
@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de planta</title>
+    <title>Adicionar planta</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -113,59 +113,59 @@
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
-                                        
-                                       
+
+
                                         <div class="form-row align-items-left">
 
                                             <label for="formtexto" id="texto">Nome cientifico da espécie</label>
-                                                <div class="w-100"></div>
-                                                    <input type="text" name="nomePop" class="form-control" id="formtexto"
-                                                        aria-describedby="nome-cadastro">
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomePop" class="form-control" id="formtexto"
+                                                aria-describedby="nome-cadastro">
 
                                             <label for="formtexto" id="texto">Código numérico</label>
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomeCie" class="form-control" id="formtextoo"
+                                                aria-describedby="nome-cadastro">
+
+
+                                            <div class="col">
+                                                <a id="zonatxt">Zona</a>
                                                 <div class="w-100"></div>
-                                                    <input type="text" name="nomeCie" class="form-control" id="formtextoo"
-                                                        aria-describedby="nome-cadastro">
-                                                        
-                                                
-                                            <div class="col"> 
-                                                    <a  id="zonatxt">Zona</a> 
-                                                    <div class="w-100"></div>
-                                            
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
-                                                
-                                                    </button>
+
+                                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
+
+                                                </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        
-                                                        <a class="dropdown-item" href="modosolo">zona 1</a>
-                                                        <a class="dropdown-item" href="emequipe">zona 2</a>
-                                                        <a class="dropdown-item" href="emequipe">zona 3</a>
-                                                        <a class="dropdown-item" href="emequipe">zona 4</a>
-                                                        <a class="dropdown-item" href="emequipe">zona 5</a>
-                                                        <a class="dropdown-item" href="emequipe">zona 6</a>
+
+                                                    <a class="dropdown-item" href="modosolo">zona 1</a>
+                                                    <a class="dropdown-item" href="emequipe">zona 2</a>
+                                                    <a class="dropdown-item" href="emequipe">zona 3</a>
+                                                    <a class="dropdown-item" href="emequipe">zona 4</a>
+                                                    <a class="dropdown-item" href="emequipe">zona 5</a>
+                                                    <a class="dropdown-item" href="emequipe">zona 6</a>
                                                 </div>
-                                                
+
                                             </div>
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Pontos</label>
-                                                <div class="w-100"></div>
-                                                    <input type="text" name="nomeCie" class="form-control" id="formtextoo"
-                                                        aria-describedby="nome-cadastro">
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomeCie" class="form-control" id="formtextoo"
+                                                aria-describedby="nome-cadastro">
 
                                             <div class="w-100"></div>
 
                                             <label for="formtexto" id="texto">Nome social</label>
 
-                                                <div class="w-100"></div>
-                                                    <input type="text" name="nomeCie" class="form-control" id="form2"
-                                                        aria-describedby="nome-cadastro">
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomeCie" class="form-control" id="form2"
+                                                aria-describedby="nome-cadastro">
 
                                         </div>
 
 
-                                        
-                                       
+
+
 
                                     </div>
 
@@ -174,10 +174,12 @@
 
                                             <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
 
-                                            <label class="picture" for="picture__input" tabIndex="0">
-                                                <span class="picture__image"></span>
+                                            <label class="picture align-content-center" for="picture__input" tabIndex="0">
+                                                <span class="picture__image">
+                                                    <img class="img-camera" src="../../public/camera.svg">
+                                                </span>
                                             </label>
-                                            <input type="file" name="imagem" id="picture__input">
+                                            <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
                                             <script
                                                 src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
                                             <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
@@ -225,12 +227,12 @@
         <div class="container">
             <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Adicionar</a> </button>
             <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"><a id="limpar"> Limpar</a>
-            <button type="button" class="btn btn-primary btn-lg" id="botoesexcluir"><a>Excluir</a> </button>
+                <button type="button" class="btn btn-primary btn-lg" id="botoesexcluir"><a>Excluir</a> </button>
             </button>
         </div>
 
-        
-        </form> 
+
+        </form>
 
 
     </main>

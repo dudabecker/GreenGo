@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php if (isset($_SESSION['msg_erro'])): ?>
-<span>
-    <?= $_SESSION['msg_erro'] ?>
-</span>
+    <span>
+        <?= $_SESSION['msg_erro'] ?>
+    </span>
 <?php endif ?>
 
 
@@ -16,7 +16,7 @@
     <title>Registro</title>
 
     <!--FAVICON-->
-    <link rel="icon" href="../public/favicon.svg">
+    <link rel="icon" href="../../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
@@ -40,37 +40,25 @@
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/script.js"></script>
-
-    <style>
-        .ck-editor__editable_inline {
-            min-height: 400px;
-        }
-    </style>
 </head>
 
 
 <nav id="indexinteiro">
-
     <div class="col-xs-12" id="nav-container">
-
         <div id="itensmenu">
-
             <nav class="navbar navbar-expand-lg " id="menu">
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
-
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
-
 
                 <nav>
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
@@ -87,11 +75,8 @@
                     </div>
                 </nav>
             </nav>
-
         </div>
-
     </div>
-
 </nav>
 
 <body>
@@ -99,9 +84,7 @@
         <nav id="primeirotextoindex">
             <div class="container">
                 <div class="row justify-content-md-left">
-
                     <div id="corpo-registro">
-
                         <div class="row">
                             <div class="col">
                                 <h1 id="primeirotextoreg"> Registre uma espécie!</h1>
@@ -179,7 +162,6 @@
                                                 </div>
                                             </div>
                                         </nav>
-
                                     </div>
 
                                     <nav>
@@ -187,10 +169,14 @@
 
                                             <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
 
-                                            <label class="picture" for="picture__input" tabIndex="0">
-                                                <span class="picture__image"></span>
+                                            <label class="picture align-content-center" for="picture__input"
+                                                tabIndex="0">
+                                                <span class="picture__image">
+                                                    <img class="img-camera" src="../../public/camera.svg">
+                                                </span>
                                             </label>
-                                            <input type="file" name="imagem" id="picture__input">
+                                            <input type="file" name="imagem" id="picture__input"
+                                                accept=".png, .jpg, .jpeg">
                                             <script
                                                 src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
                                             <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
@@ -203,16 +189,13 @@
             </div>
         </nav>
 
-
-
-
         <nav id="primeirotextoindex">
             <br>
             <div class="container" id="caixadetexto">
                 <a id="textodescritivo">Texto descritivo</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="ckeditor/build/ckeditor.js"></script>
+                <script src="../ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -228,11 +211,7 @@
                             console.error(error);
                         });
                 </script>
-
             </div>
-
-            </div>
-
         </nav>
 
         <div class="container">
@@ -242,14 +221,12 @@
         </div>
 
         <nav>
-
-
             <div class="container" id="caixa-adicione-individuos">
 
-                <a id="textoind">Indivíduos dessa espécie:</a>
+                <a id="textoind">Indivíduos dessa espécie</a>
 
+                <img class="img-responsive" src="../../public/mais.svg" id="mais-registro">
 
-                <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
                 <div class="col">
                     <div class="row">
                         <div class="quadrado">
@@ -258,8 +235,6 @@
 
                     </div>
 
-
-
                     <div class="col">
                         <div class="row">
                             <div class="quadrado">
@@ -267,23 +242,16 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
-
-
-
         </nav>
-        </form> <!-- onde seria o fim do form, não sei onde é -->
 
-
+        </form>
     </main>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/grayscale.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/registro.js"></script>
 </body>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/grayscale.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/registro.js"></script>
 
 </html>
