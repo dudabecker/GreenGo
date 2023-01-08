@@ -150,7 +150,7 @@
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Pontos</label>
                                             <div class="w-100"></div>
-                                            <input type="text" name="nomeCie" class="form-control" id="formtextoo"
+                                            <input type="number" min="0" name="nomeCie" class="form-control" id="formtextoo"
                                                 aria-describedby="nome-cadastro">
 
                                             <div class="w-100"></div>
