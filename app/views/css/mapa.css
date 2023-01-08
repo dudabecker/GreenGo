@@ -22,17 +22,19 @@
     font-family: 'Poppins';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../fontes/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
 
-#itemmenu  {
+#itemmenu {
     display: flex;
     font-size: 1.3em;
     margin-left: 50px;
@@ -43,12 +45,11 @@
     height: min-content;
     font-family: Poppins-regular;
     font-size: 19px;
-
-
 }
-#navbar-links{
+
+#navbar-links {
     margin-right: 90px;
-    
+
 }
 
 #navbar-links a:hover {
@@ -58,27 +59,25 @@
     height: min-content;
 
 }
-#logo{
+
+#logo {
     width: 100px;
     margin-top: 20px;
     margin-left: 15px;
 
 }
-body{
+
+body {
     background-color: var(--branco);
 }
 
-#mapa-da-home{
-   
-    
+#mapa-da-home {
     margin-top: 30px;
-   cursor: pointer;
-   
-   
+    cursor: pointer;
 
 }
 
-#botaoentrar{
+#botaoentrar {
     display: flex;
     font-size: 1.3em;
     margin-left: 50px;
@@ -91,61 +90,89 @@ body{
     font-size: 19px;
     font-weight: bold;
 }
-#botoesmapa{
+
+#botoesmapa {
     margin-top: 60px;
     text-align: center;
 }
 
-#botaozona{
+#botaozona {
     width: 120px;
     height: 50px;
-    margin-right: 30px;
     font-family: Poppins-regular;
-    color: #338a5f;
-    border-color: #338a5f;
+    color: var(--principal);
+    border-color: var(--principal);
     border-radius: 9px;
-    text-decoration: none;
-    background-color: #ebf0f1;
+    background-color: var(--branco);
     border-width: 2px;
     font-size: 20px;
     margin-top: 20px;
+    margin-right: 30px;
+    transition: 0.3s ease;
 }
-#todosbotao{
+
+#botaozona:hover {
+    color: var(--branco);
+    background-color: var(--principal);
+    border-radius: 9px;
+}
+
+#todosbotao {
     width: 120px;
     height: 50px;
     margin-right: 25px;
-    background-color: #EA8C94;
+    background-color: var(--destaque);
     border: none;
     font-size: 20px;
     font-family: Poppins-regular;
     border-radius: 9px;
     margin-top: 20px;
+    transition: 0.3s ease;
+
 }
 
-#botoesfileira2{
+#todosbotao:hover {
+    transform: scale(1.05);
+}
+
+#botoesfileira2 {
     width: 110px;
     height: 40px;
     margin-right: 5px;
     font-family: Poppins-regular;
-    color: #338a5f;
-    border-color: #338a5f;
-    border-radius: 9px;
+    color: var(--principal);
+    border-color: var(--principal);
+    border-radius: 5px;
     text-decoration: none;
-    background-color: #ebf0f1;
+    background-color: var(--branco);
     border-width: 2px;
     font-size: 17px;
     margin-top: 20px;
+    transition: 0.3s ease;
 }
-#linhasecundaria{
+
+#botoesfileira2:hover {
+    color: var(--branco);
+    background-color: var(--principal);
+    border-radius: 5px;
+}
+
+#linhasecundaria {
     margin-left: 20px;
 }
 
-.quadrado{
+.quadrado {
     width: 245px;
     height: 381px;
-    background-color: #EA8C94;
-    margin-top :40px ;
+    background-color: var(--destaque);
+    margin-top: 40px;
     margin-left: 20px;
     cursor: pointer;
     border-radius: 30px;
+    transition: 0.3s ease;
+
+}
+
+.quadrado:hover {
+    transform: scale(1.02);
 }

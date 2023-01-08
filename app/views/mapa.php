@@ -77,11 +77,9 @@
 
                         <div class="row">
                             <div class="col" id="textoindex">
-
-                                
                             
                                 <div class="img-responsive">
-                                    <a href="mapa.php"><img src="../public/mapa mapa.svg" class="img-fluid" alt="logo-index" id="mapa-da-home"></a>
+                                    <a href="mapa.php"><img src="../public/mapa mapa.svg" class="img-fluid" alt="mapa ifpr" id="mapa-da-home"></a>
                                 </div>
                             </div>
                         </div>
