@@ -88,10 +88,10 @@
 
             <div class="row justify-content-start">
                 <div class="col-auto align-content-center">
-                    <img class="img-especie" src="../public/especie.svg"><!-- < ?=$especie->getImagem() ?> -->
+                    <img class="img-especie"><!-- < ?=$especie->getImagem() ?> -->
                 </div>
 
-                <div class="col-6">
+                <div class="col-lg">
 
                     <!-- SOBRE AS TAGS
 
@@ -104,10 +104,24 @@
                         se quiser fazer ser uma tag clicavel, direcionando pra pagina do mapa com o 
                         filtro do atributo especifico aplicado para aparecer outros com o mesmo atributo,
                         fique a vontade!!
+
+                        Atributos Especiais:
+                        Frutifera: < ?= $especie->getFrutifera(); ?>
+                        <br>
+                        Tóxica: < ?= $especie->getToxidade(); ?>
+                        <br>
+                        Exótica: < ?= $especie->getExotica(); ?>
+                        <br>
+                        Rara: < ?= $especie->getRaridade(); ?>
+                        <br>
+                        Medicinal: < ?= $especie->getMedicinal(); ?>
+                        <br>
+                        Comestível: < ?=$especie->getComestivel(); ?>
                     -->
+
                     <div class="row col flex-wrap">
                         <div class="atributos">
-                            frut[ifera
+                            frutífera
                         </div>
                     </div>
 
@@ -121,46 +135,67 @@
             <br>
 
             <!--BOTAO NO MODO JOGO E SOMENTE QUANDO ESTIVER NO JOGO-->
-            <div class="col">
+            <div class="col botoes">
                 <div class="row">
-                    <a class="btn-primario" href='CONTINUAR'> Continuar </a>
+                    <a class="continuar" href='CONTINUAR'> Continuar </a>
                 </div>
 
                 <div class="row">
-                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO--> xxxx pontos</p>
+                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</p>
                 </div>
             </div>
 
             <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
+            <div class="row justify-content-between">
+                <h3 class="subtitulo">
+                    Indivíduos nessa espécie
+                </h3>
+                
+                <!--BOTÃO SÓ PARA ADM-->
+                <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
+                    <img class="mais " src="../public/mais.svg">
+                </a>
+            </div>
 
-            INDIIDUOS
+            <!--LISTAGEM DE INDIVIDUOS-->
+            <div class="row-cols-4 align-content-start">
+            <a href="./">
+                <div class="col individuo">
+                    <div class="row justify-content-evenly">
+                        <div class="col align-content-center">
+                            <img class="img-ind"><!--< ?= $especie['imagem'] ?>-->
+                        </div>
+                        
+                        <div class="col">
+                            <p>
+                                <b>Código numérico:</b> < ?= $especie['idEspecie'] ?><br>
+                                <b>Zona:</b> < ?= $especie['pontoEsp'] ?><br>
+                                <b>Ponto:</b> < ?= $especie['frutifera'] ?><br>
+                                <b>Nome Social:</b> < ?= $especie['toxidade'] ?><br>
+                                <b>História:</b> < ?= $especie['comestivel'] ?><br>
+                            </p>
+
+                            <!--QR CODE-->
+                            <div class="row-3">
+                                <a class="qrcode" href=".">QR CODE</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             <!-- ESSA PARTE É SÓ PRA ADM -->
-            <div class="row justify-content-start align-middle">
+            <div class="row justify-content-start botoes">
                 <!--EDITAR-->
-                <div class="col-sm-3">
-                    <a class="btn-primario" href=",">Editar</a>
+                <div class="col-sm-3 min-content">
+                    <a class="editar" href=",">Editar</a>
                 </div>
 
                 <!--EXCLUIR-->
-                <div class="col-sm-3">
+                <div class="col-sm-3 min-content">
                     <a class="excluir" href=".">Excluir</a>
                 </div>
             </div>
             <br><br>
-
-            Atributos Especiais:
-            Frutifera: <?= $especie->getFrutifera(); ?>
-            <br>
-            Tóxica: <?= $especie->getToxidade(); ?>
-            <br>
-            Exótica: <?= $especie->getExotica(); ?>
-            <br>
-            Rara: <?= $especie->getRaridade(); ?>
-            <br>
-            Medicinal: <?= $especie->getMedicinal(); ?>
-            <br>
-            Comestível: < ?=$especie->getComestivel(); ?>
         </div>
     <?php endforeach; ?>
 </body>

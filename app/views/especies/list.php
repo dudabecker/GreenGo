@@ -77,7 +77,7 @@
             </a>
         </div>
 
-        <div class="foreach row-cols-4 align-content-start">
+        <div class="row-cols-4 align-content-start">
             <?php foreach ($data['especies'] as $especie): ?>
             <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
                 <div class="col especie">
@@ -91,15 +91,24 @@
                                 <?= $especie['nomeCie'] ?>
                             </h3>
 
+                            <!-- SOBRE OS BOOLEANOS
+
+                                fazer um if == 1 {
+                                    return "sim"
+                                } else{
+                                    return "nao"
+                                }
+                            -->
+
                             <p>
-                                Identificação Espécie: <?= $especie['idEspecie'] ?><br>
-                                Pontos: <?= $especie['pontoEsp'] ?><br>
-                                Frutifera: <?= $especie['frutifera'] ?><br>
-                                Tóxica: <?= $especie['toxidade'] ?><br>
-                                Comestível: <?= $especie['comestivel'] ?><br>
-                                Exótica: <?= $especie['exotica'] ?><br>
-                                Rara: <?= $especie['raridade'] ?><br>
-                                Medicinal: <?= $especie['medicinal'] ?><br>
+                                <b>Identificação Espécie:</b> <?= $especie['idEspecie'] ?><br>
+                                <b>Pontos:</b> <?= $especie['pontoEsp'] ?><br>
+                                <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
+                                <b>Tóxica:</b> <?= $especie['toxidade'] ?><br>
+                                <b>Comestível:</b> <?= $especie['comestivel'] ?><br>
+                                <b>Exótica:</b> <?= $especie['exotica'] ?><br>
+                                <b>Rara:</b> <?= $especie['raridade'] ?><br>
+                                <b>Medicinal:</b> <?= $especie['medicinal'] ?><br>
                             </p>
 
                             <div class="row justify-content-start">
