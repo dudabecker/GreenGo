@@ -93,7 +93,18 @@
 
                 <div class="col-6">
 
-                    <!-- TAGS -->
+                    <!-- SOBRE AS TAGS
+
+                        fazer um if atributo==1{
+                            aparece
+                        }else{
+                            pula
+                        }
+
+                        se quiser fazer ser uma tag clicavel, direcionando pra pagina do mapa com o 
+                        filtro do atributo especifico aplicado para aparecer outros com o mesmo atributo,
+                        fique a vontade!!
+                    -->
                     <div class="row col flex-wrap">
                         <div class="atributos">
                             frut[ifera
@@ -107,16 +118,35 @@
                     </div>
                 </div>
             </div>
+            <br>
 
             <!--BOTAO NO MODO JOGO E SOMENTE QUANDO ESTIVER NO JOGO-->
-            <div>
-                <a class="btn-primario" href='CONTINUAR'> Continuar </a>
+            <div class="col">
+                <div class="row">
+                    <a class="btn-primario" href='CONTINUAR'> Continuar </a>
+                </div>
+
+                <div class="row">
+                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO--> xxxx pontos</p>
+                </div>
             </div>
 
-            
+            <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
 
-            <!---->
+            INDIIDUOS
 
+            <!-- ESSA PARTE É SÓ PRA ADM -->
+            <div class="row justify-content-start align-middle">
+                <!--EDITAR-->
+                <div class="col-sm-3">
+                    <a class="btn-primario" href=",">Editar</a>
+                </div>
+
+                <!--EXCLUIR-->
+                <div class="col-sm-3">
+                    <a class="excluir" href=".">Excluir</a>
+                </div>
+            </div>
             <br><br>
 
             Atributos Especiais:
@@ -131,8 +161,8 @@
             Medicinal: <?= $especie->getMedicinal(); ?>
             <br>
             Comestível: < ?=$especie->getComestivel(); ?>
-
-                <?php endforeach; ?>
+        </div>
+    <?php endforeach; ?>
 </body>
 
 </html>
