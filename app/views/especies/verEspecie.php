@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espécie</title>
@@ -13,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/perfil.css">
+    <link rel="stylesheet" href="../views/css/especie.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -36,10 +37,10 @@
         <div id="itensmenu">
 
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
+                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -63,31 +64,51 @@
 </nav>
 
 <body>
-<?php foreach($data['especies'] as $especie): ?>
+    <?php foreach ($data['especies'] as $especie): ?>
 
-    <h2><?= $especie->getNomePop() ?></h2>
-    <img <?= $especie->getImagem() ?>><br><br>
+        <div class="container">
 
-		Nome Cientifico: <?= $especie->getNomeCie(); ?>
-		<br>
-		Descrição: <?= $especie->getDescricao(); ?>
-		<br>
-		Pontos: <?= $especie->getPontoEsp(); ?>
-		<br><br>
-	
-		Atributos Especiais:
-		Frutifera: <?= $especie->getFrutifera(); ?>
-		<br>
-		Tóxica: <?= $especie->getToxidade(); ?>
-		<br>
-		Exótica: <?= $especie->getExotica(); ?>
-		<br>
-		Rara: <?= $especie->getRaridade(); ?>
-		<br>
-		Medicinal: <?= $especie->getMedicinal(); ?>
-		<br>
-		Comestível: <?= $especie->getComestivel(); ?>
-		<br>
-<?php endforeach; ?>
+            <div class="row justify-content-between">
+                <h2 class="popular">
+                    <?= $especie->getNomePop(); ?>
+                </h2>
+
+                <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
+                    < ?=$especie->getPontoEsp(); ?>
+                </span>
+            </div>
+
+            <div class="row justify-content-between">
+                <h3 class="cientifico">
+                    <?= $especie->getNomeCie(); ?>
+                </h3>
+            </div>
+
+            
+        </div>
+
+        <img < ?=$especie->getImagem() ?> ><br><br>
+
+        Atributos Especiais:
+        Frutifera: <?= $especie->getFrutifera(); ?>
+        <br>
+        Tóxica: <?= $especie->getToxidade(); ?>
+        <br>
+        Exótica: <?= $especie->getExotica(); ?>
+        <br>
+        Rara: <?= $especie->getRaridade(); ?>
+        <br>
+        Medicinal: <?= $especie->getMedicinal(); ?>
+        <br>
+        Comestível: < ?=$especie->getComestivel(); ?>
+            <br>
+
+            <br>
+            Descrição: <?= $especie->getDescricao(); ?>
+            <br>
+
+
+            <?php endforeach; ?>
 </body>
+
 </html>
