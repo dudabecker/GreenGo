@@ -75,7 +75,7 @@
                     </h2>
 
                     <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
-                        < ?=$especie->getPontoEsp(); ?>
+                        <?=$especie->getPontoEsp(); ?>
                     </span>
                 </div>
 
