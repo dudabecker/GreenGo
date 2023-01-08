@@ -68,47 +68,71 @@
 
         <div class="container">
 
-            <div class="row justify-content-between">
-                <h2 class="popular">
-                    <?= $especie->getNomePop(); ?>
-                </h2>
+            <div class="titulo">
+                <div class="row justify-content-between">
+                    <h2 class="popular">
+                        <?= $especie->getNomePop(); ?>
+                    </h2>
 
-                <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
-                    < ?=$especie->getPontoEsp(); ?>
-                </span>
+                    <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
+                        < ?=$especie->getPontoEsp(); ?>
+                    </span>
+                </div>
+
+                <div class="row justify-content-between">
+                    <h3 class="cientifico">
+                        <?= $especie->getNomeCie(); ?>
+                    </h3>
+                </div>
             </div>
 
-            <div class="row justify-content-between">
-                <h3 class="cientifico">
-                    <?= $especie->getNomeCie(); ?>
-                </h3>
+            <div class="row justify-content-start">
+                <div class="col-auto align-content-center">
+                    <img class="img-especie" src="../public/especie.svg"><!-- < ?=$especie->getImagem() ?> -->
+                </div>
+
+                <div class="col-6">
+
+                    <!-- TAGS -->
+                    <div class="row col flex-wrap">
+                        <div class="atributos">
+                            frut[ifera
+                        </div>
+                    </div>
+
+                    <div class="row col">
+                        <p class="descricao">
+                            <?= $especie->getDescricao(); ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--BOTAO NO MODO JOGO E SOMENTE QUANDO ESTIVER NO JOGO-->
+            <div>
+                <a class="btn-primario" href='CONTINUAR'> Continuar </a>
             </div>
 
             
-        </div>
 
-        <img < ?=$especie->getImagem() ?> ><br><br>
+            <!---->
 
-        Atributos Especiais:
-        Frutifera: <?= $especie->getFrutifera(); ?>
-        <br>
-        Tóxica: <?= $especie->getToxidade(); ?>
-        <br>
-        Exótica: <?= $especie->getExotica(); ?>
-        <br>
-        Rara: <?= $especie->getRaridade(); ?>
-        <br>
-        Medicinal: <?= $especie->getMedicinal(); ?>
-        <br>
-        Comestível: < ?=$especie->getComestivel(); ?>
+            <br><br>
+
+            Atributos Especiais:
+            Frutifera: <?= $especie->getFrutifera(); ?>
             <br>
-
+            Tóxica: <?= $especie->getToxidade(); ?>
             <br>
-            Descrição: <?= $especie->getDescricao(); ?>
+            Exótica: <?= $especie->getExotica(); ?>
             <br>
+            Rara: <?= $especie->getRaridade(); ?>
+            <br>
+            Medicinal: <?= $especie->getMedicinal(); ?>
+            <br>
+            Comestível: < ?=$especie->getComestivel(); ?>
 
-
-            <?php endforeach; ?>
+                <?php endforeach; ?>
 </body>
 
 </html>
