@@ -77,15 +77,11 @@
         foreach ($data['usuario'] as $user): ?>
 
         <p>
-            Meu nome aqui é <b>
-                <?= $user->getNomeUsuario() ?>
-            </b>
-            , meu gênero é <b>
-                <?= $user->getGenero() ?>
-            </b>
-            e estou no <b>
-                <?= $user->getEscolaridade() ?>
-            </b>.
+            Meu nome aqui é <b><?= $user->getNomeUsuario() ?></b>
+            , meu gênero é <b><?= $user->getGenero() ?></b>
+            e estou no <b><?= $user->getEscolaridade() ?></b>.
+            <br>
+            Estou acessando com o perfil de <b><?= $user->getTipoUsuario() ?></b>.
             <br><br>
             O e-mail cadastrado é <b>
                 <?= $user->getEmail() ?>
