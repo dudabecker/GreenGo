@@ -7,6 +7,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . "/../repository/UserRepository.php";
+require_once __DIR__ . "/../models/UserModel.php";
 //require_once __DIR__ . "/Controller.php";
 
 $userc = new ControllerUser();
@@ -54,23 +55,103 @@ class ControllerUser{
             print "Erro ao carregar a view";
         }
     }
-    function create(){
-    $user = new UserModel();
 
-	$user->setNomeUsuario($_POST["field_nome"]);
-    $user->setEmail($_POST["field_email"]);
-    $user->setPassword($_POST["field_password"]);
-	$user->setGenero($_POST["field_genero"]);
-    $user->setEscolaridade($_POST["field_escolaridade"]);
+
+function create(){
+    $user = new UserModel();
+    $user->setNomeUsuario($_POST['field_nome']);
+    $user->setEmail($_POST['field_email']);
+    $user->setPassword($_POST['field_password']);
+    /*if(filter_var($email,FILTER_VALIDATE_EMAIL)){ //verifica se a senha tem no minimo 8 ou mais caracteres
+      if(strlen($senha)<8){
+      //senha inválida
+      //mensagem de erro
+          $msg="As senhas devem ter no mínimo oito caracteres!";
+      }
+      //senha válida
+      if($senha == $csenha){
+          //executar a classe de cadastro
+              $connectar = new Cadastro;
+              echo "<div class=\"flash\">";
+              $connectar = $connectar->cadastrar($nome,$usuario,$idade,$endereco,$email,$senha);
+              echo "</div>";
+          
+      }*/
+    $user->setGenero($_POST['field_genero']);
+    $user->setEscolaridade($_POST['field_escolaridade']);
     
-    //$senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
-   
+    
+    var_dump($user); 
+    $this->loadView("../views/termos.html");
+    //$checkbox = isset($_POST['conc_termos[]']) ? "checked" : "unchecked";
+    
+    if(isset($_POST['conc_termos']))
+    $userRepository = new UserRepository();
+    $userRepository->create($user);
+    GlobalControllerUser::loadView("../views/index.html");
+    
+}
+
+function Logar() {
+    $email = $_POST['field_email'];
+    $senha = $_POST['field_password'];
 
     $userRepository = new UserRepository();
 
-    $id = $userRepository->create($user);
-    //print_r($senhaCriptografada);
-    $this->findAll();
+    $user = $userRepository->findUserByEmail($email);
+
+    var_dump($user);
+    $password = $user->getPassword();
+    if($user == false){
+        $_SESSION['msg_erro'] =  "usuário não cadastrado";
+        header("location: ../views/login.php?msg=erroaologar");
+        
+    } else if($password != md5($senha)){
+            $_SESSION['msg_erro'] =  "senha incorreta";
+            header("location: ../views/login.php?msg=senhaincorreta");
+
+            
+    } else {
+        
+        //$idParam = $_GET['id'];
+        $this->adm();
+        $_SESSION['usuario_logado'] =  true;
+        header("location: ../views/index.html");
+        //$this->loadView("../views/users/perfil.php", );
+        //GlobalControllerUser::loadView("../controllers/UserController?action=adm");
+
+    }
+
+
+}
+
+function sair()
+{
+    session_start(); 
+    session_destroy(); 
+    //header("Location: index.php");
+    exit;
+}
+
+function verificaLogado()
+{
+    if (!isset($_SESSION)) session_start();
+
+    // Verifica se não há a variável da sessão que identifica o usuário
+    if (!isset($_SESSION['id'])) {
+        // Destrói a sessão por segurança
+        session_destroy();
+        // Redireciona o visitante de volta pro login
+        header("Location: index.php"); exit;
+    }
+}
+
+
+
+function preventDefault()
+{
+   // print "call preventDefault() no LoginController";
+    //Controller::loadView("users/preventDefault.php", $data);
 }
 
 function findAll()
@@ -101,8 +182,7 @@ function findUserById()
 
 }
 
-function findUserByEmail()
-{
+function findUserByEmail(){
     $idParam = $_GET['id'];
     //print_r($idParam);
     $userRepository = new UserRepository();
@@ -134,7 +214,7 @@ function edit(){
     $usuario = $userRepository->findUserById($idParam);
     $data['usuario'][0] = $usuario;
 
-    GlobalControllerUser::loadView("../views/eteste.php", $data, $idParam);
+    GlobalControllerUser::loadView("../views/users/editUser.php", $data, $idParam);
 }
  
 function update()
@@ -161,12 +241,7 @@ function update()
     }
     $data['usuario'][0] = $usuario;
     //GlobalControllerUser::findUserById($idParam);  
-    $this->loadView("../views/users/perfil.php", $data, $idParam);  
-}
-	
-function preventDefault() {
-    print "call preventDefault()";
-    //Controller::loadView("users/list.php", $data);
+    $this->loadView("../views/users/perfil.php", $data, $idParam);      
 }
 
 function genero(){
@@ -180,17 +255,33 @@ function genero(){
 
 function adm(){
 
-  // A sessão precisa ser iniciada em cada página diferente
 
-  $nivel_necessario = 1;
+  //$nivel_necessario = 1;
 
+  
+  $idParam = $_GET['tipoUsuario'];
+  $userRepository = new UserRepository();
+  if (!isset($_SESSION)) session_start();
+  
+  $ut = ($_SESSION['tipoUsuario']);
+  $userRepository->adm($idParam);
   // Verifica se não há a variável da sessão que identifica o usuário
-  if ($_SESSION['tipoUsuario'] == $nivel_necessario) {
-      // Destrói a sessão por segurança
-      session_destroy();
-      // Redireciona o visitante de volta pro login
-      header("Location: index.php"); exit;
+  var_dump($ut);
+  if ($ut == 1) {
+      
+    GlobalControllerUser::loadView("../views/cabecalhoJogador.php");
+      
+      //header("Location: index.php");
+      //GlobalControllerUser::loadView("../views/index.html");
+  } if ($ut == 2) {
+    # code...
+    GlobalControllerUser::loadView("../views/cabecalhoAdm.php");
+    //GlobalControllerUser::loadView("../views/index.html");
+  } else{
+    GlobalControllerUser::loadView("../views/cabecalhoVisitante.php");
+    //GlobalControllerUser::loadView("../views/index.html");
   }
-}
+  
 
+}
 }

@@ -5,7 +5,20 @@ class PlantaModel{
 	private $idEspecie;
 	private $codNumerico;
 	private $codQR;
+	private $codPlanta;
 	
+
+	public function getCodPlanta(): int
+	{
+		return $this->CodPlanta;
+	}
+
+	public function setCodPlanta(int $codPlanta)
+	{
+		$this->codPlanta = $codPlanta;
+
+		return $this;
+	}
 
 	public function getIdZona(): int
 	{
