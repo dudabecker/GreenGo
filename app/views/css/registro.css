@@ -530,7 +530,7 @@ input[type=checkbox]:checked:after {
 }
 
 #botoeslimpar {
-    background-color: (var(--branquinho));
+    background-color:#ebf0f1;
     border-color: var(--principal);
     border-radius: 5px;
     border-width: 2px;
@@ -539,11 +539,6 @@ input[type=checkbox]:checked:after {
     transition: 0.3s ease;
 }
 
-#botoeslimpar {
-    color: var(--branco);
-    background-color: var(--principal);
-    border-radius: 5px;
-}
 
 
 #botoeslimpar a {

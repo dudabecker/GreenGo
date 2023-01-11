@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Editar espécie</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../../public/favicon.svg">
@@ -87,7 +87,7 @@
                     <div id="corpo-registro">
                         <div class="row">
                             <div class="col">
-                                <h1 id="primeirotextoreg"> Registre uma espécie!</h1>
+                                <h1 id="primeirotextoreg"> Editar (nome científico)</h1>
                             </div>
                         </div>
 

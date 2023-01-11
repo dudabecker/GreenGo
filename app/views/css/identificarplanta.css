@@ -1,0 +1,185 @@
+:root {
+    --principal: #338a5f;
+    --verdao: #04574d;
+    --branco: #ebf0f1;
+    --branquinho: #ebf0f14b;
+    --destaque: #f58c95;
+    --rosinha: #f0b6bc;
+    --cinza: #586660;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: Poppins-regular, Roboto;
+}
+
+@font-face {
+    font-family: 'Cooper';
+    src: url('../fontes/cooperhewitt-heavy.otf');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fontes/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-regular';
+    src: url('../fontes/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-semibold';
+    src: url('../fontes/Poppins-SemiBold.ttf');
+}
+
+#itemmenu {
+    display: flex;
+    font-size: 1.3em;
+    margin-left: 50px;
+    color: var(--principal);
+    text-decoration: none;
+    padding-top: 0.3em;
+    cursor: pointer;
+    height: min-content;
+    font-family: Poppins-regular;
+    font-size: 19px;
+
+}
+
+#navbar-links {
+    margin-right: 90px;
+
+}
+
+#navbar-links a:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    height: min-content;
+
+}
+
+#logo {
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 15px;
+
+}
+
+body {
+    background-color: var(--branco);
+}
+#mapa-da-home {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 900px;
+    
+   
+
+}
+
+#botaoentrar {
+    display: flex;
+    font-size: 1.3em;
+    margin-left: 50px;
+    color: var(--principal);
+    text-decoration: none;
+    padding-top: 0.3em;
+    cursor: pointer;
+    height: min-content;
+    font-family: Poppins-regular;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#texto_zona{
+    color: var(--principal);
+    font-family: Poppins;
+    font-size: 45px;
+}
+#indentifique_aqui{
+    color: var(--principal);
+    font-family: Poppins-semibold;
+    font-size: 30px;
+}
+
+#identifique{
+    margin-top: 90px;
+    
+}
+#codigoNumerico{
+    background-color: var(--branco);
+    border-color: var(--principal);
+    width:110px;
+    height: 150px;
+    display: inline;
+    border-width: 5px ;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom:90px;
+    position: relative;
+    margin-left: auto;
+}
+#codigoNumerico1{
+    background-color: var(--branco);
+    border-color: var(--principal);
+    width:110px;
+    height: 150px;
+    display: inline;
+    border-width: 5px ;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom:5px;
+    position: relative;
+    margin-left: auto;
+}
+#botao-qrcode{
+    background-color: var(--branco);
+    border-width: 5px;
+    border-radius: 5px;
+    width:300px;
+    height: 150px;
+    display: inline;
+    border-color: var(--principal);
+    margin-top: -40px;
+    margin-left: 70px;
+    
+    
+
+}
+#SCAN{
+    color: var(--principal);
+    font-size: 30px;
+    font-family: poppins-semibold;
+    margin-left: 20px;
+    
+
+}
+
+#botao-proximo{
+    background-color: var(--principal);
+    font-family: Poppins-regular;
+    border-color: var(--principal);
+    width: 250px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+#botao-proximo:hover{
+    background-color: var(--branco);
+    border-color: var(--principal);
+    color: var(--principal);
+    border-width: 2px;
+
+}
+#suapontuacao{
+    color: var(--principal);
+    margin-top: 40px;
+}
