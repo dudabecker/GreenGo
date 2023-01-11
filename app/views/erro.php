@@ -74,7 +74,7 @@
                 <div>
                     <b class="oops">Oops,</b><br>
                     <b class="erro">ocorreu um erro!</b> <br>
-                    403, mais especificamente :/<br>
+                    403, mais especificamente :/<br><br><br><br>
                     <a href="!!!">Voltar à página inicial</a>
                 </div>
             </div>
