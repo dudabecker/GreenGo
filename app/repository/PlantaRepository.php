@@ -80,4 +80,22 @@
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":idPlanta", $idPlanta);
         }
+
+        public function identificarPlanta(PlantaModel $Planta){
+            try {
+                echo $codPlanta;
+                $query = "SELECT * FROM planta where codNumerico = :codPlanta;";
+                $prepare = $this->conn->prepare($query);
+                $res = $prepare->rowCount();
+                
+                if($res > 0){
+                    echo "código válido";
+                    } 
+                else{
+                    echo "código inválido!";}
+                    }
+                catch(Exception $e) {
+                    print("Algo deu errado :/");
+            }
+        }
     }

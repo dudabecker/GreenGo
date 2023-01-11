@@ -92,6 +92,7 @@ error_reporting(E_ALL);
     </ul>
 
     [ <a href="./PlantaController.php?action=loadFormNew">Cadastrar novo</a> ]
+    [ <a href="./PlantaController.php?action=formIdentificarPlanta">Jogar</a> ]
     
 </body>
 </html>
