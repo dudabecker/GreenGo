@@ -150,6 +150,29 @@ class ControllerPlanta{
         $this->findAll($msg);        
     }
 
+    private function formIdentificarPlanta(){
+        $this->loadView("plantas/formIdentificarPlanta.php");
+    }
+
+    private function identificarPlanta(){
+        $planta = new PlantaModel();
+
+        $planta->setCodPlanta($_POST["codPlanta"]);
+
+        $this->plantaRepository->identificarPlanta($planta);
+        
+        $data['plantas'][0] = $planta;
+        $this->loadView("plantas/verPlanta.php", $data);
+
+        /*if($cod){
+			$msg = "código existe";
+		}else{
+			$msg = "código nãp existe";
+		}
+
+        $this->findAll($msg);*/
+    }
+
     private function preventDefault() {
         print "Ação indefinida...";
     }
