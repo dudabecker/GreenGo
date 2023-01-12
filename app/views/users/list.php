@@ -83,7 +83,7 @@
             <th scope="col">Gênero</th>
             <th scope="col">Escolaridade</th>
             <th scope="col">Tipo</th>
-            <th scope="col">Coroar</th>
+            <th class="coroa" scope="col">Coroar</th>
           </tr>
         </thead>
 
@@ -113,6 +113,7 @@
               </td>
 
               <td>
+                <!--FALAR O TIPO USUARIO POR ESCRITO-->
                 <?= $user['tipoUsuario'] ?>
               </td>
 
