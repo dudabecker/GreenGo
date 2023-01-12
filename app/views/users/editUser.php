@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/edituser.css">
+    <link rel="stylesheet" href="./views/css/edituser.css">
 
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -31,9 +31,10 @@
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 </head>
 
-<body id="fundocadastro">
 
-<form method="post" action="../../controllers/UserController.php?action=create">
+<?php foreach($data['usuario'] as $user): ?>
+<body id="fundocadastro">
+<form action="./UserController.php?action=update&id=<?= $user->getId()?>" method="POST">
   <div class="form-group">
     <div class="row">
       <div class="col-sm">
@@ -42,7 +43,7 @@
           <div class="container">
             <div class="col-auto " id="venhacon">
               <span class="img-fluid">
-                <img class="img-responsive" src="../../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
+                <img class="img-responsive" src="../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
             </div>
 
             <h1 id="h1">Editar conta</h1>
@@ -54,7 +55,7 @@
                   <label for="formtexto" id="texto">nome</label>
                   <div class="w-100"></div>
                   <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro"
-                    name="field_nome">
+                     name="field_nome" value="<?= $user->getNomeUsuario(); ?>">
                 </div>
               </div>
             </div>
@@ -66,7 +67,7 @@
                   <label for="formtexto" id="texto">email</label>
                   <div class="w-100"></div>
                   <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro"
-                    name="field_email">
+                    name="field_email" value="<?= $user->getEmail(); ?>">
                 </div>
               </div>
 
@@ -79,7 +80,7 @@
                   <label for="formtexto" id="texto">senha</label>
                   <div class="w-100"></div>
                   <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro"
-                    name="field_password">
+                    name="field_password"  value="<?= $user->getPassword(); ?>">
                   <div class="w-100"></div>
                   <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
                 </div>
@@ -92,7 +93,7 @@
                 <br>
                 <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
                 <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
-                  <option selected></option>
+                  <option selected value="<?= $user->getGenero(); ?>"><?= $user->getGenero(); ?></option>
                   <option value="feminino">feminino</option>
                   <option value="masculino">masculino</option>
                   <option value="outro">outro</option>
@@ -104,7 +105,7 @@
                 <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
                 <br>
                 <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
-                  <option selected></option>
+                  <option selected value="<?= $user->getEscolaridade(); ?>"><?= $user->getEscolaridade(); ?></option>
                   <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
                   <option value=" 7° Ano (EF II)"> 7° ano (EF II)</option>
                   <option value=" 8° Ano (EF II)"> 8° ano (EF II) </option>
@@ -115,7 +116,7 @@
               </div>
 
             </div>
-
+            <?php endforeach; ?>
             <br>
         </form>
         <div class="form-row align-items-left">
@@ -132,7 +133,7 @@
           </div>
 
           <div class="img-fluid" id="icon">
-            <a href="index.html"><img src="../../public/iconebranco.svg" alt=""></a>
+            <a href="index.html"><img src="../public/iconebranco.svg" alt=""></a>
           </div>
 
         </div>
@@ -143,46 +144,5 @@
   </div>
 
 </form>
-
-
-
-<?php
-	//include_once __DIR__ . "/../helpers/mensagem.php";
-	//$caminho = __DIR__ . "/../helpers/mensagem.php";
-	//print_r($caminho); 
-?>
-<h2>Editar Dados</h2>
-</p>
-<?php foreach($data['usuario'] as $user): ?>
-	<form action="./UserController.php?action=update&id=<?= $user->getId()?>" method="POST">
-		Nome: <input type="text" name="field_nome" value="<?= $user->getNomeUsuario(); ?>">
-		<br>
-		Email: <input type="text" name="field_email" value="<?= $user->getEmail(); ?>">
-        <br>
-        Senha: <input type="password" name="field_password" value="<?= $user->getPassword(); ?>">
-		<br>
-        gênero<select name="field_genero">
-              <option value="<?= $user->getGenero(); ?>"></option>
-              <option value="feminino"> feminino </option>
-              <option value="masculino"> masculino </option>
-              <option value="outro"> outro </option>
-              </select>
-            <br>
-        nível de escolaridade <br>
-                <select name="field_escolaridade">
-                <option value ="<?= $user->getEscolaridade(); ?>"></option>
-                    <option value="ensino fundamental 1"> ensino fundamental 1 </option>
-                    <option value="ensino fundamental 2"> ensino fundamental 2 </option>
-                    <option value="ensino medio"> ensino médio </option>
-                    <option value="ensino superior"> ensino superior </option>
-                </select>    
-</p>
-		<input type="submit" value="Salvar">
-		<input type="reset" value="Limpar">
-	</form>		
-<?php endforeach; ?>
-
-
-
-</body>
+	</body>
 </html>
