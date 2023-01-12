@@ -137,107 +137,41 @@ a:hover{
     margin-left: -10px;
 }
 
-.especie{
-    transition: 0.3s ease;
-    display: inline-block;
-    margin-bottom: 25px;
-    outline: 0 solid var(--rosinha);
-
-}
-
-.especie:hover{
-    background-color: var(--rosinha);
-    transition: 0.3s ease;
-    box-shadow: 0 0 0 10px  var(--rosinha);
-
-}
-
-.nome-pop{
-    font-family: Poppins-semibold;
-    font-size: 30px;
-}
-
-.nome-cient{
-    font-family: Poppins-semibold;
-    font-size: 20px;
-}
-
 p{
     font-family: Poppins-medium;
     font-size: 20px;
 }
 
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    margin-right: 10px;
+td{
+    border: none !important;
+    font-family: Poppins-regular;
+    font-size: 18px;
+    color: var(--verdao);
 }
 
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: var(--rosinha);
-}
-
-input[type=checkbox]:checked:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: var(--destaque);
-}
-
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    border: solid var(--branco);
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 4.5px;
-    left: 7.5px;
-}
-
-
-.salvar{
-    color: var(--branco);
-    background-color: var(--principal);
-    border: none;
-    border-radius: 5px;
-
-    width: max-content !important;
-    height: max-content !important;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+th{
+    border: none !important;
     font-family: Poppins-semibold;
-    font-size: 20px;
-    transition: 0.3s ease;
-    margin-left: 10px;
-
-    display: inline-block;
+    color: var(--verdao);
+    font-size: 20px !important;
 }
 
-.salvar:hover{
-    color: var(--branco);
-    transform: scale(1.05);
+th.id{
+    font-family: Poppins-regular;
 }
 
-.salvar:disabled{
-    background-color: var(--cinza);
+.linha{
+    border-bottom: 2px solid var(--rosinha);
+    transform: 0.3s ease all !important;
+
 }
 
+.linha:hover{
+    background-color: var(--rosinha);
+    transform: 0.3s ease all;
+}
 
+.img-coroa{
+    height: 30px !important;
+    margin-left: 20px;
+}

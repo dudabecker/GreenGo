@@ -73,7 +73,7 @@
       </h2>
     </div>
 
-    <div class="row-cols-4 align-content-start">
+    <div class="container row align-content-start">
       <table class="table">
         <thead>
           <tr>
@@ -84,50 +84,53 @@
             <th scope="col">Escolaridade</th>
             <th scope="col">Tipo</th>
             <th scope="col">Coroar</th>
-            <th scope="col">Ver perfil</th>
-            <th scope="col">Editar</th>
           </tr>
         </thead>
 
         <tbody>
 
-        <?php foreach ($data['usuarios'] as $user): ?>
+          <?php foreach ($data['usuarios'] as $user): ?>
 
-            <tr>
-              <th scope="row">
-              <?= $user['id'] ?>
+            <tr class="linha">
+              <th class="id" scope="row">
+                <?= $user['id'] ?>
               </th>
 
               <td>
-              <?= $user['nomeUsuario'] ?>
+                <?= $user['nomeUsuario'] ?>
               </td>
 
               <td>
-              <?= $user['email'] ?>
+                <?= $user['email'] ?>
               </td>
 
               <td>
-              <?= $user['genero'] ?>
+                <?= $user['genero'] ?>
               </td>
 
               <td>
-              <?= $user['escolaridade'] ?>
+                <?= $user['escolaridade'] ?>
               </td>
 
               <td>
-              <?= $user['tipoUsuario'] ?>
+                <?= $user['tipoUsuario'] ?>
               </td>
 
               <td>
-                <input type="checkbox" name="coroar" class="form-check-input" id="botaocheck">
-              </td>
-
-              <td>
-                <a href='../controllers/UserController.php?action=verPerfil&id=<?= $user['id'] ?>'> Mostrar usuário</a>
-              </td>
-
-              <td>
-                <a href='../controllers/UserController.php?action=edit&id=<?= $user['id'] ?>'> Editar </a>
+                <!-- SOBRE O BOTAO DE Coroar
+              
+                    IF tipoUsuario==admin{
+                      acao de diminuir o nivel do usuario
+                      imagem com a src="../public/coroado.svg"
+                    } ELSE{
+                      acao de tornar admin
+                      imagem com a src="../public/coroa.svg"
+                    }
+                  
+                -->
+                <a href='.'>
+                  <img class="img-coroa" src="../public/coroado.svg">
+                </a>
               </td>
             </tr>
 
