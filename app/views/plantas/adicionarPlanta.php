@@ -134,10 +134,9 @@
 
                                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
-
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
+                                                    <!--LISTAR ZONAS DO BANCO-->
                                                     <a class="dropdown-item" href="modosolo">zona 1</a>
                                                     <a class="dropdown-item" href="emequipe">zona 2</a>
                                                     <a class="dropdown-item" href="emequipe">zona 3</a>
