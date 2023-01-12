@@ -4,8 +4,8 @@
     --branco: #ebf0f1;
     --branquinho: #ebf0f14b;
     --destaque: #f58c95;
-    --rosinha: #f0b6bc;
-    --cinza: #586660;
+    --rosinha: #f0b6bcb4;
+    --cinza: #5866603a;
 
     width: 100%;
     height: 100%;
@@ -79,77 +79,6 @@ p{
 }
 
 .assinatura{
-    background-color: #f0b6bc94;
+    background-color: var(--cinza);
     padding: 10px;
-}
-
-div.col.chk{
-    max-width: 5%;
-    align-items: center;
-    display: flex;  
-    justify-content: center;
-    padding-right: 0px;
-}
-
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-}
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: var(--branco);
-}
-input[type=checkbox]:checked:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color:var(--destaque);
-}
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    border: solid var(--destaque);
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 2px;
-    left: 6px;
-}
-div.col.envio{
-    flex-grow: 0;
-    align-self: center;
-    display: flex;  
-
-}
-
-.cad-btn{
-    color: var(--branco);
-    background-color: var(--principal);
-    border: none;
-    border-radius: 5px;
-    height: 50px;
-    width: 160px;
-    font-family: Poppins-semibold;
-    font-size: 20px;
-}
-
-.voltar{
-    color: var(--principal);
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
 }
