@@ -40,7 +40,7 @@
 
             $table = $this->conn->query("SELECT * FROM myuser");
             //$usuarios  = $table->fetchAll(PDO::FETCH_ASSOC);
-            $usuarios  = $table->fetchAll(PDO::FETCH_CLASS, "UserModel");
+            $usuarios  = $table->fetchAll(PDO::FETCH_ASSOC/*, "UserModel"*/);
 
             return $usuarios;
         }
@@ -141,6 +141,12 @@
             //var_dump($result);
             return $result;
             
+        }
+
+        public function verPerfil(int $id){
+            $query = "SELECT * FROM myuser WHERE id = :id";
+            $prepare = $this->conn->prepare($query);
+            $prepare->bindValue(":id", $id);
         }
 
         public function adm(int $id):int {
