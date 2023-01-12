@@ -59,7 +59,7 @@ class ControllerUser{
 
 function create(){
     $user = new UserModel();
-    $user->setNomeUsuario($_POST['field_nome']);
+    $user->setNomeUsuario($_POST["name"]);
     $user->setEmail($_POST['field_email']);
     $user->setPassword($_POST['field_password']);
     /*if(filter_var($email,FILTER_VALIDATE_EMAIL)){ //verifica se a senha tem no minimo 8 ou mais caracteres
@@ -168,16 +168,25 @@ function findAll()
 
 function findUserById()
 {
-    $idParam = $_GET['id'];
+    $idParam = $_GET["id"];
+    $usuario = $this->UserRepository->findUserById($idParam);
     //print_r($idParam);
-    $userRepository = new UserRepository();
-    $usuario = $userRepository->findUserById($idParam);
-    //print "<pre>";
-    //print_r($usuario);
-    //print "</pre>";
-    $data['usuario'][0] = $usuario;
+    //$userRepository = new UserRepository();
+    //$usuario = $userRepository->findUserById($idParam);
+    print "<pre>";
+    print_r($usuario);
+    print "</pre>";
+    //$data['usuario'][0] = $usuario;
     //$this->loadView("users/perfil.php");
-    $this->loadView("../views/users/perfil.php", $data, $idParam);
+    //$this->loadView("../views/users/perfil.php", $data, $idParam);
+
+    /*$idParam = $_GET["idEspecie"];
+
+        $especie = $this->especieRepository->findEspecieById($idParam);
+
+        print "<pre>";
+        print_r($especie);
+        print "</pre>";*/ 
 
 
 }
@@ -251,6 +260,15 @@ function genero(){
     
     $userRepository->genero($idParam);
 
+}
+
+private function verPerfil(){
+    $userRepository = new UserRepository();
+    $idParam = $_GET["id"];
+    $usuario = $this->$userRepository->findUserById($idParam);
+    $data['usuario'][0] = $usuario;
+
+    $this->loadView("users/perfil.php", $data);
 }
 
 function adm(){
