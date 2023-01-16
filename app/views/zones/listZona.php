@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/perfil.css">
+    <link rel="stylesheet" href="../views/css/listEspecie.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -66,55 +66,54 @@
 
 <body>
     <div class="container">
-        <h2 class="titulo">
-            Zonas
-        </h2>
 
+        <div class="row justify-content-between">
+            <h2 class="titulo">
+                Zonas
+            </h2>
 
-        <?php foreach($data['zonas'] as $zona): ?>
-
-            <div class="row justify-content-md-left">
-            <div class="row">
-        <p>
-           
-           
-            Identificação : <?= $zona['idZona'] ?><br>
-            Nome: <?= $zona['nomeZona'] ?><br>
-            quantidade de plantas <?= $zona['nomeZona'] ?><br>
-            Pontuação Minima: <?= $zona['pontoZona'] ?><br>
-            
-            [ <a href="./ZonaController.php?action=edit&idZona=<?= $zona['idZona'] ?>">Editar</a> ]
-            [ <a href="./ZonaController.php?action=deleteZonaById&idZona=<?= $zona['idZona'] ?>">Excluir</a> ]
-        </p>
-
-        <div class="row justify-content-md-left">
-            <div class="row">
-                <!--EDITAR-->
-                <div class="col">
-                 
-                </div>
-
-                <!--EXCLUIR-->
-                <div class="col">
-                    
-                </div>
-
-                <div class="col">
-                 
-                </div>
-                <div class="col">
-                 
-                </div>
-                
-            </div>
+            <!--LINK PARA CADASTRO NAO EH IGUAL AO DA LIST ESPECIE-->
+            <a class="mais align-self-center" href="../views/zones/definirZona.php">
+                <img class="mais" src="../public/mais.svg">
+            </a>
         </div>
-        
+
+        <div class="row justify-content-evenly  flex-wrap">
+            <?php foreach ($data['zonas'] as $zona): ?>
+                <a href="./ZonaController.php?action=verZona&idZona=<?= $zona['idZona'] ?>">
+                    <div class="col-auto especie">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3 class="nome-cient">
+                                    <?= $zona['nomeZona'] ?>
+                                </h3>
+
+                                <p>
+                                    <?= $zona['pontoZona'] ?> pontos mínimos<br>
+                                    <?= $zona['qntPlantas'] ?> quantidade de plantas <br>
+                                </p>
+
+                                <div class="row justify-content-start">
+                                    <!--EDITAR-->
+                                    <div class="col">
+                                        <a class="editar" href="./ZonaController.php?action=edit&idZona=<?= $zona['idZona'] ?>">Editar</a>
+                                    </div>
+
+                                    <!--EXCLUIR-->
+                                    <div class="col">
+                                        <a class="excluir" href="./ZonaController.php?action=deleteZonaById&idZona=<?= $zona['idZona'] ?>">Excluir</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        </div>
     </div>
+
+    <br>
+    <br>
 </body>
 
 </html>
-
-<?php endforeach; ?>
-<div>
-[ <a href="../views/zones/definirZona.php">Cadastrar zona</a> ]
-                </div>
