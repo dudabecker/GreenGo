@@ -77,7 +77,6 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Nome</th>
             <th scope="col">E-mail</th>
             <th scope="col">Gênero</th>
@@ -92,10 +91,6 @@
           <?php foreach ($data['usuarios'] as $user): ?>
 
             <tr class="linha">
-              <th class="id" scope="row">
-                <?= $user['id'] ?>
-              </th>
-
               <td>
                 <?= $user['nomeUsuario'] ?>
               </td>

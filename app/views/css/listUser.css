@@ -153,22 +153,19 @@ th{
     border: none !important;
     font-family: Poppins-semibold;
     color: var(--verdao);
-    font-size: 20px !important;
-}
-
-th.id{
-    font-family: Poppins-regular;
+    font-size: 22px !important;
 }
 
 .linha{
-    border-bottom: 2px solid var(--rosinha);
-    transform: 0.3s ease all !important;
-
+    transform: 0.3s ease;
 }
 
 .linha:hover{
     background-color: var(--rosinha);
-    transform: 0.3s ease all;
+    box-shadow: 0 0 0 1px  var(--rosinha);
+    transform: 0.3s ease !important;
+    
+
 }
 
 .coroa{
