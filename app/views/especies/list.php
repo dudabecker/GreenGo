@@ -77,62 +77,64 @@
             </a>
         </div>
 
-        <div class="row-cols-2 justify-content-evenly">
-            <div class="row">
+        <div class="row justify-content-between align-content-start">
             <?php foreach ($data['especies'] as $especie): ?>
-                    <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
-                        <div class="col especie">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <h3 class="nome-pop">
-                                        <?= $especie['nomePop'] ?>
-                                    </h3>
+                <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
+                    <div class="col-auto especie">
+                        <div class="row">
+                            <div class="col-sm">
+                                <h3 class="nome-pop">
+                                    <?= $especie['nomePop'] ?>
+                                </h3>
 
-                                    <h3 class="nome-cient">
-                                        <?= $especie['nomeCie'] ?>
-                                    </h3>
+                                <h3 class="nome-cient">
+                                    <?= $especie['nomeCie'] ?>
+                                </h3>
 
-                                    <!-- SOBRE OS BOOLEANOS
+                                <!-- SOBRE OS BOOLEANOS
 
-                                    mostrar o nome do atributo caso seja 1
-                                -->
+                                            mostrar o nome do atributo caso seja 1
+                                        -->
 
-                                    <p>
-                                        <?= $especie['pontoEsp'] ?> pontos<br>
-                                        <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
-                                        <b>Tóxica:</b><?= $especie['toxidade'] ?><br>
-                                        <b>Comestível:</b> <?= $especie['comestivel'] ?><br>
-                                        <b>Exótica:</b> <?= $especie['exotica'] ?><br>
-                                        <b>Rara:</b> <?= $especie['raridade'] ?><br>
-                                        <b>Medicinal:</b> <?= $especie['medicinal'] ?><br>
-                                    </p>
+                                <p>
+                                    <?= $especie['pontoEsp'] ?> pontos<br>
+                                    <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
+                                    <b>Tóxica:</b>
+                                    <?= $especie['toxidade'] ?><br>
+                                    <b>Comestível:</b>
+                                    <?= $especie['comestivel'] ?><br>
+                                    <b>Exótica:</b>
+                                    <?= $especie['exotica'] ?><br>
+                                    <b>Rara:</b>
+                                    <?= $especie['raridade'] ?><br>
+                                    <b>Medicinal:</b>
+                                    <?= $especie['medicinal'] ?><br>
+                                </p>
 
-                                    <div class="row justify-content-start">
-                                        <!--EDITAR-->
-                                        <div class="row-3">
-                                            <a class="editar"
-                                                href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
-                                        </div>
-
-                                        <!--EXCLUIR-->
-                                        <div class="row-3">
-                                            <a class="excluir"
-                                                href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
-                                        </div>
+                                <div class="row justify-content-start" style="display: -webkit-box;">
+                                    <!--EDITAR-->
+                                    <div class="row-3">
+                                        <a class="editar"
+                                            href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
                                     </div>
-                                </div>
 
-                                <div class="col-auto align-content-center">
-                                    <div class="row col">
-                                        <img class="img-especie translate-middle" <?= $especie['imagem'] ?>>
+                                    <!--EXCLUIR-->
+                                    <div class="row-3">
+                                        <a class="excluir"
+                                            href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-auto align-content-center align-items-center">
+                                <img class="img-especie align-content-center align-items-center" <?= $especie['imagem'] ?>>
+                            </div>
                         </div>
-                    </a>
+                    </div>
+                </a>
             <?php endforeach; ?>
-            </div>
         </div>
+    </div>
     </div>
 
     <br>

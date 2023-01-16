@@ -150,6 +150,7 @@ a:hover{
     transition: 0.3s ease;
     display: inline-block;
     margin-bottom: 25px;
+    margin-right: 62px;
     outline: 0 solid var(--rosinha);
 
 }
@@ -235,12 +236,9 @@ a.excluir:hover{
 }
 
 .img-especie{
-    height: 275px !important;
-    width: 200px;
+    height: 320px !important;
+    width: 200px !important;
     margin: auto;    
     display: block;
+    border-radius: 5px;
 }
-/**height: 100% !important;
-    width: 100%;
-    object-fit: contain !important;
-**/
