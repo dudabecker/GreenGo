@@ -234,6 +234,8 @@ a.excluir:hover{
 }
 
 .img-especie{
+    height: 375px !important;
+    width: 300px;
     margin: auto;    
     display: block;
 }
