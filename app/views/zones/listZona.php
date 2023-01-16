@@ -81,10 +81,10 @@
         <div class="row justify-content-evenly  flex-wrap">
             <?php foreach ($data['zonas'] as $zona): ?>
                 <a href="./ZonaController.php?action=verZona&idZona=<?= $zona['idZona'] ?>">
-                    <div class="col-auto especie">
+                    <div class="col-auto zona">
                         <div class="row">
                             <div class="col-sm">
-                                <h3 class="nome-cient">
+                                <h3 class="nome">
                                     <?= $zona['nomeZona'] ?>
                                 </h3>
 

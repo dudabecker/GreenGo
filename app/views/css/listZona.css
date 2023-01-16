@@ -146,7 +146,7 @@ a:hover{
     margin-left: -10px;
 }
 
-.especie{
+.zona{
     transition: 0.3s ease;
     display: inline-block;
     margin-bottom: 25px;
@@ -155,19 +155,14 @@ a:hover{
 
 }
 
-.especie:hover{
+.zona:hover{
     background-color: var(--rosinha);
     transition: 0.3s ease;
     box-shadow: 0 0 0 10px  var(--rosinha);
 
 }
 
-.nome-pop{
-    font-family: Poppins-semibold;
-    font-size: 30px;
-}
-
-.nome-cient{
+.nome{
     font-family: Poppins-semibold;
     font-size: 20px;
     margin-bottom: 0;
@@ -233,12 +228,4 @@ a.excluir:hover{
 .excluir:disabled{
     color: var(--cinza);
     border: 2px solid var(--cinza);
-}
-
-.img-especie{
-    height: 320px !important;
-    width: 200px !important;
-    margin: auto;    
-    display: block;
-    border-radius: 5px;
 }
