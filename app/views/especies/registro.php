@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../views/css/registro.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
 
-                        <form action="controllers/EspecieController.php?action=create" method="POST">
+                        <form action="./EspecieController.php?action=create" method="POST">
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
@@ -121,27 +121,27 @@
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="comestivel"
-                                                                    class="form-check-input" id="botaocheck">
+                                                                    class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Comestível</label>
 
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="exotica"
-                                                                    class="form-check-input" id="botaocheck">
+                                                                    class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Exótica</label>
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="frutifera"
-                                                                    class="form-check-input" id="botaocheck">
+                                                                    class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Frutífera</label>
                                                                 <span></span>
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="medicinal"
-                                                                    class="form-check-input" id="botaocheck">
+                                                                    class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Medicinal</label>
                                                             </div>
@@ -153,7 +153,7 @@
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="toxidade"
-                                                                    class="form-check-input" id="botaocheck">
+                                                                    class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Tóxica</label>
                                                             </div>
@@ -172,7 +172,7 @@
                                             <label class="picture align-content-center" for="picture__input"
                                                 tabIndex="0">
                                                 <span class="picture__image">
-                                                    <img class="img-camera" src="../../public/camera.svg">
+                                                    <img class="img-camera" src="../public/camera.svg">
                                                 </span>
                                             </label>
                                             <input type="file" name="imagem" id="picture__input"
@@ -195,7 +195,7 @@
                 <a id="textodescritivo">Texto descritivo</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="../ckeditor/build/ckeditor.js"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -215,8 +215,8 @@
         </nav>
 
         <div class="container">
-            <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
-            <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
+            <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
+            <button type="reset" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
             </button>
         </div>
 
@@ -225,7 +225,15 @@
 
                 <a id="textoind">Indivíduos dessa espécie</a>
 
-                <img class="img-responsive" src="../../public/mais.svg" id="mais-registro">
+                <img class="img-responsive" src="../public/mais.svg" id="mais-registro">
+
+                <!--
+                    FAZER DUAS DIVS
+
+                    UMA COM O TEXTO NA SITUAçÃO DE NAO TER INDIVIDUOS
+
+                    OUTRA DIV COM OS ITENS DOS INDIVIDUOS PRONTOS PRA SUBSTITUIR COM PHP
+                -->
 
                 <div class="col">
                     <div class="row">

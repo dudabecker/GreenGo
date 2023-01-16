@@ -73,70 +73,70 @@
             </h2>
 
             <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
-                <img class="mais " src="../public/mais.svg">
+                <img class="mais" src="../public/mais.svg">
             </a>
         </div>
 
-        <div class="row-cols-4 align-content-start">
+        <div class="row-cols-2 justify-content-evenly">
+            <div class="row">
             <?php foreach ($data['especies'] as $especie): ?>
-            <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
-                <div class="col especie">
-                    <div class="row justify-content-evenly">
-                        <div class="col">
-                            <h3 class="nome-pop">
-                                <?= $especie['nomePop'] ?>
-                            </h3>
+                    <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
+                        <div class="col especie">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h3 class="nome-pop">
+                                        <?= $especie['nomePop'] ?>
+                                    </h3>
 
-                            <h3 class="nome-cient">
-                                <?= $especie['nomeCie'] ?>
-                            </h3>
+                                    <h3 class="nome-cient">
+                                        <?= $especie['nomeCie'] ?>
+                                    </h3>
 
-                            <!-- SOBRE OS BOOLEANOS
+                                    <!-- SOBRE OS BOOLEANOS
 
-                                fazer um if == 1 {
-                                    return "sim"
-                                } else{
-                                    return "nao"
-                                }
-                            -->
+                                    mostrar o nome do atributo caso seja 1
+                                -->
 
-                            <p>
-                                <b>Identificação Espécie:</b> <?= $especie['idEspecie'] ?><br>
-                                <b>Pontos:</b> <?= $especie['pontoEsp'] ?><br>
-                                <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
-                                <b>Tóxica:</b> <?= $especie['toxidade'] ?><br>
-                                <b>Comestível:</b> <?= $especie['comestivel'] ?><br>
-                                <b>Exótica:</b> <?= $especie['exotica'] ?><br>
-                                <b>Rara:</b> <?= $especie['raridade'] ?><br>
-                                <b>Medicinal:</b> <?= $especie['medicinal'] ?><br>
-                            </p>
+                                    <p>
+                                        <?= $especie['pontoEsp'] ?> pontos<br>
+                                        <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
+                                        <b>Tóxica:</b><?= $especie['toxidade'] ?><br>
+                                        <b>Comestível:</b> <?= $especie['comestivel'] ?><br>
+                                        <b>Exótica:</b> <?= $especie['exotica'] ?><br>
+                                        <b>Rara:</b> <?= $especie['raridade'] ?><br>
+                                        <b>Medicinal:</b> <?= $especie['medicinal'] ?><br>
+                                    </p>
 
-                            <div class="row justify-content-start">
-                                <!--EDITAR-->
-                                <div class="row-3">
-                                    <a class="editar"
-                                        href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
+                                    <div class="row justify-content-start">
+                                        <!--EDITAR-->
+                                        <div class="row-3">
+                                            <a class="editar"
+                                                href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
+                                        </div>
+
+                                        <!--EXCLUIR-->
+                                        <div class="row-3">
+                                            <a class="excluir"
+                                                href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <!--EXCLUIR-->
-                                <div class="row-3">
-                                    <a class="excluir"
-                                        href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
+                                <div class="col-auto align-content-center">
+                                    <div class="row col">
+                                        <img class="img-especie translate-middle" <?= $especie['imagem'] ?>>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col align-content-center">
-                            <img class="img-especie" <?= $especie['imagem'] ?>>
-                        </div>
-                    </div>
-                </div>
-            </a>
+                    </a>
             <?php endforeach; ?>
+            </div>
         </div>
     </div>
 
     <br>
     <br>
 </body>
+
 </html>
