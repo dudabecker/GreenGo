@@ -124,7 +124,6 @@
                                                                     class="form-check-input" id="botaocheck" value="1">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Comestível</label>
-
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="exotica"
