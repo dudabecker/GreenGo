@@ -109,12 +109,12 @@
                   <br>
                   <select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
                             <option selected></option>
-                            <option value="6° Ano (EF II)"> 6° Ano (EF II) </option>
-                            <option value=" 7° Ano (EF II)"> 7° Ano (EF II)</option>
-                            <option value=" 8° Ano (EF II)" > 8° Ano (EF II) </option>
-                            <option value=" 9° Ano (EF II)"> 9° Ano (EF II) </option>
-                            <option value="ensino medio">ensino medio</option>
-                            <option value="ensino superior">ensino superior</option>
+                            <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
+                            <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
+                            <option value="8° Ano (EF II)" > 8° ano (EF II) </option>
+                            <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
+                            <option value="Ensino Médio">ensino médio</option>
+                            <option value="Ensino Superior">ensino superior</option>
                   </select>
                 </div>
 
