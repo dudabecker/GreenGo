@@ -129,17 +129,13 @@ a:hover{
     text-decoration: none;
 }
 
-.row{
-    margin-left: -15px;
-}
-
-.col{
-    margin-left: -10px;
-}
-
 p{
     font-family: Poppins-medium;
     font-size: 20px;
+}
+
+table{
+    float: left;
 }
 
 td{
@@ -158,14 +154,16 @@ th{
 
 .linha{
     transform: 0.3s ease;
+    width: 0em;
+    overflow: hidden;
 }
 
 .linha:hover{
     background-color: var(--rosinha);
     box-shadow: 0 0 0 1px  var(--rosinha);
     transform: 0.3s ease !important;
-    
-
+    -webkit-transition: 0.3s ease !important;
+    -moz-transition: 0.3s ease !important;
 }
 
 .coroa{
