@@ -67,19 +67,29 @@ body {
 .titulo{
     color: var(--principal);
     font-family: Poppins;
-    margin-top: 50px;
-    font-size: 60px;
+    margin-top: 40px;
+    font-size: 48px;
     margin-left: 10px;
     margin-bottom: 40px;
 }
 
-p{
+ol, li, p{
     font-size: 20px;
     margin-left: 10px;
     text-align: justify;
 }
 
+p.assinatura{
+    margin: 0 !important;
+}
+
 .assinatura{
     background-color: var(--cinzinha);
     padding: 10px;
+    transition: 0.3s ease;
+}
+
+.assinatura:hover{
+    background-color: var(--rosinha);
+    cursor: default;
 }

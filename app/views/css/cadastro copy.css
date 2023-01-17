@@ -83,6 +83,22 @@ input[type=password]:focus {
     box-shadow: var(--rosinha);
 }
 
+input[type=text].error,
+input[type=password].error {
+    background-color: var(--destaque);
+    border: var(--destaque);
+}
+
+.mensagem-erro{
+    color: var(--destaque);
+    font-family: Poppins-medium;
+    margin-top: -20px;
+    font-size: 13px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+
 label {
     color: var(--principal);
     font-family: Poppins-semibold;

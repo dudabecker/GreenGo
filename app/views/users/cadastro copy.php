@@ -47,20 +47,20 @@
           <div class="col-sm">
             <label for="nome-cadastro">nome</label>
             <br>
-            <input type="text" class="form-control" id="nome-cadastro" name='field_nome'>
+            <input type="text" class="form-control" id="nome-cadastro" name='field_nome' required>
 
             <label for="email-cadastro">e-mail</label>
             <br>
-            <input type="text" class="form-control" id="email-cadastro" name='field_email'>
+            <input type="text" class="form-control" id="email-cadastro" name='field_email' required>
 
             <label for="senha-cadastro">senha</label>
             <br>
-            <input type="password" class="form-control" id="senha-cadastro" name="field_password">
+            <input type="password" class="form-control" id="senha-cadastro" name="field_password" required>
             <h6 class="senha-cadastro">8 caracteres contendo letras e números</h6>
 
             <label for="caixinha-cad">gênero</label>
             <br>
-            <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
+            <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad" required>
               <option selected></option>
               <option value="feminino">feminino</option>
               <option value="masculino">masculino</option>
@@ -72,7 +72,7 @@
 
             <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
             <br>
-            <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+            <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad" required>
               <option selected></option>
               <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
               <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
