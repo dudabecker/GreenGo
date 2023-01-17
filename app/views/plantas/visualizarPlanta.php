@@ -134,56 +134,17 @@
             </div>
             <br>
 
-            <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
-            <div class="row justify-content-between">
-                <h3 class="subtitulo">
-                    Indivíduos nessa espécie
-                </h3>
-                
-                <!--BOTÃO SÓ PARA ADM-->
-                <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
-                    <img class="mais " src="../public/mais.svg">
-                </a>
-            </div>
-
-            <!--LISTAGEM DE INDIVIDUOS-->
-            <div class="row-cols-4 align-content-start">
-            <a href="./">
-                <div class="col individuo">
-                    <div class="row justify-content-evenly">
-                        <div class="col align-content-center">
-                            <img class="img-ind"><!--< ?= $especie['imagem'] ?>-->
-                        </div>
-                        
-                        <div class="col">
-                            <p>
-                                <b>Código numérico:</b> < ?= $especie['idEspecie'] ?><br>
-                                <b>Zona:</b> < ?= $especie['pontoEsp'] ?><br>
-                                <b>Ponto:</b> < ?= $especie['frutifera'] ?><br>
-                                <b>Nome Social:</b> < ?= $especie['toxidade'] ?><br>
-                                <b>História:</b> < ?= $especie['comestivel'] ?><br>
-                            </p>
-
-                            <!--QR CODE-->
-                            <div class="row-3">
-                                <a class="qrcode" href=".">QR CODE</a>
-                            </div>
-                        </div>
-                    </div>
+            <!--BOTAO NO MODO JOGO E SOMENTE QUANDO ESTIVER NO JOGO-->
+            <div class="col botoes">
+                <div class="row">
+                    <a class="continuar" href='CONTINUAR'> Continuar </a>
                 </div>
 
-            <!-- ESSA PARTE É SÓ PRA ADM -->
-            <div class="row justify-content-start botoes">
-                <!--EDITAR-->
-                <div class="col-sm-3 min-content">
-                    <a class="editar" href=",">Editar</a>
-                </div>
-
-                <!--EXCLUIR-->
-                <div class="col-sm-3 min-content">
-                    <a class="excluir" href=".">Excluir</a>
+                <div class="row">
+                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</p>
                 </div>
             </div>
+    
             <br><br>
         </div>
     <?php endforeach; ?>
