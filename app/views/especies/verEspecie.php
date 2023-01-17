@@ -143,7 +143,7 @@
                 </h3>
 
                 <!--BOTÃO SÓ PARA ADM-->
-                <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
+                <a class="mais align-self-center" href="./PlantaController.php?action=loadFormNew">
                     <img class="mais " src="../public/mais.svg">
                 </a>
             </div>
