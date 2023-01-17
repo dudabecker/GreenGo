@@ -18,126 +18,142 @@
     font-family: 'Poppins-ExtraBold';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-regular';
     src: url('../fontes/Poppins-Regular.ttf');
 }
+
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
 body {
-    background-color: var(--branco);
+    background-color: var(--branco) !important;
     color: var(--verdao);
 }
 
-.img-top{
+.img-top {
     width: 20%;
     position: fixed;
     left: 79%;
     top: -5%;
 }
 
-.img-bottom{
-    width: 27%;
+.img-bottom {
+    width: 30%;
     position: fixed;
     left: -2%;
     bottom: -10%;
 }
 
-.container{
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.centrao {
+    margin: auto;
+    position: absolute;
+  top: 50%;
+  transform: translateY(50%);
 }
 
-form.login-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h2.titulo-form {
-    font-family: 'Poppins-ExtraBold';
+.titulo {
     color: var(--principal);
-    font-size: 35pt;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 0;
-    margin-bottom: 20px;
-
+    font-family: Poppins;
+    font-size: 50px;
+    margin-left: -5px;
+    position: relative;
 }
 
 label {
     color: var(--principal);
-    font-size: 18pt;
-    margin-top: 5px;
+    font-family: Poppins-semibold;
 }
 
-input.input-form {
-    font-size: 14pt;
-    color: #021a17;
-    height: 40px;
-    width: 500px;
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover,
+input[type=text]::after,
+input[type=password]::after,
+input[type=email]::after {
+    width: 480px;
     background-color: var(--rosinha);
-    padding-left: 1em;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    box-shadow: none;
-    border: none;
+    height: 45px;
+    margin-right: auto;
+    border-radius: 0%;
+    margin-bottom: 20px;
+    margin-top: -5px;
+    border-color: var(--rosinha);
+    position: relative;
+    font-family: Poppins-regular;
 }
 
-a.restaurar-senha-form{
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    background-color: var(--branco);
+    border: 2px solid var(--rosinha);
+    box-shadow: var(--rosinha);
+}
+
+input[type=text].error,
+input[type=password].error,
+input[type=email].error {
+    background-color: var(--destaque);
+    border: var(--destaque);
+}
+
+.mensagem-erro {
+    color: var(--destaque);
+    font-family: Poppins-medium;
+    margin-top: -20px;
+    font-size: 13px;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+a.restaurar-senha-form {
     color: var(--verdao);
     font-size: 14pt;
     text-decoration: none;
     padding-left: 20px;
 }
 
-.entrar-btn {
-    background-color: var(--principal);
+#botaologin {
     color: var(--branco);
-    font-size: 25pt;
-    font-weight: bold;
-    letter-spacing: 0.01em;
-
+    background-color: var(--principal);
     border: none;
-    border-radius: 0.2em;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 3px;
-    margin-top: 25px;
+    border-radius: 5px;
+    width: max-content !important;
+    height: max-content !important;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-family: Poppins-semibold;
+    font-size: 25px;
+    transition: 0.3s ease;
+    display: inline-block;
 }
 
-span {
-    width: 100%;
-    color: var(--verdao);
-    font-size: 14pt;
+#botaologin:hover {
+    transform: scale(1.05);
     text-decoration: none;
-    text-align:end!important; /*ALINHAR COM O FINAL DA DIV DO FORM*/
-    padding-left: 5em;
 }
 
-.link-cadastro {
+.novoporaqui {
+    margin-left: 90px;
     color: var(--verdao);
+    position: relative;
+    padding-right: -15px;
+}
+
+#cadastro {
+    color: var(--verdao);
+    cursor: pointer;
+    font-family: Poppins-semibold;
+}
+
+#cadastro:hover {
+    color: inherit;
     text-decoration: none;
-    font-weight: bold;
- 
-}
-
-#icon{
-    margin-top: 20px;
-    text-align: center;
-}
-#senha-cadastro {
-    color: 04574D;
-    size: 10px;
-
-}
-#jatemumaconta{
-    margin-top: 120px;
-    text-align: right;
 }
