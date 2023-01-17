@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php if (isset($_SESSION['msg_erro'])): ?>
-<span>
-  <?= $_SESSION['msg_erro'] ?>
-</span>
+  <span>
+    <?= $_SESSION['msg_erro'] ?>
+  </span>
 <?php endif ?>
 
 
@@ -16,7 +16,6 @@
   <title>Cadastro</title>
 
   <link rel="icon" href="../../public/favicon.svg">
-  <link rel="stylesheet" href="/app/views/index.html">
   <link rel="stylesheet" href="../css/cadastro.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -38,7 +37,7 @@
 </head>
 
 
-<body id="fundocadastro">
+<body>
 
   <form method="post" action="../../controllers/UserController.php?action=create">
     <div class="form-group">
@@ -47,9 +46,10 @@
           <form>
 
             <div class="container">
-              <div class="col-auto " id="venhacon">
+              <div class="col-auto " id="">
                 <span class="img-fluid">
                   <img class="img-responsive" src="../../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
+                </span>
               </div>
 
               <h1 id="h1">Criar conta</h1>
@@ -60,7 +60,8 @@
 
                     <label for="formtexto" id="texto">nome</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro" name='field_nome'>
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro"
+                      name='field_nome'>
                   </div>
                 </div>
               </div>
@@ -71,7 +72,8 @@
 
                     <label for="formtexto" id="texto">email</label>
                     <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro" name='field_email'>
+                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro"
+                      name='field_email'>
                   </div>
                 </div>
 
@@ -83,7 +85,8 @@
 
                     <label for="formtexto" id="texto">senha</label>
                     <div class="w-100"></div>
-                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro" name= "field_password">
+                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro"
+                      name="field_password">
                     <div class="w-100"></div>
                     <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
                   </div>
@@ -95,7 +98,7 @@
                   <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
                   <br>
                   <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                  <select name= "field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
+                  <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
                     <option selected></option>
                     <option value="feminino">feminino</option>
                     <option value="masculino">masculino</option>
@@ -107,14 +110,14 @@
                 <div class="col-auto my-1">
                   <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
                   <br>
-                  <select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
-                            <option selected></option>
-                            <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
-                            <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
-                            <option value="8° Ano (EF II)" > 8° ano (EF II) </option>
-                            <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
-                            <option value="Ensino Médio">ensino médio</option>
-                            <option value="Ensino Superior">ensino superior</option>
+                  <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+                    <option selected></option>
+                    <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
+                    <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
+                    <option value="8° Ano (EF II)"> 8° ano (EF II) </option>
+                    <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
+                    <option value="Ensino Médio">ensino médio</option>
+                    <option value="Ensino Superior">ensino superior</option>
                   </select>
                 </div>
 
@@ -124,13 +127,14 @@
 
               <div class="form-row align-items-left">
                 <div class="col-auto my-1">
-                  <button  class="btn btn-primary" id="botaocadastro" href="../termos.html">Cadastrar</button>
+                  <button class="btn btn-primary" id="botaocadastro" href="../termos.html">Cadastrar</button>
 
-                  <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
+                  <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></label>
                 </div>
+                
                 <div class="col-sm">
-
                 </div>
+
                 <div id="pp">
                   <a>Comece sua <br> aventura...</a>
                 </div>
