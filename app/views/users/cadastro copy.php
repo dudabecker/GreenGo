@@ -51,7 +51,7 @@
 
             <label for="email-cadastro">e-mail</label>
             <br>
-            <input type="text" class="form-control" id="email-cadastro" name='field_email' required>
+            <input type="email" class="form-control" id="email-cadastro" name='field_email' required>
 
             <label for="senha-cadastro">senha</label>
             <br>

@@ -59,10 +59,13 @@ body {
 
 input[type=text],
 input[type=password],
+input[type=email],
 input[type=text]:hover,
 input[type=password]:hover,
+input[type=email]:hover,
 input[type=text]::after,
-input[type=password]::after {
+input[type=password]::after,
+input[type=email]::after {
     width: 480px;
     background-color: var(--rosinha);
     height: 45px;
@@ -89,7 +92,7 @@ input[type=password].error {
     border: var(--destaque);
 }
 
-.mensagem-erro{
+.mensagem-erro {
     color: var(--destaque);
     font-family: Poppins-medium;
     margin-top: -20px;
@@ -116,11 +119,11 @@ label {
     margin: 0 auto;
 }
 
-select{
+select {
     font-family: Poppins-regular;
 }
 
-select:focus{
+select:focus {
     box-shadow: none !important;
 }
 
@@ -211,7 +214,7 @@ a:hover {
 
 }
 
-.vazio{
+.vazio {
     background-color: var(--principal);
 }
 
@@ -236,11 +239,11 @@ a:hover {
 
 
 @media (max-width: 780px) {
-    body{
+    body {
         background-color: var(--branco) !important;
         background-image: none;
     }
-    
+
     .logo-div {
         height: 50vh !important;
         content: "/a";
@@ -249,11 +252,11 @@ a:hover {
         margin-left: 0;
     }
 
-    .comece{
+    .comece {
         height: auto;
     }
 
-    .aventura{
+    .aventura {
         font-size: 22px;
     }
 }
