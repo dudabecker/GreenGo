@@ -87,7 +87,7 @@
                     <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" >
+                        <div class="navbar-nav">
 
                             <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.html"> Projeto </a>
                             <a class="nav-item nav-link" id="registro-menu" href="#"> Mapa</a>
