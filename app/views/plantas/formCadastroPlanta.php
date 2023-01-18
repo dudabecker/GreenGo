@@ -78,4 +78,7 @@
 	<input type="reset" value="Limpar">
 </form>		
 </body>
+<div class="container-fluid" id="rodape">
+            
+            </div>
 </html>

@@ -611,3 +611,10 @@ input[type=checkbox]:checked:after {
     border: solid 1px var(--rosinha);
     background-color: transparent;
 }
+#rodape{
+    background-color: var(--principal);
+    width: 100%;
+    height: 70px;
+    margin-top: 200px;
+
+}

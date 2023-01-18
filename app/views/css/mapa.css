@@ -177,3 +177,12 @@ body {
 .quadrado:hover {
     transform: scale(1.02);
 }
+
+
+#rodape{
+    background-color: var(--principal);
+    width: 100%;
+    height: 70px;
+    margin-top: 200px;
+
+}

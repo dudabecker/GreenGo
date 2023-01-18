@@ -79,7 +79,7 @@
                             <div class="col" id="textoindex">
                             
                                 <div class="img-responsive">
-                                    <a href="mapa.php"><img src="../public/mapa mapa.svg" class="img-fluid" alt="mapa ifpr" id="mapa-da-home"></a>
+                                    <a href="mapa.php"><img src="../public/mapa 1.svg" class="img-fluid" alt="mapa ifpr" id="mapa-da-home"></a>
                                 </div>
                             </div>
                         </div>
@@ -167,4 +167,7 @@
         </nav>
     </main>
 </body>
+        <div class="container-fluid" id="rodape">
+            
+            </div>
 </hmtl>

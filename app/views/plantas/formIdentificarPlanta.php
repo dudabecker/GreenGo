@@ -87,4 +87,7 @@ error_reporting(E_ALL);
 </form>		
     
 </body>
+<div class="container-fluid" id="rodape">
+            
+            </div>
 </html>

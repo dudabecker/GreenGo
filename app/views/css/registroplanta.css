@@ -633,7 +633,7 @@ input[type=checkbox]:checked:after {
 }
 
 .dropdown-item {
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins-semibold;
     background-color: #ebf0f1;
 }
@@ -646,5 +646,12 @@ input[type=checkbox]:checked:after {
     box-shadow: none;
     margin-top: -10px;
     margin-right: 70px;
+
+}
+#rodape{
+    background-color: var(--principal);
+    width: 100%;
+    height: 70px;
+    margin-top: 200px;
 
 }

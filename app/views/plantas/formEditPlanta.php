@@ -82,4 +82,7 @@
 <?php endforeach; ?>
 </form>		
 </body>
+<div class="container-fluid" id="rodape">
+            
+            </div>
 </html>
