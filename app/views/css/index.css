@@ -73,9 +73,11 @@ body {
 }
 
 #mapa-da-home {
-    width: 100%;
+    width: 90%;
     margin-top: 100px;
     cursor: pointer;
+    min-width: auto;
+    
 }
 
 #about-area h1 {
@@ -185,3 +187,8 @@ body {
     font-size: 19px;
     font-weight: bold;
 }
+#menuicon{
+    width: 40px;
+    
+}
+body { overflow-x: hidden; }
