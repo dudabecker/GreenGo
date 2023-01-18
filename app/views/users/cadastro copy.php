@@ -86,7 +86,7 @@
 
             <div class="row justify-content-start align-items-center">
               <div class="col-auto">
-                <button class="btn btn-primary" id="botaocadastro" href="../termos.html">Cadastrar</button>
+                <button class="btn btn-primary" id="botaocadastro" type="submit">Cadastrar</button>
 
               </div>
               <div class="col-auto">

@@ -66,7 +66,7 @@
 
                     <div class="row justify-content-beetween align-items-center">
                         <div class="col-auto">
-                            <button class="btn btn-primary" id="botaologin" href="../termos.html">Entrar</button>
+                            <button class="btn btn-primary" id="botaologin" type="submit">Entrar</button>
 
                         </div>
 
