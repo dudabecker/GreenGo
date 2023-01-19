@@ -37,120 +37,91 @@
 </head>
 
 
-<body>
+<body class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 justify-content-end formulario">
+      <h1 class="titulo">Criar conta</h1>
 
-  <form method="post" action="../../controllers/UserController.php?action=create">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm">
-          <form>
+      <form method="post" action="../../controllers/UserController.php?action=create">
+        <div class="row form-row align-items-left">
+          <div class="col-sm">
+            <label for="nome-cadastro">nome</label>
+            <br>
+            <input type="text" class="form-control" id="nome-cadastro" name='field_nome' required>
 
-            <div class="container">
-              <div class="col-auto " id="">
-                <span class="img-fluid">
-                  <img class="img-responsive" src="../../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
-                </span>
-              </div>
+            <label for="email-cadastro">e-mail</label>
+            <br>
+            <input type="email" class="form-control" id="email-cadastro" name='field_email' required>
 
-              <h1 id="h1">Criar conta</h1>
+            <label for="senha-cadastro">senha</label>
+            <br>
+            <input type="password" class="form-control" id="senha-cadastro" name="field_password" required>
+            <h6 class="senha-cadastro">8 caracteres contendo letras e números</h6>
 
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
+            <label for="caixinha-cad">gênero</label>
+            <br>
+            <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad" required>
+              <option selected></option>
+              <option value="feminino">feminino</option>
+              <option value="masculino">masculino</option>
+              <option value="outro">outro</option>
+            </select>
+            <br>
+            <br>
 
-                    <label for="formtexto" id="texto">nome</label>
-                    <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro"
-                      name='field_nome'>
-                  </div>
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
+            <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
+            <br>
+            <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad" required>
+              <option selected></option>
+              <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
+              <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
+              <option value="8° Ano (EF II)"> 8° ano (EF II) </option>
+              <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
+              <option value="Ensino Médio">ensino médio</option>
+              <option value="Ensino Superior">ensino superior</option>
+            </select>
+            <br>
+            <br>
 
-                    <label for="formtexto" id="texto">email</label>
-                    <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro"
-                      name='field_email'>
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
-
-                    <label for="formtexto" id="texto">senha</label>
-                    <div class="w-100"></div>
-                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro"
-                      name="field_password">
-                    <div class="w-100"></div>
-                    <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                  <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
-                  <br>
-                  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                  <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
-                    <option selected></option>
-                    <option value="feminino">feminino</option>
-                    <option value="masculino">masculino</option>
-                    <option value="outro">outro</option>
-                  </select>
-                </div>
-                <div class="w-100"></div>
-
-                <div class="col-auto my-1">
-                  <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
-                  <br>
-                  <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
-                    <option selected></option>
-                    <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
-                    <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
-                    <option value="8° Ano (EF II)"> 8° ano (EF II) </option>
-                    <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
-                    <option value="Ensino Médio">ensino médio</option>
-                    <option value="Ensino Superior">ensino superior</option>
-                  </select>
-                </div>
+            <div class="row justify-content-start align-items-center">
+              <div class="col-auto">
+                <button class="btn btn-primary" id="botaocadastro" type="submit">Cadastrar</button>
 
               </div>
+              <div class="col-auto">
+                <p id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></p>
+              </div>
 
-              <br>
-
-              <div class="form-row align-items-left">
-                <div class="col-auto my-1">
-                  <button class="btn btn-primary" id="botaocadastro" href="../termos.html">Cadastrar</button>
-
-                  <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></label>
-                </div>
-                
-                <div class="col-sm">
-                </div>
-
-                <div id="pp">
-                  <a>Comece sua <br> aventura...</a>
-                </div>
-
-                <div class="img-fluid" id="icon">
-                  <a href="index.html"><img src="../../public/logo-rosa.svg" alt=""></a>
-                </div>
-
+              <div class="row container justify-content-start align-items-center">
+                <p class="container termos">
+                  Ao clicar em “Cadastrar”, você aceita o nosso
+                  <a class="termos" href="../termos.php" target="__blank">Termo de Consentimento
+                    Livre e Esclarecido</a>
+                </p>
               </div>
             </div>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
 
-  </form>
+    <div class="col col-logo">
+      <img class="logo-div" src="../../public/greengo-div.svg" alt="logo">
+    </div>
 
+    <div class="row col align-items-end justify-content-end comece">
+      <p class="aventura">
+        Comece sua <br> aventura...
+      </p>
+
+      <div class="img-fluid">
+        <a href="../index.html">
+          <img id="icon" src="../../public/logo-rosa.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
