@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22.140011mm"
+   height="26.018173mm"
+   viewBox="0 0 22.140011 26.018173"
+   version="1.1"
+   id="svg135"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
+   sodipodi:docname="logo-rodape.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview137"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.7415825"
+     inkscape:cx="16.169629"
+     inkscape:cy="68.152981"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs132" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-154.11822,-133.16369)">
+    <path
+       d="m 157.58844,159.1748 c 0,0 -3.04953,-6.73721 -3.37752,-9.67079 -0.85318,-7.63066 4.34107,-14.77292 9.07814,-16.10244 4.73708,-1.32952 9.01536,3.1558 9.99564,7.44086 0.98028,4.28503 -1.48611,8.88301 -3.80375,12.96794 2.10375,-1.48124 6.71893,-1.67391 6.77688,1.08897 0.0263,1.25522 -1.24998,4.28252 -1.24998,4.28252 z"
+       fill="#338a5f"
+       id="path1587"
+       style="stroke-width:0.264583"
+       sodipodi:nodetypes="cccccccc" />
+  </g>
+</svg>
