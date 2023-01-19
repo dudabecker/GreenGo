@@ -72,12 +72,13 @@
             </h2>
 
             <p>
-                Esta zona possui <b>
-                    <?= $zona->getQntPlantas() ?>
+                Esta zona possui
+                <b>
+                    <?= $zona->getQntPlantas() ?> plantas
                 </b>
                 e a pontuação mínima é de <b>
-                    <?= $zona->getPontoZona() ?>
-                </b> pontos.
+                    <?= $zona->getPontoZona() ?>% do total
+                </b>.
                 <br>
             </p>
 
