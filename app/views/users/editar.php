@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <?php if (isset($_SESSION['msg_erro'])): ?>
-<span>
-  <?= $_SESSION['msg_erro'] ?>
-</span>
+  <span>
+    <?= $_SESSION['msg_erro'] ?>
+  </span>
 <?php endif ?>
 
 
@@ -13,10 +13,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro</title>
+  <title>Editar Conta</title>
 
-  <link rel="icon" href="../../public/favicon.svg">
-  <link rel="stylesheet" href="../css/edituser.css">
+  <link rel="icon" href="../public/favicon.svg">
+  <link rel="stylesheet" href="../views/css/editUser.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -37,115 +37,81 @@
 </head>
 
 
-<body id="fundocadastro">
+<body class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 justify-content-end formulario">
+      <h1 class="titulo">Editar conta</h1>
+      
+      <?php foreach ($data['usuario'] as $user): ?>
+        <form action="./UserController.php?action=update&id=<?= $user->getId() ?>" method="POST">
+          <div class="row form-row align-items-left">
+            <div class="col-sm">
+              <label for="nome-cadastro">nome</label>
+              <br>
+              <input type="text" class="form-control" id="nome-cadastro" name='field_nome'
+                value="<?= $user->getNomeUsuario(); ?>" required>
 
-  <form method="post" action="../../controllers/UserController.php?action=edit">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm">
-          <form>
+              <label for="email-cadastro">e-mail</label>
+              <br>
+              <input type="email" class="form-control" id="email-cadastro" name='field_email'
+                value="<?= $user->getEmail(); ?>" required>
 
-            <div class="container">
-              <div class="col-auto " id="venhacon">
-                <span class="img-fluid">
-                  <img class="img-responsive" src="../../public/greengo-div.svg" alt="logocentro" id="imagemcentrocad">
-              </div>
-
-              <h1 id="h1">Criar conta</h1>
-
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
-
-                    <label for="formtexto" id="texto">nome</label>
-                    <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="nome-cadastro" name="field_nome">
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
-
-                    <label for="formtexto" id="texto">email</label>
-                    <div class="w-100"></div>
-                    <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro" name= "field_email">
-                  </div>
-                </div>
-
-              </div>
-
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
-
-                    <label for="formtexto" id="texto">senha</label>
-                    <div class="w-100"></div>
-                    <input type="password" class="form-control" id="formtexto" aria-describedby="senha-cadastro" name= "field_password">
-                    <div class="w-100"></div>
-                    <h6 id="senha-cadastro" style="color: #04574D ">8 caracteres contendo letras e números</h6>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                  <label for="caixinha-cad" id="texto-caixinhas">gênero</label>
-                  <br>
-                  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">gênero</label>
-                  <select name= "field_genero" class="custom-select mr-sm-2" id="caixinha-cad">
-                    <option selected></option>
-                    <option value="feminino">feminino</option>
-                    <option value="masculino">masculino</option>
-                    <option value="outro">outro</option>
-                  </select>
-                </div>
-                <div class="w-100"></div>
-
-                <div class="col-auto my-1">
-                  <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
-                  <br>
-                  <select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
-                            <option selected></option>
-                            <option value="6° Ano (EF II)"> 6° Ano (EF II) </option>
-                            <option value=" 7° Ano (EF II)"> 7° Ano (EF II)</option>
-                            <option value=" 8° Ano (EF II)" > 8° Ano (EF II) </option>
-                            <option value=" 9° Ano (EF II)"> 9° Ano (EF II) </option>
-                            <option value="ensino medio">ensino medio</option>
-                            <option value="ensino superior">ensino superior</option>
-                  </select>
-                </div>
-
-              </div>
-
+              <label for="caixinha-cad">gênero</label>
+              <br>
+              <select name="field_genero" class="custom-select mr-sm-2" id="caixinha-cad" required>
+                <option selected value="<?= $user->getGenero(); ?>">
+                  <?= $user->getGenero(); ?>
+                </option>
+                <option value="feminino">feminino</option>
+                <option value="masculino">masculino</option>
+                <option value="outro">outro</option>
+              </select>
+              <br>
               <br>
 
-              <div class="form-row align-items-left">
-                <div class="col-auto my-1">
-                  <button type="submit" class="btn btn-primary" id="botaocadastro">Cadastrar</button>
 
-                  <label id="jatemumaconta">Já tem uma conta? <a id="entrar" href="login.php">Entrar</a></button>
-                </div>
-                <div class="col-sm">
+              <label for="caixinha-cad" id="texto-caixinhas">nível de escolaridade</label>
+              <br>
+              <select name="field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad" required>
+                <option selected value="<?= $user->getEscolaridade(); ?>">
+                  <?= $user->getEscolaridade(); ?>
+                </option>
+                <option value="6° Ano (EF II)"> 6° ano (EF II) </option>
+                <option value="7° Ano (EF II)"> 7° ano (EF II)</option>
+                <option value="8° Ano (EF II)"> 8° ano (EF II) </option>
+                <option value="9° Ano (EF II)"> 9° ano (EF II) </option>
+                <option value="Ensino Médio">ensino médio</option>
+                <option value="Ensino Superior">ensino superior</option>
+              </select>
+              <br>
+              <br>
 
+              <div class="row justify-content-start align-items-center">
+                <div class="col-auto">
+                  <button class="btn btn-primary" id="botaopronto" type="submit">Pronto</button>
                 </div>
-                <div id="pp">
-                  <a>Comece sua <br> aventura...</a>
-                </div>
-
-                <div class="img-fluid" id="icon"  >
-                  <a href="../index2.html"><img src="../../public/logo-branca.svg" alt=""></a>
-                </div>
-
               </div>
             </div>
-        </div>
-      </div>
+        </form>
+      <?php endforeach; ?>
     </div>
 
-  </form>
+    <div class="col col-logo">
+      <img class="logo-div" src="../public/greengo-div.svg" alt="logo">
+    </div>
 
+    <div class="row col align-items-end justify-content-end comece">
+      <p class="aventura">
+        Comece sua <br> aventura...
+      </p>
+
+      <div class="img-fluid">
+        <a href="../index.html">
+          <img id="icon" src="../public/logo-branca.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
