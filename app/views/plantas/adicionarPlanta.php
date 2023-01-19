@@ -176,7 +176,7 @@
 
                                             <label class="picture align-content-center" for="picture__input" tabIndex="0">
                                                 <span class="picture__image">
-                                                    <img class="img-camera" src="../../public/camera.svg">
+                                                    <img class="img-camera" src="../public/camera.svg">
                                                 </span>
                                             </label>
                                             <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
@@ -201,7 +201,7 @@
                 <a id="textodescritivo">História</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="../ckeditor/build/ckeditor.js"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',

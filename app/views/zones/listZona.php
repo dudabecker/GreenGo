@@ -14,7 +14,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/listEspecie.css">
+    <link rel="stylesheet" href="../views/css/listZona.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -97,9 +97,9 @@
         </div>
         -->
 
-        <div class="row justify-content-evenly  flex-wrap">
+        <div class="row justify-content-evenly flex-wrap">
             <?php foreach ($data['zonas'] as $zona): ?>
-                <a href="./ZonaController.php?action=verZona&idZona=<?= $zona['idZona'] ?>">
+                <a href="./ZonaController.php?action=findZonaByIdZona&idZona=<?= $zona['idZona'] ?>">
                     <div class="col-auto zona">
                         <div class="row">
                             <div class="col-sm">
