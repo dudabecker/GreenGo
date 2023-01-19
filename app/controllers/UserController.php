@@ -223,7 +223,7 @@ function edit(){
     $usuario = $userRepository->findUserById($idParam);
     $data['usuario'][0] = $usuario;
 
-    GlobalControllerUser::loadView("../views/users/editUser.php", $data, $idParam);
+    GlobalControllerUser::loadView("../views/users/editar.php", $data, $idParam);
 }
  
 function update()
