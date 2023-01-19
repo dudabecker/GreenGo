@@ -74,7 +74,13 @@
     height: min-content;
 }
 
+button,
+button:focus,
+button::after,
+button::before {
+    outline: none !important;
+}
 
-#menuicon{
+#menuicon {
     width: 40px;
 }

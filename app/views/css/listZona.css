@@ -146,6 +146,21 @@ a:hover{
     margin-left: -10px;
 }
 
+#nenhuma{
+    font-size: 24px;
+}
+
+.adicione{
+    font-size: 20px;
+}
+
+.img-flecha{
+    height: 120px;
+    margin: auto;
+    margin-right: 10px;
+    display: block;
+}
+
 .zona{
     transition: 0.3s ease;
     display: inline-block;

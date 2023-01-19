@@ -146,10 +146,25 @@ a:hover{
     margin-left: -10px;
 }
 
+#nenhuma{
+    font-size: 24px;
+}
+
+.adicione{
+    font-size: 20px;
+}
+
+.img-flecha{
+    height: 120px;
+    margin: auto;
+    margin-right: 10px;
+    display: block;
+}
+
 .especie{
     transition: 0.3s ease;
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     margin-right: 62px;
     outline: 0 solid var(--rosinha);
 

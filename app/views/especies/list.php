@@ -77,7 +77,26 @@
             </a>
         </div>
 
+        <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
+
+        <!--
         <div class="row justify-content-between align-content-start">
+
+            <div class="col justify-content-start">
+                <p id="nenhuma">
+                    Puts, nenhuma espécie por enquanto!
+                    <br>
+                    <span class="adicione">Adicione no ícone de mais +</span>
+                </p>
+            </div>
+
+            <div class="col">
+                <img class="align-content-end img-flecha" src="../public/flecha.svg">
+            </div>
+        </div>
+        -->
+        <div class="row justify-content-between align-content-start">
+
             <?php foreach ($data['especies'] as $especie): ?>
                 <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
                     <div class="col-auto especie">
@@ -93,8 +112,8 @@
 
                                 <!-- SOBRE OS BOOLEANOS
 
-                                            mostrar o nome do atributo caso seja 1
-                                        -->
+                                                    mostrar o nome do atributo caso seja 1
+                                                -->
 
                                 <p>
                                     <?= $especie['pontoEsp'] ?> pontos<br>

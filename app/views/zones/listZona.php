@@ -78,6 +78,25 @@
             </a>
         </div>
 
+        <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
+
+        <!--
+        <div class="row justify-content-between align-content-start">
+
+            <div class="col justify-content-start">
+                <p id="nenhuma">
+                    Puts, nenhuma zona por enquanto!
+                    <br>
+                    <span class="adicione">Adicione no ícone de mais +</span>
+                </p>
+            </div>
+
+            <div class="col">
+                <img class="align-content-end img-flecha" src="../public/flecha.svg">
+            </div>
+        </div>
+        -->
+
         <div class="row justify-content-evenly  flex-wrap">
             <?php foreach ($data['zonas'] as $zona): ?>
                 <a href="./ZonaController.php?action=verZona&idZona=<?= $zona['idZona'] ?>">
