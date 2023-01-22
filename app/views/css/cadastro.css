@@ -62,10 +62,13 @@ input[type=password],
 input[type=email],
 input[type=text]:hover,
 input[type=password]:hover,
+input[type=email]:valid,
+input[type=text]:valid,
+input[type=password]:valid,
 input[type=email]:hover,
 input[type=text]::after,
 input[type=password]::after,
-input[type=email]::after {
+input[type=email]::after  {
     width: 480px;
     background-color: var(--rosinha);
     height: 45px;
@@ -77,20 +80,25 @@ input[type=email]::after {
     border-color: var(--rosinha);
     position: relative;
     font-family: Poppins-regular;
+    transition: 0.3s all ease;
 }
 
 input[type=text]:focus,
-input[type=password]:focus, input[type=email]:focus {
+input[type=password]:focus,
+input[type=email]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
 }
 
-input[type=text].error,
-input[type=password].error, input[type=email].error {
+/**
+input[type=text]:invalid,
+input[type=password]:invalid,
+input[type=email]:invalid {
     background-color: var(--destaque);
     border: var(--destaque);
 }
+**/
 
 .mensagem-erro {
     color: var(--destaque);
