@@ -3,36 +3,29 @@
     class UserModel {
 
         private $id;
-        private string $name;
+        private string $nomeUsuario;
         private string $email;
-        private string $password;
+        private string $senha;
         private string $genero;
         private string $escolaridade;
+        private int $tipoUsuario;
+        private int $somaPonto;
 
         public function setId(int $id) {
             $this->id = $id;
         }
 
-        public function getId(): int {
+        public function getId(){
             return $this->id;
         }
 
-        public function getNomeUsuario(): string{
-            return $this->name;
-        }
-        
-        public function setNomeUsuario(string $name){
-            $this->name = $name;
+        public function setNomeUsuario(string $nomeUsuario){
+            $this->nomeUsuario = $nomeUsuario;
         }
 
-
-        /*public function getImagem(): string{
-		return $this->imagem;
-	}
-	
-	public function setImagem(string $img){
-		$this->imagem = $img;
-	}*/
+        public function getNomeUsuario(){
+            return $this->nomeUsuario;
+        }
 
         public function setEmail(string $email){
             $this->email = $email;
@@ -42,12 +35,12 @@
             return $this->email;
         }
 
-        public function setPassword(string $password){
-            $this->password = $password;
+        public function setPassword(string $senha){
+            $this->senha = $senha;
         }
 
         public function getPassword(){
-            return $this->password;
+            return $this->senha;
         }
 
         public function setGenero(string $genero){
@@ -57,6 +50,7 @@
         public function getGenero(){
             return $this->genero;
         }
+        
         public function setEscolaridade(string $escolaridade){
             $this->escolaridade = $escolaridade;
         }
@@ -65,5 +59,20 @@
             return $this->escolaridade;
         }
 
+        public function setTipoUsuario(int $tipoUsuario){
+            $this->tipoUsuario = $tipoUsuario;
+        }
+
+        public function getTipoUsuario(){
+            return $this->tipoUsuario;
+        }
+
+        public function setSomaPonto(int $somaPonto){
+            $this->somaPonto = $somaPonto;
+        }
+
+        public function getSomaPonto(){
+            return $this->somaPonto;
+        }
 
     }
