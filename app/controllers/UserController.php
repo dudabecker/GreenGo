@@ -59,23 +59,16 @@ class ControllerUser{
 
 function create(){
     $user = new UserModel();
-    $user->setNomeUsuario($_POST["name"]);
+    $user->setNomeUsuario($_POST['field_nome']);
     $user->setEmail($_POST['field_email']);
-    $user->setPassword($_POST['field_password']);
-    /*if(filter_var($email,FILTER_VALIDATE_EMAIL)){ //verifica se a senha tem no minimo 8 ou mais caracteres
+    /*$senha = $_POST['field_password'];
       if(strlen($senha)<8){
       //senha inválida
       //mensagem de erro
-          $msg="As senhas devem ter no mínimo oito caracteres!";
-      }
-      //senha válida
-      if($senha == $csenha){
-          //executar a classe de cadastro
-              $connectar = new Cadastro;
-              echo "<div class=\"flash\">";
-              $connectar = $connectar->cadastrar($nome,$usuario,$idade,$endereco,$email,$senha);
-              echo "</div>";
-          
+      $_SESSION['msg_erro'] =  "As senhas devem ter no mínimo oito caracteres!";
+          echo $msg="As senhas devem ter no mínimo oito caracteres!";
+      }else {
+        $user->setPassword($_POST['field_password']);
       }*/
     $user->setGenero($_POST['field_genero']);
     $user->setEscolaridade($_POST['field_escolaridade']);
@@ -83,12 +76,9 @@ function create(){
     
     var_dump($user); 
     $this->loadView("../views/termos.html");
-    //$checkbox = isset($_POST['conc_termos[]']) ? "checked" : "unchecked";
-    
-    if(isset($_POST['conc_termos']))
     $userRepository = new UserRepository();
     $userRepository->create($user);
-    GlobalControllerUser::loadView("../views/index.html");
+    $this->loadView("../views/index.php");
     
 }
 
@@ -100,25 +90,31 @@ function Logar() {
 
     $user = $userRepository->findUserByEmail($email);
 
-    var_dump($user);
     $password = $user->getPassword();
+    $tipo = $user->getTipoUsuario();
     if($user == false){
         $_SESSION['msg_erro'] =  "usuário não cadastrado";
-        header("location: ../views/login.php?msg=erroaologar");
+        header("location: ../views/users/login.php?msg=erroaologar");
         
     } else if($password != md5($senha)){
             $_SESSION['msg_erro'] =  "senha incorreta";
-            header("location: ../views/login.php?msg=senhaincorreta");
+            header("location: ../views/users/login.php?msg=senhaincorreta");
 
             
     } else {
-        
-        //$idParam = $_GET['id'];
-        $this->adm();
         $_SESSION['usuario_logado'] =  true;
-        header("location: ../views/index.html");
-        //$this->loadView("../views/users/perfil.php", );
-        //GlobalControllerUser::loadView("../controllers/UserController?action=adm");
+
+        //adm($tipo); 
+        if ($tipo == 1){
+      
+            include("../views/cabecalhoJogador.php");
+            
+        }  if ($tipo = 2){
+    
+            include("../views/cabecalhoAdm.php");
+      
+        } 
+          $this->loadView("../views/index.php");
 
     }
 
@@ -147,13 +143,6 @@ function verificaLogado()
 }
 
 
-
-function preventDefault()
-{
-   // print "call preventDefault() no LoginController";
-    //Controller::loadView("users/preventDefault.php", $data);
-}
-
 function findAll()
 {
     $userRepository = new UserRepository();
@@ -168,25 +157,16 @@ function findAll()
 
 function findUserById()
 {
-    $idParam = $_GET["id"];
-    $usuario = $this->UserRepository->findUserById($idParam);
+    $idParam = $_GET['id'];
     //print_r($idParam);
-    //$userRepository = new UserRepository();
-    //$usuario = $userRepository->findUserById($idParam);
-    print "<pre>";
-    print_r($usuario);
-    print "</pre>";
-    //$data['usuario'][0] = $usuario;
+    $userRepository = new UserRepository();
+    $usuario = $userRepository->findUserById($idParam);
+    //print "<pre>";
+    //print_r($usuario);
+    //print "</pre>";
+    $data['usuario'][0] = $usuario;
     //$this->loadView("users/perfil.php");
-    //$this->loadView("../views/users/perfil.php", $data, $idParam);
-
-    /*$idParam = $_GET["idEspecie"];
-
-        $especie = $this->especieRepository->findEspecieById($idParam);
-
-        print "<pre>";
-        print_r($especie);
-        print "</pre>";*/ 
+    $this->loadView("../views/users/perfil.php", $data, $idParam);
 
 
 }
@@ -222,8 +202,8 @@ function edit(){
     $userRepository = new UserRepository(); 
     $usuario = $userRepository->findUserById($idParam);
     $data['usuario'][0] = $usuario;
-
-    GlobalControllerUser::loadView("../views/users/editar.php", $data, $idParam);
+    //header("location: ../views/users/editUser.php", $data, $idParam);
+    $this->loadView("../views/users/editar.php", $data, $idParam);
 }
  
 function update()
@@ -259,47 +239,30 @@ function genero(){
     $userRepository = new UserRepository();    
     
     $userRepository->genero($idParam);
-
-}
-
-private function verPerfil(){
-    $userRepository = new UserRepository();
-    $idParam = $_GET["id"];
-    $usuario = $this->$userRepository->findUserById($idParam);
-    $data['usuario'][0] = $usuario;
-
-    $this->loadView("users/perfil.php", $data);
+    
 }
 
 function adm(){
 
+    //$usuario = new UserModel();
+    
+    //$usuario->setTipoUsuario($_GET['id']);
+    $idParam = $_GET['id'];
+    $userRepository = new UserRepository();
 
-  //$nivel_necessario = 1;
-
-  
-  $idParam = $_GET['tipoUsuario'];
-  $userRepository = new UserRepository();
-  if (!isset($_SESSION)) session_start();
-  
-  $ut = ($_SESSION['tipoUsuario']);
-  $userRepository->adm($idParam);
-  // Verifica se não há a variável da sessão que identifica o usuário
-  var_dump($ut);
-  if ($ut == 1) {
-      
-    GlobalControllerUser::loadView("../views/cabecalhoJogador.php");
-      
-      //header("Location: index.php");
-      //GlobalControllerUser::loadView("../views/index.html");
-  } if ($ut == 2) {
-    # code...
-    GlobalControllerUser::loadView("../views/cabecalhoAdm.php");
-    //GlobalControllerUser::loadView("../views/index.html");
-  } else{
-    GlobalControllerUser::loadView("../views/cabecalhoVisitante.php");
-    //GlobalControllerUser::loadView("../views/index.html");
-  }
+    $userRepository->adm($idParam);
+    $usuarios = $userRepository->findAll();
+    //$data['titulo'] = "listar usuarios";
+    $data['usuarios'] = $usuarios;
+    $this->loadView("users/list.php", $data);
+    
   
 
 }
+
+function preventDefault()
+{
+   header("Location: ../views/erro.php");
+}
+
 }
