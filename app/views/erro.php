@@ -29,7 +29,7 @@
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="../views/css/perfil.css">
 
 </head>
 
