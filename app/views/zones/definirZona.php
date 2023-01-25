@@ -9,7 +9,7 @@
 
   <link rel="icon" href="../../public/favicon.svg">
   <link rel="stylesheet" href="/app/views/index.html">
-  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/definirzona.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -39,6 +39,7 @@
           <form>
 
           <nav class="navbar navbar-expand-lg " id="menu">
+            
                 <a href="views/index.html" class="nav-brand">
                     <div class="row justify-content-md-center">
                         <div id="imgmenu">
@@ -65,6 +66,9 @@
     </div>
 </nav>
 
+<nav>
+          <div class="container"> 
+          
               <h1 id="h1">Definir Zona!</h1>
 
               <div class="row">
@@ -72,35 +76,27 @@
                   <div class="form-row align-items-left">
 
 
-              <div class="row">
-                <div class="col-sm">
-                  <div class="form-row align-items-left">
-
+              
+                  <div id="zonass">
                     <label for="formtexto" id="texto">Zona</label>
                     <div class="w-100"></div>
                     <input type="text" class="form-control" id="formtexto" aria-describedby="email-cadastro" name= "field_NomeZona">
-                  </div>
-                </div>
-
-              </div>
-
+                    </div>
               
               </div>
 
-              <div class="form-row align-items-left">
-                <div class="col-auto my-1">
-                  <label for="caixinha-cad" id="texto-caixinhas"> Pontuação Minima</label>
+                  <label for="caixinha-cad" id="texto-caixinhas"> Pontuação mínima</label>
                   <br>
-                  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Pontuação Minima</label>
-                  <input type="number" class="form-control" id="formtexto" aria-describedby="email-cadastro" name= "field_PMZ" class="custom-select mr-sm-2" id="caixinha-cad">
+                  <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Pontuação mínima</label>
+                  <input type="number" class="form-control" id="pontuacao" aria-describedby="email-cadastro" name= "field_PMZ" class="custom-select mr-sm-2" >
                 </div>
                 <div class="w-100"></div>
                   
                 </div>
-                <div class="form-row align-items-center">
+                <div class="form-row align-items-center" id="botaocadastro">
                 <div class="col-auto my-1">
-                  <button type="submit" class="btn btn-primary" id="botaocadastro">Pronto</button>
-                  <button type="reset" class="btn btn-primary" id="botaocadastro">Limpar</button>
+                  <button type="submit" class="btn btn-primary" id="botaopronto">Pronto</button>
+                  <button type="reset" class="btn btn-primary" id="botaolimpar">Limpar</button>
               </div>
 
 
@@ -109,11 +105,19 @@
               </div>
             </div>
         </div>
-      </div>
-    </div>
+      
+   
 
   </form>
+</div>
+  </nav>
 
 </body>
 
+
+<div id="rodape">
+  <div class="img-fluid">
+        <img src="../public/logo-rodape" class="img-fluid">
+  </div>
+</div>
 </html>
