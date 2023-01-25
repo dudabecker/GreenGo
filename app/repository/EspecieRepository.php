@@ -13,9 +13,9 @@
             var_dump($this->conn);
         }
 
-        public function create(EspecieModel $especie){
+        public function create(EspecieModel $especie) :bool{
             try {
-                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, imagem, pontoEsp, frutifera, toxidade, exotica, raridade, medicinal, comestivel) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :pontoEsp, :frutifera, :toxidade, :raridade, :medicinal, :comestivel)";
+                $query = "INSERT INTO especie (nomePop, nomeCie, descricao, imagem, pontoEsp, frutifera, toxidade, exotica, raridade, medicinal, comestivel) VALUES (:nomePop, :nomeCie, :descricao, :imagem, :pontoEsp, :frutifera, :toxidade, :exotica, :raridade, :medicinal, :comestivel)";
                 $prepare = $this->conn->prepare($query);
                 $prepare->bindValue(":nomePop", $especie->getNomePop());
                 $prepare->bindValue(":nomeCie", $especie->getNomeCie());
@@ -74,8 +74,6 @@
             $prepare->bindValue(11, $especie->getImagem());
             $prepare->bindValue(12, $especie->getIdEspecie());
             $result = $prepare->execute();
-            //$result = $prepare->rowCount();
-            //var_dump($result);
             return $result;
         }
 
@@ -94,4 +92,41 @@
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(":idEspecie", $idEspecie);
         }
-    }
+
+        public function verFrutifera(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE frutifera = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }
+
+        public function verToxidade(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE toxidade = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }    
+
+        public function verComestivel(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE comestivel = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }
+        
+        public function verExotica(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE exotica = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }
+            
+        public function verRaridade(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE raridade = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }   
+            
+        public function verMedicinal(){
+            $table = $this->conn->query("SELECT * FROM especie WHERE medicinal = 1");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+            return $especies;
+            }    
+        }
+    

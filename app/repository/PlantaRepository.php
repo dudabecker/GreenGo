@@ -81,21 +81,65 @@
             $prepare->bindValue(":idPlanta", $idPlanta);
         }
 
-        public function identificarPlanta(PlantaModel $Planta){
-            try {
-                echo $codPlanta;
-                $query = "SELECT * FROM planta where codNumerico = :codPlanta;";
-                $prepare = $this->conn->prepare($query);
-                $res = $prepare->rowCount();
-                
-                if($res > 0){
-                    echo "código válido";
-                    } 
-                else{
-                    echo "código inválido!";}
-                    }
-                catch(Exception $e) {
-                    print("Algo deu errado :/");
+        public function identificarPlanta($codNumerico){
+            $query = "SELECT * FROM planta where codNumerico = :codNumerico;";
+            $prepare = $this->conn->prepare($query);
+            $planta = $prepare->bindValue(":codNumerico", $codNumerico);
+            if($prepare->execute()){
+                $planta  = $prepare->fetchObject("PlantaModel");
+            } else {
+                $planta = null;
             }
-        }
+            return $planta;}
+
+        public function verZona(int $idZona){
+            switch ($idZona) {
+                case 1:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 1");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+                
+                case 2:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 2");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+                
+                case 3:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 3");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+                
+                case 4:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 4");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+
+                case 5:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 5");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+
+                case 6:
+                    $table = $this->conn->query("SELECT * FROM planta WHERE idZona = 6");
+                    $planta = $table->fetchAll(PDO::FETCH_ASSOC);
+                    return $planta;
+                    break;
+            }
+        } 
+        
+        public function verIndividuos($idEspecie){
+            $query = "SELECT * FROM planta where idEspecie = :idEspecie;";
+            $prepare = $this->conn->prepare($query);
+            $planta = $prepare->bindValue(":idEspecie", $idEspecie);
+            if($prepare->execute()){
+                $planta  = $prepare->fetchObject("PlantaModel");
+            } else {
+                $planta = null;
+            }
+            return $planta;}
     }
