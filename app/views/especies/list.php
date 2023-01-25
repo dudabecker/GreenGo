@@ -53,10 +53,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
+                    <a class="nav-item nav-link" id="itemmenu" href="../views/projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../views/mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../views/perfil.php"> Eu </a>
                     </div>
                 </div>
             </nav>
@@ -73,7 +73,7 @@
             </h2>
 
             <a class="mais align-self-center" href="./EspecieController.php?action=loadFormNew">
-                <img class="mais" src="../public/mais.svg">
+                <img class="mais " src="../public/mais.svg">
             </a>
         </div>
 
@@ -81,7 +81,6 @@
 
         <!--
         <div class="row justify-content-between align-content-start">
-
             <div class="col justify-content-start">
                 <p id="nenhuma">
                     Puts, nenhuma espécie por enquanto!
@@ -89,48 +88,46 @@
                     <span class="adicione">Adicione no ícone de mais +</span>
                 </p>
             </div>
-
             <div class="col">
                 <img class="align-content-end img-flecha" src="../public/flecha.svg">
             </div>
         </div>
         -->
-        <div class="row justify-content-between align-content-start">
 
+        <div class="row justify-content-between align-content-start">
             <?php foreach ($data['especies'] as $especie): ?>
-                <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
-                    <div class="col-auto especie">
+            <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
+            
+            <div class="col-auto especie">
                         <div class="row">
                             <div class="col-sm">
                                 <h3 class="nome-pop">
-                                    <?= $especie['nomePop'] ?>
-                                </h3>
+                                <?= $especie['nomePop'] ?>
+                            </h3>
 
-                                <h3 class="nome-cient">
-                                    <?= $especie['nomeCie'] ?>
-                                </h3>
+                            <h3 class="nome-cient">
+                                <?= $especie['nomeCie'] ?>
+                            </h3>
 
-                                <!-- SOBRE OS BOOLEANOS
+                            <p>
+                                <b>Identificação Espécie:</b> <?= $especie['idEspecie'] ?><br>
+                                <b>Pontos:</b> <?= $especie['pontoEsp'] ?><br>
+                                <b>Atributos Especiais:</b><br>
+                                <a href="./EspecieController.php?action=verFrutifera"> <b><?php if($especie['frutifera'] == 1): 
+                                    echo "Frutifera"; endif ?></b></a>
+                                <a href="./EspecieController.php?action=verToxidade"> <b><?php if($especie['toxidade'] == 1): 
+                                    echo "Tóxica"; endif ?></b>
+                                <a href="./EspecieController.php?action=verComestivel"> <b><?php if($especie['comestivel'] == 1): 
+                                    echo "Comestível"; endif ?></b>
+                                <a href="./EspecieController.php?action=verExotica"> <b><?php if($especie['exotica'] == 1): 
+                                    echo "Exótica"; endif ?></b>
+                                <a href="./EspecieController.php?action=verRaridade"> <b><?php if($especie['raridade'] == 1): 
+                                    echo "Rara"; endif ?>
+                                <a href="./EspecieController.php?action=verMedicinal"> <b><?php if($especie['medicinal'] == 1): 
+                                    echo "Medicinal"; endif ?></b>
+                            </p>
 
-                                                    mostrar o nome do atributo caso seja 1
-                                                -->
-
-                                <p>
-                                    <?= $especie['pontoEsp'] ?> pontos<br>
-                                    <b>Frutifera:</b> <?= $especie['frutifera'] ?><br>
-                                    <b>Tóxica:</b>
-                                    <?= $especie['toxidade'] ?><br>
-                                    <b>Comestível:</b>
-                                    <?= $especie['comestivel'] ?><br>
-                                    <b>Exótica:</b>
-                                    <?= $especie['exotica'] ?><br>
-                                    <b>Rara:</b>
-                                    <?= $especie['raridade'] ?><br>
-                                    <b>Medicinal:</b>
-                                    <?= $especie['medicinal'] ?><br>
-                                </p>
-
-                                <div class="row justify-content-start" style="display: -webkit-box;">
+                            <div class="row justify-content-start" style="display: -webkit-box;">
                                     <!--EDITAR-->
                                     <div class="row-3">
                                         <a class="editar"

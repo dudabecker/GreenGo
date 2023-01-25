@@ -95,35 +95,43 @@
 
                 <div class="col-lg">
 
-                    <!-- SOBRE AS TAGS
-
-                            fazer um if atributo==1{
-                                aparece
-                            }else{
-                                pula
-                            }
-
-                            se quiser fazer ser uma tag clicavel, direcionando pra pagina do mapa com o 
-                            filtro do atributo especifico aplicado para aparecer outros com o mesmo atributo,
-                            fique a vontade!!
-
-                            Atributos Especiais:
-                            Frutifera: < ?= $especie->getFrutifera(); ?>
-                            <br>
-                            Tóxica: < ?= $especie->getToxidade(); ?>
-                            <br>
-                            Exótica: < ?= $especie->getExotica(); ?>
-                            <br>
-                            Rara: < ?= $especie->getRaridade(); ?>
-                            <br>
-                            Medicinal: < ?= $especie->getMedicinal(); ?>
-                            <br>
-                            Comestível: < ?=$especie->getComestivel(); ?>
-                        -->
 
                     <div class="row col flex-wrap">
+                        
                         <div class="atributos">
-                            frutífera
+                        <a href="./EspecieController.php?action=verFrutifera"> 
+                        <?php if($especie->getFrutifera() == 1): 
+                            echo "Frutifera"; endif ?></a>
+                        </div>
+
+                        <div class="atributos">
+                        <a href="./EspecieController.php?action=verToxidade">
+                        <?php if($especie->getToxidade() == 1): 
+                            echo "Tóxica"; endif ?>
+                        </div>
+
+                        <div class="atributos">
+                        <a href="./EspecieController.php?action=verComestivel">
+                        <?php if($especie->getComestivel() == 1): 
+                                    echo "Comestível"; endif ?>
+                        </div>
+
+                        <div class="atributos">
+                        <a href="./EspecieController.php?action=verExotica">
+                        <?php if($especie->getExotica() == 1): 
+                            echo "Exótica"; endif ?>
+                        </div>
+
+                        <div class="atributos">
+                        <a href="./EspecieController.php?action=verRaridade">
+                        <?php if($especie->getRaridade() == 1): 
+                            echo "Rara"; endif ?>
+                        </div>
+
+                        <div class="atributos">
+                        <a href="./EspecieController.php?action=verMedicinal">
+                        <?php if($especie->getMedicinal() == 1): 
+                            echo "Medicinal"; endif ?>
                         </div>
                     </div>
 
@@ -136,51 +144,23 @@
             </div>
             <br>
 
-            <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
+             <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
+            <div class="row justify-content-start botoes">
+                <div class="col-sm-3 min-content">
+                <a  class= "editar" href="./plantaController.php?action=findAll">
+                Indivíduos nessa espécie </a>
+                </div>
+            </div>    
+            
             <div class="row justify-content-between">
-                <h3 class="subtitulo">
-                    Indivíduos nessa espécie
-                </h3>
-
                 <!--BOTÃO SÓ PARA ADM-->
                 <a class="mais align-self-center" href="./PlantaController.php?action=loadFormNew">
                     <img class="mais " src="../public/mais.svg">
                 </a>
             </div>
 
-            <!--LISTAGEM DE INDIVIDUOS-->
-            <div class="row-cols-4 align-content-start">
-                <a href="./">
-                    <div class="col individuo">
-                        <div class="row justify-content-evenly">
-                            <div class="col align-content-center">
-                                <img class="img-ind"><!--< ?= $especie['imagem'] ?>-->
-                            </div>
-
-                            <div class="col">
-                                <p>
-                                    <b>Código numérico:</b>
-                                    < ?=$especie['idEspecie'] ?><br>
-                                        <b>Zona:</b>
-                                        < ?=$especie['pontoEsp'] ?><br>
-                                            <b>Ponto:</b>
-                                            < ?=$especie['frutifera'] ?><br>
-                                                <b>Nome Social:</b>
-                                                < ?=$especie['toxidade'] ?><br>
-                                                    <b>História:</b>
-                                                    < ?=$especie['comestivel'] ?><br>
-                                </p>
-
-                                <!--QR CODE-->
-                                <div class="row-3">
-                                    <a class="qrcode" href=".">QR CODE</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ESSA PARTE É SÓ PRA ADM -->
-                    <div class="row justify-content-start botoes">
+            <!-- ESSA PARTE É SÓ PRA ADM -->
+            <div class="row justify-content-start botoes">
                         <!--EDITAR-->
                         <div class="col-sm-3 min-content">
                             <a class="editar" href=",">Editar</a>
@@ -193,6 +173,14 @@
                     </div>
                     <br><br>
             </div>
+
+            <!--LISTAGEM DE INDIVIDUOS-->
+            <div class="row justify-content-start botoes">
+                <div class="col-sm-3 min-content">
+                    <a class="editar" href="./PlantaController.php?action=verIndividuos&idEspecie=<?= $especie['idEspecie'] ?>">Indivíduos nessa espécie</a>
+            </div>
+
+                    
     </body>
 <?php endforeach; ?>
 
