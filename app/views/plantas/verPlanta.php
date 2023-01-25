@@ -78,21 +78,21 @@ error_reporting(E_ALL);
     <h1>Plantas</h1>
     <ul>
         <?php foreach($data['plantas'] as $planta): ?>
-
             <li>
-                Identificação da Planta: <?= $planta['idPlanta'] ?><br>
-                Espécie: <?= $planta['idEspecie'] ?><br>
-                <a href="./PlantaController.php?action=verZona&idZona=<?= $planta['idZona'] ?>">Zona: <?= $planta['idZona'] ?></a> <br>
-                Código Numérico: <?= $planta['codNumerico'] ?><br>
-                Codigo QR: <?= $planta['codQR'] ?><br><br>
-                [ <a href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">Editar</a> ] 
-                [ <a href="./PlantaController.php?action=deletePlantaById&id=<?= $planta['idPlanta'] ?>">Excluir</a> ]<br><br>
-            </li>             
+                Identificação da Planta: <?= $planta["idPlanta"] ?><br>
+                Espécie: <?= $planta["idEspecie"] ?><br>
+                Zona: <?= $planta["idZona"] ?><br>
+                Código Numérico: <?= $planta["codNumerico"] ?><br><br>
+                [<a href="./PlantaController.php?action=verDetalhesPlanta">Detalhes</a>]
+                [<a href="./PlantaController.php?action=formIdentificarPlanta">Continuar Jogando</a>]
+
+                <!-- VER SE É NECESSÁRIO
+                    Codigo QR: <?= $planta['codQR'] ?><br><br>--> 
+            </li>          
         <?php endforeach; ?>
     </ul>
 
-    [<a href="./PlantaController.php?action=loadFormNew">Cadastrar novo</a>]
-    [<a href="./PlantaController.php?action=formIdentificarPlanta">jogar</a>]
+    [ <a href="./PlantaController.php?action=loadFormNew">Cadastrar novo</a> ]
     
 </body>
 </html>

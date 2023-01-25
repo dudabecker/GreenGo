@@ -155,14 +155,24 @@ class ControllerPlanta{
     }
 
     private function identificarPlanta(){
-        $planta = new PlantaModel();
+        $idParam = $_POST["codNumerico"];
+        $planta = $this->plantaRepository->identificarPlanta($idParam);
+        $data['plantas'][0] = $planta;
 
-        $planta->setCodPlanta($_POST["codPlanta"]);
+        if ($planta == null){ 
+            echo "Está não é uma planta cadastrada";
+        }else {
+            $this->loadView("plantas/verPlanta.php", $data);
+        }
+       
+        /*$planta = new PlantaModel();
+
+        $planta->setCodNumerico($_POST["codNumerico"]);
 
         $this->plantaRepository->identificarPlanta($planta);
         
-        $data['plantas'][0] = $planta;
-        $this->loadView("plantas/verPlanta.php", $data);
+        //$data['plantas'][0] = $planta;
+        $this->loadView("plantas/listPlantas.php"/*, $data*/
 
         /*if($cod){
 			$msg = "código existe";
@@ -172,6 +182,27 @@ class ControllerPlanta{
 
         $this->findAll($msg);*/
     }
+
+    private function verDetalhesPlanta(){
+
+        
+    }
+
+    private function verZona(){
+        $idParam = $_GET["idZona"];
+        $planta = $this->plantaRepository->verZona($idParam);
+        $data['plantas'] = $planta;
+
+        $this->loadView("plantas/listPlantas.php", $data);
+        }
+
+    private function verIndividuos(){
+        $idParam = $_GET["idEspecie"];
+        $planta = $this->plantaRepository->verIndividuos($idParam);
+        $data['plantas'] = $planta;
+    
+        $this->loadView("plantas/listPlantas.php", $data);
+        }
 
     private function preventDefault() {
         print "Ação indefinida...";

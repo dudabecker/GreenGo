@@ -51,9 +51,9 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
+                    <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
                     </div>
                 </div>
@@ -78,7 +78,7 @@ error_reporting(E_ALL);
 
 <form action="./PlantaController.php?action=identificarPlanta" method="POST">
 	Achou uma planta? Identifique-a e ganhe pontos!<br><br>
-    Código numérico: <input type="text" name="codPlanta">
+    Código numérico: <input type="text" name="codNumerico">
 	<br>
     <!--Código QR: <input type="text" name="codQR">-->
 	<br>
@@ -87,7 +87,4 @@ error_reporting(E_ALL);
 </form>		
     
 </body>
-<div class="container-fluid" id="rodape">
-            
-            </div>
 </html>

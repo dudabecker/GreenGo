@@ -44,15 +44,15 @@
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
 
                         <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="itemmenu" href="mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="users/login.php"> Entrar </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="login.php"> Entrar </a>
                     </div>
                 </div>
             </nav>
@@ -88,11 +88,11 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                        <div href="mapa.php" id="divmapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
-                                id="mapa-da-home"></div>
-                    
+
+                    <div class="img-responsive">
+                        <a href="mapa.php"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
+                                id="mapa-da-home"></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,9 +127,5 @@
 
     <br><br><br>
 </body>
-
-    <div class="container-fluid" id="rodape">
-            
-    </div>
 
 </html>

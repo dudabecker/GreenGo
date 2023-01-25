@@ -64,9 +64,9 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                         <div class="navbar-nav" id="navbar-links">
 
-                            <a class="nav-item nav-link" id="portfolio-menu" href="projeto.html"> Projeto </a>
-                            <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
+                        <a class="nav-item nav-link" id="identificar-menu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="identificar-menu" href="./mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="identificar-menu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
@@ -105,6 +105,11 @@
                                             <label for="formtexto" id="texto">Nome científico</label>
 
                                             <input type="text" name="nomeCie" class="form-control" id="formtexto"
+                                                aria-describedby="nome-cadastro">
+
+                                            <label for="formtexto" id="texto">Ponto Espécie</label>
+
+                                            <input type="text" name="pontoEsp" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
                                         </div>
 
@@ -228,9 +233,7 @@
 
                 <!--
                     FAZER DUAS DIVS
-
                     UMA COM O TEXTO NA SITUAçÃO DE NAO TER INDIVIDUOS
-
                     OUTRA DIV COM OS ITENS DOS INDIVIDUOS PRONTOS PRA SUBSTITUIR COM PHP
                 -->
 

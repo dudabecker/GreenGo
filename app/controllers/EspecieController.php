@@ -138,14 +138,6 @@ class ControllerEspecie{
         print "</pre>";
     }
 
-    private function verEspecie(){
-        $idParam = $_GET["idEspecie"];
-        $especie = $this->especieRepository->findEspecieById($idParam);
-        $data['especies'][0] = $especie;
-
-        $this->loadView("especies/verEspecie.php", $data);
-    }
-
     private function deleteEspecieById(){
         $idParam = $_GET["idEspecie"];
         $qt = $this->especieRepository->deleteEspecieById($idParam);
@@ -222,6 +214,50 @@ class ControllerEspecie{
 		// include_once "cadastrar.php";
 
         $this->findAll($msg);        
+    }
+
+    private function verEspecie(){
+        $idParam = $_GET["idEspecie"];
+        $especie = $this->especieRepository->findEspecieById($idParam);
+        $data['especies'][0] = $especie;
+
+        $this->loadView("especies/verEspecie.php", $data);
+    }
+
+    private function verFrutifera(){
+        $especie = $this->especieRepository->verFrutifera();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
+    }
+
+    private function verToxidade(){
+        $especie = $this->especieRepository->verToxidade();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
+    }
+
+    private function verComestivel(){
+        $especie = $this->especieRepository->verComestivel();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
+    }
+
+    private function verExotica(){
+        $especie = $this->especieRepository->verExotica();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
+    }
+
+    private function verRaridade(){
+        $especie = $this->especieRepository->verRaridade();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
+    }
+
+    private function verMedicinal(){
+        $especie = $this->especieRepository->verMedicinal();
+        $data['especies'] = $especie;
+        $this->loadView("especies/list.php", $data);
     }
 
     private function preventDefault() {

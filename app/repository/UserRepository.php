@@ -40,7 +40,7 @@
 
             $table = $this->conn->query("SELECT * FROM myuser");
             //$usuarios  = $table->fetchAll(PDO::FETCH_ASSOC);
-            $usuarios  = $table->fetchAll(PDO::FETCH_ASSOC/*, "UserModel"*/);
+            $usuarios  = $table->fetchAll(PDO::FETCH_CLASS, "UserModel");
 
             return $usuarios;
         }
@@ -94,17 +94,18 @@
         }
 
         public function Logar (string $email, string $senha) {
-            $query = "SELECT * FROM myuser WHERE myuser.email = ? and myuser.senha = ?";
+            $query = "SELECT tipoUsuario FROM myuser WHERE myuser.email = ? and myuser.senha = ?";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(1, $email);
             $prepare->bindValue(2, $senha);
-            
+            $result = $prepare->execute();
             if($prepare->execute()){
                 $usuario  = $prepare->fetchObject("UserModel");
             } else {
                 $usuario = null;
             }
             return $usuario;
+            var_dump($result);
     }
 
         public function update(UserModel $user){
@@ -143,22 +144,16 @@
             
         }
 
-        public function verPerfil(int $id){
-            $query = "SELECT * FROM myuser WHERE id = :id";
-            $prepare = $this->conn->prepare($query);
-            $prepare->bindValue(":id", $id);
-        }
+        public function adm(int $id){
 
-        public function adm(int $id):int {
-
-            $query = "SELECT * FROM myuser WHERE myuser.tipoUsuario = ?";
+            $query = "UPDATE myuser SET tipoUsuario = :tipoUsuario WHERE id = :id";
             
             $prepare = $this->conn->prepare($query);
-            $prepare->bindParam(1, $tipoUsuario, PDO::PARAM_INT);
-
+            $prepare->bindValue(":tipoUsuario", 2, PDO::PARAM_INT);
+            $prepare->bindValue(":id", $id, PDO::PARAM_INT);
             $prepare->execute();
-            $tu = $prepare;
-            //var_dump($result);
-            return $tu;
+            $result = $prepare->rowCount();
+
+            return $result;
         }
     }

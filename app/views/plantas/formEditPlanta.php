@@ -51,9 +51,9 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
+                    <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
                     </div>
                 </div>
