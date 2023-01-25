@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="../css/adicionarplanta.css">
+    <link rel="stylesheet" href="../css/registroplanta.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -77,12 +77,10 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                         <div class="navbar-nav" id="navbar-links">
 
-                            <a class="nav-item nav-link" id="portfolio-menu" href="projeto.html"> Projeto </a>
-                            <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
                             <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
                         </div>
                     </div>
@@ -109,7 +107,7 @@
                             </div>
                         </div>
 
-                        <form action="controllers/EspecieController.php?action=create" method="POST">
+                        <form action="controllers/plantaController.php?action=create" method="POST">
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
@@ -117,7 +115,7 @@
 
                                         <div class="form-row align-items-left">
 
-                                            <label for="formtexto" id="texto">Nome cientifico da espécie</label>
+                                            <label for="formtexto" id="texto">Identificação da espécie</label>
                                             <div class="w-100"></div>
                                             <input type="text" name="nomePop" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
@@ -128,16 +126,25 @@
                                                 aria-describedby="nome-cadastro">
 
 
-                                            <div class="col">
+
+                                            <!--<div class="col">
                                                 <a id="zonatxt">Zona</a>
                                                 <div class="w-100"></div>
 
-                                                <!--NAO FUNCIONA, MUDAR PARA SELECT QUE NEM NO MENU?-->
                                                 <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
-                                                </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <!--LISTAR ZONAS DO BANCO-->
+
+                                                </button>-->
+                                                <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+                                                <!--<select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+                                                        <option selected></option>
+                                                        <option value="1"> Zona 1 </option>
+                                                        <option value="2"> Zona 2</option>
+                                                        <option value="3" > Zona 3 </option>
+                                                        <option value="4"> Zona 4 </option>
+                                                        <option value="5"> Zona 5 </option>
+                                                        <option value="6"> Zona 6 </option>
+                                            </select>
                                                     <a class="dropdown-item" href="modosolo">zona 1</a>
                                                     <a class="dropdown-item" href="emequipe">zona 2</a>
                                                     <a class="dropdown-item" href="emequipe">zona 3</a>
@@ -146,11 +153,19 @@
                                                     <a class="dropdown-item" href="emequipe">zona 6</a>
                                                 </div>
 
-                                            </div>
+                                            </div>-->
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Pontos</label>
                                             <div class="w-100"></div>
                                             <input type="number" min="0" name="nomeCie" class="form-control" id="formtextoo"
+                                                aria-describedby="nome-cadastro">
+
+                                            <div class="w-100"></div>
+
+                                            <div class="w-100"></div>
+                                            <label for="formtexto" id="texto">Zona</label>
+                                            <div class="w-100"></div>
+                                            <input type="text" name="nomeCie" class="form-control" id="form2"
                                                 aria-describedby="nome-cadastro">
 
                                             <div class="w-100"></div>
@@ -163,20 +178,16 @@
 
                                         </div>
 
-
-
-
-
                                     </div>
 
                                     <nav>
-                                        <div class="col-sm" id="imagemreg">
+                                        <!--<div class="col-sm" id="imagemreg">
 
                                             <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
 
                                             <label class="picture align-content-center" for="picture__input" tabIndex="0">
                                                 <span class="picture__image">
-                                                    <img class="img-camera" src="../public/camera.svg">
+                                                    <img class="img-camera" src="../../public/camera.svg">
                                                 </span>
                                             </label>
                                             <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
@@ -184,7 +195,7 @@
                                                 src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
                                             <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
                                                 máximo: 5MB </a>
-                                        </div>
+                                        </div>-->
                                 </div>
                             </div>
                     </div>
@@ -201,7 +212,7 @@
                 <a id="textodescritivo">História</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="../views/ckeditor/build/ckeditor.js"></script>
+                <script src="../ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -241,7 +252,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/registro.js"></script>
 </body>
-<div class="container-fluid" id="rodape">
-          
-            </div>
+
 </html>
