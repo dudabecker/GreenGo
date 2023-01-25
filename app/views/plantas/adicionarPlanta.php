@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="../css/registroplanta.css">
+    <link rel="stylesheet" href="../views/css/adicionarplanta.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -154,13 +154,7 @@
                                                 </div>
 
                                             </div>-->
-                                            <div class="w-100"></div>
-                                            <label for="formtexto" id="texto">Pontos</label>
-                                            <div class="w-100"></div>
-                                            <input type="number" min="0" name="nomeCie" class="form-control" id="formtextoo"
-                                                aria-describedby="nome-cadastro">
-
-                                            <div class="w-100"></div>
+                                            
 
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Zona</label>

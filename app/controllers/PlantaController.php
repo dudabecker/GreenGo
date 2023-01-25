@@ -71,7 +71,7 @@ class ControllerPlanta{
     }
 
     private function loadFormNew(){
-        $this->loadView("plantas/formCadastroPlanta.php", null,"teste");
+        $this->loadView("plantas/adicionarPlanta.php", null,"teste");
     }    
 
     private function findAll(string $msg = null){
