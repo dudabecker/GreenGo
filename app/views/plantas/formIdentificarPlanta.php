@@ -13,7 +13,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/perfil.css">
+    <link rel="stylesheet" href="../css/identificarplantas.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -74,17 +74,26 @@ error_reporting(E_ALL);
 	//$caminho = __DIR__ . "/../helpers/mensagem.php";
 	//print_r($caminho); 
 ?>
-<h2>Identificar plantas</h2>
+        <div class="container">
+
+            <h2 id="textoplanta">Achou uma planta?</h2>
+        
 
 <form action="./PlantaController.php?action=identificarPlanta" method="POST">
-	Achou uma planta? Identifique-a e ganhe pontos!<br><br>
-    Código numérico: <input type="text" name="codNumerico">
+	<a id="a"> Identifique-a e ganhe pontos!</a><br><br>
+    
+     <input type="text" class="form-control" name="codNumerico" id="codigo" >
 	<br>
     <!--Código QR: <input type="text" name="codQR">-->
 	<br>
 
-	<input type="submit" value="Confirmar">
-</form>		
+	<input type="submit" value="Próximo" id="botaoproximo">
+
     
+                    
+               
+</form>		
+        <a class="pontuacao" id="a2"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</a>
+</div>
 </body>
 </html>

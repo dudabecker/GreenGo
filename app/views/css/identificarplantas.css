@@ -185,10 +185,70 @@ body {
     margin-top: 40px;
 }
 
-#rodape{
-    background-color: var(--principal);
-    width: 100%;
-    height: 70px;
-    margin-top: 200px;
+#textoplanta{
+    color: var(--principal);
+    font-family: Poppins;
+    font-size:  60px;
+    margin-top: 95px;
+}
+#a{
+    color: var(--principal);
+    font-family: Poppins-semibold;
+    font-size: 30px;
+}
 
+input[type=text],
+input[type=text]:hover,
+input[type=text]:valid,
+input[type=text]::after {
+    
+    width: 350px;
+    height: 90px;
+    left: 159px;
+    top: 452px;
+    background-color: var(--rosinha);
+    margin-right: auto;
+    border-radius: 0%;
+    margin-bottom: 18px;
+    border-color: var(--rosinha);
+    font-family: Poppins-semibold;
+    transition: 0.3s all ease;
+    color: var(--branco);
+    margin-top: 90px;
+}
+
+input[type=text]:focus {
+    background-color: var(--branco);
+    border: 2px solid var(--rosinha);
+    box-shadow: var(--rosinha);
+    color: var(--principal);
+}
+
+.form-control{
+    font-size: 50px;
+}
+
+#botaoproximo{
+    background-color: var(--principal);
+    border: none;
+    width: 266px;
+    height: 83px;
+    border-radius: 10px;
+    color: var(--branco);
+    font-family: Poppins-semibold;
+    font-size: 30px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+#botaoproximo:hover{
+    transform: scale(1.05);
+
+}
+
+#a2{
+    color: var(--principal);
+    font-family: Poppins-semibold;
+    font-size: 20px;
+   
 }
