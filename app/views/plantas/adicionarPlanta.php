@@ -36,7 +36,7 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="../views/css/adicionarplanta.css">
+    <link rel="stylesheet" href="../css/adicionarplanta.css">
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -119,48 +119,37 @@
                                             <div class="w-100"></div>
                                             <input type="text" name="nomePop" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
-
+                                                <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Código numérico</label>
                                             <div class="w-100"></div>
                                             <input type="text" name="nomeCie" class="form-control" id="formtextoo"
                                                 aria-describedby="nome-cadastro">
 
 
-
-                                            <!--<div class="col">
-                                                <a id="zonatxt">Zona</a>
                                                 <div class="w-100"></div>
-
-                                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true">
-
-                                                </button>-->
-                                                <!--<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
-                                                <!--<select name= "field_escolaridade" class="custom-select mr-sm-2" id="caixinha-cad">
+                                           
+                                                
+                                                
+                                            <label for="zonasselect" id="texto">Zonas</label>
+                                            <div class="w-100"></div>
+                                                <select class="custom-select mr-sm-2"  name="field_escolaridade" id="zonasselect">
+                                                    
                                                         <option selected></option>
-                                                        <option value="1"> Zona 1 </option>
+                                                        <option value="1"> Zona 1</option>
                                                         <option value="2"> Zona 2</option>
                                                         <option value="3" > Zona 3 </option>
                                                         <option value="4"> Zona 4 </option>
                                                         <option value="5"> Zona 5 </option>
                                                         <option value="6"> Zona 6 </option>
-                                            </select>
-                                                    <a class="dropdown-item" href="modosolo">zona 1</a>
-                                                    <a class="dropdown-item" href="emequipe">zona 2</a>
-                                                    <a class="dropdown-item" href="emequipe">zona 3</a>
-                                                    <a class="dropdown-item" href="emequipe">zona 4</a>
-                                                    <a class="dropdown-item" href="emequipe">zona 5</a>
-                                                    <a class="dropdown-item" href="emequipe">zona 6</a>
-                                                </div>
+                                                </select>
+                                                    
+                                                
 
-                                            </div>-->
+                                            
                                             
 
                                             <div class="w-100"></div>
-                                            <label for="formtexto" id="texto">Zona</label>
-                                            <div class="w-100"></div>
-                                            <input type="text" name="nomeCie" class="form-control" id="form2"
-                                                aria-describedby="nome-cadastro">
+                                            
 
                                             <div class="w-100"></div>
 

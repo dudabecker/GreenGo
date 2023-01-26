@@ -593,7 +593,7 @@ input[type=checkbox]:checked:after {
 }
 
 #formtextoo {
-    width: 280px;
+    width: 250px;
 }
 
 #dropdownMenuButton {
@@ -646,6 +646,7 @@ input[type=checkbox]:checked:after {
     box-shadow: none;
     margin-top: -10px;
     margin-right: 70px;
+    width: 428px;
 
 }
 #rodape{
@@ -654,4 +655,18 @@ input[type=checkbox]:checked:after {
     height: 70px;
     margin-top: 200px;
 
+}
+
+#formtexto{
+    width: 428px;
+}
+
+#zonasselect{
+    width: 250px;
+    background-color: var(--rosinha);
+    border: none;
+    border-radius: 0%;
+    height: 45px;
+    color: var(--principal);
+    font-family: Poppins-semibold;
 }
