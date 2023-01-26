@@ -688,9 +688,13 @@ input[type=text]:focus {
 }
 
 #zonasselect,
-#zonasselect,
-#zonasselect,
-#zonasselect::after {
+#number,
+#zonasselect:hover,
+#number:hover,
+#zonasselect:valid,
+#number:valid,
+#zonasselect::after,
+#number::after {
     width: 250px;
     background-color: var(--rosinha);
     height: 45px;
@@ -705,12 +709,15 @@ input[type=text]:focus {
     transition: 0.3s all ease;
     color: var(--branco);
 }
-#zonasselect:focus {
+#zonasselect:focus,
+#number:focus
+ {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
     color: var(--principal);
 }
+
 
 
 

@@ -150,9 +150,12 @@
 
                                             <div class="w-100"></div>
                                             
+                                            <label for="number" id="texto">Pontos</label>
+                                            <div class="w-100"></div>
+                                            <input type="number" name="inputnumber" class="form-control" id="number">
 
-                                            
 
+                                            <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Nome social</label>
 
                                             <div class="w-100"></div>
