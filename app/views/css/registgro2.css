@@ -527,8 +527,8 @@ input[type=checkbox]:checked:after {
 }
 
 #botoeslimpar {
-    background-color: (var(--branquinho));
-    border-color: #338A5F;
+    background-color: var(--branquinho);
+    border-color: var(--principal);
     border-radius: 5px;
     border-width: 2px;
     width: 110px;
@@ -542,10 +542,6 @@ input[type=checkbox]:checked:after {
     background-color: var(--principal);
     color: var(--branco);
 }
-
-
-
-
 
 #caixa-adicione-individuos a {
     font-family: Poppins-semibold;
