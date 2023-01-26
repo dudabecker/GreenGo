@@ -320,6 +320,7 @@ input[type=number]:focus{
 
 #botaocadastro{
     margin-top: 50px;
+    margin-bottom: 130px;
 }
 #texto{
     color: var(--principal);
@@ -330,10 +331,21 @@ input[type=number]:focus{
 
 #rodape{
     height: 100px;
-    
-    background-color: var(--principal);
+    position: end;
+    background-color: var(--branco);
+    bottom: 0%;
+    margin-bottom: -3px;
 }
 
 #loginho{
-    width: 2px;
+    float: right;
+    text-align: right;
+    width: 150px;
+   
+}
+#rodape2{
+    height: 100px;
+    position: end;
+    background-color: var(--principal);
+    bottom: 0%;
 }

@@ -93,10 +93,10 @@
                 <div class="col">
                 <div class="form-row align-items-left">
                     
-                    <!--essa linha ta tirando toda a responsividade do sistema
+                  
 
                 <form action="./EspecieController.php?action=create" method="POST">
--->
+
                     <label for="formtexto" id="texto">Nome popular</label>
                     <div class="w-100"></div>
 

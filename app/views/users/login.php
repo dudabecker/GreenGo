@@ -57,8 +57,11 @@
 
                     <?php if (isset($_SESSION['msg_erro'])): ?>
                         <br>
+                        
                         <span class="mensagem-erro">
+
                             <?= $_SESSION['msg_erro'] ?>
+                            
                         </span>
                     <?php endif ?>
 
