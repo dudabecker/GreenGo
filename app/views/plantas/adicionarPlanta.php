@@ -142,12 +142,6 @@
                                                         <option value="5"> Zona 5 </option>
                                                         <option value="6"> Zona 6 </option>
                                                 </select>
-                                                    
-                                                
-
-                                            
-                                            
-
                                             <div class="w-100"></div>
                                             
                                             <label for="number" id="texto">Pontos</label>
