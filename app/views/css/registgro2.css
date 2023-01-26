@@ -35,6 +35,11 @@
 }
 
 @font-face {
+    font-family: 'Poppins-medium';
+    src: url('../fontes/Poppins-Medium.ttf');
+}
+
+@font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
@@ -107,6 +112,8 @@ header,
 
 body {
     background-color: var(--branco);
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 #titulo {
@@ -142,13 +149,12 @@ body {
 }
 
 .picture:focus {
-    background: #ccc;
+    background: var(--cinza);
 }
 
 .picture__img {
     max-width: 100%;
 }
-
 
 #pontos {
     margin-top: 15px;
@@ -310,7 +316,7 @@ a {
     margin-left: 0%;
     font-family: Poppins-semibold;
     color: var(--principal);
-    margin-top: 10px;
+    
 }
 
 #caixa-adicione-individuos h4 {
@@ -386,15 +392,12 @@ input[type=checkbox]:checked:after {
 
 #texto-checkbox {
     font-family: Poppins-regular;
-    color: var(--verdao);
+    color: var(--principal);
 }
 
 #container-checkbox a {
     font-family: Poppins-semibold;
     color: var(--principal);
-
-
-
 }
 
 
@@ -449,7 +452,7 @@ input[type=checkbox]:checked:after {
 }
 
 #rodapezinho {
-    background-color: #338A5F;
+    background-color: var(--principal);
 
     height: 100px;
 }
@@ -459,14 +462,12 @@ input[type=checkbox]:checked:after {
 }
 
 #primeirotextoreg {
-    color: #338A5F;
+    color: var(--principal);
     margin-bottom: 50px;
     font-family: Poppins;
     margin-top: 40px;
     font-size: 50px;
-
-
-
+    
 }
 
 #container-checkbox {
@@ -478,27 +479,23 @@ input[type=checkbox]:checked:after {
     margin-top: -5px;
 }
 
-#atributos {
-    margin-bottom: -20px;
-}
-
 #imagemreg {
-    margin-left: 10px;
+   
 }
 
 #carregueimagemtexto {
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins-semibold;
 }
 
 #carregueimagemtexto2 {
-    color: #04574d;
-    font-family: Poppins-semibold;
+    color: var(--verdao);
+    font-family: Poppins-medium;
     font-size: 12px;
 }
 
 #textodescritivo {
-    color: #338A5F;
+    color: var(--principal);
     font-family: Poppins-semibold;
     font-size: 20px;
 
@@ -510,21 +507,26 @@ input[type=checkbox]:checked:after {
 }
 
 #txtconteudo {
-    color: #f58c95;
+    color: var(--destaque);
 }
 
 #botoesregistrar {
-    background-color: #338A5F;
+    background-color: var(--principal);
     margin-top: 60px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 2px;
     width: 130px;
-    border-color: #338A5F;
+    border-color: var(--principal);
     margin-right: 20px;
     font-family: Poppins-regular;
     height: 52px;
     text-align: center;
+    transition: 0.3s ease;
+}
 
+#botoesregistrar:hover {
+    color: var(--branco);
+    transform: scale(1.05);
 }
 
 #botoeslimpar {
@@ -543,32 +545,32 @@ input[type=checkbox]:checked:after {
     background-color: var(--principal);
     color: var(--branco);
 }
-#botoesregistrar:hover {
-    background-color: (var(--branquinho));
-    border-color: #338A5F;
-    color: #338A5F;
 
-}
 
 
 
 
 #caixa-adicione-individuos a {
     font-family: Poppins-semibold;
-    color: #338A5F;
+    color: var(--principal);
     text-align: start;
 
 }
 
 #textoind {
     font-size: 27px;
-    color: #04574d;
+    color: var(--principal);
 }
 
 #mais-registro {
     text-align: left;
     float: right;
     cursor: pointer;
+    transition: 0.3 ease;
+}
+
+#mais-registro:hover {
+    transform: scale(1.05);
 }
 
 .quadrado {
@@ -591,62 +593,26 @@ input[type=checkbox]:checked:after {
     display: inline-block;
 }
 
-#formtextoo {
-    width: 250px;
+.ck-editor__editable_inline {
+    min-height: 400px;
 }
 
-#dropdownMenuButton {
+.img-camera {
+    margin: auto;
+    display: block;
+    border-collapse: collapse;
+}
+
+/**TENTATIVAS DE DEIXAR O CK ESTILIZADO**/
+.ck-toolbar {
+    color: var(--verdao);
     background-color: var(--rosinha);
-    border: none;
-    border-radius: 0%;
-    width: 150px;
-    margin-top: -10px;
-    margin-left: -47px;
-    height: 45px;
 
 }
 
-#botoesexcluir {
-    background-color: var(--rosinha);
-    border: none;
-    margin-top: 60px;
-    border-radius: 10px;
-    border-width: 2px;
-    width: 130px;
-    margin-left: 20px;
-    font-family: Poppins-regular;
-    height: 52px;
-    text-align: center;
-}
-
-#botoesexcluir:hover {
-    background-color: var(--destaque);
-}
-
-#zonatxt {
-    margin-top: -32px;
-    position: absolute;
-    color: #338A5F;
-    font-family: Poppins-semibold;
-    margin-left: -45px;
-}
-
-.dropdown-item {
-    color: var(--principal);
-    font-family: Poppins-semibold;
-    background-color: #ebf0f1;
-}
-
-#form2 {
-    background-color: var(--rosinha);
-    height: 45px;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    margin-top: -10px;
-    margin-right: 70px;
-    width: 428px;
-
+.cke_contents {
+    border: solid 1px var(--rosinha);
+    background-color: transparent;
 }
 #rodape{
     background-color: var(--principal);
@@ -656,91 +622,23 @@ input[type=checkbox]:checked:after {
 
 }
 
-#formtexto{
-    width: 428px;
-}
-
-
 input[type=text],
 input[type=text]:hover,
 input[type=text]:valid,
 input[type=text]::after {
-    width: 480px;
+    width: 650px;
     background-color: var(--rosinha);
     height: 45px;
     margin-right: auto;
     border-radius: 0%;
-    margin-right: 50px;
     margin-bottom: 20px;
-    margin-top: -5px;
     border-color: var(--rosinha);
-    position: relative;
     font-family: Poppins-semibold;
     transition: 0.3s all ease;
     color: var(--branco);
 }
 
 input[type=text]:focus {
-    background-color: var(--branco);
-    border: 2px solid var(--rosinha);
-    box-shadow: var(--rosinha);
-    color: var(--principal);
-}
-
-#zonasselect,
-#number,
-#zonasselect:hover,
-#number:hover,
-#zonasselect:valid,
-#number:valid,
-#zonasselect::after,
-#number::after {
-    width: 250px;
-    background-color: var(--rosinha);
-    height: 45px;
-    margin-right: auto;
-    border-radius: 0%;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    margin-top: -5px;
-    border-color: var(--rosinha);
-    position: relative;
-    font-family: Poppins-semibold;
-    transition: 0.3s all ease;
-    color: var(--branco);
-}
-#zonasselect:focus,
-#number:focus
- {
-    background-color: var(--branco);
-    border: 2px solid var(--rosinha);
-    box-shadow: var(--rosinha);
-    color: var(--principal);
-}
-
-
-
-
-#form2,
-#form2,
-#form2,
-#form2::after {
-    width: 80px;
-    background-color: var(--rosinha);
-    height: 45px;
-    margin-right: auto;
-    border-radius: 0%;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    margin-top: -5px;
-    border-color: var(--rosinha);
-    position: relative;
-    font-family: Poppins-semibold;
-    transition: 0.3s all ease;
-    color: var(--branco);
-
-}
-#form2:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);

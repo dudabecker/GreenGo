@@ -390,7 +390,7 @@ input[type=checkbox]:checked:after {
 
 #texto-checkbox {
     font-family: Poppins-regular;
-    color: var(--verdao);
+    color: var(--principal);
 }
 
 #container-checkbox a {
@@ -531,32 +531,36 @@ input[type=checkbox]:checked:after {
 }
 
 #botoeslimpar {
-    background-color:#ebf0f1;
-    border-color: var(--principal);
-    border-radius: 5px;
+    background-color: (var(--branquinho));
+    border-color: #338A5F;
+    border-radius: 10px;
     border-width: 2px;
     width: 110px;
     margin-top: 60px;
-    transition: 0.3s ease;
-}
-
-
-
-#botoeslimpar a {
     color: var(--principal);
     font-family: Poppins-regular;
+
 }
+
+#botoeslimpar:hover{
+    background-color: var(--principal);
+    color: var(--branco);
+}
+
+
+
+
 
 #caixa-adicione-individuos a {
     font-family: Poppins-semibold;
-    color: #338A5F;
+    color: var(--principal);
     text-align: start;
 
 }
 
 #textoind {
     font-size: 27px;
-    color: #04574d;
+    color: var(--principal);
 }
 
 #mais-registro {
@@ -617,4 +621,30 @@ input[type=checkbox]:checked:after {
     height: 70px;
     margin-top: 200px;
 
+}
+
+input[type=text],
+input[type=text]:hover,
+input[type=text]:valid,
+input[type=text]::after {
+    width: 480px;
+    background-color: var(--rosinha);
+    height: 45px;
+    margin-right: auto;
+    border-radius: 0%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-top: -5px;
+    border-color: var(--rosinha);
+    position: relative;
+    font-family: Poppins-semibold;
+    transition: 0.3s all ease;
+    color: var(--branco);
+}
+
+input[type=text]:focus {
+    background-color: var(--branco);
+    border: 2px solid var(--rosinha);
+    box-shadow: var(--rosinha);
+    color: var(--principal);
 }
