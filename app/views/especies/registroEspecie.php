@@ -16,13 +16,13 @@
     <title>Registro</title>
 
     <!--FAVICON-->
-    <link rel="icon" href="../../public/favicon.svg">
+    <link rel="icon" href="../public/favicon.svg">
     <!-- Fonte -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/registgro2.css">
+    <link rel="stylesheet" href="../views/css/registgro2.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
     <script src="js/registro.js"></script>
-    <link rel="stylesheet" href="js/registro.js">
+    <link rel="stylesheet" href="views/js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -50,7 +50,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -113,58 +113,58 @@
                     aria-describedby="nome-cadastro">
                         
                 <div class="container" id="container-checkbox">
-                                                <div class="row">
-                                                    <div class="col-md">
-                                                        <div class="form-group form-check">
-                                                            <div id="atributos">
-                                                                <a>Atributos específicos</a>
-                                                                <div class="w-100"></div>
-                                                                <br>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form1">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="form-group form-check">
+                                <div id="atributos">
+                                    <a>Atributos específicos</a>
+                                    <div class="w-100"></div>
+                                    <br>
+                                </div>
+                                <div class="form-group form-check" id="form1">
 
-                                                                <input type="checkbox" name="comestivel"
-                                                                    class="form-check-input" id="botaocheck1" value="1">
+                                    <input type="checkbox" name="comestivel"
+                                        class="form-check-input" id="botaocheck1" value="1">
 
-                                                                <label class="form-check-label" for="botaocheck1"
-                                                                    id="texto-checkbox">Comestível</label>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form2">
-                                                                <input type="checkbox" name="exotica"
-                                                                    class="form-check-input" id="botaocheck2" value="1">
-                                                                <label class="form-check-label" for="botaocheck2"
-                                                                    id="texto-checkbox">Exótica</label>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form3">
-                                                                <input type="checkbox" name="frutifera"
-                                                                    class="form-check-input" id="botaocheck3" value="1">
-                                                                <label class="form-check-label" for="botaocheck3"
-                                                                    id="texto-checkbox">Frutífera</label>
-                                                                <span></span>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form4">
-                                                                <input type="checkbox" name="medicinal"
-                                                                    class="form-check-input" id="botaocheck4" value="1">
-                                                                <label class="form-check-label" for="botaocheck4"
-                                                                    id="texto-checkbox">Medicinal</label>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form5">
-                                                                <input type="checkbox" name="raridade"
-                                                                    class="form-check-input" id="botaocheck5">
-                                                                <label class="form-check-label" for="botaocheck5"
-                                                                    id="texto-checkbox">Rara</label>
-                                                            </div>
-                                                            <div class="form-group form-check" id="form6">
-                                                                <input type="checkbox" name="toxidade"
-                                                                    class="form-check-input" id="botaocheck6" value="1">
-                                                                <label class="form-check-label" for="botaocheck6"
-                                                                    id="texto-checkbox">Tóxica</label>
-                                                            </div>
+                                    <label class="form-check-label" for="botaocheck1"
+                                        id="texto-checkbox">Comestível</label>
+                                </div>
+                                <div class="form-group form-check" id="form2">
+                                    <input type="checkbox" name="exotica"
+                                        class="form-check-input" id="botaocheck2" value="1">
+                                    <label class="form-check-label" for="botaocheck2"
+                                        id="texto-checkbox">Exótica</label>
+                                </div>
+                                <div class="form-group form-check" id="form3">
+                                    <input type="checkbox" name="frutifera"
+                                        class="form-check-input" id="botaocheck3" value="1">
+                                    <label class="form-check-label" for="botaocheck3"
+                                        id="texto-checkbox">Frutífera</label>
+                                    <span></span>
+                                </div>
+                                <div class="form-group form-check" id="form4">
+                                    <input type="checkbox" name="medicinal"
+                                        class="form-check-input" id="botaocheck4" value="1">
+                                    <label class="form-check-label" for="botaocheck4"
+                                        id="texto-checkbox">Medicinal</label>
+                                </div>
+                                <div class="form-group form-check" id="form5">
+                                    <input type="checkbox" name="raridade"
+                                        class="form-check-input" id="botaocheck5">
+                                    <label class="form-check-label" for="botaocheck5"
+                                        id="texto-checkbox">Rara</label>
+                                </div>
+                                <div class="form-group form-check" id="form6">
+                                    <input type="checkbox" name="toxidade"
+                                        class="form-check-input" id="botaocheck6" value="1">
+                                    <label class="form-check-label" for="botaocheck6"
+                                        id="texto-checkbox">Tóxica</label>
+                                </div>
 
-                                                        </div>
-                                                        </form>
-                                                    </div>
-                                                </div>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
 
                                             </div>
 </div>
@@ -179,7 +179,7 @@
                                             <label class="picture align-content-center" for="picture__input"
                                                 tabIndex="0">
                                                 <span class="picture__image">
-                                                    <img class="img-camera" src="../../public/camera.svg">
+                                                    <img class="img-camera" src="../public/camera.svg">
                                                 </span>
                                             </label>
                                             <input type="file" name="imagem" id="picture__input"
@@ -198,7 +198,7 @@
                 <a id="textodescritivo">Texto descritivo</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="../ckeditor/build/ckeditor" ></script>
+                <script src="../views/ckeditor/build/ckeditor" ></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',

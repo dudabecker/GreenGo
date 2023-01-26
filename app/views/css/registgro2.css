@@ -529,7 +529,7 @@ input[type=checkbox]:checked:after {
 #botoeslimpar {
     background-color: (var(--branquinho));
     border-color: #338A5F;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 2px;
     width: 110px;
     margin-top: 60px;
