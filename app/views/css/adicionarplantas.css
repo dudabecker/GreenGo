@@ -665,7 +665,7 @@ input[type=text],
 input[type=text]:hover,
 input[type=text]:valid,
 input[type=text]::after {
-    width: 480px;
+    width: 1000px;
     background-color: var(--rosinha);
     height: 45px;
     margin-right: auto;
@@ -725,7 +725,7 @@ input[type=text]:focus {
 #form2,
 #form2,
 #form2::after {
-    width: 480px;
+    width: 420px;
     background-color: var(--rosinha);
     height: 45px;
     margin-right: auto;
