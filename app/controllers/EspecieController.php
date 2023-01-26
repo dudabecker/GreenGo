@@ -114,7 +114,7 @@ class ControllerEspecie{
     }
 
     private function loadFormNew(){
-        $this->loadView("especies/registro.php", null,"teste");
+        $this->loadView("especies/registroEspecie.php", null,"teste");
     }    
 
     private function findAll(string $msg = null){
