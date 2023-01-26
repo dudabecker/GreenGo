@@ -151,7 +151,7 @@
                                             <div class="w-100"></div>
                                             
 
-                                            <div class="w-100"></div>
+                                            
 
                                             <label for="formtexto" id="texto">Nome social</label>
 
@@ -193,9 +193,9 @@
             <br>
             <div class="container" id="caixadetexto">
                 <a id="textodescritivo">História</a>
-                <textarea id="txtconteudo" name="descricao"></textarea>
+                <textarea id="txtconteudo" name="descricao" ></textarea>
 
-                <script src="../ckeditor/build/ckeditor"></script>
+                <script src="../ckeditor/build/ckeditor" ></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -221,7 +221,7 @@
         <div class="container">
             <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Adicionar</a> </button>
             <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"><a id="limpar"> Limpar</a>
-                <button type="button" class="btn btn-primary btn-lg" id="botoesexcluir"><a>Excluir</a> </button>
+              
             </button>
         </div>
 
