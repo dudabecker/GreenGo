@@ -169,11 +169,13 @@
 
                     <!--PHP FOREACH AQUI-->
                     <?php?>
-                    <div class="quadrado"
-                        style="background-image:url('../public/especies/cacto2.webp');">
-                        
-                        <div class="nome align-items-center justify-content-center">
-                            NOME DA PLANTA!!!!!!!!
+                    <div class="quadrado">
+                        <div class="ind align-items-center justify-content-center">
+                            NOME DA PLANTA!!
+                        </div>
+
+                        <div class="cod align-items-center justify-content-center">
+                            [COD NUMERICO]
                         </div>
                     </div>
                 </div>

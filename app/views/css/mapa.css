@@ -197,11 +197,34 @@ body {
 
 .nome{
     text-align: center;
-    top: 50px;
-    left: 50px;
     margin: auto;
-    margin-top: 310px;
+    margin-top: 290px;
     display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 28px;
+    font-family: Poppins-semibold;
+}
+
+.ind{
+    text-align: center;
+    margin: auto;
+    margin-top: 150px;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 28px;
+    font-family: Poppins-semibold;
+}
+
+.cod{
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: Poppins-semibold;
 }
 
 #rodape{
