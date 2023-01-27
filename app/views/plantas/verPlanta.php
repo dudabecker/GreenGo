@@ -79,10 +79,10 @@ error_reporting(E_ALL);
     <ul>
         <?php foreach($data['plantas'] as $planta): ?>
             <li>
-                Identificação da Planta: <?= $planta["idPlanta"] ?><br>
-                Espécie: <?= $planta["idEspecie"] ?><br>
-                Zona: <?= $planta["idZona"] ?><br>
-                Código Numérico: <?= $planta["codNumerico"] ?><br><br>
+                Identificação da Planta: <?=  $planta->getIdPlanta() ?><br>
+                Espécie: <?=$planta->getIdEspecie() ?><br>
+                Zona: <?= $planta->getIdZona() ?><br>
+                Código Numérico: <?= $planta->getCodNumerico() ?><br><br>
                 [<a href="./PlantaController.php?action=verDetalhesPlanta">Detalhes</a>]
                 [<a href="./PlantaController.php?action=formIdentificarPlanta">Continuar Jogando</a>]
 
