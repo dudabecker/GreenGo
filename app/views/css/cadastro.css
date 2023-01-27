@@ -193,9 +193,9 @@ select:focus {
 }
 
 a.termos {
-    color: inherit;
+    color: var(--cinza);
     text-decoration: none;
-    font-family: Poppins-medium;
+    text-decoration: underline;
     font-size: 14px;
 }
 
