@@ -57,7 +57,9 @@ class ControllerPlanta{
         $planta->setIdEspecie($_POST["idEspecie"]);
 		$planta->setIdZona($_POST["idZona"]);
 		$planta->setCodNumerico($_POST["codNumerico"]);
-        $planta->setCodQR($_POST["codQR"]);
+        $planta->setNomeSocial($_POST["nomeSocial"]);
+		$planta->setHistoria($_POST["historia"]);
+        //$planta->setCodQR($_POST["codQR"]);
 
         $id = $this->plantaRepository->create($planta);
 
@@ -137,7 +139,9 @@ class ControllerPlanta{
 		$planta->setIdEspecie($_POST["idEspecie"]);
 		$planta->setIdZona($_POST["idZona"]);
         $planta->setCodNumerico($_POST["codNumerico"]);
-        $planta->setCodQR($_POST["codQR"]);
+        $planta->setNomeSocial($_POST["nomeSocial"]);
+        $planta->setHistoria($_POST["historia"]);
+        //$planta->setCodQR($_POST["codQR"]);
         
         $atualizou = $this->plantaRepository->update($planta);
         
