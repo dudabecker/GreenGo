@@ -249,7 +249,7 @@ a.excluir:hover{
 
 a.qrcode{
     color: var(--branco);
-    background-color: var(--rosinha);
+    background-color: var(--destaque);
     border: none;
     border-radius: 5px;
     width: max-content !important;
