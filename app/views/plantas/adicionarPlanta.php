@@ -36,9 +36,9 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="../css/adicionarplantas.css">
+    <link rel="stylesheet" href="../views/css/adicionarplantas.css">
     <script src="js/registro.js"></script>
-    <link rel="stylesheet" href="js/registro.js">
+    <link rel="stylesheet" href="../views/js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
     <script type="text/javascript" src="js/script.js"></script>
 
@@ -60,7 +60,7 @@
                 <a href="index.html" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../../public/logo-green.svg" alt="">
+                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
                         </div>
                     </div>
                 </a>
@@ -192,7 +192,7 @@
                 <a id="textodescritivo">História</a>
                 <textarea id="txtconteudo" name="descricao" ></textarea>
 
-                <script src="../ckeditor/build/ckeditor.js"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -216,9 +216,8 @@
         </nav>
 
         <div class="container">
-            <button type="button" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Adicionar</a> </button>
-            <button type="button" class="btn btn-secondary btn-lg" id="botoeslimpar"><a id="limpar"> Limpar</a>
-              
+            <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Adicionar</a> </button>
+            <button type="reset" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
             </button>
         </div>
 

@@ -341,81 +341,6 @@ a {
 
 }
 
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    margin-right: 10px;
-}
-
-input[type=checkbox]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: var(--rosinha);
-}
-
-input[type=checkbox]:checked:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-    background-color: var(--destaque);
-}
-
-input[type=checkbox]:checked:after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    border: solid var(--branco);
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    position: absolute;
-    top: 4.5px;
-    left: 7.5px;
-}
-
-#texto-checkbox {
-    font-family: Poppins-regular;
-    color: var(--verdao);
-}
-
-#container-checkbox a {
-    font-family: Poppins-semibold;
-    color: var(--principal);
-
-
-
-}
-
-
-.chk input {
-    display: none;
-    background-color: var(--verdao);
-}
-
-.chk span {
-    width: 12px;
-    height: 12px;
-    display: block;
-
-    border: 1px solid #DDD;
-    background-color: var(--verdao);
-}
-
-.chk input:checked+span {
-    background-color: #c03;
-}
-
 #indexinteiro {
     margin-right: 0%;
 
@@ -514,23 +439,28 @@ input[type=checkbox]:checked:after {
 }
 
 #botoesregistrar {
-    background-color: #338A5F;
+    background-color: var(--principal);
     margin-top: 60px;
-    border-radius: 10px;
+    border-radius: 5px;
     border-width: 2px;
     width: 130px;
-    border-color: #338A5F;
+    border-color: var(--principal);
     margin-right: 20px;
     font-family: Poppins-regular;
     height: 52px;
     text-align: center;
+    transition: 0.3s ease;
+}
 
+#botoesregistrar:hover {
+    color: var(--branco);
+    transform: scale(1.05);
 }
 
 #botoeslimpar {
-    background-color: (var(--branquinho));
-    border-color: #338A5F;
-    border-radius: 10px;
+    background-color: var(--branquinho);
+    border-color: var(--principal);
+    border-radius: 5px;
     border-width: 2px;
     width: 110px;
     margin-top: 60px;
@@ -543,15 +473,6 @@ input[type=checkbox]:checked:after {
     background-color: var(--principal);
     color: var(--branco);
 }
-#botoesregistrar:hover {
-    background-color: (var(--branquinho));
-    border-color: #338A5F;
-    color: #338A5F;
-
-}
-
-
-
 
 #caixa-adicione-individuos a {
     font-family: Poppins-semibold;
@@ -604,23 +525,6 @@ input[type=checkbox]:checked:after {
     margin-left: -47px;
     height: 45px;
 
-}
-
-#botoesexcluir {
-    background-color: var(--rosinha);
-    border: none;
-    margin-top: 60px;
-    border-radius: 10px;
-    border-width: 2px;
-    width: 130px;
-    margin-left: 20px;
-    font-family: Poppins-regular;
-    height: 52px;
-    text-align: center;
-}
-
-#botoesexcluir:hover {
-    background-color: var(--destaque);
 }
 
 #zonatxt {
