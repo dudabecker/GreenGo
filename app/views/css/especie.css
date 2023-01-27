@@ -6,7 +6,6 @@
     --destaque: #f58c95;
     --rosinha: #f0b6bc;
     --cinza: #586660;
-    --cinzinha: #d3dadb;
 
     width: 100%;
     height: 100%;
@@ -289,6 +288,29 @@ a.editar{
 }
 
 a.editar:hover{
+    color: var(--branco);
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
+a.vermais{
+    color: var(--branco);
+    background-color: var(--rosinha);
+    border: none;
+    border-radius: 5px;
+    width: max-content !important;
+    height: max-content !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Poppins-semibold;
+    font-size: 22px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+a.vermais:hover{
     color: var(--branco);
     transform: scale(1.05);
     text-decoration: none;
