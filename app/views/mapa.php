@@ -172,8 +172,8 @@
                     <div class="quadrado"
                         style="background-image:url('../public/especies/cacto2.webp');">
                         
-                        <div class="nome">
-                            NOME DA PLANTA!!!!!!!!!
+                        <div class="nome align-items-center justify-content-center">
+                            NOME DA PLANTA!!!!!!!! !!!!!!!!!!!!!!!!
                         </div>
                     </div>
                 </div>

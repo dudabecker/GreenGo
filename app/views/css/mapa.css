@@ -174,7 +174,7 @@ body {
 
 .quadrado {
     width: 245px;
-    height: 381px;
+    height: 380px;
     background-color: var(--rosinha);
     margin-top: 40px;
     margin-left: 20px;
@@ -191,16 +191,17 @@ body {
 
 .quadrado:hover {
     background-color: var(--destaque);
+    opacity: 0.9;
     transform: scale(1.02);
 }
 
-span.nome{
-    position: absolute;
+.nome{
     text-align: center;
     top: 50px;
     left: 50px;
     margin: auto;
-    display: inline-block;
+    margin-top: 310px;
+    display: block;
 }
 
 #rodape{
