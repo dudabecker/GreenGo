@@ -84,11 +84,12 @@
     <main>
         <div class="container">
             <?php foreach ($data['especies'] as $especie): ?>
-
-                <h1 id="titulo">Editar
-                    <?= $especie->getNomeCie(); ?>!
-                </h1>
-
+                <div class="row">
+                    <h1 id="titulo">Editar
+                        <?= $especie->getNomeCie(); ?>!
+                    </h1>
+                </div>
+                
                 <div class="row">
                     <div class="col">
                         <div class="form-row align-items-left">
