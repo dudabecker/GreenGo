@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COD CABECALHO ADM</title>
+    <title>COD  ADM</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -30,7 +30,6 @@
 
 
 
-
 <!--------------ADMIN-------------->
 
 <nav>
@@ -49,20 +48,18 @@
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" >
 
-                        <a class="nav-item nav-link" id="projeto-menu" href="#"> Projeto </a>
-                        <a class="nav-item nav-link" id="mapa-menu" href="#"> Mapa</a>
-                        <a class="nav-item nav-link" id="jogar-menu" href="#"> Jogar </a>
-                        <a class="nav-item nav-link" id="zonas-menu" href="#"> Zonas </a>
-                        <a class="nav-item nav-link" id="especies-menu" href="#"> Espécies </a>
-                        <a class="nav-item nav-link" id="usuarios-menu" href="#"> Usuários </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="#"> Adm </a>
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="./views/mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieController.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="./UserController.php?action=findUserById"> Adm </a>
                     </div>
                 </div>
-
             </nav>
         </div>
     </div>
