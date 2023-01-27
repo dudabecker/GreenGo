@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planta</title>
@@ -51,9 +52,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav" id="navbar-links">
 
-                    <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
+                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="itemmenu"
+                            href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
                     </div>
                 </div>
@@ -63,37 +65,33 @@
 </nav>
 
 <body>
-<?php
+    <?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
 
+    //include_once __DIR__ . "/../helpers/mensagem.php";
+    //$caminho = __DIR__ . "/../helpers/mensagem.php";
+    //print_r($caminho); 
+    ?>
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+    <div class="container">
 
-	//include_once __DIR__ . "/../helpers/mensagem.php";
-	//$caminho = __DIR__ . "/../helpers/mensagem.php";
-	//print_r($caminho); 
-?>
-        <div class="container">
+        <h2 id="textoplanta">Achou uma planta?</h2>
 
-            <h2 id="textoplanta">Achou uma planta?</h2>
+        <form action="./PlantaController.php?action=identificarPlanta" method="POST">
+            <a id="a"> Identifique-a e ganhe pontos!</a><br><br>
+
+            <input type="text" class="form-control" name="codNumerico" id="codigo">
+            <br>
+            <!--Código QR: <input type="text" name="codQR">-->
+            <br>
+
+            <input type="submit" value="Próximo" id="botaoproximo">
+        </form>
         
-
-<form action="./PlantaController.php?action=identificarPlanta" method="POST">
-	<a id="a"> Identifique-a e ganhe pontos!</a><br><br>
-    
-     <input type="text" class="form-control" name="codNumerico" id="codigo" >
-	<br>
-    <!--Código QR: <input type="text" name="codQR">-->
-	<br>
-
-	<input type="submit" value="Próximo" id="botaoproximo">
-
-    
-                    
-               
-</form>		
         <a class="pontuacao" id="a2"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</a>
-</div>
+    </div>
 </body>
+
 </html>
