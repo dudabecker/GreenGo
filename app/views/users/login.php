@@ -81,7 +81,7 @@
             </div>
 
             <div class="col align-self-start">
-                <a href="../index.html">
+                <a href="../index.php">
                     <img class="img-bottom" src="../../public/imagem-bottom.svg">
                 </a>
             </div>

@@ -113,7 +113,7 @@
       </p>
 
       <div class="img-fluid">
-        <a href="../index.">
+        <a href="../views/index.php">
           <img id="icon" src="../public/logo-branca.svg" alt="">
         </a>
       </div>

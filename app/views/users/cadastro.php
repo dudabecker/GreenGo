@@ -116,7 +116,7 @@
       </p>
 
       <div class="img-fluid">
-        <a href="../index.">
+        <a href="../index.php">
           <img id="icon" src="../../public/logo-rosa.svg" alt="">
         </a>
       </div>
