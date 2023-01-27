@@ -107,7 +107,7 @@
                             </div>
                         </div>
 
-                        <form action="controllers/plantaController.php?action=create" method="POST">
+                        <form action="./plantaController.php?action=create" method="POST">
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
@@ -117,12 +117,12 @@
 
                                             <label for="formtexto" id="texto">Identificação da espécie</label>
                                             <div class="w-100"></div>
-                                            <input type="text" name="nomePop" class="form-control" id="formtexto"
+                                            <input type="text" name="idEspecie" class="form-control" id="formtexto"
                                                 aria-describedby="nome-cadastro">
                                                 <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Código numérico</label>
                                             <div class="w-100"></div>
-                                            <input type="text" name="nomeCie" class="form-control" id="formtextoo"
+                                            <input type="text" name="codNumerico" class="form-control" id="formtextoo"
                                                 aria-describedby="nome-cadastro">
 
 
@@ -132,7 +132,7 @@
                                                 
                                             <label for="zonasselect" id="texto">Zonas</label>
                                             <div class="w-100"></div>
-                                                <select class="custom-select mr-sm-2"  name="field_escolaridade" id="zonasselect">
+                                                <select class="custom-select mr-sm-2"  name="idZona" id="zonasselect">
                                                     
                                                         <option selected></option>
                                                         <option value="1"> Zona 1</option>
@@ -144,16 +144,16 @@
                                                 </select>
                                             <div class="w-100"></div>
                                             
-                                            <label for="number" id="texto">Pontos</label>
+                                            <!--<label for="number" id="texto">Pontos</label>
                                             <div class="w-100"></div>
-                                            <input type="number" name="inputnumber" class="form-control" id="number">
+                                            <input type="number" name="inputnumber" class="form-control" id="number">-->
 
 
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Nome social</label>
 
                                             <div class="w-100"></div>
-                                            <input type="text" name="nomeCie" class="form-control" id="form2"
+                                            <input type="text" name="nomeSocial" class="form-control" id="form2"
                                                 aria-describedby="nome-cadastro">
 
                                         </div>
@@ -190,7 +190,7 @@
             <br>
             <div class="container" id="caixadetexto">
                 <a id="textodescritivo">História</a>
-                <textarea id="txtconteudo" name="descricao" ></textarea>
+                <textarea id="txtconteudo" name="historia" ></textarea>
 
                 <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor

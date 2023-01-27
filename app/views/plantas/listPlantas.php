@@ -106,13 +106,28 @@ error_reporting(E_ALL);
         -->
 
         <div class="row justify-content-evenly align-content-start">
+        <?php if ($data['plantas'] == null){ ?>
+                <div class="row justify-content-between align-content-start">
+                <div class="col justify-content-start">
+                    <p id="nenhuma">
+                        Puts, nenhuma planta por enquanto!
+                        <br>
+                        <span class="adicione">Adicione no ícone de mais +</span>
+                    </p>
+                </div>
+                <div class="col">
+                    <img class="align-content-end img-flecha" src="../public/flecha.svg">
+                </div>
+            </div>
+           <?php }else {  ?>
+
             <?php foreach ($data['plantas'] as $planta): ?>
                 <a href="./PlantaController.php?action=verPlanta&idPlanta=<?= $planta['idPlanta'] ?>">
                     <div class="col- planta">
                         <div class="row">
                             <div class="col-sm">
                                 <h3 class="nome-soc">
-                                    < ?=$planta['nomeSoc'] ?>
+                                <?= $planta['nomeSocial'] ?>
                                 </h3>
 
                                 <h3 class="codigo">
@@ -156,7 +171,7 @@ error_reporting(E_ALL);
                         </div>
                     </div>
                 </a>
-            <?php endforeach; ?>
+            <?php endforeach; }?>
         </div>
     </div>
     </div>
