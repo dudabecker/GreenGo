@@ -15,12 +15,14 @@
 
         public function create(PlantaModel $planta){
             try {
-                $query = "INSERT INTO planta (idEspecie, idZona, codNumerico, codQR) VALUES (:idEspecie, :idZona, :codNumerico, :codQR)";
+                $query = "INSERT INTO planta (idEspecie, idZona, codNumerico, /*codQR*/ nomeSocial, historia) VALUES (:idEspecie, :idZona, :codNumerico, /*:codQR*/ :nomeSocial, :historia)";
                 $prepare = $this->conn->prepare($query);
                 $prepare->bindValue(":idEspecie", $planta->getIdEspecie());
                 $prepare->bindValue(":idZona", $planta->getIdZona());
                 $prepare->bindValue(":codNumerico", $planta->getCodNumerico());
-                $prepare->bindValue(":codQR", $planta->getCodQR());
+                $prepare->bindValue(":nomeSocial", $planta->getNomeSocial());
+                $prepare->bindValue(":historia", $planta->getHistoria());
+                //$prepare->bindValue(":codQR", $planta->getCodQR());
                 print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
@@ -52,13 +54,15 @@
         }
 
         public function update(PlantaModel $planta) : bool {
-            $query = "UPDATE planta SET idEspecie = ?, idZona = ?, codNumerico = ?, codQR = ? WHERE idPlanta = ?";
+            $query = "UPDATE planta SET idEspecie = ?, idZona = ?, codNumerico = ?, /*codQR = ?*/ nomeSocial = ?, historia = ? WHERE idPlanta = ?";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(1, $planta->getIdEspecie());
             $prepare->bindValue(2, $planta->getIdZona());
             $prepare->bindValue(3, $planta->getCodNumerico());
-            $prepare->bindValue(4, $planta->getCodQR());
-            $prepare->bindValue(5, $planta->getIdPlanta());
+            //$prepare->bindValue(4, $planta->getCodQR());
+            $prepare->bindValue(4, $planta->getNomeSocial());
+            $prepare->bindValue(5, $planta->getHistoria());
+            $prepare->bindValue(6, $planta->getIdPlanta());
             $result = $prepare->execute();
             //$result = $prepare->rowCount();
             //var_dump($result);
