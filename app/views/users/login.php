@@ -57,14 +57,16 @@
 
                     <?php if (isset($_SESSION['msg_erro'])): ?>
                         <br>
-                        
-                        <span class="mensagem-erro">
 
-                            <?= $_SESSION['msg_erro'] ?>
-                            
-                        </span>
+                        <div class="justify-content-between align-content-center mensagem">
+                            <img class="img-erro align-items-center" src="../../public/exclamation.svg">
+
+                            <span class="mensagem-erro align-items-center">
+                                o campo de email ou senha está incorreto
+                                <?= $_SESSION['msg_erro'] ?>
+                            </span>
+                        </div>
                     <?php endif ?>
-
                     <br>
 
                     <div class="row justify-content-beetween align-items-center">
@@ -74,7 +76,7 @@
                         </div>
 
                         <div class="col-auto align-items-center novoporaqui">
-                            <p >Novo por aqui? <a id="cadastro" href="cadastro.php">Cadastrar</a></p>
+                            <p>Novo por aqui? <a id="cadastro" href="cadastro.php">Cadastrar</a></p>
                         </div>
                     </div>
                 </form>

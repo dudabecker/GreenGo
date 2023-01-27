@@ -29,6 +29,11 @@
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'Poppins-medium';
+    src: url('../fontes/Poppins-Medium.ttf');
+}
+
 body {
     background-color: var(--branco) !important;
     color: var(--verdao);
@@ -104,13 +109,25 @@ input[type=email].error {
     border: var(--destaque);
 }
 
+.mensagem{
+    background-color: var(--destaque) !important;
+    padding: 10px;
+}
+
+.img-erro{
+    margin: auto;
+    display: inline-block;
+    height: 23px;
+    margin-left: 20px;
+}
+
 .mensagem-erro {
-    color: var(--destaque);
-    font-family: Poppins-medium;
-    margin-top: -20px;
-    font-size: 13px;
-    margin-left: 15px;
-    margin-bottom: 20px;
+    color: var(--branco);
+    font-family: Poppins-regular;
+    margin: auto;
+    display: inline-block;
+    font-size: 15px;
+    margin-left: 30px;
 }
 
 a.restaurar-senha-form {
