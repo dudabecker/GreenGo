@@ -112,6 +112,8 @@ header,
 
 body {
     background-color: var(--branco);
+    min-height: 100%;
+    overflow-x: hidden;
 }
 
 #titulo {
@@ -630,4 +632,26 @@ input[type=text]:focus {
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
     color: var(--principal);
+}
+
+#botoesexcluir{
+    background-color: var(--rosinha);
+    border-color: var(--rosinha);
+    border-radius: 5px;
+    border-width: 2px;
+    width: 120px;
+    margin-top: 60px;
+    color: var(--branco);
+    font-family: Poppins-regular;
+    margin-left: 20px;
+    font-size: 23px;
+}
+#botoesexcluir:hover{
+    background-color: var(--destaque);
+    border-color: var(--destaque);
+
+}
+
+button[type=submit]::after{
+    border: none;
 }
