@@ -114,20 +114,28 @@
                                 <b>Pontos:</b> <?= $especie['pontoEsp'] ?><br>
                                 <b>Atributos Especiais:</b><br>
                                 <a href="./EspecieController.php?action=verFrutifera"> <b><?php if($especie['frutifera'] == 1): 
+                                    echo "Frutifera <br>"; endif ?></b></a>
                                 <a href="./EspecieController.php?action=verToxidade"> <b><?php if($especie['toxidade'] == 1): 
+                                    echo "Tóxica <br>"; endif ?></b>
                                 <a href="./EspecieController.php?action=verComestivel"> <b><?php if($especie['comestivel'] == 1): 
+                                    echo "Comestível <br>"; endif ?></b>
                                 <a href="./EspecieController.php?action=verExotica"> <b><?php if($especie['exotica'] == 1): 
+                                    echo "Exótica <br>"; endif ?></b>
                                 <a href="./EspecieController.php?action=verRaridade"> <b><?php if($especie['raridade'] == 1): 
+                                    echo "Rara <br>"; endif ?>
                                 <a href="./EspecieController.php?action=verMedicinal"> <b><?php if($especie['medicinal'] == 1): 
+                                    echo "Medicinal <br>"; endif ?></b>
                             </p>
 
                             <div class="row justify-content-start" style="display: -webkit-box;">
                                     <!--EDITAR-->
+                                    <div class="col-3">
                                         <a class="editar"
                                             href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
                                     </div>
 
                                     <!--EXCLUIR-->
+                                    <div class="col-3">
                                         <a class="excluir"
                                             href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
                                     </div>
