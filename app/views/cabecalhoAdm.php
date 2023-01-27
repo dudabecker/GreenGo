@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COD  ADM</title>
+    <title>COD ADM</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -49,7 +49,7 @@
                     <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav" >
+                    <div class="navbar-nav">
 
                         <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.html"> Projeto </a>
                         <a class="nav-item nav-link" id="mapa-menu" href="./views/mapa.php"> Mapa</a>

@@ -97,46 +97,53 @@
 
 
                     <div class="row col flex-wrap">
-                        
+
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verFrutifera"> 
-                        <?php if($especie->getFrutifera() == 1): 
-                            echo "Frutifera"; endif ?></a>
+                            <a href="./EspecieController.php?action=verFrutifera">
+                                <?php if ($especie->getFrutifera() == 1):
+                                    echo "Frutifera";
+                                endif ?>
+                            </a>
                         </div>
 
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verToxidade">
-                        <?php if($especie->getToxidade() == 1): 
-                            echo "Tóxica"; endif ?>
-                        </a>
+                            <a href="./EspecieController.php?action=verToxidade">
+                                <?php if ($especie->getToxidade() == 1):
+                                    echo "Tóxica";
+                                endif ?>
+                            </a>
                         </div>
 
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verComestivel">
-                        <?php if($especie->getComestivel() == 1): 
-                                    echo "Comestível"; endif ?>
-                        </a>
+                            <a href="./EspecieController.php?action=verComestivel">
+                                <?php if ($especie->getComestivel() == 1):
+                                    echo "Comestível";
+                                endif ?>
+                            </a>
                         </div>
 
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verExotica">
-                        <?php if($especie->getExotica() == 1): 
-                            echo "Exótica"; endif ?>
-                        </a>
+                            <a href="./EspecieController.php?action=verExotica">
+                                <?php if ($especie->getExotica() == 1):
+                                    echo "Exótica";
+                                endif ?>
+                            </a>
                         </div>
 
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verRaridade">
-                        <?php if($especie->getRaridade() == 1): 
-                            echo "Rara"; endif ?>
-                        </a>  
+                            <a href="./EspecieController.php?action=verRaridade">
+                                <?php if ($especie->getRaridade() == 1):
+                                    echo "Rara";
+                                endif ?>
+                            </a>
                         </div>
 
                         <div class="atributos">
-                        <a href="./EspecieController.php?action=verMedicinal">
-                        <?php if($especie->getMedicinal() == 1): 
-                            echo "Medicinal"; endif ?>
-                        </a>
+                            <a href="./EspecieController.php?action=verMedicinal">
+                                <?php if ($especie->getMedicinal() == 1):
+                                    echo "Medicinal";
+                                endif ?>
+                            </a>
                         </div>
                     </div>
 
@@ -149,37 +156,27 @@
             </div>
             <br>
 
-             
-            
-            <!--<div class="row justify-content-between">
-                BOTÃO SÓ PARA ADM
-                <a class="mais align-self-center" href="./PlantaController.php?action=loadFormNew">
-                    <img class="mais " src="../public/mais.svg">
-                </a>
-            </div>-->
-
             <!-- ESSA PARTE É SÓ PRA ADM -->
             <div class="row justify-content-start botoes">
-                        <!--EDITAR-->
-                        <div class="col-sm-3 min-content">
-                            <a class="editar" href=",">Editar</a>
-                        </div>
+                <!--EDITAR-->
+                <div class="col-sm-3 min-content">
+                    <a class="editar" href=",">Editar</a>
+                </div>
 
-                        <!--EXCLUIR-->
-                        <div class="col-sm-3 min-content">
-                            <a class="excluir" href=".">Excluir</a>
-                        </div>
+                <!--EXCLUIR-->
+                <div class="col-sm-3 min-content">
+                    <a class="excluir" href=".">Excluir</a>
+                </div>
 
-                        <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
-                        <div class="col-sm-3 min-content">
-                        <a  class="vermais" href="./plantaController.php?action=verIndividuos&idEspecie=<?=$especie->getIdEspecie() ?>">Ver mais</a>
-                        </div>
-                    </div>
-                    <br><br>
+                <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
+                <div class="col-sm-3 min-content">
+                    <a class="vermais"
+                        href="./plantaController.php?action=verIndividuos&idEspecie=<?= $especie->getIdEspecie() ?>">Ver
+                        mais</a>
+                </div>
             </div>
-
-            </div> 
-                    
+            <br><br>
+        </div>
     </body>
 <?php endforeach; ?>
 

@@ -101,7 +101,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->findPlantaById($idParam);
         $data['plantas'][0] = $planta;
 
-        $this->loadView("plantas/verPlanta.php", $data);
+        $this->loadView("plantas/visualizarPlanta.php", $data);
     }
 
     private function deletePlantaById(){
@@ -166,7 +166,7 @@ class ControllerPlanta{
         if ($planta == null){ 
             echo "Está não é uma planta cadastrada";
         }else {
-            $this->loadView("plantas/verPlanta.php", $data);
+            $this->loadView("plantas/resultado.php", $data);
         }
        
         /*$planta = new PlantaModel();

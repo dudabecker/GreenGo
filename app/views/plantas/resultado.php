@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <?php
-
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -104,8 +101,7 @@ error_reporting(E_ALL);
 
                 <div class="caixa">
                     <a href="">
-                        Espécie
-                        <?= $planta->getIdEspecie() ?>
+                        Espécie <?= $planta->getIdEspecie() ?>
                     </a>
                 </div>
 
@@ -114,28 +110,14 @@ error_reporting(E_ALL);
                         Zona <?= $planta->getIdZona() ?>
                     </a>
                 </div>
-
-                <div class="qrcode">
-                    
-                </div>
             </div>
-
-            <div class="row justify-content-start botoes">
-                <!--EDITAR-->
-                <div class="col-auto min-content">
-                    <a class="editar" href=",">Editar</a>
+            <div class="col botoes">
+                <div class="row">
+                    <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Continuar </a>
                 </div>
 
-                <!--EXCLUIR-->
-                <div class="col-auto min-content">
-                    <a class="excluir" href=".">Excluir</a>
-                </div>
-
-                <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
-                <div class="col-auto min-content">
-                    <a class="qrcode" href=".">
-                        QR CODE
-                    </a>
+                <div class="row">
+                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</p>
                 </div>
             </div>
 
