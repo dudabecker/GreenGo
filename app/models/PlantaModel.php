@@ -4,6 +4,8 @@ class PlantaModel{
 	private $idZona;
 	private $idEspecie;
 	private $codNumerico;
+	private $nomeSocial;
+	private $historia;
 	private $codQR;
 
 	public function getIdZona(): int
@@ -49,6 +51,30 @@ class PlantaModel{
 	public function setCodNumerico(int $codNumerico)
 	{
 		$this->codNumerico = $codNumerico;
+
+		return $this;
+	}
+
+	public function getNomeSocial(): string
+	{
+		return $this->nomeSocial;
+	}
+
+	public function setNomeSocial(string $nomeSocial)
+	{
+		$this->nomeSocial = $nomeSocial;
+
+		return $this;
+	}
+
+	public function getHistoria(): string
+	{
+		return $this->historia;
+	}
+
+	public function setHistoria(string $historia)
+	{
+		$this->historia = $historia;
 
 		return $this;
 	}
