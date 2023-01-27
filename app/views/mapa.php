@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="../views/css/mapa.css">
 
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -70,126 +70,117 @@
 
 <body id="fundoindex">
     <main>
-        <nav id="primeirotextoindex">
-            <div class="container">
-                <div class="row justify-content-md-center">
-                    <div id="about-area">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div id="about-area">
 
-                        <div class="row">
-                            <div class="col" id="textoindex">
+                    <div class="row">
+                        <div class="col" id="textoindex">
 
-                                <div class="img-responsive">
-                                    <a href="mapa.php"><img src="../public/mapa mapa.svg" class="img-fluid"
-                                        alt="mapa ifpr" id="mapa-da-home">
-                                    </a>
-                                </div>
+                            <div class="img-responsive">
+                                <a href="mapa.php"><img src="../public/mapa.svg" class="img-fluid" alt="mapa ifpr"
+                                        id="mapa-da-home">
+                                </a>
                             </div>
-                        </div> 
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col" id="botoesmapa">
-                        <a class="btn btn-primary" id="todosbotao"
-                            href="..\controllers\PlantaController.php?action=findAll">Todos</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=1">Zona 1</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=2">Zona 2</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=3">Zona 3</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=4">Zona 4</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=5">Zona 5</a>
-                        <a class="btn btn-primary" id="botaozona"
-                            href="..\controllers\PlantaController.php?action=verZona&idZona=6">Zona 6</a>
-
-                        <!--<button class="btn btn-primary" id="todosbotao">Todos</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 1</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 2</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 3</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 4</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 5</button>
-                                <button class="btn btn-primary" id="botaozona">Zona 6</button>
-                                <div class="w-100"></div>-->
-
-                    </div>
-
-                </div>
-
-
-                <div class="row">
-                    <div class="col" id="linhasecundaria">
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verFrutifera">Frutiferas</a>
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verExotica">Exóticas</a>
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verMedicinal">Medicinais</a>
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verToxidade">Tóxicas</a>
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verRaridade">Raras</a>
-                        <a class="btn btn-primary" id="botoesfileira2"
-                            href="..\controllers\EspecieController.php?action=verComestivel">Comestíveis </a>
-                        <!--<button class="btn btn-primary" id="botoesfileira2">Exótica</button>
-                                <button class="btn btn-primary" id="botoesfileira2">Medicinal</button>
-                                <button class="btn btn-primary" id="botoesfileira2" href="..\controllers\EspecieController.php?action=verFrutifera" >Frutífera</button>
-                                <button class="btn btn-primary" id="botoesfileira2">Tóxica</button>-->
-
-                        <div class="w-100"></div>
-
-                    </div>
-
-                </div>
-
-
-
-            </div>
-            <div class="container" id="caixa-adicione-individuos">
-
-
-                <div class="col">
-                    <div class="row">
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="row">
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
-                        </div>
-                        <div class="quadrado">
-
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
 
-        </nav>
+            <!-- CASO O FILTRO ESTEJA APLICADO, PODE ADICIONAR O checked NO CLASS DO BOTAO -->
+            <div class="row">
+                <div class="col" id="botoesmapa">
+                    <a class="btn btn-primary" id="todosbotao"
+                        href="..\controllers\PlantaController.php?action=findAll">
+                        Todos
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona"
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=1">
+                        Zona 1
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona"
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=2">
+                        Zona 2
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona"
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=3">
+                        Zona 3
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona"
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=4">
+                        Zona 4
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona"
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=5">
+                        Zona 5
+                    </a>
+
+                    <a class="btn btn-primary" id="botaozona" 
+                        href="..\controllers\PlantaController.php?action=verZona&idZona=6">
+                        Zona 6
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" id="linhasecundaria">
+                    <a class="btn btn-primary" id="botoesfileira2" 
+                        href="..\controllers\EspecieController.php?action=verFrutifera">
+                        Frutiferas
+                    </a>
+
+                    <a class="btn btn-primary" id="botoesfileira2"
+                        href="..\controllers\EspecieController.php?action=verExotica">
+                        Exóticas
+                    </a>
+
+                    <a class="btn btn-primary" id="botoesfileira2"
+                        href="..\controllers\EspecieController.php?action=verMedicinal">
+                        Medicinais
+                    </a>
+
+                    <a class="btn btn-primary" id="botoesfileira2"
+                        href="..\controllers\EspecieController.php?action=verToxidade">
+                        Tóxicas</a>
+
+                    <a class="btn btn-primary" id="botoesfileira2"
+                        href="..\controllers\EspecieController.php?action=verRaridade">
+                        Raras
+                    </a>
+
+                    <a class="btn btn-primary" id="botoesfileira2"
+                        href="..\controllers\EspecieController.php?action=verComestivel">
+                        Comestíveis
+                    </a>
+
+                    <div class="w-100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col">
+                <div class="row">
+
+                    <!--PHP FOREACH AQUI-->
+                    <?php?>
+                    <div class="quadrado"
+                        style="background-image:url('../public/especies/cacto2.webp');">
+                        
+                        <div class="nome">
+                            NOME DA PLANTA!!!!!!!!!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
     </main>
 </body>
 </hmtl>

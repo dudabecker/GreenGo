@@ -61,6 +61,20 @@
 
 }
 
+#botaoentrar {
+    display: flex;
+    font-size: 1.3em;
+    margin-left: 50px;
+    color: #338a5f;
+    text-decoration: none;
+    padding-top: 0.3em;
+    cursor: pointer;
+    height: min-content;
+    font-family: Poppins-regular;
+    font-size: 19px;
+    font-weight: bold;
+}
+
 #logo {
     width: 100px;
     margin-top: 20px;
@@ -78,20 +92,6 @@ body {
 
 }
 
-#botaoentrar {
-    display: flex;
-    font-size: 1.3em;
-    margin-left: 50px;
-    color: #338a5f;
-    text-decoration: none;
-    padding-top: 0.3em;
-    cursor: pointer;
-    height: min-content;
-    font-family: Poppins-regular;
-    font-size: 19px;
-    font-weight: bold;
-}
-
 #botoesmapa {
     margin-top: 60px;
     text-align: center;
@@ -99,11 +99,13 @@ body {
 
 #botaozona {
     width: 120px;
-    height: 50px;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
     font-family: Poppins-regular;
     color: var(--principal);
     border-color: var(--principal);
-    border-radius: 9px;
+    border-radius: 7px;
     background-color: var(--branco);
     border-width: 2px;
     font-size: 20px;
@@ -115,21 +117,21 @@ body {
 #botaozona:hover {
     color: var(--branco);
     background-color: var(--principal);
-    border-radius: 9px;
 }
 
 #todosbotao {
     width: 120px;
-    height: 50px;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
     margin-right: 25px;
     background-color: var(--destaque);
     border: none;
     font-size: 20px;
     font-family: Poppins-regular;
-    border-radius: 9px;
+    border-radius: 7px;
     margin-top: 20px;
     transition: 0.3s ease;
-
 }
 
 #todosbotao:hover {
@@ -137,8 +139,12 @@ body {
 }
 
 #botoesfileira2 {
-    width: 110px;
-    height: 40px;
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: auto;
+    padding-top: auto;
+    padding-bottom: auto;
     margin-right: 5px;
     font-family: Poppins-regular;
     color: var(--principal);
@@ -155,7 +161,11 @@ body {
 #botoesfileira2:hover {
     color: var(--branco);
     background-color: var(--principal);
-    border-radius: 5px;
+}
+
+.checked{
+    color: var(--branco) !important;
+    background-color: var(--principal) !important;
 }
 
 #linhasecundaria {
@@ -165,19 +175,33 @@ body {
 .quadrado {
     width: 245px;
     height: 381px;
-    background-color: var(--destaque);
+    background-color: var(--rosinha);
     margin-top: 40px;
     margin-left: 20px;
     cursor: pointer;
     border-radius: 30px;
     transition: 0.3s ease;
-
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    color: var(--branco);
+    font-size: 20px;
+    align-self: center;
 }
 
 .quadrado:hover {
+    background-color: var(--destaque);
     transform: scale(1.02);
 }
 
+span.nome{
+    position: absolute;
+    text-align: center;
+    top: 50px;
+    left: 50px;
+    margin: auto;
+    display: inline-block;
+}
 
 #rodape{
     background-color: var(--principal);
