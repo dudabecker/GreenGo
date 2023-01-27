@@ -39,6 +39,11 @@
     src: url('../fontes/Poppins-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: 'Poppins-medium';
+    src: url('../fontes/Poppins-Medium.ttf');
+}
+
 
 header,
 .navbar {
@@ -118,28 +123,7 @@ body {
     margin-bottom: 40px;
 }
 
-#picture__input {
-    display: none;
-}
 
-.picture {
-    width: 400px;
-    height: 400px;
-    background: var(--rosinha);
-    color: var(--verdao);
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    cursor: pointer;
-    transition: color 300ms ease-in-out, background 300ms ease-in-out, outline 300ms ease-in-out;
-    overflow: hidden;
-}
-
-.picture:hover {
-    background: var(--destaque);
-}
 
 .picture:focus {
     background: #ccc;
@@ -609,18 +593,17 @@ input[type=text]:focus {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-semibold;
+    font-family: Poppins-medium;
     transition: 0.3s all ease;
     color: var(--branco);
 }
 
 #zonasselect:focus,
-#number:focus
- {
+#number:focus{
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
-    color: var(--principal);
+    color: var(--verdao);
 }
 
 #form2,

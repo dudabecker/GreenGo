@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../views/css/registgro2.css">
+    <link rel="stylesheet" href="../views/css/registro.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -64,9 +64,10 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                         <div class="navbar-nav" id="navbar-links">
 
-                        <a class="nav-item nav-link" id="identificar-menu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="identificar-menu" href="./mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                            <a class="nav-item nav-link" id="identificar-menu" href="projeto.html"> Projeto </a>
+                            <a class="nav-item nav-link" id="identificar-menu" href="./mapa.php"> Mapa</a>
+                            <a class="nav-item nav-link" id="identificar-menu"
+                                href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
                             <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
@@ -83,186 +84,129 @@
     <main>
         <div class="container">
             <div class="row">
+                <h1 id="titulo"> Registre uma espécie!</h1>
+
                 <div class="col">
-                  <h1 id="primeirotextoreg"> Registre uma espécie!</h1>
-                </div>
-        </div>
-</div>
-<div class="container">
-            <div class="row">
-                <div class="col">
-                <div class="form-row align-items-left">
-                    
-                  
+                    <div class="form-row align-items-left">
+                        <form action="./EspecieController.php?action=create" method="POST">
 
-                <form action="./EspecieController.php?action=create" method="POST">
+                        <label for="formtexto" id="texto">Nome científico</label>
+                        <div class="w-100"></div>
+                        <input type="text" name="nomeCie" class="form-control" id="formtexto">
+                        <div class="w-100"></div>
 
-                    <label for="formtexto" id="texto">Nome popular</label>
-                    <div class="w-100"></div>
+                        <label for="formtexto" id="texto">Nome popular</label>
+                        <div class="w-100"></div>
+                        <input type="text" name="nomePop" class="form-control" id="formtexto">
 
+                        <label for="formtexto" id="texto">Pontos</label>
+                        <div class="w-100"></div>
+                        <input type="number" name="pontoEsp" class="form-control" id="number" min="0">
 
-                <input type="text" name="nomePop" class="form-control" id="formtexto"
-                    aria-describedby="nome-cadastro">
-                    <div class="w-100"></div>
-
-                    <label for="formtexto" id="texto">Nome popular</label>
-                    <div class="w-100"></div>
-
-
-                <input type="text" name="nomePop" class="form-control" id="formtexto"
-                    aria-describedby="nome-cadastro">
-                        
-                <div class="container" id="container-checkbox">
-                    <div class="row">
-                        <div class="col-md">
-                            <div class="form-group form-check">
-                                <div id="atributos">
-                                    <a>Atributos específicos</a>
-                                    <div class="w-100"></div>
-                                    <br>
-                                </div>
-                                <div class="form-group form-check" id="form1">
-
-                                    <input type="checkbox" name="comestivel"
-                                        class="form-check-input" id="botaocheck1" value="1">
-
-                                    <label class="form-check-label" for="botaocheck1"
-                                        id="texto-checkbox">Comestível</label>
-                                </div>
-                                <div class="form-group form-check" id="form2">
-                                    <input type="checkbox" name="exotica"
-                                        class="form-check-input" id="botaocheck2" value="1">
-                                    <label class="form-check-label" for="botaocheck2"
-                                        id="texto-checkbox">Exótica</label>
-                                </div>
-                                <div class="form-group form-check" id="form3">
-                                    <input type="checkbox" name="frutifera"
-                                        class="form-check-input" id="botaocheck3" value="1">
-                                    <label class="form-check-label" for="botaocheck3"
-                                        id="texto-checkbox">Frutífera</label>
-                                    <span></span>
-                                </div>
-                                <div class="form-group form-check" id="form4">
-                                    <input type="checkbox" name="medicinal"
-                                        class="form-check-input" id="botaocheck4" value="1">
-                                    <label class="form-check-label" for="botaocheck4"
-                                        id="texto-checkbox">Medicinal</label>
-                                </div>
-                                <div class="form-group form-check" id="form5">
-                                    <input type="checkbox" name="raridade"
-                                        class="form-check-input" id="botaocheck5">
-                                    <label class="form-check-label" for="botaocheck5"
-                                        id="texto-checkbox">Rara</label>
-                                </div>
-                                <div class="form-group form-check" id="form6">
-                                    <input type="checkbox" name="toxidade"
-                                        class="form-check-input" id="botaocheck6" value="1">
-                                    <label class="form-check-label" for="botaocheck6"
-                                        id="texto-checkbox">Tóxica</label>
-                                </div>
-
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-
-                                            </div>
-</div>
-                                            
-                                        
-        </div>
-
-        <div class="col-sm" id="imagemreg">
-
-                                            <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
-
-                                            <label class="picture align-content-center" for="picture__input"
-                                                tabIndex="0">
-                                                <span class="picture__image">
-                                                    <img class="img-camera" src="../public/camera.svg">
-                                                </span>
-                                            </label>
-                                            <input type="file" name="imagem" id="picture__input"
-                                                accept=".png, .jpg, .jpeg">
-                                            <script
-                                                src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
-                                            <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
-                                                máximo: 5MB </a>
-                                        
+                        <div class="container" id="container-checkbox">
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="form-group form-check">
+                                        <div id="atributos">
+                                            <a>Atributos específicos</a>
+                                            <div class="w-100"></div>
+                                            <br>
                                         </div>
+                                        <div class="form-group form-check" id="form1">
 
-                                        
-            
-           
-            <div class="container" id="caixadetexto">
-                <a id="textodescritivo">Texto descritivo</a>
-                <textarea id="txtconteudo" name="descricao"></textarea>
+                                            <input type="checkbox" name="comestivel" class="form-check-input"
+                                                id="botaocheck1" value="1">
 
-                <script src="../views/ckeditor/build/ckeditor" ></script>
-                <script>ClassicEditor
-                        .create(document.querySelector('#txtconteudo'), {
-                            licenseKey: '',
-
-                        })
-                        .then(editor => {
-                            window.editor = editor;
-                        })
-                        .catch(error => {
-                            console.error('Oops, something went wrong!');
-                            console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
-                            console.warn('Build id: mnx0o2etqvuk-d6hv5tpaevt5');
-                            console.error(error);
-                        });
-                </script>
-                </div>
-            
-        
-                    
-                 
-
-        <div class="container">
-            <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
-            <button type="reset" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
-            </button>
-        </div>
-
-        
-            <div class="container" id="caixa-adicione-individuos">
-
-                <a id="textoind">Indivíduos dessa espécie</a>
-
-                <img class="img-responsive" src="../../public/mais.svg" id="mais-registro">
-
-                <!--
-                    FAZER DUAS DIVS
-                    UMA COM O TEXTO NA SITUAçÃO DE NAO TER INDIVIDUOS
-                    OUTRA DIV COM OS ITENS DOS INDIVIDUOS PRONTOS PRA SUBSTITUIR COM PHP
-                -->
-
-                <div class="col">
-                    <div class="row">
-                        <div class="quadrado">
-                            <p>IMAGEM</p>
-                        </div>
-
-                    </div>
-
-                    <div class="col">
-                        <div class="row">
-                            <div class="quadrado">
-                                <p>IMAGEM</p>
+                                            <label class="form-check-label" for="botaocheck1"
+                                                id="texto-checkbox">Comestível</label>
+                                        </div>
+                                        <div class="form-group form-check" id="form2">
+                                            <input type="checkbox" name="exotica" class="form-check-input"
+                                                id="botaocheck2" value="1">
+                                            <label class="form-check-label" for="botaocheck2"
+                                                id="texto-checkbox">Exótica</label>
+                                        </div>
+                                        <div class="form-group form-check" id="form3">
+                                            <input type="checkbox" name="frutifera" class="form-check-input"
+                                                id="botaocheck3" value="1">
+                                            <label class="form-check-label" for="botaocheck3"
+                                                id="texto-checkbox">Frutífera</label>
+                                            <span></span>
+                                        </div>
+                                        <div class="form-group form-check" id="form4">
+                                            <input type="checkbox" name="medicinal" class="form-check-input"
+                                                id="botaocheck4" value="1">
+                                            <label class="form-check-label" for="botaocheck4"
+                                                id="texto-checkbox">Medicinal</label>
+                                        </div>
+                                        <div class="form-group form-check" id="form5">
+                                            <input type="checkbox" name="raridade" class="form-check-input"
+                                                id="botaocheck5">
+                                            <label class="form-check-label" for="botaocheck5"
+                                                id="texto-checkbox">Rara</label>
+                                        </div>
+                                        <div class="form-group form-check" id="form6">
+                                            <input type="checkbox" name="toxidade" class="form-check-input"
+                                                id="botaocheck6" value="1">
+                                            <label class="form-check-label" for="botaocheck6"
+                                                id="texto-checkbox">Tóxica</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="col-sm" id="imagemreg">
+
+                    <a id="carregueimagemtexto"> Carregue uma imagem</a> <br>
+
+                    <label class="picture align-content-center" for="picture__input" tabIndex="0">
+                        <span class="picture__image">
+                            <img class="img-camera" src="../public/camera.svg">
+                        </span>
+                    </label>
+                    <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
+                    <script
+                        src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+                    <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho
+                        máximo: 5MB </a>
+
+                </div>
+
+                <div class="container" id="caixadetexto">
+                    <a id="textodescritivo">Texto descritivo</a>
+                    <textarea id="txtconteudo" name="descricao"></textarea>
+
+                    <script src="../views/ckeditor/build/ckeditor.js"></script>
+                    <script>ClassicEditor
+                            .create(document.querySelector('#txtconteudo'), {
+                                licenseKey: '',
+
+                            })
+                            .then(editor => {
+                                window.editor = editor;
+                            })
+                            .catch(error => {
+                                console.error('Oops, something went wrong!');
+                                console.error('Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:');
+                                console.warn('Build id: mnx0o2etqvuk-d6hv5tpaevt5');
+                                console.error(error);
+                            });
+                    </script>
+                </div>
+
+                <div class="container">
+                    <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Registrar</a> </button>
+                    <button type="reset" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
+                    </button>
+                </div>
+                
+                </form>
             </div>
-        
-        
-
-                        
-                                      
-
-        </form>
+        </div>
+        <br><br>
     </main>
 </body>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>

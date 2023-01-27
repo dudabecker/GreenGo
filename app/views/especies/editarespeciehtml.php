@@ -81,6 +81,7 @@
 
 <body>
     <main>
+    <?php foreach($data['especies'] as $especie): ?>
         <nav id="primeirotextoindex">
             <div class="container">
                 <div class="row justify-content-md-left">
@@ -137,7 +138,6 @@
                                                                     class="form-check-input" id="botaocheck">
                                                                 <label class="form-check-label" for="botaocheck"
                                                                     id="texto-checkbox">Frutífera</label>
-                                                                <span></span>
                                                             </div>
                                                             <div class="form-group form-check" id="form">
                                                                 <input type="checkbox" name="medicinal"
@@ -195,7 +195,7 @@
                 <a id="textodescritivo">Texto descritivo</a>
                 <textarea id="txtconteudo" name="descricao"></textarea>
 
-                <script src="../ckeditor/build/ckeditor.js"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -247,8 +247,10 @@
         </nav>
 
         </form>
+        <?php endforeach; ?>
     </main>
 </body>
+
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/grayscale.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
