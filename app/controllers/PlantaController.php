@@ -155,7 +155,7 @@ class ControllerPlanta{
     }
 
     private function formIdentificarPlanta(){
-        $this->loadView("plantas/formIdentificarPlanta.php");
+        $this->loadView("plantas/jogar.php");
     }
 
     private function identificarPlanta(){
