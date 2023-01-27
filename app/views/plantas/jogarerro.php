@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planta</title>
+    <title>Jogar erro</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -63,24 +64,16 @@
 </nav>
 
 <body>
-<?php
 
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-	//include_once __DIR__ . "/../helpers/mensagem.php";
-	//$caminho = __DIR__ . "/../helpers/mensagem.php";
-	//print_r($caminho); 
-?>
         <div class="container">
 
-            <h2 id="textoplanta">Achou uma planta?</h2>
+            <h2 id="textoplanta">Calma aí!</h2>
         
 
 <form action="./PlantaController.php?action=identificarPlanta" method="POST">
-	<a id="a"> Identifique-a e ganhe pontos!</a><br><br>
+	<a id="a"> Não conhecemos essa planta ainda :(</a><br>
+    <a id="a"> Tente de novo.</a>
     
      <input type="text" class="form-control" name="codNumerico" id="codigo" >
 	<br>
