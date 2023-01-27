@@ -252,3 +252,48 @@ input[type=text]:focus {
     font-size: 20px;
    
 }
+#a3{
+    color: var(--principal);
+    font-family: Poppins-semibold;
+    font-size: 25px;
+}
+
+
+
+.mostrarpontos{
+    width: 450px;
+    height: 100px;
+    
+    
+    background-color: var(--rosinha);
+    margin-right: auto;
+    border-radius: 0%;
+    margin-bottom: 5px;
+    border-color: var(--rosinha);
+    font-family: Poppins;
+    transition: 0.3s all ease;
+    color: var(--branco);
+    margin-top: 30px;
+    text-align: center;
+    font-size: 60px;
+    margin-left: -12px;
+    
+}
+
+h5{
+    color: var(--principal);
+    font-family: Poppins-semibold;
+    margin-bottom: 100px;
+}
+
+#voltar{
+    cursor: pointer;
+    font-family: Poppins-regular;
+    color: var(--principal);
+    
+}
+#voltar:hover{
+    color: var(--destaque);
+    transition: 0.3s all ease ;
+    text-decoration: none;
+}
