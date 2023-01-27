@@ -134,15 +134,23 @@ error_reporting(E_ALL);
 
                                 <div class="row justify-content-start" style="display: -webkit-box;">
                                     <!--EDITAR-->
-                                    <div class="col-3">
+                                    <div class="col-auto">
                                         <a class="editar"
                                             href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">Editar</a>
                                     </div>
 
                                     <!--EXCLUIR-->
-                                    <div class="col-3">
+                                    <div class="col-auto">
                                         <a class="excluir"
                                             href="./PlantaController.php?action=deletePlantaById&id=<?= $planta['idPlanta'] ?>">Excluir</a>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-evenly" style="display: -webkit-box;">
+                                    <!--QR CODE-->
+                                    <div class="col-7">
+                                        <a class="qrcode"
+                                            href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">QR CODE</a>
                                     </div>
                                 </div>
                             </div>
