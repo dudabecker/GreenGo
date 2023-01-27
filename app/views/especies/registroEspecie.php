@@ -113,7 +113,6 @@
                                             <br>
                                         </div>
                                         <div class="form-group form-check" id="form1">
-
                                             <input type="checkbox" name="comestivel" class="form-check-input"
                                                 id="botaocheck1" value="1">
 
@@ -123,31 +122,35 @@
                                         <div class="form-group form-check" id="form2">
                                             <input type="checkbox" name="exotica" class="form-check-input"
                                                 id="botaocheck2" value="1">
+                                            
                                             <label class="form-check-label" for="botaocheck2"
                                                 id="texto-checkbox">Exótica</label>
                                         </div>
                                         <div class="form-group form-check" id="form3">
                                             <input type="checkbox" name="frutifera" class="form-check-input"
                                                 id="botaocheck3" value="1">
+                                        
                                             <label class="form-check-label" for="botaocheck3"
                                                 id="texto-checkbox">Frutífera</label>
-                                            <span></span>
                                         </div>
                                         <div class="form-group form-check" id="form4">
                                             <input type="checkbox" name="medicinal" class="form-check-input"
                                                 id="botaocheck4" value="1">
+                                            
                                             <label class="form-check-label" for="botaocheck4"
                                                 id="texto-checkbox">Medicinal</label>
                                         </div>
                                         <div class="form-group form-check" id="form5">
                                             <input type="checkbox" name="raridade" class="form-check-input"
-                                                id="botaocheck5">
+                                                id="botaocheck5" value="1">
+                                            
                                             <label class="form-check-label" for="botaocheck5"
                                                 id="texto-checkbox">Rara</label>
                                         </div>
                                         <div class="form-group form-check" id="form6">
                                             <input type="checkbox" name="toxidade" class="form-check-input"
                                                 id="botaocheck6" value="1">
+                                        
                                             <label class="form-check-label" for="botaocheck6"
                                                 id="texto-checkbox">Tóxica</label>
                                         </div>
