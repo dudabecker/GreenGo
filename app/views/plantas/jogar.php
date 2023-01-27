@@ -85,8 +85,7 @@
             <input type="text" class="form-control" name="codNumerico" id="codigo">
             <br>
             <!--Código QR: <input type="text" name="codQR">-->
-            <br>
-
+            
             <input type="submit" value="Próximo" id="botaoproximo">
         </form>
         

@@ -76,10 +76,8 @@
             <input type="text" class="form-control" name="codNumerico" id="codigo">
             <br>
             <!--Código QR: <input type="text" name="codQR">-->
-            <br>
 
             <input type="submit" value="Próximo" id="botaoproximo">
-
         </form>
 
         <a class="pontuacao" id="a2"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</a>
