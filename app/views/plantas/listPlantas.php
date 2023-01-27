@@ -15,7 +15,7 @@ error_reporting(E_ALL);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantas</title>
+    <title>Indivíduos</title>
 
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
@@ -80,7 +80,7 @@ error_reporting(E_ALL);
 
         <div class="row justify-content-between">
             <h2 class="titulo">
-                Plantas
+                Indivíduos
             </h2>
 
             <a class="mais align-self-center" href="./PlantaController.php?action=loadFormNew">
@@ -129,7 +129,6 @@ error_reporting(E_ALL);
                                     <a href="./PlantaController.php?action=verZona&idZona=<?= $planta['idZona'] ?>">
                                         ID ZONA <?= $planta['idZona'] ?>
                                     </a>
-
                                 </p>
 
                                 <div class="row justify-content-start" style="display: -webkit-box;">
