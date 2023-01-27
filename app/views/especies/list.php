@@ -94,7 +94,7 @@
         </div>
         -->
 
-        <div class="row justify-content-between align-content-start">
+        <div class="row justify-content-evenly align-content-start">
             <?php foreach ($data['especies'] as $especie): ?>
             <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
             
@@ -114,28 +114,20 @@
                                 <b>Pontos:</b> <?= $especie['pontoEsp'] ?><br>
                                 <b>Atributos Especiais:</b><br>
                                 <a href="./EspecieController.php?action=verFrutifera"> <b><?php if($especie['frutifera'] == 1): 
-                                    echo "Frutifera"; endif ?></b></a>
                                 <a href="./EspecieController.php?action=verToxidade"> <b><?php if($especie['toxidade'] == 1): 
-                                    echo "Tóxica"; endif ?></b>
                                 <a href="./EspecieController.php?action=verComestivel"> <b><?php if($especie['comestivel'] == 1): 
-                                    echo "Comestível"; endif ?></b>
                                 <a href="./EspecieController.php?action=verExotica"> <b><?php if($especie['exotica'] == 1): 
-                                    echo "Exótica"; endif ?></b>
                                 <a href="./EspecieController.php?action=verRaridade"> <b><?php if($especie['raridade'] == 1): 
-                                    echo "Rara"; endif ?>
                                 <a href="./EspecieController.php?action=verMedicinal"> <b><?php if($especie['medicinal'] == 1): 
-                                    echo "Medicinal"; endif ?></b>
                             </p>
 
                             <div class="row justify-content-start" style="display: -webkit-box;">
                                     <!--EDITAR-->
-                                    <div class="row-3">
                                         <a class="editar"
                                             href="./EspecieController.php?action=edit&idEspecie=<?= $especie['idEspecie'] ?>">Editar</a>
                                     </div>
 
                                     <!--EXCLUIR-->
-                                    <div class="row-3">
                                         <a class="excluir"
                                             href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie['idEspecie'] ?>">Excluir</a>
                                     </div>
