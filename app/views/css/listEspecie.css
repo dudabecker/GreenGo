@@ -166,30 +166,51 @@ a:hover{
     margin-bottom: 50px;
     margin-right: 62px;
     outline: 0 solid var(--rosinha);
+    width: 44.5%;
 
 }
 
 .especie:hover{
     background-color: var(--rosinha);
     transition: 0.3s ease;
-    box-shadow: 0 0 0 20px  var(--rosinha);
+    box-shadow: 0 0 0 15px  var(--rosinha);
 
 }
 
 .nome-pop{
     font-family: Poppins-semibold;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .nome-cient{
     font-family: Poppins-semibold;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 0;
 }
 
 p{
     font-family: Poppins-medium;
     font-size: 20px;
+    margin: 0;
+}
+
+.atributos{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+}
+
+.atributo{
+    margin: 0;
+    font-size: 20px;
+    padding-left: 0;
+    
+}
+
+.atributo:hover{
+    color: var(--destaque);
+    
 }
 
 a.editar{
@@ -197,7 +218,6 @@ a.editar{
     background-color: var(--principal);
     border: none;
     border-radius: 5px;
-
     width: max-content !important;
     height: max-content !important;
     padding-left: 40px;
@@ -207,6 +227,7 @@ a.editar{
     font-family: Poppins-semibold;
     font-size: 20px;
     transition: 0.3s ease;
+    margin-left: 0 !important;
 
     display: inline-block;
 }
@@ -232,7 +253,7 @@ a.editar:disabled{
     font-family: Poppins-medium;
     font-size: 18px;
     transition: 0.3s ease;
-    margin-left: 20px;
+    margin-left: 0px !important;
 
     display: inline-block;
 }
@@ -249,9 +270,19 @@ a.excluir:hover{
 }
 
 .img-especie{
-    height: 320px !important;
-    width: 200px !important;
+    height: 270px !important;
+    width: 150px !important;
     margin: auto;    
     display: block;
     border-radius: 5px;
+}
+
+.pad{
+    padding: 0;
+}
+
+@media (max-width:1200px) {
+    .especie{
+        width: auto;
+    }
 }
