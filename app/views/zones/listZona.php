@@ -66,36 +66,31 @@
 
 <body>
     <div class="container">
-
-        <div class="row justify-content-between">
+    <div class="row justify-content-between">
             <h2 class="titulo">
                 Zonas
             </h2>
 
-            <!--LINK PARA CADASTRO NAO EH IGUAL AO DA LIST ESPECIE-->
             <a class="mais align-self-center" href="../views/zones/definirZona.php">
-                <img class="mais" src="../public/mais.svg">
+                <img class="mais " src="../public/mais.svg">
             </a>
-        </div>
+            <div class="w-100"></div>
 
-        <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
-
-        <!--
-        <div class="row justify-content-between align-content-start">
-
-            <div class="col justify-content-start">
-                <p id="nenhuma">
-                    Puts, nenhuma zona por enquanto!
-                    <br>
-                    <span class="adicione">Adicione no ícone de mais +</span>
-                </p>
+            <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
+            <?php if ($data['zonas'] == null) { ?>
+                <div class="justify-content-start">
+                    <p id="nenhuma">
+                        Puts, nenhuma zona por enquanto!
+                        <br>
+                        <span class="adicione">Adicione no ícone de mais +</span>
+                    </p>
+                </div>
+                <div class="align-self-center">
+                    <img class="align-content-end img-flecha" src="../public/flecha.svg">
+                </div>
             </div>
-
-            <div class="col">
-                <img class="align-content-end img-flecha" src="../public/flecha.svg">
-            </div>
+            <?php } else { ?>
         </div>
-        -->
 
         <div class="row justify-content-evenly flex-wrap">
             <?php foreach ($data['zonas'] as $zona): ?>
@@ -114,12 +109,12 @@
 
                                 <div class="row justify-content-start">
                                     <!--EDITAR-->
-                                    <div class="col">
+                                    <div class="col-auto">
                                         <a class="editar" href="./ZonaController.php?action=edit&idZona=<?= $zona['idZona'] ?>">Editar</a>
                                     </div>
 
                                     <!--EXCLUIR-->
-                                    <div class="col">
+                                    <div class="col-auto">
                                         <a class="excluir" href="./ZonaController.php?action=deleteZonaById&idZona=<?= $zona['idZona'] ?>">Excluir</a>
                                     </div>
                                 </div>
@@ -127,7 +122,7 @@
                         </div>
                     </div>
                 </a>
-            <?php endforeach; ?>
+            <?php endforeach;}?>
         </div>
     </div>
 

@@ -168,7 +168,9 @@
                 <div class="row">
                     <?php foreach ($data['especies'] as $especie): ?>
                         <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
-                            <div class="quadrado" style="background-image:url('../public/especies/cacto2.webp');">
+                            <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
+                            <div class="quadrado"
+                                style="background-image:url('< ?= $especie['imagem'] ?>');">
                                 <div class="nome align-items-center justify-content-center">
                                     <?= $especie['nomePop'] ?>
                                 </div>

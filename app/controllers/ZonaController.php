@@ -79,7 +79,7 @@ function listarPlantas(){
 
 }
 
-function findZonas(){
+function findAll(){
     $zonaRepository = new ZonaRepository();
 
     $zonas = $zonaRepository->findZonas();

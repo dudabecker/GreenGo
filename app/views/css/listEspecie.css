@@ -270,11 +270,12 @@ a.excluir:hover{
 }
 
 .img-especie{
-    height: 270px !important;
-    width: 150px !important;
+    width: 150px;
+    height: 232px;
     margin: auto;    
     display: block;
     border-radius: 5px;
+    background-color: var(--rosinha);
 }
 
 .pad{

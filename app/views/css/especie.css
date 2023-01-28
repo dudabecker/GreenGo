@@ -145,7 +145,10 @@ body {
 .img-especie{
     margin: auto;    
     display: block;
-    border-radius: 5px;
+    border-radius: 10px;
+    width: 245px;
+    height: 380px;
+    background-color: var(--rosinha);
 }
 
 .atributos{

@@ -89,8 +89,9 @@
             </div>
 
             <div class="row justify-content-start">
-                <div class="col-auto align-content-center">
-                    <img class="img-especie"><!-- < ?=$especie->getImagem() ?> -->
+                <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
+                <div class="col-auto align-content-center img-especie"
+                    style="background-image:url('< ?= $especie['imagem'] ?>');">
                 </div>
 
                 <div class="col-lg">

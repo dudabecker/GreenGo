@@ -147,10 +147,11 @@ error_reporting(E_ALL);
 
                                 <div class="row justify-content-evenly" style="display: -webkit-box;">
                                     <!--QR CODE-->
-                                    <div class="col-7">
+                                    <div class="col-8">
                                         <a class="qrcode"
-                                            href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">QR
-                                            CODE</a>
+                                            href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">
+                                            QR CODE
+                                        </a>
                                     </div>
                                 </div>
                             </div>
