@@ -91,7 +91,9 @@ input[type=email]::after {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-regular;
+    font-family: Poppins-medium;
+    transition: 0.3s all ease;
+    color: var(--branco) !important;
 }
 
 input[type=text]:focus,
@@ -100,6 +102,7 @@ input[type=email]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
+    color: var(--verdao);
 }
 
 input[type=text].error,

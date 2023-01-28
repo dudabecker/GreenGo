@@ -565,7 +565,7 @@ input[type=text]::after {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-semibold;
+    font-family: Poppins-medium;
     transition: 0.3s all ease;
     color: var(--branco);
 }
@@ -574,7 +574,7 @@ input[type=text]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
-    color: var(--principal);
+    color: var(--verdao);
 }
 
 #zonasselect,
@@ -622,7 +622,7 @@ input[type=text]:focus {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-semibold;
+    font-family: Poppins-medium;
     transition: 0.3s all ease;
     color: var(--branco);
 }
@@ -631,7 +631,7 @@ input[type=text]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
-    color: var(--principal);
+    color: var(--verdao);
 }
 
 #botoesexcluir{

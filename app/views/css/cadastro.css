@@ -79,7 +79,8 @@ input[type=email]::after  {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-regular;
+    font-family: Poppins-medium;
+    color: var(--branco);
     transition: 0.3s all ease;
 }
 
@@ -89,6 +90,7 @@ input[type=email]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
+    color: var(--verdao);
 }
 
 /**
@@ -129,6 +131,7 @@ label {
 
 select {
     font-family: Poppins-regular;
+    color: var(--verdao);
 }
 
 select:focus {

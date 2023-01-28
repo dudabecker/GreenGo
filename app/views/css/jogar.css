@@ -15,11 +15,6 @@
 }
 
 @font-face {
-    font-family: 'Cooper';
-    src: url('../fontes/cooperhewitt-heavy.otf');
-}
-
-@font-face {
     font-family: 'Poppins';
     src: url('../fontes/Poppins-ExtraBold.ttf');
 }
@@ -32,6 +27,11 @@
 @font-face {
     font-family: 'Poppins-semibold';
     src: url('../fontes/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-medium';
+    src: url('../fontes/Poppins-Medium.ttf');
 }
 
 #itemmenu {
@@ -211,7 +211,7 @@ input[type=text]::after {
     border-radius: 0%;
     margin-bottom: 18px;
     border-color: var(--rosinha);
-    font-family: Poppins-semibold;
+    font-family: Poppins-medium;
     transition: 0.3s all ease;
     color: var(--branco);
     margin-top: 90px;
@@ -221,7 +221,7 @@ input[type=text]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
-    color: var(--principal);
+    color: var(--verdao);
 }
 
 .form-control{
