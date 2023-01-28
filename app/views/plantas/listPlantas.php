@@ -86,40 +86,25 @@ error_reporting(E_ALL);
             <a class="mais align-self-center" href="./PlantaController.php?action=loadFormNew">
                 <img class="mais " src="../public/mais.svg">
             </a>
-        </div>
+            <div class="w-100"></div>
 
-        <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
-
-        <!--
-        <div class="row justify-content-between align-content-start">
-            <div class="col justify-content-start">
-                <p id="nenhuma">
-                    Puts, nenhuma planta por enquanto!
-                    <br>
-                    <span class="adicione">Adicione no ícone de mais +</span>
-                </p>
-            </div>
-            <div class="col justify-content-end">
-                <img class="align-content-end img-flecha" src="../public/flecha.svg">
-            </div>
-        </div>
-        -->
-
-        <div class="row justify-content-evenly align-content-start">
-        <?php if ($data['plantas'] == null){ ?>
-                <div class="row justify-content-between align-content-start">
-                <div class="col justify-content-start">
+            <!--CASO NAO TENHA NENHUMA NO BD MOSTRAR ISSO-->
+            <?php if ($data['plantas'] == null) { ?>
+                <div class="justify-content-start">
                     <p id="nenhuma">
                         Puts, nenhuma planta por enquanto!
                         <br>
                         <span class="adicione">Adicione no ícone de mais +</span>
                     </p>
                 </div>
-                <div class="col">
+                <div class="align-self-center">
                     <img class="align-content-end img-flecha" src="../public/flecha.svg">
                 </div>
             </div>
-           <?php }else {  ?>
+            <?php } else { ?>
+        </div>
+
+        <div class="row justify-content-evenly align-content-start">
 
             <?php foreach ($data['plantas'] as $planta): ?>
                 <a href="./PlantaController.php?action=verPlanta&idPlanta=<?= $planta['idPlanta'] ?>">
@@ -127,7 +112,7 @@ error_reporting(E_ALL);
                         <div class="row">
                             <div class="col-sm">
                                 <h3 class="nome-soc">
-                                <?= $planta['nomeSocial'] ?>
+                                    <?= $planta['nomeSocial'] ?>
                                 </h3>
 
                                 <h3 class="codigo">
@@ -164,15 +149,18 @@ error_reporting(E_ALL);
                                     <!--QR CODE-->
                                     <div class="col-7">
                                         <a class="qrcode"
-                                            href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">QR CODE</a>
+                                            href="./PlantaController.php?action=edit&idPlanta=<?= $planta['idPlanta'] ?>">QR
+                                            CODE</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </a>
-            <?php endforeach; }?>
-        </div>
+            <?php endforeach;
+            } ?>
+
+    </div>
     </div>
     </div>
 

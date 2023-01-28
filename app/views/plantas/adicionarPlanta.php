@@ -192,7 +192,7 @@
                 <a id="textodescritivo">História</a>
                 <textarea id="txtconteudo" name="historia" ></textarea>
 
-                <script src="../ckeditor/build/ckeditor"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',

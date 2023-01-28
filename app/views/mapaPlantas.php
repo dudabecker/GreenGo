@@ -5,6 +5,15 @@
     </span>
 <?php endif ?>
 
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+//include_once __DIR__ . "/../helpers/mensagem.php";
+//$caminho = __DIR__ . "/../helpers/mensagem.php";
+//print_r($caminho); 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -168,16 +177,18 @@
                 <div class="row">
 
                     <!--PHP FOREACH AQUI-->
-                    <?php?>
+                    <?php foreach ($data['plantas'] as $planta): ?>
                     <div class="quadrado">
                         <div class="ind align-items-center justify-content-center">
-                            NOME DA PLANTA!!
+                        <?= $planta['nomeSocial'] ?>
                         </div>
 
                         <div class="cod align-items-center justify-content-center">
-                            [COD NUMERICO]
+                        <?= $planta['codNumerico'] ?>
                         </div>
                     </div>
+                    <?php endforeach;?>
+
                 </div>
             </div>
         </div>

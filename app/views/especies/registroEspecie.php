@@ -22,7 +22,7 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../views/css/registro.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -167,7 +167,7 @@
 
                     <label class="picture align-content-center" for="picture__input" tabIndex="0">
                         <span class="picture__image">
-                            <img class="img-camera" src="../../public/camera.svg">
+                            <img class="img-camera" src="../public/camera.svg">
                         </span>
                     </label>
                     <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
@@ -182,7 +182,7 @@
                     <a id="textodescritivo">Texto descritivo</a>
                     <textarea id="txtconteudo" name="descricao"></textarea>
 
-                    <script src="../ckeditor/build/ckeditor"></script>
+                    <script src="../views/ckeditor/build/ckeditor.js"></script>
                     <script>ClassicEditor
                             .create(document.querySelector('#txtconteudo'), {
                                 licenseKey: '',

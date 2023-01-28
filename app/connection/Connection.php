@@ -5,7 +5,7 @@ class Connection {
     private static $host = "localhost";
     private static $dbname = "GREENGO";
     private static $user = "root";
-    private static $password = "bancodedados";
+    private static $password = "";
 
     private static ?PDO $conn = null;
 

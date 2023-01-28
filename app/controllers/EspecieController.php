@@ -227,37 +227,37 @@ class ControllerEspecie{
     private function verFrutifera(){
         $especie = $this->especieRepository->verFrutifera();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function verToxidade(){
         $especie = $this->especieRepository->verToxidade();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function verComestivel(){
         $especie = $this->especieRepository->verComestivel();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function verExotica(){
         $especie = $this->especieRepository->verExotica();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function verRaridade(){
         $especie = $this->especieRepository->verRaridade();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function verMedicinal(){
         $especie = $this->especieRepository->verMedicinal();
         $data['especies'] = $especie;
-        $this->loadView("especies/list.php", $data);
+        $this->loadView("mapa.php", $data);
     }
 
     private function preventDefault() {

@@ -120,7 +120,7 @@
                         Zona 5
                     </a>
 
-                    <a class="btn btn-primary" id="botaozona" 
+                    <a class="btn btn-primary" id="botaozona"
                         href="..\controllers\PlantaController.php?action=verZona&idZona=6">
                         Zona 6
                     </a>
@@ -129,7 +129,7 @@
 
             <div class="row">
                 <div class="col" id="linhasecundaria">
-                    <a class="btn btn-primary" id="botoesfileira2" 
+                    <a class="btn btn-primary" id="botoesfileira2"
                         href="..\controllers\EspecieController.php?action=verFrutifera">
                         Frutiferas
                     </a>
@@ -167,15 +167,18 @@
             <div class="col">
                 <div class="row">
 
-                    <!--PHP FOREACH AQUI-->
-                    <?php?>
-                    <div class="quadrado"
-                        style="background-image:url('../public/especies/cacto2.webp');">
-                        
-                        <div class="nome align-items-center justify-content-center">
-                            NOME DA PLANTA!!!!!!!!
-                        </div>
-                    </div>
+                    <?php foreach ($data['especies'] as $especie): ?>
+                        <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
+
+                            <div class="quadrado" style="background-image:url('../public/especies/cacto2.webp');">
+
+                                <div class="nome align-items-center justify-content-center">
+                                    <?= $especie['nomePop'] ?>
+                                </div>
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+
                 </div>
             </div>
         </div>
