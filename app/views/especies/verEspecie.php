@@ -94,14 +94,11 @@
                 </div>
 
                 <div class="col-lg">
-
-
                     <div class="row col flex-wrap">
-
                         <div class="atributos">
                             <a href="./EspecieController.php?action=verFrutifera">
                                 <?php if ($especie->getFrutifera() == 1):
-                                    echo "Frutifera";
+                                    echo "Frutífera";
                                 endif ?>
                             </a>
                         </div>
@@ -159,17 +156,17 @@
             <!-- ESSA PARTE É SÓ PRA ADM -->
             <div class="row justify-content-start botoes">
                 <!--EDITAR-->
-                <div class="col-sm-3 min-content">
+                <div class="col-auto min-content">
                     <a class="editar" href=",">Editar</a>
                 </div>
 
                 <!--EXCLUIR-->
-                <div class="col-sm-3 min-content">
+                <div class="col-auto min-content">
                     <a class="excluir" href=".">Excluir</a>
                 </div>
 
                 <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
-                <div class="col-sm-3 min-content">
+                <div class="col-auto min-content">
                     <a class="vermais"
                         href="./plantaController.php?action=verIndividuos&idEspecie=<?= $especie->getIdEspecie() ?>">Ver
                         mais</a>
