@@ -166,12 +166,9 @@
         <div class="container">
             <div class="col">
                 <div class="row">
-
                     <?php foreach ($data['especies'] as $especie): ?>
                         <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
-
                             <div class="quadrado" style="background-image:url('../public/especies/cacto2.webp');">
-
                                 <div class="nome align-items-center justify-content-center">
                                     <?= $especie['nomePop'] ?>
                                 </div>

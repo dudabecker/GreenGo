@@ -172,6 +172,9 @@ body {
     margin-left: 20px;
 }
 
+a:hover{
+    text-decoration: none;
+}
 .quadrado {
     width: 245px;
     height: 380px;
@@ -198,7 +201,7 @@ body {
 .nome{
     text-align: center;
     margin: auto;
-    margin-top: 290px;
+    padding-top: 290px;
     display: block;
     padding-left: 20px;
     padding-right: 20px;
@@ -209,7 +212,7 @@ body {
 .ind{
     text-align: center;
     margin: auto;
-    margin-top: 150px;
+    padding-top: 150px;
     display: block;
     padding-left: 20px;
     padding-right: 20px;
