@@ -113,7 +113,7 @@ error_reporting(E_ALL);
             </div>
             <div class="col botoes">
                 <div class="row">
-                    <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Continuar </a>
+                    <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Próximo </a>
                 </div>
 
                 <div class="row">
