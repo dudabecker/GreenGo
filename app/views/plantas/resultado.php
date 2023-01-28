@@ -96,7 +96,7 @@ error_reporting(E_ALL);
 
             <div>
                 <p class="descricao">
-                    < ?=$planta->getDescricao(); ?>
+                    <?=$planta->getHistoria(); ?>
                 </p>
 
                 <div class="caixa">
