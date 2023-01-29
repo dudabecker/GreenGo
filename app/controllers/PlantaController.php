@@ -164,7 +164,7 @@ class ControllerPlanta{
         $data['plantas'][0] = $planta;
 
         if ($planta == null){ 
-            echo "Está não é uma planta cadastrada";
+            $this->loadView("plantas/jogarerro.php", $data);
         }else {
             $this->loadView("plantas/resultado.php", $data);
         }
@@ -197,7 +197,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->verZona($idParam);
         $data['plantas'] = $planta;
 
-        $this->loadView("plantas/listPlantas.php", $data);
+        $this->loadView("mapaPlantas.php", $data);
         }
 
     private function verIndividuos(){

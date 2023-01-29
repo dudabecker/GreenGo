@@ -260,6 +260,16 @@ class ControllerEspecie{
         $this->loadView("mapa.php", $data);
     }
 
+    private function EspeciesMapa(string $msg = null){
+
+        $especies = $this->especieRepository->EspeciesMapa();
+
+        $data['titulo'] = "listar especies";
+        $data['especies'] = $especies;
+
+        $this->loadView("mapa.php", $data, $msg);
+    }
+
     private function preventDefault() {
         print "Ação indefinida...";
     }
