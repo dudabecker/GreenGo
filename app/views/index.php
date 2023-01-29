@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu" href="mapa.php"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
                         <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
                         <a class="nav-item nav-link" id="botaoentrar" href="users/login.php"> Entrar </a>
                     </div>
@@ -60,7 +60,7 @@
                         <h1><br><br>Aprenda <br> com trilhas <br> ecológicas! </h1>
                         <div class="row">
                             <div class="col">
-                                <a class="btn btn-secondary jogar" href=".">JOGAR</a>
+                                <a class="btn btn-secondary jogar" href="../Controllers/PlantaController.php?action=formIdentificarPlanta">JOGAR</a>
                                 <!--SÓ HÁ UM MODO DE JOGO POR HORA
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <div class="img-responsive">
-                        <a href="mapa.php"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
+                        <a href="..\controllers\EspecieController.php?action=EspeciesMapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
                                 id="mapa-da-home"></a>
                     </div>
                 </div>
