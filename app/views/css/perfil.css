@@ -188,8 +188,8 @@ a.sair:hover{
 
 .excluir{
     color: var(--branco);
-    background-color: var(--rosinha);
-    border: 2px solid var(--rosinha);
+    background-color: var(--destaque);
+    border: 2px solid var(--destaque);
     border-radius: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -204,7 +204,7 @@ a.sair:hover{
 }
 
 a.excluir:hover{
-    color: var(--rosinha);
+    color: var(--destaque);
     background-color: transparent;
     border-radius: 5px;
 }

@@ -298,7 +298,7 @@ a.editar:hover{
 
 a.vermais{
     color: var(--branco);
-    background-color: var(--rosinha);
+    background-color: var(--destaque);
     border: none;
     border-radius: 5px;
     width: max-content !important;
