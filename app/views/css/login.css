@@ -102,7 +102,7 @@ input[type=email]:focus {
     background-color: var(--branco);
     border: 2px solid var(--rosinha);
     box-shadow: var(--rosinha);
-    color: var(--verdao);
+    color: var(--verdao) !important;
 }
 
 input[type=text].error,
