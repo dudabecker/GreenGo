@@ -127,6 +127,13 @@
             $table = $this->conn->query("SELECT * FROM especie WHERE medicinal = 1");
             $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
             return $especies;
-            }    
+            } 
+            
+        public function EspeciesMapa(): array {
+            $table = $this->conn->query("SELECT * FROM especie");
+            $especies  = $table->fetchAll(PDO::FETCH_ASSOC);
+
+            return $especies;
+        }
         }
     
