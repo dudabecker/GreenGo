@@ -203,9 +203,9 @@ class ControllerPlanta{
     private function verIndividuos(){
         $idParam = $_GET["idEspecie"];
         $planta = $this->plantaRepository->verIndividuos($idParam);
-        $data['plantas'] = $planta;
+        $data['plantas'][0] = $planta;
     
-        $this->loadView("plantas/listPlantas.php", $data);
+        $this->loadView("plantas/listPlantaEspecie.php", $data);
         }
 
     private function preventDefault() {

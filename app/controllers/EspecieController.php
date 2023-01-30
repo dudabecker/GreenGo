@@ -5,6 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once __DIR__ . "/../repository/EspecieRepository.php";
+extract($_FILES);
 //require_once __DIR__ . "/Controller.php";
 
 $ccliente = new ControllerEspecie();
@@ -57,14 +58,63 @@ class ControllerEspecie{
 
     private function create(){
         $especie = new EspecieModel();
+        $imagem = $_FILES['imagem'];
 
-        $especie->setImagem($_POST["imagem"]);
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $imagem["name"], $ext);
+        $nome_imagem = md5(uniqid(time())).".".$ext[1];
+        echo $nome_imagem;
+        $estensao = $ext[1];
+        echo $estensao;
+        $caminho_imagem = "../public/" . $nome_imagem;
+        move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
+
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
-        //$especie->setImagem($_POST["imagem"]);
         $especie->setPontoEsp($_POST["pontoEsp"]);
+        $especie->setImagem($caminho_imagem);
         
+        
+        
+        /*if (!empty($imagem["name"])) {
+        
+            // Largura máxima em pixels
+            $largura = 150;
+            // Altura máxima em pixels
+            $altura = 180;
+            // Tamanho máximo do arquivo em bytes
+            $tamanho = 1000;
+            $error = array();
+
+            $dimensoes = getimagesize($imagem["tmp_name"]);
+    
+            // Verifica se a largura da imagem é maior que a largura permitida
+            if($dimensoes[0] > $largura) {
+                $error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
+            }
+            // Verifica se a altura da imagem é maior que a altura permitida
+            if($dimensoes[1] > $altura) {
+                $error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
+            }
+            
+            // Verifica se o tamanho da imagem é maior que o tamanho permitido
+            if($imagem["size"] > $tamanho) {
+                    $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+            }
+            // Se não houver nenhum erro
+            if (count($error) == 0) {
+            
+                // Pega extensão da imagem
+                preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $imagem["name"], $ext);
+                // Gera um nome único para a imagem
+                $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+                // Caminho de onde ficará a imagem
+                $caminho_imagem = "public/" . $nome_imagem;
+                // Faz o upload da imagem para seu respectivo caminho
+                move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
+                
+                $sql = mysql_query("INSERT INTO especie (imagem) VALUES ($nome_imagem)");
+            }}*/
         
         if(isset($_POST["frutifera"])){
             $especie->setFrutifera(1);
@@ -160,11 +210,23 @@ class ControllerEspecie{
     private function update(){
         $especie = new EspecieModel();
 
+
 		$especie->setIdEspecie($_GET["idEspecie"]);
+
+        $imagem = $_FILES['imagem'];
+
+        preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $imagem["name"], $ext);
+        $nome_imagem = md5(uniqid(time())).".".$ext[1];
+        echo $nome_imagem;
+        $estensao = $ext[1];
+        echo $estensao;
+        $caminho_imagem = "../public/" . $nome_imagem;
+        move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
+        
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
-        $especie->setImagem($_POST["imagem"]);
+        $especie->setImagem($caminho_imagem);
         $especie->setPontoEsp($_POST["pontoEsp"]);
 		
         if(isset($_POST["frutifera"])){
