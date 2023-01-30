@@ -190,7 +190,9 @@
 
                         <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
                         <div class="col-auto align-content-center align-items-center pad img-especie"
-                            style="background-image:url('< ?= $especie['imagem'] ?>');">
+                            style="background-image:url(<?=$especie['imagem']?>);">
+                            
+                            <!--<img src="<?=$especie['imagem']?>">-->
                         </div>
 
                     </div>

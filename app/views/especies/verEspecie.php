@@ -79,6 +79,10 @@
                     <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
                         <?= $especie->getPontoEsp(); ?> pontos
                     </span>
+
+                    <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
+                    ID <?= $especie->getIdEspecie(); ?> 
+                    </span>
                 </div>
 
                 <div class="row justify-content-between">
@@ -91,7 +95,7 @@
             <div class="row justify-content-start">
                 <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
                 <div class="col-auto align-content-center img-especie"
-                    style="background-image:url('< ?= $especie['imagem'] ?>');">
+                    style="background-image:url('<?= $especie->getImagem()?>');">
                 </div>
 
                 <div class="col-lg">
@@ -158,12 +162,12 @@
             <div class="row justify-content-start botoes">
                 <!--EDITAR-->
                 <div class="col-auto min-content">
-                    <a class="editar" href=",">Editar</a>
+                    <a class="editar" href="./EspecieController.php?action=edit&idEspecie=<?= $especie->getIdEspecie() ?>">Editar</a>
                 </div>
 
                 <!--EXCLUIR-->
                 <div class="col-auto min-content">
-                    <a class="excluir" href=".">Excluir</a>
+                    <a class="excluir" href="./EspecieController.php?action=deleteEspecieById&idEspecie=<?= $especie->getIdEspecie()?>">Excluir</a>
                 </div>
 
                 <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->

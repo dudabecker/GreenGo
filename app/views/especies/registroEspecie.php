@@ -88,7 +88,7 @@
 
                 <div class="col">
                     <div class="form-row align-items-left">
-                        <form action="./EspecieController.php?action=create" method="POST">
+                        <form action="./EspecieController.php?action=create" method="POST" enctype="multipart/form-data">
 
                         <label for="formtexto" id="texto">Nome científico</label>
                         <div class="w-100"></div>
@@ -170,7 +170,8 @@
                             <img class="img-camera" src="../public/camera.svg">
                         </span>
                     </label>
-                    <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg">
+                    <input type="file" name="imagem" id="picture__input" accept=".png, .jpg, .jpeg" >
+            
                     <script
                         src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
                     <a id="carregueimagemtexto2"> .png .jpg ou .jpeg tamanho mínimo: 2MB tamanho

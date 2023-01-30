@@ -94,7 +94,7 @@
                     <div class="col">
                         <div class="form-row align-items-left">
                             <form action="./EspecieController.php?action=update&idEspecie=<?= $especie->getIdEspecie() ?>"
-                                method="POST">
+                                method="POST" enctype="multipart/form-data">
 
                                 <label for="formtexto" id="texto">Nome científico</label>
                                 <div class="w-100"></div>
