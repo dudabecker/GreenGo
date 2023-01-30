@@ -78,7 +78,7 @@
                         <div class="col" id="textoindex">
 
                             <div class="img-responsive">
-                                <a href="mapa.php"><img src="../public/mapa.svg" class="img-fluid" alt="mapa ifpr"
+                                <a href="..\controllers\EspecieController.php?action=EspeciesMapa"><img src="../public/mapa.svg" class="img-fluid" alt="mapa ifpr"
                                         id="mapa-da-home">
                                 </a>
                             </div>
@@ -91,7 +91,7 @@
             <div class="row">
                 <div class="col" id="botoesmapa">
                     <a class="btn btn-primary" id="todosbotao"
-                        href="..\controllers\PlantaController.php?action=findAll">
+                        href="..\controllers\EspecieController.php?action=EspeciesMapa">
                         Todos
                     </a>
 

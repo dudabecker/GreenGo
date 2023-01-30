@@ -87,7 +87,7 @@ error_reporting(E_ALL);
                         <div class="col" id="textoindex">
 
                             <div class="img-responsive">
-                                <a href="mapa.php"><img src="../public/mapa.svg" class="img-fluid" alt="mapa ifpr"
+                                <a href="..\controllers\EspecieController.php?action=EspeciesMapa"><img src="../public/mapa.svg" class="img-fluid" alt="mapa ifpr"
                                         id="mapa-da-home">
                                 </a>
                             </div>
@@ -100,7 +100,7 @@ error_reporting(E_ALL);
             <div class="row">
                 <div class="col" id="botoesmapa">
                     <a class="btn btn-primary" id="todosbotao"
-                        href="..\controllers\PlantaController.php?action=findAll">
+                        href="..\controllers\EspecieController.php?action=EspeciesMapa">
                         Todos
                     </a>
 
@@ -178,6 +178,7 @@ error_reporting(E_ALL);
 
                     <!--PHP FOREACH AQUI-->
                     <?php foreach ($data['plantas'] as $planta): ?>
+                    <a href="./PlantaController.php?action=verPlanta&idPlanta=<?= $planta['idPlanta'] ?>">
                     <div class="quadrado">
                         <div class="ind align-items-center justify-content-center">
                         <?= $planta['nomeSocial'] ?>
