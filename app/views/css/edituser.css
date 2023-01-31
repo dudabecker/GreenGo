@@ -76,7 +76,7 @@ input[type=email]::after {
     margin-top: -5px;
     border-color: var(--rosinha);
     position: relative;
-    font-family: Poppins-regular;
+    font-family: Poppins-medium;
 }
 
 input[type=text]:focus,
