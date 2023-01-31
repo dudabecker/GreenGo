@@ -233,7 +233,7 @@ input[type=text]:focus {
     border: none;
     width: 266px;
     height: 83px;
-    border-radius: 10px;
+    border-radius: 5px;
     color: var(--branco);
     font-family: Poppins-semibold;
     font-size: 30px;

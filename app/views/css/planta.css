@@ -159,7 +159,7 @@ body {
     color: var(--branco);
     background-color: var(--principal);
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     width: max-content !important;
     height: max-content !important;
     padding-left: 70px;
