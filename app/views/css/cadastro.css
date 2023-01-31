@@ -127,15 +127,15 @@ label {
     border-color: var(--rosinha);
     position: relative;
     margin: 0 auto;
+    color: var(--branco);
+    font-family: Poppins-medium;
 }
 
-select {
-    font-family: Poppins-regular;
-    color: var(--verdao);
-}
 
-select:focus {
+#caixinha-cad:focus {
     box-shadow: none !important;
+    color: #04574d;
+    background-color: var(--branco);
 }
 
 #texto-caixinhas {
