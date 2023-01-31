@@ -107,7 +107,7 @@ label {
     font-family: Poppins-semibold;
 }
 
-#caixinha-cad {
+select{
     width: 250px;
     height: 45px;
     border-radius: 0%;
@@ -117,14 +117,15 @@ label {
     border-color: var(--rosinha);
     position: relative;
     margin: 0 auto;
+    color: var(--branco);
+    font-family: Poppins-medium;
 }
 
-select {
-    font-family: Poppins-regular;
-}
 
 select:focus {
     box-shadow: none !important;
+    color: #04574d;
+    background-color: var(--branco);
 }
 
 #texto-caixinhas {
