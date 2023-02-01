@@ -121,6 +121,11 @@ body {
     padding-top: 15px;
 }
 
+.jogar:hover {
+    transform: scale(1.05);
+    text-decoration: none;
+}
+
 #textoindex {
     margin-right: 62px;
 }
