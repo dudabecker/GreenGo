@@ -45,15 +45,18 @@
 
     </head>
 
+<!--------------ADMIN-------------->
 
-    <nav>
+<nav>
     <div class="col-xs-12" id="nav-container">
-        <div id="itensmenu">
+
+    <div id="itensmenu">
+
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="../views/index.php" class="nav-brand">
+                <a href="../views/indexADM.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                        <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
+                            <img class="img-responsive"  id="logo" >
                         </div>
                     </div>
                 </a>
@@ -63,19 +66,20 @@
                     <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav">
-
-                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
-                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
+                    <div class="navbar-nav" id="navbar-links">
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaControllerADM.php?action=findAll"> Plantas </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair  </a>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
 </nav>
-
     <body>
 
         <div class="container">
@@ -98,20 +102,20 @@
                 </p>
 
                 <div class="caixa">
-                    <a href="..\controllers\EspecieController.php?action=EspeciesMapa">
+                    <a href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa">
                         Espécie <?= $planta->getIdEspecie() ?>
                     </a>
                 </div>
 
                 <div class="caixa">
-                    <a href="./PlantaController.php?action=verZona&idZona=<?= $planta->getIdZona() ?>">
+                    <a href="./PlantaControllerADM.php?action=verZona&idZona=<?= $planta->getIdZona() ?>">
                         Zona <?= $planta->getIdZona() ?>
                     </a>
                 </div>
             </div>
             <div class="col botoes">
                 <div class="row">
-                    <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Próximo </a>
+                    <a class="continuar" href="./PlantaControllerADM.php?action=formIdentificarPlanta"> Próximo </a>
                 </div>
             </div>
 

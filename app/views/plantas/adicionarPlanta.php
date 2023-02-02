@@ -37,6 +37,8 @@
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
     <link rel="stylesheet" href="../views/css/adicionarplanta.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
+
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="../views/js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -50,49 +52,39 @@
 </head>
 
 
-<nav id="indexinteiro">
-
+<nav>
     <div class="col-xs-12" id="nav-container">
 
-        <div id="itensmenu">
+    <div id="itensmenu">
 
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/indexADM.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                            <img class="img-responsive"  id="logo" >
                         </div>
                     </div>
                 </a>
 
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
-
-
-
-                <nav>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" id="navbar-links">
-
-                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
-                        </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav" id="navbar-links">
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaControllerADM.php?action=findAll"> Plantas </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair  </a>
                     </div>
-                </nav>
+                </div>
             </nav>
-
         </div>
-
     </div>
-
 </nav>
-
 <body>
     <main>
         <nav id="primeirotextoindex">

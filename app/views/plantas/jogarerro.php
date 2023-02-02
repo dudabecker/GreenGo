@@ -16,6 +16,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../views/css/jogar.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -34,30 +35,27 @@
 
 <nav>
     <div class="col-xs-12" id="nav-container">
-
         <div id="itensmenu">
-
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/index.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/icone 3.svg" alt="">
+                        <img class="img-responsive"  id="logo" >
                         </div>
                     </div>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav" id="navbar-links">
+                    <div class="navbar-nav">
 
-                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu"
-                            href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
                     </div>
                 </div>
             </nav>
@@ -79,8 +77,6 @@
 
             <input type="submit" value="Próximo" id="botaoproximo">
         </form>
-
-        <a class="pontuacao" id="a2"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</a>
     </div>
 </body>
 

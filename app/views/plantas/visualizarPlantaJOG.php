@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <?php
+
+
 
 
 //include_once __DIR__ . "/../helpers/mensagem.php";
@@ -28,7 +31,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="../views/css/planta.css">
-        <link rel="stylesheet" href="../views/css/cabecalho.css">
         <!--scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -45,12 +47,11 @@
 
     </head>
 
-
     <nav>
     <div class="col-xs-12" id="nav-container">
         <div id="itensmenu">
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="../views/index.php" class="nav-brand">
+                <a href="../views/indexJOG.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
                         <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
@@ -65,10 +66,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
 
-                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
-                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoJOG.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerJOG.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../controllers/PlantaControllerJOG.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair </a>
                     </div>
                 </div>
             </nav>
@@ -98,8 +99,9 @@
                 </p>
 
                 <div class="caixa">
-                    <a href="..\controllers\EspecieController.php?action=EspeciesMapa">
-                        Espécie <?= $planta->getIdEspecie() ?>
+                    <a href="">
+                        Espécie
+                        <?= $planta->getIdEspecie() ?>
                     </a>
                 </div>
 
@@ -108,11 +110,29 @@
                         Zona <?= $planta->getIdZona() ?>
                     </a>
                 </div>
-            </div>
-            <div class="col botoes">
-                <div class="row">
-                    <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Próximo </a>
+
+                <div class="qrcode">
+                    
                 </div>
+            </div>
+
+            <div class="row justify-content-start botoes">
+                <!--EDITAR--
+                <div class="col-auto min-content">
+                    <a class="editar" href=",">Editar</a>
+                </div>
+
+                <!-EXCLUIR--
+                <div class="col-auto min-content">
+                    <a class="excluir" href=".">Excluir</a>
+                </div>-->
+
+                <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)
+                <div class="col-auto min-content">
+                    <a class="qrcode" href=".">
+                        QR CODE
+                    </a>
+                </div>-->
             </div>
 
             <br><br>
