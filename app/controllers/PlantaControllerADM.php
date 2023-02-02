@@ -1,7 +1,6 @@
 <?php
 
 
-
 require_once __DIR__ . "/../repository/PlantaRepository.php";
 //require_once __DIR__ . "/Controller.php";
 
@@ -99,7 +98,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->findPlantaById($idParam);
         $data['plantas'][0] = $planta;
 
-        $this->loadView("plantas/visualizarPlanta.php", $data);
+        $this->loadView("plantas/visualizarPlantaADM.php", $data);
     }
 
     private function deletePlantaById(){
@@ -153,7 +152,7 @@ class ControllerPlanta{
     }
 
     private function formIdentificarPlanta(){
-        $this->loadView("plantas/jogarVIS.php");
+        $this->loadView("plantas/jogarADM.php");
     }
 
     private function identificarPlanta(){
@@ -162,9 +161,9 @@ class ControllerPlanta{
         $data['plantas'][0] = $planta;
 
         if ($planta == null){ 
-            $this->loadView("plantas/jogarerro.php", $data);
+            $this->loadView("plantas/jogarerroADM.php", $data);
         }else {
-            $this->loadView("plantas/resultado.php", $data);
+            $this->loadView("plantas/resultadoADM.php", $data);
         }
        
         /*$planta = new PlantaModel();
@@ -195,7 +194,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->verZona($idParam);
         $data['plantas'] = $planta;
 
-        $this->loadView("mapaPlantas.php", $data);
+        $this->loadView("mapaPlantasADM.php", $data);
         }
 
     private function verIndividuos(){

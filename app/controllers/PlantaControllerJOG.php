@@ -99,7 +99,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->findPlantaById($idParam);
         $data['plantas'][0] = $planta;
 
-        $this->loadView("plantas/visualizarPlanta.php", $data);
+        $this->loadView("plantas/visualizarPlantaJOG.php", $data);
     }
 
     private function deletePlantaById(){
@@ -153,7 +153,7 @@ class ControllerPlanta{
     }
 
     private function formIdentificarPlanta(){
-        $this->loadView("plantas/jogarVIS.php");
+        $this->loadView("plantas/jogarJOG.php");
     }
 
     private function identificarPlanta(){
@@ -162,9 +162,9 @@ class ControllerPlanta{
         $data['plantas'][0] = $planta;
 
         if ($planta == null){ 
-            $this->loadView("plantas/jogarerro.php", $data);
+            $this->loadView("plantas/jogarerroJOG.php", $data);
         }else {
-            $this->loadView("plantas/resultado.php", $data);
+            $this->loadView("plantas/resultadoJOG.php", $data);
         }
        
         /*$planta = new PlantaModel();
@@ -195,7 +195,7 @@ class ControllerPlanta{
         $planta = $this->plantaRepository->verZona($idParam);
         $data['plantas'] = $planta;
 
-        $this->loadView("mapaPlantas.php", $data);
+        $this->loadView("mapaPlantasJOG.php", $data);
         }
 
     private function verIndividuos(){

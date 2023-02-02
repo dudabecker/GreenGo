@@ -73,6 +73,47 @@ class ControllerEspecie{
         $especie->setImagem($caminho_imagem);
         
         
+        
+        /*if (!empty($imagem["name"])) {
+        
+            // Largura máxima em pixels
+            $largura = 150;
+            // Altura máxima em pixels
+            $altura = 180;
+            // Tamanho máximo do arquivo em bytes
+            $tamanho = 1000;
+            $error = array();
+
+            $dimensoes = getimagesize($imagem["tmp_name"]);
+    
+            // Verifica se a largura da imagem é maior que a largura permitida
+            if($dimensoes[0] > $largura) {
+                $error[2] = "A largura da imagem não deve ultrapassar ".$largura." pixels";
+            }
+            // Verifica se a altura da imagem é maior que a altura permitida
+            if($dimensoes[1] > $altura) {
+                $error[3] = "Altura da imagem não deve ultrapassar ".$altura." pixels";
+            }
+            
+            // Verifica se o tamanho da imagem é maior que o tamanho permitido
+            if($imagem["size"] > $tamanho) {
+                    $error[4] = "A imagem deve ter no máximo ".$tamanho." bytes";
+            }
+            // Se não houver nenhum erro
+            if (count($error) == 0) {
+            
+                // Pega extensão da imagem
+                preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $imagem["name"], $ext);
+                // Gera um nome único para a imagem
+                $nome_imagem = md5(uniqid(time())) . "." . $ext[1];
+                // Caminho de onde ficará a imagem
+                $caminho_imagem = "public/" . $nome_imagem;
+                // Faz o upload da imagem para seu respectivo caminho
+                move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
+                
+                $sql = mysql_query("INSERT INTO especie (imagem) VALUES ($nome_imagem)");
+            }}*/
+        
         if(isset($_POST["frutifera"])){
             $especie->setFrutifera(1);
         } else{ 
@@ -170,7 +211,7 @@ class ControllerEspecie{
 
 		$especie->setIdEspecie($_GET["idEspecie"]);
 
-        /*$imagem = $_FILES['imagem'];
+        $imagem = $_FILES['imagem'];
 
         preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $imagem["name"], $ext);
         $nome_imagem = md5(uniqid(time())).".".$ext[1];
@@ -178,12 +219,12 @@ class ControllerEspecie{
         $estensao = $ext[1];
         echo $estensao;
         $caminho_imagem = "../public/" . $nome_imagem;
-        move_uploaded_file($imagem["tmp_name"], $caminho_imagem);*/
+        move_uploaded_file($imagem["tmp_name"], $caminho_imagem);
         
 		$especie->setNomePop($_POST["nomePop"]);
 		$especie->setNomeCie($_POST["nomeCie"]);
         $especie->setDescricao($_POST["descricao"]);
-        //$especie->setImagem($caminho_imagem);
+        $especie->setImagem($caminho_imagem);
         $especie->setPontoEsp($_POST["pontoEsp"]);
 		
         if(isset($_POST["frutifera"])){
@@ -240,43 +281,43 @@ class ControllerEspecie{
         $especie = $this->especieRepository->findEspecieById($idParam);
         $data['especies'][0] = $especie;
 
-        $this->loadView("especies/verEspecieADM.php", $data);
+        $this->loadView("especies/verEspecieJOG.php", $data);
     }
 
     private function verFrutifera(){
         $especie = $this->especieRepository->verFrutifera();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function verToxidade(){
         $especie = $this->especieRepository->verToxidade();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function verComestivel(){
         $especie = $this->especieRepository->verComestivel();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function verExotica(){
         $especie = $this->especieRepository->verExotica();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function verRaridade(){
         $especie = $this->especieRepository->verRaridade();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function verMedicinal(){
         $especie = $this->especieRepository->verMedicinal();
         $data['especies'] = $especie;
-        $this->loadView("mapaADM.php", $data);
+        $this->loadView("mapaJOG.php", $data);
     }
 
     private function EspeciesMapa(string $msg = null){
@@ -286,7 +327,7 @@ class ControllerEspecie{
         $data['titulo'] = "listar especies";
         $data['especies'] = $especies;
 
-        $this->loadView("mapaADM.php", $data, $msg);
+        $this->loadView("mapaJOG.php", $data, $msg);
     }
 
     private function preventDefault() {

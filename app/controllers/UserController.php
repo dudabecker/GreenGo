@@ -2,9 +2,7 @@
 
 use ControllerUser as GlobalControllerUser;
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 require_once __DIR__ . "/../repository/UserRepository.php";
 require_once __DIR__ . "/../models/UserModel.php";
@@ -75,12 +73,13 @@ function create(){
     $user->setEscolaridade($_POST['field_escolaridade']);
     
     
-    var_dump($user); 
+    //var_dump($user); 
     $userRepository = new UserRepository();
     $userRepository->create($user);
     
     $_SESSION['usuario_logado'] =  $user;
-    $this->loadView("../views/index.php");
+    //echo "Cadastro concluído!!!! Faça login!!";
+    $this->loadView("../views/users/loginCadastro.php");
     
 }
 
@@ -108,11 +107,16 @@ function Logar() {
     } else {
         //print($_SESSION['user']->getTipoUsuario());
         $_SESSION['usuario_logado'] =  $user;
-        $this->loadView("../views/index.php");
+        
+        if($_SESSION['usuario_logado']->getTipoUsuario()==2){ 
+        $this->loadView("../views/indexADM.php");
+        }elseif($_SESSION['usuario_logado']->getTipoUsuario()==1){
+            $this->loadView("../views/indexJOG.php");
+        }
 
     }
 }
-function menu(){
+/*function menu(){
     $idParam = $_GET['id'];
     $userRepository = new UserRepository();
 
@@ -120,12 +124,12 @@ function menu(){
     $_SESSION['usuario_logado'] =  $user;
     $tipo = $user->getTipoUsuario();
     echo $tipo;
-}
+}*/
 function sair()
 {
     session_start(); 
     session_destroy(); 
-    //header("Location: index.php");
+    $this->loadView("../views/index.php");
     exit;
 }
 
