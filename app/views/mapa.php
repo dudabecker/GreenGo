@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../views/css/mapa.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
 
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -46,7 +47,7 @@
 
         <div id="itensmenu">
             <nav class="navbar navbar-expand-lg ">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/index.php" class="nav-brand">
                     <img class="img-responsive" src="../public/logo-green.svg" id="logo">
                 </a>
 
@@ -57,10 +58,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
 
-                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="login.php"> Entrar </a>
+                    <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.php"> Projeto </a>
+                            <a class="nav-item nav-link" id="registro-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
+                            <a class="nav-item nav-link" id="identificar-menu" href="../controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                            <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> entrar </a>
                     </div>
                 </div>
             </nav>
@@ -170,7 +171,7 @@
                         <a href="./EspecieController.php?action=verEspecie&idEspecie=<?= $especie['idEspecie'] ?>">
                             <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
                             <div class="quadrado"
-                                style="background-image:url('< ?= $especie['imagem'] ?>');">
+                                style="background-image:url('<?= $especie['imagem'] ?>');">
                                 <div class="nome align-items-center justify-content-center">
                                     <?= $especie['nomePop'] ?>
                                 </div>

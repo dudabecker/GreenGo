@@ -31,11 +31,14 @@
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
-    <nav>
+</head> 
+
+
+<nav>
     <div class="col-xs-12" id="nav-container">
         <div id="itensmenu">
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="../views/index.php" class="nav-brand">
+                <a href="../views/indexJOG.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
                         <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
@@ -50,10 +53,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
 
-                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
-                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoJOG.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerJOG.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="../controllers/PlantaControllerJOG.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair </a>
                     </div>
                 </div>
             </nav>
@@ -67,12 +70,10 @@
             <div id="about-area">
                 <div class="row">
                     <div class="col" id="textoindex">
-
                         <h1><br><br>Aprenda <br> com trilhas <br> ecológicas! </h1>
                         <div class="row">
                             <div class="col">
-                                <a class="btn btn-secondary jogar" href="../Controllers/PlantaController.php?action=formIdentificarPlanta">JOGAR</a>
-
+                                <a class="btn btn-secondary jogar" href="../Controllers/PlantaControllerJOG.php?action=formIdentificarPlanta">JOGAR</a>
                                 <!--SÓ HÁ UM MODO DE JOGO POR HORA
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -80,7 +81,6 @@
                                         JOGAR
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-
                                         <a class="dropdown-item" href="modosolo">Modo solo</a>
                                         <a class="dropdown-item" href="emequipe">Em equipe</a>
                                     </div>
@@ -89,16 +89,14 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                        <div href="mapa.php" id="divmapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
-                                id="mapa-da-home"></div>
-                    
+                    <div class="img-responsive">
+                        <a href="..\controllers\EspecieControllerJOG.php?action=EspeciesMapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
+                                id="mapa-da-home"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row justify-content-center">
             <div class="col quadrado">
@@ -114,23 +112,14 @@
                 <p>Plataforma web <br>com código aberto e muito amor</p>
             </div>
         </div>
-
-
         <div class="finalhome" id="ultimo-cont-index">
             <div class="row justify-content-md-left">
-
                 <div class="col">
                     <img class="img-fluid" src="../public/Group 52.svg" alt="celular-greengo" id="imagem-celular">
                 </div>
             </div>
         </div>
     </div>
-
     <br><br><br>
 </body>
-
-    <div class="container-fluid" id="rodape">
-            
-    </div>
-
 </html>
