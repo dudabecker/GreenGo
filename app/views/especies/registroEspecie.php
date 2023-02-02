@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="../views/css/registro.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -43,38 +44,36 @@
 </head>
 
 
-<nav id="indexinteiro">
+<!--------------ADMIN-------------->
+
+<nav>
     <div class="col-xs-12" id="nav-container">
         <div id="itensmenu">
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/indexADM.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                        <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
                         </div>
                     </div>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
 
-                <nav>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" id="navbar-links">
-
-                            <a class="nav-item nav-link" id="identificar-menu" href="projeto.html"> Projeto </a>
-                            <a class="nav-item nav-link" id="identificar-menu" href="./mapa.php"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu"
-                                href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Quiz </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Equipes </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
-                        </div>
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <!--<a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>-->
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findAll"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> sair  </a>
                     </div>
-                </nav>
+                </div>
             </nav>
         </div>
     </div>
@@ -88,7 +87,7 @@
 
                 <div class="col">
                     <div class="form-row align-items-left">
-                        <form action="./EspecieController.php?action=create" method="POST" enctype="multipart/form-data">
+                        <form action="./EspecieControllerADM.php?action=create" method="POST" enctype="multipart/form-data">
 
                         <label for="formtexto" id="texto">Nome científico</label>
                         <div class="w-100"></div>

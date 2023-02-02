@@ -17,7 +17,8 @@
         <!--BOOTSTRAP-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="../views/css/especie.css">
+            <link rel="stylesheet" href="../views/css/especie.css">
+            <link rel="stylesheet" href="../views/css/cabecalho.css">
         <!--scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -34,36 +35,41 @@
 
     </head>
 
+    <!--------------ADMIN-------------->
+
     <nav>
-        <div class="col-xs-12" id="nav-container">
+    <div class="col-xs-12" id="nav-container">
 
-            <div id="itensmenu">
+    <div id="itensmenu">
 
-                <nav class="navbar navbar-expand-lg " id="menu">
-                    <a href="../views/index.php" class="nav-brand">
-                        <div class="row justify-content-md-left">
-                            <div id="imgmenu">
-                                <img class="img-responsive" src="../public/logo-green.svg" alt="">
-                            </div>
-                        </div>
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-                        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" id="navbar-links">
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.php"> Projeto </a>
-                            <a class="nav-item nav-link" id="registro-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu" href="../controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> entrar </a>
+            <nav class="navbar navbar-expand-lg " id="menu">
+                <a href="../views/indexADM.php" class="nav-brand">
+                    <div class="row justify-content-md-left">
+                        <div id="imgmenu">
+                            <img class="img-responsive"  id="logo" >
                         </div>
                     </div>
-                </nav>
-            </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav" id="navbar-links">
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaControllerADM.php?action=findAll"> Plantas </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair  </a>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <body>
 
@@ -100,7 +106,7 @@
                 <div class="col-lg">
                     <div class="row col flex-wrap">
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verFrutifera">
+                            <a href="./EspecieControllerADM.php?action=verFrutifera">
                                 <?php if ($especie->getFrutifera() == 1):
                                     echo "Frutífera";
                                 endif ?>
@@ -108,7 +114,7 @@
                         </div>
 
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verToxidade">
+                            <a href="./EspecieControllerADM.php?action=verToxidade">
                                 <?php if ($especie->getToxidade() == 1):
                                     echo "Tóxica";
                                 endif ?>
@@ -116,7 +122,7 @@
                         </div>
 
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verComestivel">
+                            <a href="./EspecieControllerADM.php?action=verComestivel">
                                 <?php if ($especie->getComestivel() == 1):
                                     echo "Comestível";
                                 endif ?>
@@ -124,7 +130,7 @@
                         </div>
 
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verExotica">
+                            <a href="./EspecieControllerADM.php?action=verExotica">
                                 <?php if ($especie->getExotica() == 1):
                                     echo "Exótica";
                                 endif ?>
@@ -132,7 +138,7 @@
                         </div>
 
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verRaridade">
+                            <a href="./EspecieControllerADM.php?action=verRaridade">
                                 <?php if ($especie->getRaridade() == 1):
                                     echo "Rara";
                                 endif ?>
@@ -140,7 +146,7 @@
                         </div>
 
                         <div class="atributos">
-                            <a href="./EspecieController.php?action=verMedicinal">
+                            <a href="./EspecieControllerADM.php?action=verMedicinal">
                                 <?php if ($especie->getMedicinal() == 1):
                                     echo "Medicinal";
                                 endif ?>
@@ -159,10 +165,20 @@
 
             <!-- ESSA PARTE É SÓ PRA ADM -->
             <div class="row justify-content-start botoes">
+                <!--EDITAR-->
+                <div class="col-auto min-content">
+                    <a class="editar" href="./EspecieControllerADM.php?action=edit&idEspecie=<?= $especie->getIdEspecie() ?>">Editar</a>
+                </div>
+
+                <!--EXCLUIR-->
+                <div class="col-auto min-content">
+                    <a class="excluir" href="./EspecieControllerADM.php?action=deleteEspecieById&idEspecie=<?= $especie->getIdEspecie()?>">Excluir</a>
+                </div>
+
                 <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
                 <div class="col-auto min-content">
                     <a class="vermais"
-                        href="..\controllers\EspecieController.php?action=EspeciesMapa">Ver
+                        href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa">Ver
                         mais</a>
                 </div>
             </div>
