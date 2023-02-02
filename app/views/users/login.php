@@ -42,7 +42,7 @@
                 </h2>
 
                 <form class="form-login" id="loginform" name="loginform" method="post"
-                    action="../controllers/UserController.php?action=logar">
+                    action="../../controllers/UserController.php?action=logar">
                     <label for="email-login">e-mail</label>
                     <br>
                     <input type="email" class="form-control" id="email-login" name='field_email' required>
