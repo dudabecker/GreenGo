@@ -10,7 +10,7 @@
         function __construct()
         {
             $this->conn = Connection::getConnection();
-            var_dump($this->conn);
+            //var_dump($this->conn);
         }
 
         public function create(EspecieModel $especie) :bool{
@@ -28,7 +28,7 @@
                 $prepare->bindValue(":raridade", $especie->getRaridade());
                 $prepare->bindValue(":medicinal",$especie->getMedicinal());
                 $prepare->bindValue(":comestivel",$especie->getComestivel());
-                print_r($query);
+                //print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
                 
@@ -59,7 +59,7 @@
         }
 
         public function update(EspecieModel $especie) : bool {
-            $query = "UPDATE especie SET nomePop = ?, nomeCie = ?, descricao = ?, frutifera = ?, toxidade = ?, exotica = ?, raridade = ?, medicinal = ?, comestivel = ?, pontoEsp = ?, imagem = ? WHERE idEspecie = ?";
+            $query = "UPDATE especie SET nomePop = ?, nomeCie = ?, descricao = ?, frutifera = ?, toxidade = ?, exotica = ?, raridade = ?, medicinal = ?, comestivel = ?, pontoEsp = ? /*imagem = ?*/ WHERE idEspecie = ?";
             $prepare = $this->conn->prepare($query);
             $prepare->bindValue(1, $especie->getNomePop());
             $prepare->bindValue(2, $especie->getNomeCie());
@@ -71,8 +71,7 @@
             $prepare->bindValue(8, $especie->getMedicinal());
             $prepare->bindValue(9, $especie->getComestivel());
             $prepare->bindValue(10, $especie->getPontoEsp());
-            $prepare->bindValue(11, $especie->getImagem());
-            $prepare->bindValue(12, $especie->getIdEspecie());
+            $prepare->bindValue(11, $especie->getIdEspecie());
             $result = $prepare->execute();
             return $result;
         }

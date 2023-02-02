@@ -37,16 +37,25 @@
             return $zonas;
         }
 
-        public function listar(){
-            $table = $this->conn->query("SELECT idZona FROM zona");
-            $zonas  = $table->fetchAll(PDO::FETCH_ASSOC);
+        public function listar(int $idZona){
+            $query = "SELECT pontoZona FROM zona WHERE idZona = ?";
+            $prepare = $this->conn->prepare($query);
+            $prepare->bindParam(1, $idZona, PDO::PARAM_INT);
+
+            if($prepare->execute()){
+            
+                $zonas  = $prepare->fetchObject("ZonaModel");
+            
+            } else {
+                $zonas = null;
+            }
 
             return $zonas;
         }
 
         public function findZonaByIdZona(int $idZona) {
 
-            $query = "SELECT * FROM zona WHERE id.Zona = ?";
+            $query = "SELECT * FROM zona WHERE idZona = ?";
             
             $prepare = $this->conn->prepare($query);
             $prepare->bindParam(1, $idZona, PDO::PARAM_INT);
@@ -62,15 +71,24 @@
             return $zonas;
         }
 
-        public function update(ZonaModel $zonas) {
+        public function update(ZonaModel $zona) {
 
-            $query = "UPDATE zonas SET qntPlantas = :qntPlantas WHERE idZona = :idZona";
+            $query = "UPDATE zona SET nomeZona = ?, pontoZona = ? WHERE idZona = ?";
             $prepare = $this->conn->prepare($query);
-            $prepare->bindValue(":id", $zonas->getIdZona());
-            $prepare->bindValue(":qntPlantas", $zonas->getQntPlantas());
-            $prepare->execute();
-            
+            $prepare->bindValue(1, $zona->getNomeZona());
+            $prepare->bindValue(2, $zona->getPontoZona());
+            $prepare->bindValue(3, $zona->getIdZona());
+            $result = $prepare->execute();
+            return $result;
+
+            //return $zonas;
             //ARRUMAR
+        }
+
+        public function pontoG(ZonaModel $zonas, PlantaModel $planta){
+            $query = "SELECT * from zonas where idZona = :idZona";
+            $prepare = $this->conn->prepare($query);
+            $prepare->bindValue(":id", $planta->getIdZona(), PDO::PARAM_INT);
         }
 
         public function deleteZonaByIdZona( int $idZona) {
