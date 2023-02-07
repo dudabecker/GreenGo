@@ -1,9 +1,7 @@
 <?php
 
 // Exibe os erros em uma página web (DEVERIA ESTAR AQUI?).
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 require_once __DIR__ . "/../repository/ZonaRepository.php";
 //require_once __DIR__ . "/Controller.php";
@@ -79,7 +77,7 @@ function listarPlantas(){
 
 }
 
-function findAll(){
+function findZonas(){
     $zonaRepository = new ZonaRepository();
 
     $zonas = $zonaRepository->findZonas();
@@ -114,6 +112,42 @@ function findZonaByIdZona()
     //Controller::loadView("users/list.php");
 }
 
+function edit(){
+    $idParam = $_GET['idZona'];
+
+    $zonaRepository = new ZonaRepository();
+    $zona = $zonaRepository->findZonaByIdZona($idParam);
+    $data['zona'][0] = $zona;
+    //header("location: ../views/users/editUser.php", $data, $idParam);
+    $this->loadView("../views/zones/editZona.php", $data, $idParam);
+}
+
+function update()
+{   
+   // $zona = new ZonaModel();
+    $zona = new ZonaModel();
+    $zona->setIdZona($_GET['idZona']);
+    $zona->setIdZona($_GET['idZona']);
+    $zona->setNomeZona($_POST["field_NomeZona"]);
+    $zona->setPontoZona($_POST["field_PMZ"]);
+    
+    $zonaRepository = new ZonaRepository();
+    //print_r($usuario);
+    $atualizou = $this->zonaRepository->update($planta);
+    
+    if($atualizou){
+        $msg = "Registro atualizado com sucesso.";
+        print_r($msg) ;
+    }else{
+        $msg = "Erro ao atualizar o registro no banco de dados.";
+        print_r($msg) ;
+    }
+    //$data['zona'][0] = $zona;
+    //$_SESSION['usuario_logado'] =  $usuario;
+    $this->findZonas($msg);  
+    //$this->loadView("../views/zones/listZona.php", $data);      
+}
+
 function deleteZonaByIdZona()
 {
     $idParam = $_GET['idZona'];
@@ -124,8 +158,8 @@ function deleteZonaByIdZona()
     //Controller::loadView("users/list.php", $data);
 }
 
-function preventDefault() {
-    print "call preventDefault()";
-    //Controller::loadView("users/list.php", $data);
+function preventdefault()
+{
+   //header("Location: ../views/erro.php");
 }
 }

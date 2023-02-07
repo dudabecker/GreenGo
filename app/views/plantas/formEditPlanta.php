@@ -25,7 +25,10 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-    <link rel="stylesheet" href="../css/adicionarplanta.css">
+    <link rel="stylesheet" href="../views/css/adicionarplanta.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
+
+
     <script src="js/registro.js"></script>
     <link rel="stylesheet" href="../views/js/registro.js">
     <link rel="stylesheet" href="css/editorwys.css" type="text/css" media="all" />
@@ -38,65 +41,53 @@
     </style>
 </head>
 
-
-<nav id="indexinteiro">
-
+<nav>
     <div class="col-xs-12" id="nav-container">
 
-        <div id="itensmenu">
+    <div id="itensmenu">
 
             <nav class="navbar navbar-expand-lg " id="menu">
-                <a href="index.html" class="nav-brand">
+                <a href="../views/indexADM.php" class="nav-brand">
                     <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                            <img class="img-responsive"  id="logo" >
                         </div>
                     </div>
                 </a>
 
-
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
-
-
-
-                <nav>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" id="navbar-links">
-
-                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu" href="./mapa.php"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Registro </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="/"> Adm </a>
-                        </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav" id="navbar-links">
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaControllerADM.php?action=findAll"> Plantas </a>
+                        <a class="nav-item nav-link" id="zonas-menu" href="./ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="./EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="./UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> Sair  </a>
                     </div>
-                </nav>
+                </div>
             </nav>
-
         </div>
-
     </div>
-
 </nav>
-
 <body>
     <main>
-        <nav id="primeirotextoindex">
             <div class="container">
                 <div class="row justify-content-md-left">
 
                     <div id="corpo-registro">
 
-                        <div class="row">
+                       <div class="row">
                             <div class="col">
                                 <h1 id="primeirotextoreg"> Editando o indivíduo!</h1>
                             </div>
                         </div>
-
-                        <form action="./plantaController.php?action=create" method="POST">
+                        <?php foreach ($data['plantas'] as $planta): ?>
+                        <form action="./plantaControllerADM.php?action=update&idPlanta=<?= $planta->getIdPlanta() ?>" method="POST">
                             <div class="container" id="reg1">
                                 <div class="row">
                                     <div class="col-sm">
@@ -107,24 +98,24 @@
                                             <label for="formtexto" id="texto">Identificação da espécie</label>
                                             <div class="w-100"></div>
                                             <input type="text" name="idEspecie" class="form-control" id="formtexto"
-                                                aria-describedby="nome-cadastro">
+                                                value="<?= $planta->getIdEspecie(); ?>">
                                                 <div class="w-100"></div>
                                                 
                                             <label for="formtexto" id="texto">Código numérico</label>
                                             <div class="w-100"></div>
                                             <input type="text" name="codNumerico" class="form-control" id="formtextoo"
-                                                aria-describedby="nome-cadastro">
+                                            value="<?= $planta->getCodNumerico(); ?>">
 
 
                                                 <div class="w-100"></div>
                                            
                                                 
                                                 
-                                            <label for="zonasselect" id="texto">Zonas</label>
+                                            <label for="zonasselect" id="texto">Zona</label>
                                             <div class="w-100"></div>
-                                                <select class="custom-select mr-sm-2"  name="idZona" id="zonasselect">
+                                                <select class="custom-select mr-sm-2"  name="idZona" id="zonasselect" >
                                                     
-                                                        <option selected></option>
+                                                        <option selected ></option>
                                                         <option value="1"> Zona 1</option>
                                                         <option value="2"> Zona 2</option>
                                                         <option value="3"> Zona 3 </option>
@@ -133,18 +124,18 @@
                                                         <option value="6"> Zona 6 </option>
                                                 </select>
                                             <div class="w-100"></div>
-                                            
-                                            <!--<label for="number" id="texto">Pontos</label>
+                                            <!--
+                                            <label for="number" id="texto">Pontos</label>
                                             <div class="w-100"></div>
-                                            <input type="number" name="inputnumber" class="form-control" id="number">-->
-
+                                            <input type="number" name="inputnumber" class="form-control" id="number">
+                                            -->
 
                                             <div class="w-100"></div>
                                             <label for="formtexto" id="texto">Nome social</label>
 
                                             <div class="w-100"></div>
                                             <input type="text" name="nomeSocial" class="form-control" id="form2"
-                                                aria-describedby="nome-cadastro">
+                                            value="<?= $planta->getNomeSocial(); ?>">
 
                                         </div>
 
@@ -171,18 +162,12 @@
                     </div>
                 </div>
             </div>
-        </nav>
-
-
-
-
-        <nav id="primeirotextoindex">
             <br>
             <div class="container" id="caixadetexto">
                 <a id="textodescritivo">História</a>
-                <textarea id="txtconteudo" name="historia" ></textarea>
+                <textarea id="txtconteudo" name="historia" value="<?= $planta->getHistoria(); ?>"></textarea>
 
-                <script src="../ckeditor/build/ckeditor"></script>
+                <script src="../views/ckeditor/build/ckeditor.js"></script>
                 <script>ClassicEditor
                         .create(document.querySelector('#txtconteudo'), {
                             licenseKey: '',
@@ -206,8 +191,8 @@
         </nav>
 
         <div class="container">
-            <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Adicionar</a> </button>
-            <button type="submit" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
+            <button type="submit" class="btn btn-primary btn-lg" id="botoesregistrar"><a>Pronto</a> </button>
+            <button type="reset" class="btn btn-secondary btn-lg" id="botoeslimpar"> <a id="limpar"> Limpar</a>
             <button type="submit" class="btn btn-secondary btn-lg" id="botoesexcluir"> <a > Excluir</a>
             </button>
         </div>
@@ -215,39 +200,26 @@
 
         </form>
 
+<!--
+        <form action="./PlantaControllerADM.php?action=update&idPlanta=<?= $planta->getIdPlanta()?>" method="POST">
+            Número de identificação da espécie: <input type="text" name="idEspecie" value="<?= $planta->getIdEspecie(); ?>">
+            <br>
+            Número de identificação da zona: <input type="text" name="idZona" value="<?= $planta->getIdZona(); ?>">
+            <br>
+            Código numérico: <input type="text" name="codNumerico" value="<?= $planta->getCodNumerico(); ?>">
+            <br>
+            Código QR: <input type="text" name="codQR" value="<?= $planta->getCodQR(); ?>">
+            <br><br>
+            
+            <input type="submit" value="Atualizar">
+            <input type="reset" value="Limpar">
+        </form>	
+                    -->	
+<?php endforeach; ?>
+
 
     </main>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/grayscale.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/registro.js"></script>
+
 </body>
 
-</html>
-
-
-
-<body>
-
-
-<?php foreach($data['plantas'] as $planta): ?>
-	<form action="./PlantaController.php?action=update&idPlanta=<?= $planta->getIdPlanta()?>" method="POST">
-		Número de identificação da espécie: <input type="text" name="idEspecie" value="<?= $planta->getIdEspecie(); ?>">
-		<br>
-		Número de identificação da zona: <input type="text" name="idZona" value="<?= $planta->getIdZona(); ?>">
-		<br>
-		Código numérico: <input type="text" name="codNumerico" value="<?= $planta->getCodNumerico(); ?>">
-		<br>
-		Código QR: <input type="text" name="codQR" value="<?= $planta->getCodQR(); ?>">
-		<br><br>
-		
-		<input type="submit" value="Atualizar">
-		<input type="reset" value="Limpar">
-	</form>		
-<?php endforeach; ?>
-</form>		
-</body>
-<div class="container-fluid" id="rodape">
-            
-            </div>
 </html>

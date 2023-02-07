@@ -8,8 +8,9 @@
   <title>Definir Zona</title>
 
   <link rel="icon" href="../../public/favicon.svg">
-  <link rel="stylesheet" href="/app/views/index.html">
+  <link rel="stylesheet" href="/app/views/index.">
   <link rel="stylesheet" href="../css/definizona2.css">
+  <link rel="stylesheet" href="../css/cabecalho.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -29,36 +30,34 @@
 
 </head>
 
+<!--------------ADMIN-------------->
 
-<body id="fundocadastro">
-
-  <form method="post" action="../../controllers/ZonaController.php?action=create">
-    <div class="form-group">
-      <div class="row">
-        <div class="col-sm">
-          <form>
-
-          <nav class="navbar navbar-expand-lg " id="menu">
-            
-                <a href="views/index.html" class="nav-brand">
-                    <div class="row justify-content-md-center">
+<nav>
+    <div class="col-xs-12" id="nav-container">
+        <div id="itensmenu">
+            <nav class="navbar navbar-expand-lg " id="menu">
+                <a href="../views/indexADM.php" class="nav-brand">
+                    <div class="row justify-content-md-left">
                         <div id="imgmenu">
-                            <img class="img-responsive" src="../public/logo-green.svg" alt="">
+                        <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
                         </div>
                     </div>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                    <div class="navbar-nav" id="navbar-links">
+                    <div class="navbar-nav">
 
-                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                        <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
+                    <a class="nav-item nav-link" id="projeto-menu" href="../views/projetoADM.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieControllerADM.php?action=EspeciesMapa"> Mapa</a>
+                        <!--<a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>-->
+                        <a class="nav-item nav-link" id="zonas-menu" href="../controllers/ZonaController.php?action=findZonas"> Zonas </a>
+                        <a class="nav-item nav-link" id="especies-menu" href="../Controllers/EspecieControllerADM.php?action=findAll"> Espécies </a>
+                        <a class="nav-item nav-link" id="usuarios-menu" href="../Controllers/UserController.php?action=findAll"> Usuários </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../controllers/UserController.php?action=sair"> sair  </a>
                     </div>
                 </div>
             </nav>
@@ -66,6 +65,11 @@
     </div>
 </nav>
 
+<body id="fundocadastro">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm">
+          <form>
 <nav>
           <div class="container"> 
           
@@ -76,7 +80,8 @@
                   <div class="form-row align-items-left">
 
 
-              
+                  <form method="post" action="../../controllers/ZonaController.php?action=create">
+
                   <div id="zonass">
                     <label for="formtexto" id="texto">Zona</label>
                     <div class="w-100"></div>

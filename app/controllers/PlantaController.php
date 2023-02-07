@@ -1,8 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 require_once __DIR__ . "/../repository/PlantaRepository.php";
 //require_once __DIR__ . "/Controller.php";
@@ -155,7 +153,7 @@ class ControllerPlanta{
     }
 
     private function formIdentificarPlanta(){
-        $this->loadView("plantas/jogar.php");
+        $this->loadView("plantas/jogarVIS.php");
     }
 
     private function identificarPlanta(){
@@ -203,9 +201,9 @@ class ControllerPlanta{
     private function verIndividuos(){
         $idParam = $_GET["idEspecie"];
         $planta = $this->plantaRepository->verIndividuos($idParam);
-        $data['plantas'] = $planta;
+        $data['plantas'][0] = $planta;
     
-        $this->loadView("plantas/listPlantas.php", $data);
+        $this->loadView("plantas/listPlantaEspecie.php", $data);
         }
 
     private function preventDefault() {

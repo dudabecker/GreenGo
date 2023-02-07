@@ -2,9 +2,7 @@
 
 use ControllerUser as GlobalControllerUser;
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 require_once __DIR__ . "/../repository/UserRepository.php";
 require_once __DIR__ . "/../models/UserModel.php";
@@ -61,24 +59,27 @@ function create(){
     $user = new UserModel();
     $user->setNomeUsuario($_POST['field_nome']);
     $user->setEmail($_POST['field_email']);
-    /*$senha = $_POST['field_password'];
+    $senha = $_POST['field_password'];
       if(strlen($senha)<8){
       //senha inválida
       //mensagem de erro
       $_SESSION['msg_erro'] =  "As senhas devem ter no mínimo oito caracteres!";
           echo $msg="As senhas devem ter no mínimo oito caracteres!";
+          header("location: ../views/users/cadastro.php?msg=erroaologar");
       }else {
         $user->setPassword($_POST['field_password']);
-      }*/
+      }
     $user->setGenero($_POST['field_genero']);
     $user->setEscolaridade($_POST['field_escolaridade']);
     
     
-    var_dump($user); 
-    $this->loadView("../views/termos.html");
+    //var_dump($user); 
     $userRepository = new UserRepository();
     $userRepository->create($user);
-    $this->loadView("../views/index.php");
+    
+    $_SESSION['usuario_logado'] =  $user;
+    //echo "Cadastro concluído!!!! Faça login!!";
+    $this->loadView("../views/users/loginCadastro.php");
     
 }
 
@@ -90,42 +91,45 @@ function Logar() {
 
     $user = $userRepository->findUserByEmail($email);
 
-    $password = $user->getPassword();
-    $tipo = $user->getTipoUsuario();
     if($user == false){
         $_SESSION['msg_erro'] =  "usuário não cadastrado";
         header("location: ../views/users/login.php?msg=erroaologar");
         
-    } else if($password != md5($senha)){
+    } 
+    
+    $password = $user->getPassword();
+    $tipo = $user->getTipoUsuario();
+    if($password != md5($senha)){
             $_SESSION['msg_erro'] =  "senha incorreta";
             header("location: ../views/users/login.php?msg=senhaincorreta");
 
             
     } else {
-        $_SESSION['usuario_logado'] =  true;
-
-        //adm($tipo); 
-        if ($tipo == 1){
-      
-            include("../views/cabecalhoJogador.php");
-            
-        }  if ($tipo = 2){
-    
-            include("../views/cabecalhoAdm.php");
-      
-        } 
-          $this->loadView("../views/index.php");
+        //print($_SESSION['user']->getTipoUsuario());
+        $_SESSION['usuario_logado'] =  $user;
+        
+        if($_SESSION['usuario_logado']->getTipoUsuario()==2){ 
+        $this->loadView("../views/indexADM.php");
+        }elseif($_SESSION['usuario_logado']->getTipoUsuario()==1){
+            $this->loadView("../views/indexJOG.php");
+        }
 
     }
-
-
 }
+/*function menu(){
+    $idParam = $_GET['id'];
+    $userRepository = new UserRepository();
 
+    $user = $userRepository->findUserById($idParam);
+    $_SESSION['usuario_logado'] =  $user;
+    $tipo = $user->getTipoUsuario();
+    echo $tipo;
+}*/
 function sair()
 {
     session_start(); 
     session_destroy(); 
-    //header("Location: index.php");
+    $this->loadView("../views/index.php");
     exit;
 }
 
@@ -138,7 +142,7 @@ function verificaLogado()
         // Destrói a sessão por segurança
         session_destroy();
         // Redireciona o visitante de volta pro login
-        header("Location: index.php"); exit;
+        header("Location: ../views/index.php"); exit;
     }
 }
 
@@ -213,7 +217,7 @@ function update()
     $usuario->setId($_GET['id']);
     $usuario->setNomeUsuario($_POST["field_nome"]);
     $usuario->setEmail($_POST["field_email"]);
-    $usuario->setPassword($_POST["field_password"]);
+    //$usuario->setPassword($_POST["field_password"]);
     $usuario->setGenero($_POST["field_genero"]);
     $usuario->setEscolaridade($_POST["field_escolaridade"]);
 
@@ -229,6 +233,7 @@ function update()
         print_r($msg) ;
     }
     $data['usuario'][0] = $usuario;
+    $_SESSION['usuario_logado'] =  $usuario;
     //GlobalControllerUser::findUserById($idParam);  
     $this->loadView("../views/users/perfil.php", $data, $idParam);      
 }
@@ -250,7 +255,8 @@ function adm(){
     $idParam = $_GET['id'];
     $userRepository = new UserRepository();
 
-    $userRepository->adm($idParam);
+    $user = $userRepository->adm($idParam);
+    //$tipo = $user->getTipoUsuario();
     $usuarios = $userRepository->findAll();
     //$data['titulo'] = "listar usuarios";
     $data['usuarios'] = $usuarios;
@@ -260,7 +266,7 @@ function adm(){
 
 }
 
-function preventDefault()
+function preventdefault()
 {
    header("Location: ../views/erro.php");
 }

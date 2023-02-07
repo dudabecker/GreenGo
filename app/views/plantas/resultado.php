@@ -2,9 +2,7 @@
 <html lang="en">
 
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 //include_once __DIR__ . "/../helpers/mensagem.php";
 //$caminho = __DIR__ . "/../helpers/mensagem.php";
@@ -30,6 +28,7 @@ error_reporting(E_ALL);
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
             integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="../views/css/planta.css">
+        <link rel="stylesheet" href="../views/css/cabecalho.css">
         <!--scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -46,37 +45,36 @@ error_reporting(E_ALL);
 
     </head>
 
+
     <nav>
-        <div class="col-xs-12" id="nav-container">
-
-            <div id="itensmenu">
-
-                <nav class="navbar navbar-expand-lg " id="menu">
-                    <a href="../views/index.html" class="nav-brand">
-                        <div class="row justify-content-md-left">
-                            <div id="imgmenu">
-                                <img class="img-responsive" src="../public/logo-green.svg" alt="">
-                            </div>
-                        </div>
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
-                        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
-                        <div class="navbar-nav" id="navbar-links">
-
-                            <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                            <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
+    <div class="col-xs-12" id="nav-container">
+        <div id="itensmenu">
+            <nav class="navbar navbar-expand-lg " id="menu">
+                <a href="../views/index.php" class="nav-brand">
+                    <div class="row justify-content-md-left">
+                        <div id="imgmenu">
+                        <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
                         </div>
                     </div>
-                </nav>
-            </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                    aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
+                    </div>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <body>
 
@@ -100,7 +98,7 @@ error_reporting(E_ALL);
                 </p>
 
                 <div class="caixa">
-                    <a href="">
+                    <a href="..\controllers\EspecieController.php?action=EspeciesMapa">
                         Espécie <?= $planta->getIdEspecie() ?>
                     </a>
                 </div>
@@ -114,10 +112,6 @@ error_reporting(E_ALL);
             <div class="col botoes">
                 <div class="row">
                     <a class="continuar" href="./PlantaController.php?action=formIdentificarPlanta"> Próximo </a>
-                </div>
-
-                <div class="row">
-                    <p class="pontuacao"> Sua pontuação atual é de <!--GET PONTUACAO DO USUARIO--> xxxx pontos</p>
                 </div>
             </div>
 

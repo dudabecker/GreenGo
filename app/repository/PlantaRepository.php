@@ -10,7 +10,7 @@
         function __construct()
         {
             $this->conn = Connection::getConnection();
-            var_dump($this->conn);
+            //var_dump($this->conn);
         }
 
         public function create(PlantaModel $planta){
@@ -23,7 +23,7 @@
                 $prepare->bindValue(":nomeSocial", $planta->getNomeSocial());
                 $prepare->bindValue(":historia", $planta->getHistoria());
                 //$prepare->bindValue(":codQR", $planta->getCodQR());
-                print_r($query);
+                //print_r($query);
                 $prepare->execute();
                 return $this->conn->lastInsertId();
                 

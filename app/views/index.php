@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Go</title>
+
     <!--FAVICON-->
     <link rel="icon" href="../public/favicon.svg">
     <!-- Fonte -->
@@ -13,7 +14,9 @@
     <!--BOOTSTRAP-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../views/css/index.css">
+    <link rel="stylesheet" href="../views/css/cabecalho.css">
+
     <!--scripts-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -27,40 +30,49 @@
     <script src="js/progressbar.min.js"></script>
     <!-- Parallax -->
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
-</head>
-<nav id="indexinteiro">
+
+    <nav>
     <div class="col-xs-12" id="nav-container">
         <div id="itensmenu">
-            <nav class="navbar navbar-expand-lg ">
-                <a href="index.html" class="nav-brand">
-                    <img class="img-responsive" src="../public/logo-green.svg" id="logo">
+            <nav class="navbar navbar-expand-lg " id="menu">
+                <a href="../views/index.php" class="nav-brand">
+                    <div class="row justify-content-md-left">
+                        <div id="imgmenu">
+                        <img class="img-responsive" src="../public/logo-green.svg"  id="logo" >
+                        </div>
+                    </div>
                 </a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
                     aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"> <img src="../public/menu.svg" id="menuicon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" id="itemmenu" href="projeto.html"> Projeto </a>
-                        <a class="nav-item nav-link" id="itemmenu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
-                        <a class="nav-item nav-link" id="itemmenu" href="../Controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
-                        <a class="nav-item nav-link" id="botaoentrar" href="users/login.php"> Entrar </a>
+
+                        <a class="nav-item nav-link" id="projeto-menu" href="../views/projeto.php"> Projeto </a>
+                        <a class="nav-item nav-link" id="mapa-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
+                        <a class="nav-item nav-link" id="itemmenu" href="./PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                        <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> Entrar </a>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
 </nav>
+
 <body>
     <div class="container">
         <div class="row justify-content-md-left">
             <div id="about-area">
                 <div class="row">
                     <div class="col" id="textoindex">
+
                         <h1><br><br>Aprenda <br> com trilhas <br> ecológicas! </h1>
                         <div class="row">
                             <div class="col">
                                 <a class="btn btn-secondary jogar" href="../Controllers/PlantaController.php?action=formIdentificarPlanta">JOGAR</a>
+
                                 <!--SÓ HÁ UM MODO DE JOGO POR HORA
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -68,6 +80,7 @@
                                         JOGAR
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+
                                         <a class="dropdown-item" href="modosolo">Modo solo</a>
                                         <a class="dropdown-item" href="emequipe">Em equipe</a>
                                     </div>
@@ -76,14 +89,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="img-responsive">
-                        <a href="..\controllers\EspecieController.php?action=EspeciesMapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
-                                id="mapa-da-home"></a>
-                    </div>
+                    
+                    
+                        <div href="mapa.php" id="divmapa"><img src="../public/mapa 1.svg" class="img-fluid" alt="logo-index"
+                                id="mapa-da-home"></div>
+                    
                 </div>
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col quadrado">
@@ -99,14 +114,23 @@
                 <p>Plataforma web <br>com código aberto e muito amor</p>
             </div>
         </div>
+
+
         <div class="finalhome" id="ultimo-cont-index">
             <div class="row justify-content-md-left">
+
                 <div class="col">
                     <img class="img-fluid" src="../public/Group 52.svg" alt="celular-greengo" id="imagem-celular">
                 </div>
             </div>
         </div>
     </div>
+
     <br><br><br>
 </body>
+
+    <div class="container-fluid" id="rodape">
+            
+    </div>
+
 </html>

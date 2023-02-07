@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
 </head>
-
+<!--CABECALHO-->
 <nav>
     <div class="col-xs-12" id="nav-container">
 

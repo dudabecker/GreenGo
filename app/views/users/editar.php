@@ -41,7 +41,7 @@
   <div class="row">
     <div class="col-md-6 justify-content-end formulario">
       <h1 class="titulo">Editar conta</h1>
-
+    
       <?php foreach ($data['usuario'] as $user): ?>
       <form action="./UserController.php?action=update&id=<?= $user->getId() ?>" method="POST">
         <div class="row form-row align-items-left">

@@ -40,7 +40,7 @@
             <div id="itensmenu">
 
                 <nav class="navbar navbar-expand-lg " id="menu">
-                    <a href="../views/index.html" class="nav-brand">
+                    <a href="../views/index.php" class="nav-brand">
                         <div class="row justify-content-md-left">
                             <div id="imgmenu">
                                 <img class="img-responsive" src="../public/logo-green.svg" alt="">
@@ -54,11 +54,10 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
                         <div class="navbar-nav" id="navbar-links">
-
-                            <a class="nav-item nav-link" id="portfolio-menu" href="../projeto.html"> Projeto </a>
-                            <a class="nav-item nav-link" id="registro-menu"> Mapa</a>
-                            <a class="nav-item nav-link" id="identificar-menu"> Jogar </a>
-                            <a class="nav-item nav-link" id="botaoentrar" href="perfil.php"> Eu </a>
+                        <a class="nav-item nav-link" id="portfolio-menu" href="../views/projeto.php"> Projeto </a>
+                            <a class="nav-item nav-link" id="registro-menu" href="..\controllers\EspecieController.php?action=EspeciesMapa"> Mapa</a>
+                            <a class="nav-item nav-link" id="identificar-menu" href="../controllers/PlantaController.php?action=formIdentificarPlanta"> Jogar </a>
+                            <a class="nav-item nav-link" id="botaoentrar" href="../views/users/login.php"> entrar </a>
                         </div>
                     </div>
                 </nav>
@@ -79,6 +78,10 @@
                     <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
                         <?= $especie->getPontoEsp(); ?> pontos
                     </span>
+
+                    <span class="pontos align-self-center" href="./EspecieController.php?action=loadFormNew">
+                    ID <?= $especie->getIdEspecie(); ?> 
+                    </span>
                 </div>
 
                 <div class="row justify-content-between">
@@ -91,7 +94,7 @@
             <div class="row justify-content-start">
                 <!--CHAMAR O ATRIBUTO DA IMAGEM, QUANDO ESTIVER PRONTA. CASO NAO ESTEJA, EXCLUIR O STYLE-->
                 <div class="col-auto align-content-center img-especie"
-                    style="background-image:url('< ?= $especie['imagem'] ?>');">
+                    style="background-image:url('<?= $especie->getImagem()?>');">
                 </div>
 
                 <div class="col-lg">
@@ -156,20 +159,10 @@
 
             <!-- ESSA PARTE É SÓ PRA ADM -->
             <div class="row justify-content-start botoes">
-                <!--EDITAR-->
-                <div class="col-auto min-content">
-                    <a class="editar" href=",">Editar</a>
-                </div>
-
-                <!--EXCLUIR-->
-                <div class="col-auto min-content">
-                    <a class="excluir" href=".">Excluir</a>
-                </div>
-
                 <!--A PARTIR DAQUI, QUANDO CLICADO PARA VER DETALHES (VALE PARA TODOS OS USUARIOS!!)-->
                 <div class="col-auto min-content">
                     <a class="vermais"
-                        href="./plantaController.php?action=verIndividuos&idEspecie=<?= $especie->getIdEspecie() ?>">Ver
+                        href="..\controllers\EspecieController.php?action=EspeciesMapa">Ver
                         mais</a>
                 </div>
             </div>
